@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,9 +7,11 @@ public class DialogueUIController : MonoBehaviour
 {
     public GameObject speechBubblePrefab;
     public GameObject speechPromptPrefab;
+    public GameObject speechChoicePrefab;
 
     public static GameObject staticSpeechBubblePrefab;
     public static GameObject staticSpeechPromptPrefab;
+    public static GameObject staticSpeechChoicePrefab;
 
     public static DialogueUIController instance;
     internal static float deltaTime = 1.0f/60.0f;
@@ -22,6 +25,7 @@ public class DialogueUIController : MonoBehaviour
 
         staticSpeechBubblePrefab = speechBubblePrefab;
         staticSpeechPromptPrefab = speechPromptPrefab;
+        staticSpeechChoicePrefab = speechChoicePrefab;
     }
 
     public static IDialogueBubble DisplaySpeechPrompt(Vector3 speakerPosition, Vector2 displacementVector)
@@ -37,28 +41,36 @@ public class DialogueUIController : MonoBehaviour
         speechPrompt.Hide();
     }
 
-    public static void DeploySpeechBubbleAt(DialogueBubble speechBubble, Vector3 speakerPosition, Vector2 displacementVector)
+    public static void DeployDialogueBubbleAt(DialogueBubble dialogueBubble, Vector3 speakerPosition, Vector2 displacementVector)
     {
-        speechBubble.gameObject.SetActive(true);
-        speechBubble.DeployAt(speakerPosition, displacementVector);
+        dialogueBubble.gameObject.SetActive(true);
+        dialogueBubble.DeployAt(speakerPosition, displacementVector);
     }
 
-    public static void DeploySpeechBubble(IDialogueBubble speechBubble)
+    public static void DeployDialogueBubble(IDialogueBubble dialogueBubble)
     {
-        speechBubble.Show();
+        dialogueBubble.Show();
     }
 
-    public static DialogueBubble GenerateSpeechBubblePrefab()
+    public static void HideDialogueBubble(IDialogueBubble dialogueBubble)
     {
-        DialogueBubble speechBubble = Instantiate(staticSpeechBubblePrefab).GetComponent<DialogueBubble>();
+        Debug.Log("hide");
+        dialogueBubble.Blur();
+        dialogueBubble.Hide();
+    }
+
+    public static SpeechBubble GenerateSpeechBubblePrefab()
+    {
+        SpeechBubble speechBubble = Instantiate(staticSpeechBubblePrefab).GetComponent<SpeechBubble>();
         speechBubble.gameObject.SetActive(false);
         return speechBubble;
     }
 
-    public static void HideSpeechBubble(IDialogueBubble speechBubble)
+    internal static ChoiceBubble GenerateChoiceBubblePrefab(int choiceCount)
     {
-        Debug.Log("hide");
-        speechBubble.Blur();
-        speechBubble.Hide();
+        ChoiceBubble choiceBubble = Instantiate(staticSpeechChoicePrefab).GetComponent<ChoiceBubble>();
+        choiceBubble.Instantiate(choiceCount);
+        choiceBubble.gameObject.SetActive(false);
+        return choiceBubble;
     }
 }

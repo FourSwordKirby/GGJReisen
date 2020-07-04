@@ -430,7 +430,7 @@ PrefabInstance:
     - target: {fileID: 4657902502490761096, guid: ca207539f2140c64ca87160274bcb8da,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.61
+      value: -1.31
       objectReference: {fileID: 0}
     - target: {fileID: 4657902502490761096, guid: ca207539f2140c64ca87160274bcb8da,
         type: 3}
@@ -460,7 +460,7 @@ PrefabInstance:
     - target: {fileID: 4657902502490761096, guid: ca207539f2140c64ca87160274bcb8da,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4657902502490761096, guid: ca207539f2140c64ca87160274bcb8da,
         type: 3}
@@ -535,22 +535,22 @@ PrefabInstance:
     - target: {fileID: 4657902503103045963, guid: ca207539f2140c64ca87160274bcb8da,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.058691025
+      value: 0.058634542
       objectReference: {fileID: 0}
     - target: {fileID: 4657902503103045963, guid: ca207539f2140c64ca87160274bcb8da,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99827623
+      value: 0.9982795
       objectReference: {fileID: 0}
     - target: {fileID: 4657902503103045963, guid: ca207539f2140c64ca87160274bcb8da,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3909199
+      value: 1.3900397
       objectReference: {fileID: 0}
     - target: {fileID: 4657902503103045963, guid: ca207539f2140c64ca87160274bcb8da,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.6864243
+      value: 2.6881056
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -577,7 +577,7 @@ PrefabInstance:
     - target: {fileID: 8092289295884808357, guid: 1e06c356479b8074588d0a081b061c48,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.49999958
+      value: -2.05
       objectReference: {fileID: 0}
     - target: {fileID: 8092289295884808357, guid: 1e06c356479b8074588d0a081b061c48,
         type: 3}
@@ -667,7 +667,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1094550382 stripped
 Transform:

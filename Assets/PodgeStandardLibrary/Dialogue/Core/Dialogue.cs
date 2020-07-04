@@ -6,10 +6,10 @@ using System.Linq;
 public class Dialogue
 {
     List<ScriptLine> lines;
-    public int readCount;
-    public int currentPosition;
+    public int currentPosition = -1;
 
-    public bool IsFinished { get => readCount == lines.Count; }
+    private bool isFinished = false;
+    public bool IsFinished { get => currentPosition >= lines.Count - 1; }
 
     //temporary variables for getting this working with the current implementation
     public int speakingLineCount {
@@ -19,14 +19,12 @@ public class Dialogue
     public Dialogue (List<ScriptLine> lines)
     {
         this.lines = lines;
-        readCount = 0;
-        currentPosition = 0;
+        currentPosition = -1;
     }
 
     public void Init()
     {
-        readCount = 0;
-        currentPosition = 0;
+        currentPosition = -1;
     }
 
     // Throws an exception if we try to get the next line when we already passed the current line count
@@ -34,11 +32,30 @@ public class Dialogue
     {
         if(currentPosition < lines.Count)
         {
-            ScriptLine line = lines[currentPosition];
-            readCount++;
-            currentPosition++;
-
-            return line;
+            if(currentPosition == -1)
+            {
+                currentPosition = 0;
+                ScriptLine line = lines[currentPosition];
+                return line;
+            }
+            else
+            {
+                ScriptLine line = lines[currentPosition];
+                ScriptLine nextLine = line.GetNextLine();
+                if(nextLine == null)
+                {
+                    currentPosition++;
+                    if (currentPosition < lines.Count)
+                        return lines[currentPosition];
+                    else
+                        return null;
+                }
+                else
+                {
+                    currentPosition = nextLine.lineNumber;
+                    return nextLine;
+                }
+            }
         }
         else
             throw new System.Exception("Reached the end of the dialogue, there is no next line");
@@ -48,10 +65,30 @@ public class Dialogue
     {
         if (currentPosition >= 0)
         {
-            ScriptLine line = lines[currentPosition];
-            currentPosition--;
-
-            return line;
+            if (currentPosition >= lines.Count)
+            {
+                currentPosition = lines.Count-1;
+                ScriptLine line = lines[currentPosition];
+                return line;
+            }
+            else
+            {
+                ScriptLine line = lines[currentPosition];
+                ScriptLine previousLine = line.GetPreviousLine();
+                if (previousLine == null)
+                {
+                    currentPosition--;
+                    if (currentPosition >= 0)
+                        return lines[currentPosition];
+                    else
+                        return null;
+                }
+                else
+                {
+                    currentPosition = previousLine.lineNumber;
+                    return previousLine;
+                }
+            }
         }
         else
             throw new System.Exception("Reached the start of the dialogue, there is no previous line");

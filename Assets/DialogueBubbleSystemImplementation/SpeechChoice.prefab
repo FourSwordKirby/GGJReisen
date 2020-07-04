@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &114493751893569178
+--- !u!114 &1892122371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5286151866013731307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad17a213fefbeb948a546cbf33d80916, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e53fc8e2c969e443a8d01ded50f664c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   loggable: 1
@@ -19,7 +19,14 @@ MonoBehaviour:
   displayModifier: 0
   focusColor: {r: 1, g: 1, b: 1, a: 1}
   blurColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
-  textMesh: {fileID: 5286151866257434882}
+  choiceCenter: {fileID: 5286151866167228753}
+  choicePanels: []
+  panelSpacing: 0.55
+  panelOffset: 0.3
+  panelZOffset: 0.1
+  activeChoiceIndex: 0
+  choicePanelPrefab: {fileID: 1933168996232153960, guid: 05f926a206bb43c4b8f86a95023bd69b,
+    type: 3}
 --- !u!1001 &4303273389421341137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30,6 +37,46 @@ PrefabInstance:
     - target: {fileID: 1203477145, guid: 6338e2a978e71cb4e929e5fe7fc312b4, type: 3}
       propertyPath: loggable
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278851158744064866, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1435535
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278851158744064866, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1435535
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278851158744064866, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1435535
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278851158902469297, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8.004874
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278851158902469297, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.145991
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278851158902469297, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1435535
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278851158902469303, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ffff89d78cb635348bd2bf6cc25a73a0, type: 2}
+    - target: {fileID: 8278851160514969805, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8278851160514969809, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
         type: 3}
@@ -45,22 +92,22 @@ PrefabInstance:
     - target: {fileID: 8278851160758935610, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
         type: 3}
       propertyPath: m_Name
-      value: SpeechBubble
+      value: SpeechChoice
       objectReference: {fileID: 0}
     - target: {fileID: 8278851160758935611, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.28933406
+      value: -0.17
       objectReference: {fileID: 0}
     - target: {fileID: 8278851160758935611, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2956448
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 8278851160758935611, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.78
+      value: -3.676
       objectReference: {fileID: 0}
     - target: {fileID: 8278851160758935611, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
         type: 3}
@@ -117,24 +164,18 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 4303273389421341137}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &5286151866167228753 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8278851160340942976, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
+    type: 3}
+  m_PrefabInstance: {fileID: 4303273389421341137}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &5286151864653437798 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 8278851158902469303, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
     type: 3}
   m_PrefabInstance: {fileID: 4303273389421341137}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5286151866257434882 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8278851160514969811, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
-    type: 3}
-  m_PrefabInstance: {fileID: 4303273389421341137}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &4303273389919380382 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 575703631, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
