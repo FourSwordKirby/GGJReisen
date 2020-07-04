@@ -8,6 +8,19 @@ public abstract class ScriptLine
 
     public abstract void PerformLine();
     public abstract bool IsFinished();
+
+    public abstract ScriptLine GetPreviousLine();
+    public abstract ScriptLine GetNextLine();
+
+    /// <summary>
+    /// Used for navigating a dialogue tree when navigating dialogue
+    /// </summary>
+    public readonly string lineLabel;
+
+    public ScriptLine(string label = "")
+    {
+        lineLabel = label;
+    }
 }
 
 public struct SpeakingLineContent
@@ -21,5 +34,19 @@ public struct SpeakingLineContent
         this.speaker = speaker;
         this.lineText = lineText;
         this.lineNumber = lineNumber;
+    }
+}
+
+public struct ChoiceLineContent
+{
+    public string lineText;
+    public int lineNumber;
+    public string jumpLabel;
+
+    public ChoiceLineContent(string speaker, string lineText, int lineNumber, string jumpLabel)
+    {
+        this.lineText = lineText;
+        this.lineNumber = lineNumber;
+        this.jumpLabel = jumpLabel;
     }
 }

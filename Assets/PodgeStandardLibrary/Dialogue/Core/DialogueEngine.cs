@@ -3,21 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
+using System.Text.RegularExpressions;
 
 public delegate ScriptLine SpeakingLineGenerator(string speaker, string lineText, int lineNumber);
-public delegate ScriptLine InstructionLineGenerator(string line);
+public delegate ScriptLine ExpressionLineGenerator(CharacterExpression expression);
+public delegate ScriptLine ChoiceLineGenerator(List<ChoiceLineContent> choices);
 
 
 public class DialogueEngine
 {
     public static SpeakingLineGenerator GenerateSpeakingLine;
-    public static InstructionLineGenerator GenerateInstructionLine;
+    public static ExpressionLineGenerator GenerateInstructionLine;
+    public static ChoiceLineGenerator GenerateChoiceLine;
     static bool initialized;
 
-    public static void InitializeGenerators(SpeakingLineGenerator speakingLineGenerator, InstructionLineGenerator instructionLineGenerator)
+    public static void InitializeGenerators(SpeakingLineGenerator speakingLineGenerator, ExpressionLineGenerator instructionLineGenerator, ChoiceLineGenerator choiceLineGenerator)
     {
         GenerateSpeakingLine = speakingLineGenerator;
         GenerateInstructionLine = instructionLineGenerator;
+        GenerateChoiceLine = choiceLineGenerator;
         initialized = true;
     }
 
@@ -39,6 +43,8 @@ public class DialogueEngine
             ScriptLine processedLine = null;
 
             string line = rawLines[i];
+            string label = GetLabel(line);
+
             switch (GetLineType(line))
             {
                 case LineType.SpeakingLine:
@@ -50,8 +56,14 @@ public class DialogueEngine
                     processedLine = GenerateSpeakingLine(currentSpeaker, GetSpokenLine(line), speakingLineNumber);
                     speakingLineNumber++;
                     break;
-                case LineType.Instruction:
-                    processedLine = GenerateInstructionLine(line);
+                case LineType.Expression:
+                    CharacterExpression desiredExpression = GetExpression(line);
+                    processedLine = GenerateInstructionLine(desiredExpression);
+                    break;
+                case LineType.Choice:
+                    List<ChoiceLineContent> choices = GetChoices(line, currentSpeaker, speakingLineNumber);
+                    processedLine = GenerateChoiceLine(choices);
+                    speakingLineNumber++;
                     break;
             }
             processedLines.Add(processedLine);
@@ -63,9 +75,11 @@ public class DialogueEngine
     static LineType GetLineType(string line)
     {
         if (line.StartsWith("[expression]"))
-            return LineType.Instruction;
+            return LineType.Expression;
+        else if (line.StartsWith("[choice]"))
+            return LineType.Choice;
         else
-           return LineType.SpeakingLine;
+            return LineType.SpeakingLine;
     }
 
     public static string GetSpeaker(string line)
@@ -88,9 +102,71 @@ public class DialogueEngine
             return line;
     }
 
+    /// <summary>
+    /// Gets the label denoted by a {label} at the end of a line, like so
+    /// 
+    /// Anne: Today is a good day {good end}
+    /// </summary>
+    /// <param name="line"></param>
+    /// <returns></returns>
+    public static string GetLabel(string line)
+    {
+        Regex regex = new Regex("(?<=^}).+?(?={)");
+        // reverse a string to make the non-greedy match work properly
+        Match match = regex.Match(new string(line.Reverse().ToArray()));
+
+        if (match.Success)
+        {
+            Debug.Log(new string(match.Value.Reverse().ToArray()));
+            return new string(match.Value.Reverse().ToArray());
+        }
+        else
+            return "";
+    }
+
+    private static CharacterExpression GetExpression(string line)
+    {
+        string expressionString = line.Split(' ')[1];
+        return (CharacterExpression)Enum.Parse(typeof(CharacterExpression), expressionString);
+    }
+
+
+    /// <summary>
+    /// Gets the label denoted by a {label} at the end of a line, like so
+    /// 
+    /// Anne: Today is a good day {good end}
+    /// </summary>
+    /// <param name="line"></param>
+    /// <returns></returns>
+    public static List<ChoiceLineContent> GetChoices(string line, string speaker, int lineNumber)
+    {
+        List<ChoiceLineContent> dialogueChoices = new List<ChoiceLineContent>();
+
+        string allChoices =  line.Split(':') [1];
+        MatchCollection matches = Regex.Matches(allChoices, @"(?<=\[).+?(?=\])");
+
+        // Use foreach-loop.
+        foreach (Match match in matches)
+        {
+            foreach (Capture capture in match.Captures)
+            {
+                string choice = capture.Value;
+                string choiceLine = choice.Split('|')[0].Trim();
+                string jumpLabel = choice.Split('|')[1].Trim();
+
+                ChoiceLineContent content = new ChoiceLineContent(speaker, choiceLine, lineNumber, jumpLabel);
+
+                dialogueChoices.Add(content);
+            }
+        }
+        
+        return dialogueChoices;
+    }
+
     public enum LineType
     {
         SpeakingLine,
-        Instruction
+        Expression,
+        Choice
     }
 }

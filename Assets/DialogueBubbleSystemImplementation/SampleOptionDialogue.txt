@@ -1,0 +1,9 @@
+Player: Testing the dialogue system
+[expression]: smile
+I wonder how this should work?
+[expression]: normal
+Player: Maybe this is fine?
+Player: Where should the next dialogue line go?
+[choice]: [Yeeee | yes] [noooope | no]
+awww yes {yes}
+heeeeck np {no}

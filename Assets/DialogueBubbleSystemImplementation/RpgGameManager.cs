@@ -26,7 +26,7 @@ public class RpgGameManager : MonoBehaviour
 
     public void StartConversation(TextAsset dialogue, Vector3 speakerPosition, Transform cameraPosition = null, AfterDialogueEvent afterEvent = null)
     {
-        DialogueEngine.InitializeGenerators(SpeakingLine.CreateSpeakingLine, InstructionLine.CreateInstructionLine);
+        DialogueEngine.InitializeGenerators(SpeakingLine.CreateSpeakingLine, ExpressionLine.CreateInstructionLine, ChoiceLine.GenerateChoiceLine);
         List<ScriptLine> lines = DialogueEngine.CreateDialogueComponents(dialogue.text);
         Dialogue processedDialogue = new Dialogue(lines);
         StartCoroutine(PlayConversation(processedDialogue, cameraPosition, afterEvent));
@@ -36,11 +36,12 @@ public class RpgGameManager : MonoBehaviour
     {
         // If a special camera position was provided, tell the camera man to use it.
         ConversationPause();
-        /*
+
+        //External library dependency
         CameraMan cameraMan = FindObjectOfType<CameraMan>();
         if (cameraPosition != null)
             cameraMan.StartCinematicMode(cameraPosition);
-        */
+
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.GetComponent<CharacterDialogueAnimator>().startTalking();
@@ -55,8 +56,10 @@ public class RpgGameManager : MonoBehaviour
         {
             ScriptLine line = dialogue.GetNextLine();
             line.PerformLine();
+
             while (!line.IsFinished())
             {
+                /* disabled for now
                 if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
                     lineTracker--;
@@ -67,34 +70,10 @@ public class RpgGameManager : MonoBehaviour
                     lineTracker++;
                     StartCoroutine(DialogueBubbleUI.instance.animateLogs(lineTracker));
                 }
+                */
                 yield return null;
             }
             lineTracker++;
-            /*
-            string currentLine = dialogueLines[lineTracker];
-            if (currentLine.StartsWith("[expression]"))
-            {
-                print(currentLine);
-                var expressionString = currentLine.Split(' ')[1];
-                var expression = (CharacterExpressionAnimator.Expressions)Enum.Parse(typeof(CharacterExpressionAnimator.Expressions), expressionString);
-                player.GetComponent<CharacterDialogueAnimator>().changeExpression(expression);
-            }
-            else
-            {
-                string speaker = DialogueEngine.GetSpeaker(currentLine);
-                string spokenLine = DialogueEngine.GetSpokenLine(currentLine);
-                if (speaker != "")
-                    currentSpeaker = speaker;
-                else if (currentSpeaker == "")
-                    Debug.LogWarning("Speaker not specified");
-                Vector3 speakerPosition = speakerDict[currentSpeaker].getSpeechOrigin();
-
-                DialogueUIController.instance.displaySpeechBubble(spokenLine, speakerPosition);
-                while (!DialogueUIController.instance.ready)
-                    yield return null;
-            }
-            lineTracker++;
-            */
         }
         DialogueBubbleUI.instance.finishDialogue();
         player.GetComponent<CharacterDialogueAnimator>().stopTalking();
@@ -122,19 +101,20 @@ public class RpgGameManager : MonoBehaviour
         //ResumeGameplay();
     }
 
-    //bool gamePaused = false;
-    //public bool Paused { get { return gamePaused; } }
-    //public void PauseGameplay()
-    //{
-    //    gamePaused = true;
-    //    foreach (CharacterMovement entity in GameObject.FindObjectsOfType<CharacterMovement>())
-    //        entity.enabled = false;
-    //}
-    //public void ResumeGameplay()
-    //{
-    //    gamePaused = false;
-    //    foreach (CharacterMovement entity in GameObject.FindObjectsOfType<CharacterMovement>())
-    //        entity.enabled = true;
-    //}
+    // Dependent on external player class
+    bool gamePaused = false;
+    public bool Paused { get { return gamePaused; } }
+    public void PauseGameplay()
+    {
+        gamePaused = true;
+        foreach (CharacterMovement entity in GameObject.FindObjectsOfType<CharacterMovement>())
+            entity.enabled = false;
+    }
+    public void ResumeGameplay()
+    {
+        gamePaused = false;
+        foreach (CharacterMovement entity in GameObject.FindObjectsOfType<CharacterMovement>())
+            entity.enabled = true;
+    }
 
 }

@@ -17,10 +17,6 @@ public class CharacterMovement : MonoBehaviour
 
     public bool isGrounded;
 
-    private float fallMultiplier = 2.5f;
-    private float lowJumpMultiplier = 2.0f;
-
-
     // Update is called once per frame
     void Update()
     {

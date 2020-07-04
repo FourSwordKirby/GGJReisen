@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -18,6 +19,8 @@ public class DialogueBubbleUI : MonoBehaviour
     private List<float> randomSeedsY;
 
     public static DialogueBubbleUI instance;
+
+    public Camera dialogueCamera;
 
     public void Awake()
     {
@@ -40,8 +43,8 @@ public class DialogueBubbleUI : MonoBehaviour
 
         for (int i = 0; i < speakingLineCount; i++)
         {
-            DialogueBubble speechBubble = DialogueUIController.GenerateSpeechBubblePrefab();
-            speechBubbles.Add(speechBubble);
+            //DialogueBubble speechBubble = DialogueUIController.GenerateSpeechBubblePrefab();
+            //speechBubbles.Add(speechBubble);
             randomSeedsX.Add(Random.Range(-1.0f, 1.0f));
             randomSeedsY.Add(Random.Range(0f, 1.0f));
         }
@@ -63,13 +66,36 @@ public class DialogueBubbleUI : MonoBehaviour
         ready = true;
     }
 
-    public Camera dialogueCamera;
+    internal void DisplayChoices(List<ChoiceLineContent> choices, Vector3 speakerPosition)
+    {
+        int choicesCount = choices.Count;
+        Vector2 speakerScreenPosition = dialogueCamera.WorldToScreenPoint(speakerPosition);
+
+        
+        foreach(ChoiceLineContent choice in choices)
+        {
+            float relativeXdisplacment = (Camera.main.pixelWidth / 2.0f - speakerScreenPosition.x) / Camera.main.pixelWidth;
+            float relativeYdisplacment = (Camera.main.pixelHeight / 2.0f - speakerScreenPosition.y) / Camera.main.pixelHeight + 0.1f; // The dialogue should always be in the upper portion of the screen 
+            float relativeZdisplacment = 1.0f;
+
+            Vector3 displacementVector = new Vector3(relativeXdisplacment, relativeYdisplacment, relativeZdisplacment);
+            
+            DialogueBubble speechBubble = DialogueUIController.GenerateSpeechBubblePrefab();
+            //speechBubble.SetDialogueBubbleContent(choice);
+            speechBubbles.Add(speechBubble);
+
+            DialogueUIController.DeploySpeechBubbleAt(speechBubble, speakerPosition, displacementVector);
+        }
+
+        //StartCoroutine(animateLogs(lineNumber));
+    }
+
     //Displays the a speech bubble according to its text and position in the overall dialogue
     public void DisplaySpeechBubble(SpeakingLineContent speakingLineContent, Vector3 speakerPosition)
     {
-        int lineNumber = speakingLineContent.lineNumber;
-
         ready = false;
+
+        int lineNumber = speakingLineContent.lineNumber;
         Vector2 speakerScreenPosition = dialogueCamera.WorldToScreenPoint(speakerPosition);
 
         float relativeXdisplacment = (Camera.main.pixelWidth / 2.0f - speakerScreenPosition.x) / Camera.main.pixelWidth;
@@ -78,13 +104,14 @@ public class DialogueBubbleUI : MonoBehaviour
         Vector2 displacementVector = new Vector2(relativeXdisplacment, relativeYdisplacment);
 
         // *(offscreen dialogue we will need to handle seperately)
-        DialogueBubble speechBubble = speechBubbles[lineNumber];
+        DialogueBubble speechBubble = DialogueUIController.GenerateSpeechBubblePrefab();
         speechBubble.SetDialogueBubbleContent(speakingLineContent);
+        speechBubbles.Add(speechBubble);
+
         DialogueUIController.DeploySpeechBubbleAt(speechBubble, speakerPosition, displacementVector);
 
         StartCoroutine(animateLogs(lineNumber));
     }
-
 
     //Automatically animates the logs to the current state of the underlying dialogue data structure
     public IEnumerator animateLogs(int targetLineNumber)

@@ -1,17 +1,25 @@
 ﻿using UnityEngine;
-using UnityEditor;
-using System.Collections.Generic;
+using System;
 
 public class SpeakingLine : ScriptLine
 {
     SpeakingLineContent content;
     DialogueAnimator speakerAnimator;
 
-    public SpeakingLine(string speaker, string lineText, int lineNumber)
+    public SpeakingLine(string speaker, string lineText, int lineNumber, string label = "" ): base(label)
     {
         content = new SpeakingLineContent(speaker, lineText, lineNumber);
 
-        speakerAnimator = GameObject.Find(speaker).GetComponent<DialogueAnimator>();
+        try
+        {
+            // very per game specific stuff
+            speakerAnimator = GameObject.Find(speaker).GetComponent<DialogueAnimator>();
+        }
+        catch(Exception e)
+        {
+            Debug.Log("attempted speaker is " + speaker);
+            throw e;
+        }
     }
 
     public static SpeakingLine CreateSpeakingLine(string speaker, string lineText, int lineNumber)
@@ -37,5 +45,15 @@ public class SpeakingLine : ScriptLine
     public override DialogueEngine.LineType GetLineType()
     {
         return DialogueEngine.LineType.SpeakingLine;
+    }
+
+    public override ScriptLine GetPreviousLine()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override ScriptLine GetNextLine()
+    {
+        throw new System.NotImplementedException();
     }
 }
