@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 public class DialogueBubbleUI : MonoBehaviour
 {
-    private List<DialogueBubble> speechBubbles = new List<DialogueBubble>();
+    private List<DialogueBubble> dialogueBubbles = new List<DialogueBubble>();
     private int onScreenSpeechBubbleLimit = 2;
     private int currentLineNumber = 0;
     private int z_offset = 1;
@@ -37,7 +37,7 @@ public class DialogueBubbleUI : MonoBehaviour
         activeDialogue = dialogue;
         int speakingLineCount = activeDialogue.speakingLineCount;
 
-        speechBubbles = new List<DialogueBubble>(speakingLineCount);
+        dialogueBubbles = new List<DialogueBubble>(speakingLineCount);
         randomSeedsX = new List<float>(speakingLineCount);
         randomSeedsY = new List<float>(speakingLineCount);
 
@@ -53,41 +53,47 @@ public class DialogueBubbleUI : MonoBehaviour
     public void finishDialogue()
     {
         ready = false;
-        for (int i = 0; i < speechBubbles.Count; i++)
-            speechBubbles[i].Hide();
+        for (int i = 0; i < dialogueBubbles.Count; i++)
+            dialogueBubbles[i].Hide();
         StartCoroutine(cleanup());
     }
 
     private IEnumerator cleanup()
     {
         yield return new WaitForSeconds(1.0f);
-        for (int i = 0; i < speechBubbles.Count; i++)
-            speechBubbles[i].Destroy();
+        for (int i = 0; i < dialogueBubbles.Count; i++)
+            dialogueBubbles[i].Destroy();
         ready = true;
     }
 
-    internal void DisplayChoices(List<ChoiceLineContent> choices, Vector3 speakerPosition)
+    // Kinda hacked together choice system
+    internal void DisplayChoices(ChoiceLine line, Vector3 speakerPosition)
     {
+        ready = false;
+
+        List<ChoiceLineContent> choices = line.dialogueChoices;
+
         int choicesCount = choices.Count;
+        int lineNumber = choices[0].lineNumber;
         Vector2 speakerScreenPosition = dialogueCamera.WorldToScreenPoint(speakerPosition);
 
-        
-        foreach(ChoiceLineContent choice in choices)
+        float relativeXdisplacment = (Camera.main.pixelWidth / 2.0f - speakerScreenPosition.x) / Camera.main.pixelWidth;
+        float relativeYdisplacment = (Camera.main.pixelHeight / 2.0f - speakerScreenPosition.y) / Camera.main.pixelHeight + 0.1f; // The dialogue should always be in the upper portion of the screen 
+        Vector2 displacementVector = new Vector2(relativeXdisplacment, relativeYdisplacment);
+
+        ChoiceBubble choiceBubble = DialogueUIController.GenerateChoiceBubblePrefab(choices.Count());
+        for(int i = 0; i < choices.Count; i++)
         {
-            float relativeXdisplacment = (Camera.main.pixelWidth / 2.0f - speakerScreenPosition.x) / Camera.main.pixelWidth;
-            float relativeYdisplacment = (Camera.main.pixelHeight / 2.0f - speakerScreenPosition.y) / Camera.main.pixelHeight + 0.1f; // The dialogue should always be in the upper portion of the screen 
-            float relativeZdisplacment = 1.0f;
-
-            Vector3 displacementVector = new Vector3(relativeXdisplacment, relativeYdisplacment, relativeZdisplacment);
-            
-            DialogueBubble speechBubble = DialogueUIController.GenerateSpeechBubblePrefab();
-            //speechBubble.SetDialogueBubbleContent(choice);
-            speechBubbles.Add(speechBubble);
-
-            DialogueUIController.DeploySpeechBubbleAt(speechBubble, speakerPosition, displacementVector);
+            ChoiceLineContent content = choices[i];
+            choiceBubble.choicePanels[i].SetChoicePanelContent(content);
         }
 
-        //StartCoroutine(animateLogs(lineNumber));
+        dialogueBubbles.Add(choiceBubble);
+
+        DialogueUIController.DeployDialogueBubbleAt(choiceBubble, speakerPosition, displacementVector);
+
+        StartCoroutine(toggleChoices(line, choiceBubble));
+        StartCoroutine(animateLogs(lineNumber));
     }
 
     //Displays the a speech bubble according to its text and position in the overall dialogue
@@ -100,24 +106,46 @@ public class DialogueBubbleUI : MonoBehaviour
 
         float relativeXdisplacment = (Camera.main.pixelWidth / 2.0f - speakerScreenPosition.x) / Camera.main.pixelWidth;
         float relativeYdisplacment = (Camera.main.pixelHeight / 2.0f - speakerScreenPosition.y) / Camera.main.pixelHeight + 0.1f; // The dialogue should always be in the upper portion of the screen 
-
         Vector2 displacementVector = new Vector2(relativeXdisplacment, relativeYdisplacment);
 
         // *(offscreen dialogue we will need to handle seperately)
-        DialogueBubble speechBubble = DialogueUIController.GenerateSpeechBubblePrefab();
+        SpeechBubble speechBubble = DialogueUIController.GenerateSpeechBubblePrefab();
         speechBubble.SetDialogueBubbleContent(speakingLineContent);
-        speechBubbles.Add(speechBubble);
+        dialogueBubbles.Add(speechBubble);
 
-        DialogueUIController.DeploySpeechBubbleAt(speechBubble, speakerPosition, displacementVector);
+        DialogueUIController.DeployDialogueBubbleAt(speechBubble, speakerPosition, displacementVector);
 
         StartCoroutine(animateLogs(lineNumber));
+    }
+
+    // kinda hacky crap aaa
+    public IEnumerator toggleChoices(ChoiceLine choiceLine, ChoiceBubble choiceBubble)
+    {
+        while(!ready)
+        {
+            InputDirection dir = Controls.getInputDirectionDown();
+            if (dir == InputDirection.N)
+            {
+                choiceLine.PreviousOption();
+                choiceBubble.UpdateOption(choiceLine.GetOptionIndex());
+            }
+            else if (dir == InputDirection.S)
+            {
+                choiceLine.NextOption();
+                choiceBubble.UpdateOption(choiceLine.GetOptionIndex());
+            }
+            yield return null;
+        }
     }
 
     //Automatically animates the logs to the current state of the underlying dialogue data structure
     public IEnumerator animateLogs(int targetLineNumber)
     {
-        Debug.Log(targetLineNumber);
-        Debug.Log(currentLineNumber);
+        // a bunch of the log advance/roll backwards stuff just isn't going to work with the current branching choice system
+        // hacking it out so we always are looking at the latest dialogue
+        currentLineNumber = dialogueBubbles.Count - 2;
+        targetLineNumber = dialogueBubbles.Count - 1;
+
         if (currentLineNumber != targetLineNumber)
         {
             int offset = targetLineNumber - currentLineNumber;
@@ -129,9 +157,9 @@ public class DialogueBubbleUI : MonoBehaviour
             while (logTweenTime > 0)
             {
                 logTweenTime -= Time.deltaTime;
-                for (int i = 0; i < speechBubbles.Count; i++)
+                for (int i = 0; i < dialogueBubbles.Count; i++)
                 {
-                    DialogueBubble animatedSpeechBubble = speechBubbles[i];
+                    DialogueBubble animatedSpeechBubble = dialogueBubbles[i];
                     if(offset > 0)
                     {
                         if (targetLineNumber - offset <= i && i < targetLineNumber)
@@ -143,12 +171,14 @@ public class DialogueBubbleUI : MonoBehaviour
                             animatedSpeechBubble.transform.position -= (Vector3.right * randomSeedsX[i] + Vector3.up * randomSeedsY[i]) * delta;
                     }
                     if (targetLineNumber - onScreenSpeechBubbleLimit < i && i <= targetLineNumber)
-                        DialogueUIController.DeploySpeechBubble(animatedSpeechBubble);
-                    if (i <= targetLineNumber - onScreenSpeechBubbleLimit)
-                        DialogueUIController.HideSpeechBubble(animatedSpeechBubble);
-                    if (i > targetLineNumber)
-                        DialogueUIController.HideSpeechBubble(animatedSpeechBubble);
-                    if (i == targetLineNumber)
+                        DialogueUIController.DeployDialogueBubble(animatedSpeechBubble);
+                    // a bunch of the log advance/roll backwards stuff just isn't going to work with the current branching choice system, commenting out for now
+                    //if (i <= targetLineNumber - onScreenSpeechBubbleLimit)
+                    //    DialogueUIController.HideDialogueBubble(animatedSpeechBubble);
+                    //if (i > targetLineNumber)
+                    //    DialogueUIController.HideDialogueBubble(animatedSpeechBubble);
+                    //if (i == targetLineNumber)
+                    if(i == dialogueBubbles.Count - 1)
                         animatedSpeechBubble.Focus();
                     int currentPosition = Mathf.Clamp(currentLineNumber - i, 0, onScreenSpeechBubbleLimit);
                     int targetPosition = Mathf.Clamp(targetLineNumber - i, 0, onScreenSpeechBubbleLimit);
@@ -156,16 +186,19 @@ public class DialogueBubbleUI : MonoBehaviour
                 }
                 yield return null;
             }
-            for (int i = 0; i < speechBubbles.Count; i++)
+            for (int i = 0; i < dialogueBubbles.Count; i++)
             {
                 if (i != targetLineNumber)
-                    speechBubbles[i].Blur();
+                    dialogueBubbles[i].Blur();
             }
             currentLineNumber = targetLineNumber;
         }
         yield return new WaitForSeconds(0.2f);
         while (!Controls.confirmInputDown())
+        {
             yield return null;
+        }
+
         ready = true;
     }
 }

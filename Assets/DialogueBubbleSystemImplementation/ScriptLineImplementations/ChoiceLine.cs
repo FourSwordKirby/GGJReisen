@@ -5,25 +5,54 @@ using System;
 
 public class ChoiceLine : ScriptLine
 {
+    string speaker;
     DialogueAnimator speakerAnimator;
-    public string chosenOption;
 
     public List<ChoiceLineContent> dialogueChoices;
+    private int chosenOptionIndex = 0;
 
-    public ChoiceLine(List<ChoiceLineContent> choices)
+    public ChoiceLine(string speaker, List<ChoiceLineContent> choices)
     {
         dialogueChoices = choices;
 
         // very per game specific stuff, only the player can change have the choice dialogue appear over them
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        speakerAnimator = player.GetComponent<DialogueAnimator>();
+        try
+        {
+            // very per game specific stuff
+            speakerAnimator = GameObject.Find(speaker).GetComponent<DialogueAnimator>();
+        }
+        catch (Exception e)
+        {
+            Debug.Log("attempted speaker is " + speaker);
+            throw e;
+        }
+
     }
 
-    public static ChoiceLine GenerateChoiceLine(List<ChoiceLineContent> choices)
+    public static ChoiceLine GenerateChoiceLine(string speaker, List<ChoiceLineContent> choices)
     {
-        ChoiceLine line = new ChoiceLine(choices);
+        ChoiceLine line = new ChoiceLine(speaker, choices);
 
         return line;
+    }
+
+    public void NextOption()
+    {
+        chosenOptionIndex++;
+        if (chosenOptionIndex >= dialogueChoices.Count)
+            chosenOptionIndex = 0;
+    }
+
+    public void PreviousOption()
+    {
+        chosenOptionIndex--;
+        if (chosenOptionIndex < 0)
+            chosenOptionIndex = dialogueChoices.Count - 1;
+    }
+
+    public int GetOptionIndex()
+    {
+        return chosenOptionIndex;
     }
 
     //Change this based on the game implementation
@@ -31,7 +60,7 @@ public class ChoiceLine : ScriptLine
     {
         Vector3 speakerPosition = speakerAnimator.getSpeechOrigin();
 
-        DialogueBubbleUI.instance.DisplayChoices(dialogueChoices, speakerPosition);
+        DialogueBubbleUI.instance.DisplayChoices(this, speakerPosition);
     }
 
     public override bool IsFinished()
@@ -46,36 +75,30 @@ public class ChoiceLine : ScriptLine
 
     public override ScriptLine GetPreviousLine()
     {
-        throw new System.NotImplementedException();
+        return null;
     }
 
     public override ScriptLine GetNextLine()
     {
-        throw new System.NotImplementedException();
+        Debug.Log(dialogueChoices[chosenOptionIndex].jumpLine.lineLabel);
+        return dialogueChoices[chosenOptionIndex].jumpLine;
     }
 
-    //public static ExpressionLine CreateInstructionLine(string instruction)
-    //{
-    //    ExpressionLine line = new ExpressionLine(instruction);
+    internal void InitJumps(Dictionary<string, ScriptLine> labeledLines)
+    {
+        List<ChoiceLineContent> reInitDialogueChoices = new List<ChoiceLineContent>();
 
-    //    return line;
-    //}
+        for (int i = 0; i < dialogueChoices.Count; i++)
+        {
+            ChoiceLineContent choice = dialogueChoices[i];
+            string jumpLabel = choice.jumpLabel;
+            if (labeledLines[jumpLabel] == null)
+                throw new Exception("line wasn't tagged in this dialogue");
+            else
+                choice.jumpLine = labeledLines[jumpLabel];
+            reInitDialogueChoices.Add(choice);
+        }
 
-    ////Change this based on the game implementation
-    //public override void PerformLine()
-    //{
-    //    // very per game specific stuff
-    //    GameObject player = GameObject.FindGameObjectWithTag("Player");
-    //    player.GetComponent<CharacterDialogueAnimator>().changeExpression(desiredExpression);
-    //}
-
-    //public override bool IsFinished()
-    //{
-    //    return true;
-    //}
-
-    //public override DialogueEngine.LineType GetLineType()
-    //{
-    //    return DialogueEngine.LineType.SpeakingLine;
-    //}
+        dialogueChoices = reInitDialogueChoices;
+    }
 }

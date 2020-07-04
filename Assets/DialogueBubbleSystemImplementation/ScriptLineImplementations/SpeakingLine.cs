@@ -47,13 +47,14 @@ public class SpeakingLine : ScriptLine
         return DialogueEngine.LineType.SpeakingLine;
     }
 
+    // hacky implementation that relies on the overarching dialogue object incrementing and decrementing properly
     public override ScriptLine GetPreviousLine()
     {
-        throw new System.NotImplementedException();
+        return null;
     }
 
     public override ScriptLine GetNextLine()
     {
-        throw new System.NotImplementedException();
+        return nextLine;
     }
 }

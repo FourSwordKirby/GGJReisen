@@ -6,10 +6,9 @@ using UnityEngine;
 
 public class DialogueBubble : MonoBehaviour, IDialogueBubble
 {
-    public bool loggable;
+    public bool loggable = true;
 
     public MeshRenderer textFrame;
-    public TextMeshPro textMesh;
     public Animator animator;
 
     public Transform anchorPoint;
@@ -26,7 +25,7 @@ public class DialogueBubble : MonoBehaviour, IDialogueBubble
     //in the future we want it to display based on any number of relative positions.
     //at the very least, it should make sure that it is visible on camera and can be positioned over
     //the center of the relevant character
-    public void DeployAt(Vector3 speakerPosition, Vector3 displacementVector)
+    public virtual void DeployAt(Vector3 speakerPosition, Vector3 displacementVector)
     {
         Show();
 
@@ -39,38 +38,33 @@ public class DialogueBubble : MonoBehaviour, IDialogueBubble
         }
     }
 
-    public void Show()
+    public virtual void Show()
     {
         animator.SetBool("Deployed", true);
     }
 
-    public void Focus()
+    public virtual void Focus()
     {
         textFrame.material.color = focusColor;
     }
 
-    public void Blur()
+    public virtual void Blur()
     {
         textFrame.material.color = blurColor;
     }
 
-    public void Hide()
+    public virtual void Hide()
     {
         animator.SetBool("Deployed", false);
     }
 
-    public void SetDialogueBubbleContent(SpeakingLineContent content)
-    {
-        textMesh.text = content.lineText;
-    }
-
-    public void Cleanup()
+    public virtual void Cleanup()
     {
         if (!loggable)
             Destroy();
     }
 
-    public void Destroy()
+    public virtual void Destroy()
     {
         Destroy(this.gameObject);
     }

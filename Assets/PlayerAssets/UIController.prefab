@@ -48,6 +48,8 @@ MonoBehaviour:
     type: 3}
   speechPromptPrefab: {fileID: 2446626285042191379, guid: ad101fde4dc33e64e80c5fde64075587,
     type: 3}
+  speechChoicePrefab: {fileID: 5286151866013731307, guid: b398e83519e7aa643bfe03e7af4b7b10,
+    type: 3}
 --- !u!114 &5784740384473856020
 MonoBehaviour:
   m_ObjectHideFlags: 0

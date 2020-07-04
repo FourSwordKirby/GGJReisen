@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
+using System;
 
 public abstract class ScriptLine
 {
@@ -15,7 +16,27 @@ public abstract class ScriptLine
     /// <summary>
     /// Used for navigating a dialogue tree when navigating dialogue
     /// </summary>
-    public readonly string lineLabel;
+    public string lineLabel;
+
+    /// <summary>
+    /// Used for navigating a dialogue tree when navigating dialogue
+    /// </summary>
+    public string jumpLabel;
+
+    /// <summary>
+    /// Used for navigating a dialogue tree when navigating dialogue
+    /// </summary>
+    public ScriptLine previousLine;
+
+    /// <summary>
+    /// Used for navigating a dialogue tree when navigating dialogue
+    /// </summary>
+    public ScriptLine nextLine;
+
+    /// <summary>
+    /// Used for identifying the line it's on
+    /// </summary>
+    public int lineNumber;
 
     public ScriptLine(string label = "")
     {
@@ -42,11 +63,13 @@ public struct ChoiceLineContent
     public string lineText;
     public int lineNumber;
     public string jumpLabel;
+    public ScriptLine jumpLine;
 
-    public ChoiceLineContent(string speaker, string lineText, int lineNumber, string jumpLabel)
+    public ChoiceLineContent(string speaker, string lineText, int lineNumber, string jumpLabel, ScriptLine jumpLine = null)
     {
         this.lineText = lineText;
         this.lineNumber = lineNumber;
         this.jumpLabel = jumpLabel;
+        this.jumpLine = jumpLine;
     }
 }

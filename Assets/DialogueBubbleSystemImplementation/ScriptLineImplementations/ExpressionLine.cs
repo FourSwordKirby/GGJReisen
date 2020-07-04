@@ -5,16 +5,18 @@ using System;
 
 public class ExpressionLine : ScriptLine
 {
+    string speaker;
     CharacterExpression desiredExpression;
 
-    public ExpressionLine(CharacterExpression expression)
+    public ExpressionLine(string speaker, CharacterExpression expression)
     {
+        this.speaker = speaker;
         desiredExpression = expression;
     }
 
-    public static ExpressionLine CreateInstructionLine(CharacterExpression expression)
+    public static ExpressionLine CreateInstructionLine(string speaker, CharacterExpression expression)
     {
-        ExpressionLine line = new ExpressionLine(expression);
+        ExpressionLine line = new ExpressionLine(speaker, expression);
 
         return line;
     }
@@ -22,9 +24,17 @@ public class ExpressionLine : ScriptLine
     //Change this based on the game implementation
     public override void PerformLine()
     {
-        // very per game specific stuff, only the player can change expressions at the moment
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        player.GetComponent<CharacterDialogueAnimator>().changeExpression(desiredExpression);
+        try
+        {
+            // very per game specific stuff
+            CharacterDialogueAnimator speakerAnimator = GameObject.Find(speaker).GetComponent<CharacterDialogueAnimator>();
+            speakerAnimator.changeExpression(desiredExpression);
+        }
+        catch (Exception e)
+        {
+            Debug.Log("attempted speaker is " + speaker);
+            throw e;
+        }
     }
 
     public override bool IsFinished()
@@ -37,13 +47,14 @@ public class ExpressionLine : ScriptLine
         return DialogueEngine.LineType.SpeakingLine;
     }
 
+    // hacky implementation that relies on the overarching dialogue object incrementing and decrementing properly
     public override ScriptLine GetPreviousLine()
     {
-        throw new System.NotImplementedException();
+        return null;
     }
 
     public override ScriptLine GetNextLine()
     {
-        throw new System.NotImplementedException();
+        return nextLine;
     }
 }

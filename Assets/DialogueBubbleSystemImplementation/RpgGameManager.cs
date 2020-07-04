@@ -94,11 +94,11 @@ public class RpgGameManager : MonoBehaviour
     //hacky gameplay pause implementation because hackathon
     private void ConversationPause()
     {
-        //PauseGameplay();
+        PauseGameplay();
     }
     private void ConversationUnpause()
     {
-        //ResumeGameplay();
+        ResumeGameplay();
     }
 
     // Dependent on external player class
