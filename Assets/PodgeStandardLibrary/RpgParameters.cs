@@ -2,7 +2,7 @@
 using System.Collections;
 
 //Enums for various player things
-public enum CharacterExpressions
+public enum CharacterExpression
 {
     normal = 0,
     smile = 1,

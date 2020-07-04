@@ -4,23 +4,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class DialogueBubble : MonoBehaviour, IDialogueBubble
+/*
+public class ChoiceDialogueBubble : DialogueBubble
 {
-    public bool loggable;
-
-    public MeshRenderer textFrame;
-    public TextMeshPro textMesh;
-    public Animator animator;
-
-    public Transform anchorPoint;
-    public float displayModifier;
-    public Color focusColor;
-    public Color blurColor;
-
-    private void Start()
-    {
-        animator.speed = displayModifier == 0 ? 1 : displayModifier;
-    }
+    public List<DialogueBubble> choices;
 
     //currently the bubble only displays facing left or right depending on the argument
     //in the future we want it to display based on any number of relative positions.
@@ -75,3 +62,4 @@ public class DialogueBubble : MonoBehaviour, IDialogueBubble
         Destroy(this.gameObject);
     }
 }
+*/

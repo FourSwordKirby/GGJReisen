@@ -19,7 +19,7 @@ public class CharacterDialogueAnimator : DialogueAnimator
         animator.SetBool("Talking", false);
     }
 
-    public void changeExpression(CharacterExpressions expression)
+    public void changeExpression(CharacterExpression expression)
     {
         expressionAnimator.changeExpression(expression);
     }

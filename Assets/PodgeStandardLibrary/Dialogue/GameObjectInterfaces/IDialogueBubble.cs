@@ -7,7 +7,7 @@ using UnityEngine;
 public interface IDialogueBubble
 {
     void SetDialogueBubbleContent(SpeakingLineContent content);
-    void DeployAt(Vector3 speakerPosition, Vector2 displacementVector);
+    void DeployAt(Vector3 speakerPosition, Vector3 displacementVector);
 
     void Show();
     void Hide();

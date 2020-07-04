@@ -12,9 +12,9 @@ public class CharacterExpressionAnimator : MonoBehaviour
     public List<Texture2D> expressions;
     public List<Sprite> expressionSprites;
 
-    public CharacterExpressions? targetExpression = null;
+    public CharacterExpression? targetExpression = null;
 
-    public void changeExpression(CharacterExpressions expression)
+    public void changeExpression(CharacterExpression expression)
     {
         targetExpression = expression;
         animator.SetTrigger("NormalExpression");
