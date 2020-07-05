@@ -16,6 +16,8 @@ public class ReisenGameManager : MonoBehaviour
             instance = this;
         else if (this != instance)
             Destroy(this.gameObject);
+
+        InitSceneState();
     }
 
     private void Update()
@@ -24,15 +26,29 @@ public class ReisenGameManager : MonoBehaviour
         {
             if(Controls.pauseInputDown())
             {
-                StartPauseProcess();
+                StartGamePauseProcess();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+            InitSceneState();
     }
 
-    public void StartPauseProcess()
+    public void InitSceneState()
+    {
+        // bunch of bad game specific object goes here
+        GameObject Kosuzu = GameObject.Find("Kosuzu");
+        if (Kosuzu != null)
+            Kosuzu.GetComponent<Npc>().InitNpcState(gameProgress.Kosuzu);
+    }
+
+    public void StartGamePauseProcess()
     {
         StartLoadProcess();
     }
+
+
+
 
     public void StartLoadProcess()
     {
@@ -48,7 +64,6 @@ public class ReisenGameManager : MonoBehaviour
 
         RpgGameManager.instance.PauseGameplay();
     }
-
 
     public void EndSaveProcess()
     {

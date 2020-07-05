@@ -14,6 +14,8 @@ public class SpeakingLine : ScriptLine
         {
             // very per game specific stuff
             speakerAnimator = GameObject.Find(speaker).GetComponent<DialogueAnimator>();
+            if(speakerAnimator == null)
+                speakerAnimator = GameObject.Find(speaker).GetComponentInChildren<DialogueAnimator>();
         }
         catch(Exception e)
         {
