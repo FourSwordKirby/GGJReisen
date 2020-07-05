@@ -19,11 +19,6 @@ public class RpgGameManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     public void StartConversation(TextAsset dialogue, Vector3 speakerPosition, Transform cameraPosition = null, AfterDialogueEvent afterEvent = null)
     {
         DialogueEngine.InitializeGenerators(SpeakingLine.CreateSpeakingLine, ExpressionLine.CreateInstructionLine, ChoiceLine.GenerateChoiceLine);
