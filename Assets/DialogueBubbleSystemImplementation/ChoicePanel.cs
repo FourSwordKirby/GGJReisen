@@ -10,32 +10,40 @@ public class ChoicePanel : MonoBehaviour
     public TextMeshPro textMesh;
     public Animator animator;
 
-    public Color focusColor;
-    public Color blurColor;
+    public Color whitebackground;
+    public Color greybackground;
+
+    public bool ChoiceBubbleInFocus;
 
     // add animations for choices flipping to active and inactive etc.
 
     public void Show()
     {
-        animator.SetBool("Deployed", true);
+        //animator.SetBool("Deployed", true);
     }
 
     public void Focus()
     {
-        textFrame.material.color = focusColor;
+        if(ChoiceBubbleInFocus)
+            textFrame.material.color = greybackground;
+        else
+            textFrame.material.color = whitebackground;
     }
 
     public void Blur()
     {
-        textFrame.material.color = blurColor;
+        if (ChoiceBubbleInFocus)
+            textFrame.material.color = whitebackground;
+        else
+            textFrame.material.color = greybackground;
     }
 
     public void Hide()
     {
-        animator.SetBool("Deployed", false);
+        //animator.SetBool("Deployed", false);
     }
 
-    public void SetChoicePanelContent(ChoiceLineContent content)
+    public void SetChoicePanelContent(ChoiceLineContent content)  
     {
         textMesh.text = content.lineText;
     }
