@@ -77,6 +77,10 @@ public class DialoguePromptTrigger : MonoBehaviour
     private void hideDialogue()
     {
         postDialogueEvent?.Invoke();
+
+        // Bad game specific hack that should get addressed somehwere else
+        ReisenGameManager.instance.InitSceneState();
+
         dialogueActive = false;
         if(!forceDialogueOnEnter)
             displayPrompt(Vector3.zero);
@@ -102,6 +106,10 @@ public class DialoguePromptTrigger : MonoBehaviour
     private void destroy()
     {
         postDialogueEvent?.Invoke();
+
+        // Bad game specific hack that should get addressed somehwere else
+        ReisenGameManager.instance.InitSceneState();
+
         Destroy(gameObject.transform.parent.gameObject);
     }
 }

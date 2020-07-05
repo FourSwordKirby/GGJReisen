@@ -9,24 +9,10 @@ public class ReisenSavePointInteractable : MonoBehaviour
     public Transform spawnTransform;
     public ReisenSavePoint savePoint;
 
-    public const string saveFileName1 = "Waning Moon";
-    public const string saveFileName2 = "Half Moon";
-    public const string saveFileName3 = "Waxing Moon";
-
     public void Awake()
     {
         savePoint.sceneName = SceneManager.GetActiveScene().name;
         savePoint.spawnLocation = spawnTransform.position;
-    }
-
-    public void Update()
-    {
-        Debug.Log("clean this part up");
-
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-            ReisenGameManager.instance.SaveGame("test", savePoint);
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-            ReisenGameManager.instance.LoadGame("test");
     }
 
     public void SaveGame(string saveFileName)

@@ -43,18 +43,29 @@ public class Shard
     }
 }
 
+
 [Serializable]
-public class KeineProgress
+public class KeineProgress: CharacterProgress
 {
     public int Stage;
     public int ElixirUsed;
+
+    public int GetStage()
+    {
+        return Stage;
+    }
 }
 
 [Serializable]
-public class KosuzuProgress
+public class KosuzuProgress : CharacterProgress
 {
     public int Stage;
     public int ElixirUsed;
+
+    public int GetStage()
+    {
+        return Stage;
+    }
 }
 
 [Serializable]
@@ -89,11 +100,22 @@ public class PlayerProgress
 }
 
 [Serializable]
-public class ReisenGameProgress
+public class ReisenGameProgress: GameProgress
 {
     public ReisenSavePoint savePoint;
 
     public PlayerProgress Player;
     public KeineProgress Keine;
     public KosuzuProgress Kosuzu;
+}
+
+
+// Interfaces to leverage for later
+public interface CharacterProgress
+{
+    int GetStage();
+}
+
+public interface GameProgress
+{
 }
