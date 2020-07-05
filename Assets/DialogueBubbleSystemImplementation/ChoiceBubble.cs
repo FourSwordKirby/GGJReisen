@@ -38,6 +38,7 @@ public class ChoiceBubble : DialogueBubble
         for(int i = 0; i < choicePanels.Count; i++)
         {
             ChoicePanel panel = choicePanels[i];
+            panel.ChoiceBubbleInFocus = true;
             panel.Show();
             if(i == chosenOptionIndex)
                 panel.Focus();
@@ -53,11 +54,17 @@ public class ChoiceBubble : DialogueBubble
         for (int i = 0; i < choicePanels.Count; i++)
         {
             ChoicePanel panel = choicePanels[i];
-            panel.Blur();
+            panel.ChoiceBubbleInFocus = false;
             if (i == chosenOptionIndex)
+            {
                 panel.Show();
+                panel.Focus();
+            }
             else
+            {
+                panel.Blur();
                 panel.Hide();
+            }
         }
     }
 
