@@ -18,6 +18,45 @@ public class ReisenGameManager : MonoBehaviour
             Destroy(this.gameObject);
     }
 
+    private void Update()
+    {
+        if(!RpgGameManager.instance.Paused)
+        {
+            if(Controls.pauseInputDown())
+            {
+                StartPauseProcess();
+            }
+        }
+    }
+
+    public void StartPauseProcess()
+    {
+        StartLoadProcess();
+    }
+
+    public void StartLoadProcess()
+    {
+        SaveUI.instance.Show(SavePanelMode.Loading);
+
+        RpgGameManager.instance.PauseGameplay();
+    }
+
+    public void StartSaveProcess(ReisenSavePoint savePoint)
+    {
+        SaveUI.instance.currentSavePoint = savePoint;
+        SaveUI.instance.Show(SavePanelMode.Saving);
+
+        RpgGameManager.instance.PauseGameplay();
+    }
+
+
+    public void EndSaveProcess()
+    {
+        SaveUI.instance.Hide();
+
+        RpgGameManager.instance.ResumeGameplay();
+    }
+
     public void SaveGame(string saveName, ReisenSavePoint savePoint)
     {
         gameProgress.savePoint = savePoint;
@@ -27,7 +66,7 @@ public class ReisenGameManager : MonoBehaviour
 
     public void LoadGame(string saveName)
     {
-        gameProgress = SaveManager.LoadGame(saveName);
+        gameProgress = SaveManager.FetchGameProgress(saveName);
         SceneManager.LoadScene(gameProgress.savePoint.sceneName);
 
         gameProgress.savePoint.SpawnPlayer(player);

@@ -21,6 +21,8 @@ public class ReisenSavePointInteractable : MonoBehaviour
 
     public void Update()
     {
+        Debug.Log("clean this part up");
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
             ReisenGameManager.instance.SaveGame("test", savePoint);
         else if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -30,6 +32,11 @@ public class ReisenSavePointInteractable : MonoBehaviour
     public void SaveGame(string saveFileName)
     {
         ReisenGameManager.instance.SaveGame(saveFileName, savePoint);
+    }
+
+    public void StartSaveProcess()
+    {
+        ReisenGameManager.instance.StartSaveProcess(savePoint);
     }
 
     public void TestEvent(string message)
@@ -42,6 +49,7 @@ public class ReisenSavePointInteractable : MonoBehaviour
 public class ReisenSavePoint
 {
     public string sceneName;
+    public string locationName;
     public Vector3 spawnLocation;
 
     public void SpawnPlayer(GameObject player)
