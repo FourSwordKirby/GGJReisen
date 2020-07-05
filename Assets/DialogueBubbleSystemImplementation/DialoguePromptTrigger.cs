@@ -12,8 +12,9 @@ public class DialoguePromptTrigger : MonoBehaviour
     public Transform promptPosition;
     public Transform cameraPosition;
 
+    public UnityEvent postDialogueEvent;
 
-    public UnityEvent questEvent;
+    public List<DialogueInstruction> dialogueInstructions; 
 
     private Vector3 triggerEnteredPosition;
     private bool dialogueActive;
@@ -58,14 +59,14 @@ public class DialoguePromptTrigger : MonoBehaviour
         Vector3 speakerPosition = transform.position;
 
         if (repeatingDialogue)
-            RpgGameManager.instance.StartConversation(dialogue, speakerPosition, cameraPosition, hideDialogue);
+            RpgGameManager.instance.StartConversation(dialogue, speakerPosition, cameraPosition, hideDialogue, dialogueInstructions);
         else
-            RpgGameManager.instance.StartConversation(dialogue, speakerPosition, cameraPosition, destroy);
+            RpgGameManager.instance.StartConversation(dialogue, speakerPosition, cameraPosition, destroy, dialogueInstructions);
     }
     
     private void hideDialogue()
     {
-        questEvent?.Invoke();
+        postDialogueEvent?.Invoke();
         dialogueActive = false;
         if(!forceDialogueOnEnter)
             displayPrompt(Vector3.zero);
@@ -90,7 +91,7 @@ public class DialoguePromptTrigger : MonoBehaviour
 
     private void destroy()
     {
-        questEvent?.Invoke();
+        postDialogueEvent?.Invoke();
         Destroy(gameObject.transform.parent.gameObject);
     }
 }
