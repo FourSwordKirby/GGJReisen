@@ -32,6 +32,8 @@ public class SpeakingLine : ScriptLine
     //Change this based on the game implementation
     public override void PerformLine()
     {
+        if (content.lineText == "")
+            return;
         Vector3 speakerPosition = speakerAnimator.getSpeechOrigin();
 
         DialogueBubbleUI.instance.DisplaySpeechBubble(content, speakerPosition);

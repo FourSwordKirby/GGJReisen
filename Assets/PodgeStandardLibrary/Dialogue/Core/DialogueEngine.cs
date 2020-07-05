@@ -8,6 +8,7 @@ using System.Text.RegularExpressions;
 public delegate ScriptLine SpeakingLineGenerator(string speaker, string lineText, int lineNumber);
 public delegate ScriptLine ExpressionLineGenerator(string speaker, CharacterExpression expression);
 public delegate ScriptLine ChoiceLineGenerator(string speaker, List<ChoiceLineContent> choices);
+public delegate ScriptLine InstructionLineGenerator(DialogueInstruction instruction);
 
 
 public class DialogueEngine
@@ -15,17 +16,20 @@ public class DialogueEngine
     public static SpeakingLineGenerator GenerateSpeakingLine;
     public static ExpressionLineGenerator GenerateExperssionLine;
     public static ChoiceLineGenerator GenerateChoiceLine;
+    public static InstructionLineGenerator GenerateInstructionLine;
     static bool initialized;
 
-    public static void InitializeGenerators(SpeakingLineGenerator speakingLineGenerator, ExpressionLineGenerator instructionLineGenerator, ChoiceLineGenerator choiceLineGenerator)
+    public static void InitializeGenerators(SpeakingLineGenerator speakingLineGenerator, ExpressionLineGenerator expressionLineGenerator,
+                                            ChoiceLineGenerator choiceLineGenerator, InstructionLineGenerator instructionLineGenerator)
     {
         GenerateSpeakingLine = speakingLineGenerator;
-        GenerateExperssionLine = instructionLineGenerator;
+        GenerateExperssionLine = expressionLineGenerator;
         GenerateChoiceLine = choiceLineGenerator;
+        GenerateInstructionLine = instructionLineGenerator;
         initialized = true;
     }
 
-    public static List<ScriptLine> CreateDialogueComponents(string text)
+    public static List<ScriptLine> CreateDialogueComponents(string text, List<DialogueInstruction> AvailableInstructions = null)
     {
         if (!initialized)
             throw new Exception("InitializeGenerators not yet called");
@@ -77,6 +81,19 @@ public class DialogueEngine
                     List<ChoiceLineContent> choices = GetChoices(line, currentSpeaker, speakingLineNumber);
                     processedLine = GenerateChoiceLine(currentSpeaker, choices);
                     speakingLineNumber++;
+                    break;
+                case LineType.Instruction:
+                    if (AvailableInstructions != null)
+                    {
+                        line = GetInstructionName(line);
+                        DialogueInstruction instruction = AvailableInstructions.Find(x => x.name == line);
+                        if(instruction != null)
+                            processedLine = GenerateInstructionLine(instruction);
+                        else
+                            throw new Exception(string.Format("Instruction with name '{0}' not found", line));
+                    }
+                    else
+                        throw new Exception("No instructions provided");
                     break;
             }
 
@@ -148,6 +165,8 @@ public class DialogueEngine
             return LineType.Expression;
         else if (line.StartsWith("[choice]"))
             return LineType.Choice;
+        else if (line.StartsWith("[instruction]"))
+            return LineType.Instruction;
         else
             return LineType.SpeakingLine;
     }
@@ -187,7 +206,6 @@ public class DialogueEngine
 
         if (match.Success)
         {
-            Debug.Log(new string(match.Value.Reverse().ToArray()));
             return new string(match.Value.Reverse().ToArray());
         }
         else
@@ -211,7 +229,6 @@ public class DialogueEngine
 
         if (match.Success)
         {
-            Debug.Log(new string(match.Value.Reverse().ToArray()));
             return new string(match.Value.Reverse().ToArray());
         }
         else
@@ -258,10 +275,20 @@ public class DialogueEngine
         return dialogueChoices;
     }
 
+    public static string GetInstructionName(string line)
+    {
+        string[] dialoguePieces = line.Split(']');
+        if (dialoguePieces.Length > 1)
+            line = dialoguePieces[1];
+
+        return line.Trim();
+    }
+
     public enum LineType
     {
         SpeakingLine,
         Expression,
-        Choice
+        Choice,
+        Instruction
     }
 }
