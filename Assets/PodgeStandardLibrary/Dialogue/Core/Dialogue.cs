@@ -8,8 +8,10 @@ public class Dialogue
     List<ScriptLine> lines;
     public int currentPosition = -1;
 
+    const string END_LABEL = "end";
+
     private bool isFinished = false;
-    public bool IsFinished { get => currentPosition >= lines.Count - 1; }
+    public bool IsFinished { get => currentPosition >= lines.Count - 1 || (currentPosition > 0 && lines[currentPosition].jumpLabel == END_LABEL); }
 
     //temporary variables for getting this working with the current implementation
     public int speakingLineCount {
