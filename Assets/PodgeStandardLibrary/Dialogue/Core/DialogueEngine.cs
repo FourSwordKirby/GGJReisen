@@ -53,13 +53,15 @@ public class DialogueEngine
             else if (currentSpeaker == "")
                 Debug.LogWarning("Speaker not specified");
 
-            // processing labels
-            string label = GetLabel(line);
+            line = RemoveSpeaker(line);
 
             // processing jump statements
             string jump = GetJump(line);
+            line = RemoveJump(line);
 
-            line = RemoveMetaData(line);
+            // processing labels
+            string label = GetLabel(line);
+            line = RemoveLabel(line);
 
             switch (GetLineType(line))
             {
@@ -115,23 +117,29 @@ public class DialogueEngine
         return processedLines;
     }
 
-    private static string RemoveMetaData(string line)
+    private static string RemoveSpeaker(string line)
     {
         string[] dialoguePieces = line.Split(':');
-
         if (dialoguePieces.Length > 1)
             line = dialoguePieces[1];
 
+        return line.Trim();
+    }
+    private static string RemoveLabel(string line)
+    {
 
         string[] tagSplit = line.Split('{');
         if (tagSplit.Length > 1)
             line = tagSplit[0];
-
+        return line.Trim();
+    }
+    private static string RemoveJump(string line)
+    {
         string[] jumpSplit = line.Split('(');
         if (jumpSplit.Length > 1)
             line = jumpSplit[0];
 
-        return line;
+        return line.Trim();
     }
 
     static LineType GetLineType(string line)

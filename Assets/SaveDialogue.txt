@@ -1,0 +1,5 @@
+Player: Make an offering to save?
+[choice] [Yes | yes] [No | no]
+Your donation has been recieved {yes} (end)
+You opted not to donate {no}
+{end}
