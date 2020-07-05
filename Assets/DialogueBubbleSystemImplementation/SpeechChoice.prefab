@@ -24,7 +24,7 @@ MonoBehaviour:
   panelSpacing: 0.55
   panelOffset: 0.3
   panelZOffset: 0.1
-  activeChoiceIndex: 0
+  chosenOptionIndex: 0
   choicePanelPrefab: {fileID: 1933168996232153960, guid: 05f926a206bb43c4b8f86a95023bd69b,
     type: 3}
 --- !u!1001 &4303273389421341137
@@ -34,6 +34,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 575703631, guid: 6338e2a978e71cb4e929e5fe7fc312b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 575703631, guid: 6338e2a978e71cb4e929e5fe7fc312b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.72
+      objectReference: {fileID: 0}
     - target: {fileID: 1203477145, guid: 6338e2a978e71cb4e929e5fe7fc312b4, type: 3}
       propertyPath: loggable
       value: 1
