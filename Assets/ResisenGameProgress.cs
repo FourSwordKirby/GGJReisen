@@ -72,6 +72,8 @@ public enum Assignment
 [Serializable]
 public class PlayerProgress
 {
+    public string nameTag;
+
     public List<string> ShardsAcquired;
     public Assignment Elixir1;
     public Assignment Elixir2;
@@ -87,8 +89,10 @@ public class PlayerProgress
 }
 
 [Serializable]
-public class GameProgress
+public class ReisenGameProgress
 {
+    public ReisenSavePoint savePoint;
+
     public PlayerProgress Player;
     public KeineProgress Keine;
     public KosuzuProgress Kosuzu;

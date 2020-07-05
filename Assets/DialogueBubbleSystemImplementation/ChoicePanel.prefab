@@ -527,8 +527,9 @@ MonoBehaviour:
   textFrame: {fileID: 1933168996014943696}
   textMesh: {fileID: 1933168996042557856}
   animator: {fileID: 7673752865073444465}
-  focusColor: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
-  blurColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
+  whitebackground: {r: 1, g: 1, b: 1, a: 1}
+  greybackground: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
+  ChoiceBubbleInFocus: 0
 --- !u!95 &7673752865073444465
 Animator:
   serializedVersion: 3
