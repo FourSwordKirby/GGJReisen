@@ -50,6 +50,10 @@ public class DialogueEngine
 
             string line = rawLines[i];
 
+            // Dealing with commented out lines
+            if (line.StartsWith("//"))
+                continue;
+
             // processing current speaker
             string speaker = GetSpeaker(line);
             if (speaker != "")
