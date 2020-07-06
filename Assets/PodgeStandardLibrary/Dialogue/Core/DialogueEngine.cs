@@ -9,6 +9,7 @@ public delegate ScriptLine SpeakingLineGenerator(string speaker, string lineText
 public delegate ScriptLine ExpressionLineGenerator(string speaker, CharacterExpression expression);
 public delegate ScriptLine ChoiceLineGenerator(string speaker, List<ChoiceLineContent> choices);
 public delegate ScriptLine InstructionLineGenerator(DialogueInstruction instruction);
+public delegate bool LineChecker(List<string> conditions);
 
 
 public class DialogueEngine
@@ -17,15 +18,18 @@ public class DialogueEngine
     public static ExpressionLineGenerator GenerateExperssionLine;
     public static ChoiceLineGenerator GenerateChoiceLine;
     public static InstructionLineGenerator GenerateInstructionLine;
+    public static LineChecker IsLineValid;
     static bool initialized;
 
     public static void InitializeGenerators(SpeakingLineGenerator speakingLineGenerator, ExpressionLineGenerator expressionLineGenerator,
-                                            ChoiceLineGenerator choiceLineGenerator, InstructionLineGenerator instructionLineGenerator)
+                                            ChoiceLineGenerator choiceLineGenerator, InstructionLineGenerator instructionLineGenerator,
+                                            LineChecker isLineValid)
     {
         GenerateSpeakingLine = speakingLineGenerator;
         GenerateExperssionLine = expressionLineGenerator;
         GenerateChoiceLine = choiceLineGenerator;
         GenerateInstructionLine = instructionLineGenerator;
+        IsLineValid = isLineValid;
         initialized = true;
     }
 
@@ -70,6 +74,13 @@ public class DialogueEngine
             // processing labels
             string label = GetLabel(line);
             line = RemoveLabel(line);
+
+            // Checking if the line is valid based on what the game says
+            // This is mainly used to filter out statements which should appear/not appear based on the game
+            List<string> conditions = GetConditions(line);
+            if (!IsLineValid(conditions))
+                continue;
+            line = RemoveConditions(line);
 
             switch (GetLineType(line))
             {
@@ -138,6 +149,39 @@ public class DialogueEngine
         return processedLines;
     }
 
+    private static List<string> GetConditions(string line)
+    {
+        List<string> conditions = new List<string>();
+        if(line.StartsWith("?"))
+        {
+            MatchCollection matches = Regex.Matches(line, @"(?<=\+).+?(?=\-)");
+            // Use foreach-loop.
+            foreach (Match match in matches)
+            {
+                foreach (Capture capture in match.Captures)
+                {
+                    string condition = capture.Value;
+                    conditions.Add(condition);
+                }
+            }
+        }
+
+        Debug.Log(conditions.Count);
+        return conditions;
+    }
+
+    private static string RemoveConditions(string line)
+    {
+        if (line.StartsWith("?"))
+        {
+            line = Regex.Replace(line, @"\+.+?\-", "");
+            return line.Substring(1).Trim();
+        }
+        else
+            return line;
+    }
+
+
     private static string RemoveSpeaker(string line)
     {
         string[] dialoguePieces = line.Split(':');
@@ -148,7 +192,6 @@ public class DialogueEngine
     }
     private static string RemoveLabel(string line)
     {
-
         string[] tagSplit = line.Split('{');
         if (tagSplit.Length > 1)
             line = tagSplit[0];

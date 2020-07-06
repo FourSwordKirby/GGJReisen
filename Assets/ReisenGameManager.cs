@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -40,6 +41,14 @@ public class ReisenGameManager : MonoBehaviour
         GameObject Kosuzu = GameObject.Find("Kosuzu");
         if (Kosuzu != null)
             Kosuzu.GetComponent<Npc>().InitNpcState(gameProgress.Kosuzu);
+    }
+
+    //PARSE CONDITIONALS HERE
+    //really hacky
+    //Honestly this conditions satisfied logic being game specific is bad and can/should be adjusted qq
+    internal bool ConditionsSatisfied(List<string> conditions)
+    {
+        return true;
     }
 
     public void StartGamePauseProcess()
