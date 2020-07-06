@@ -622,13 +622,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loggable: 0
-  textFrame: {fileID: 8278851158902469303}
-  textMesh: {fileID: 8278851160514969811}
+  bubbleFrame: {fileID: 8278851158902469303}
   animator: {fileID: 6641911618477574343}
   anchorPoint: {fileID: 575703631}
   displayModifier: 0
   focusColor: {r: 1, g: 1, b: 1, a: 1}
   blurColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
+  bubbleType: 0
+  bubbleTypeMaterials:
+  - {fileID: 2100000, guid: c277f9d33f7ea144a933a81d8028977f, type: 2}
+  - {fileID: 2100000, guid: ffff89d78cb635348bd2bf6cc25a73a0, type: 2}
+  - {fileID: 2100000, guid: 2c5842ec335b1a347a8b65f4f46073e9, type: 2}
+  - {fileID: 2100000, guid: aa7cc3d082acdae4184323e39cf05843, type: 2}
+  - {fileID: 2100000, guid: 126b275dcf4232c4286d67852b72d675, type: 2}
 --- !u!95 &6641911618477574343
 Animator:
   serializedVersion: 3

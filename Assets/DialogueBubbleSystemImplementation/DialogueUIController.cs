@@ -59,16 +59,18 @@ public class DialogueUIController : MonoBehaviour
         dialogueBubble.Hide();
     }
 
-    public static SpeechBubble GenerateSpeechBubblePrefab()
+    public static SpeechBubble GenerateSpeechBubblePrefab(DialogueBubbleType type = DialogueBubbleType.Speech)
     {
         SpeechBubble speechBubble = Instantiate(staticSpeechBubblePrefab).GetComponent<SpeechBubble>();
+        speechBubble.SetDialogueBubbleType(type);
         speechBubble.gameObject.SetActive(false);
         return speechBubble;
     }
 
-    internal static ChoiceBubble GenerateChoiceBubblePrefab(int choiceCount)
+    internal static ChoiceBubble GenerateChoiceBubblePrefab(int choiceCount, DialogueBubbleType type = DialogueBubbleType.Thought)
     {
         ChoiceBubble choiceBubble = Instantiate(staticSpeechChoicePrefab).GetComponent<ChoiceBubble>();
+        choiceBubble.SetDialogueBubbleType(type);
         choiceBubble.Instantiate(choiceCount);
         choiceBubble.gameObject.SetActive(false);
         return choiceBubble;
