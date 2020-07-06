@@ -38,6 +38,11 @@ PrefabInstance:
       propertyPath: loggable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8278851158902469303, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c277f9d33f7ea144a933a81d8028977f, type: 2}
     - target: {fileID: 8278851160514969809, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
         type: 3}
       propertyPath: m_Mesh

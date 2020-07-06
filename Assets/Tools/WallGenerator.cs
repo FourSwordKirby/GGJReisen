@@ -11,7 +11,7 @@ public class WallGenerator : MonoBehaviour
     //PUBLIC INSPECTOR VARIABLES
     [SerializeField]
     public GameObject go_next_fence_post;
-
+    public Vector3 GizmoScale;
 
     //PRIVATE VARIABLES
 
@@ -28,6 +28,7 @@ public class WallGenerator : MonoBehaviour
 
     void Awake()
     {
+        transform.localScale = GizmoScale;
         //hide this fence post
         Destroy(GetComponent<MeshRenderer>());
 
@@ -80,11 +81,17 @@ public class WallGenerator : MonoBehaviour
 
             //make sure these doen't interfere with OnMouseOver
             gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+
         }
     }
 
     public void OnDrawGizmos()
     {
-        Gizmos.DrawCube(this.transform.position + Vector3.up*  2.0f, Vector3.one + Vector3.up * 3.0f);
+        Gizmos.color = Color.red;
+        Gizmos.DrawCube(this.transform.position, GizmoScale);// + Vector3.up * (this.transform.localScale.y - 1));
+
+        Gizmos.color = Color.yellow;
+        if(go_next_fence_post != null)
+            Gizmos.DrawLine(this.transform.position, this.go_next_fence_post.transform.position);
     }
 }
