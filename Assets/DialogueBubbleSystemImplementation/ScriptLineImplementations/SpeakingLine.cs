@@ -5,9 +5,22 @@ public class SpeakingLine : ScriptLine
 {
     SpeakingLineContent content;
     DialogueAnimator speakerAnimator;
+    public DialogueBubbleType type;
 
     public SpeakingLine(string speaker, string lineText, int lineNumber, string label = "" ): base(label)
     {
+        if (lineText.StartsWith("**"))
+            type = DialogueBubbleType.Thought;
+        if (lineText.StartsWith("^^"))
+            type = DialogueBubbleType.Exclamation;
+        if (lineText.StartsWith("~~"))
+            type = DialogueBubbleType.Whisper;
+        if (lineText.StartsWith("``"))
+            type = DialogueBubbleType.Weak;
+
+        if (lineText.StartsWith("**") || lineText.StartsWith("^^") || lineText.StartsWith("~~"))
+            lineText = lineText.Substring(2);
+
         content = new SpeakingLineContent(speaker, lineText, lineNumber);
 
         try
@@ -38,7 +51,7 @@ public class SpeakingLine : ScriptLine
             return;
         Vector3 speakerPosition = speakerAnimator.getSpeechOrigin();
 
-        DialogueBubbleUI.instance.DisplaySpeechBubble(content, speakerPosition);
+        DialogueBubbleUI.instance.DisplaySpeechBubble(content, speakerPosition, type);
     }
 
     public override bool IsFinished()

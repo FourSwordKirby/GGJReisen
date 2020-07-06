@@ -112,4 +112,10 @@ public class DialoguePromptTrigger : MonoBehaviour
 
         Destroy(gameObject.transform.parent.gameObject);
     }
+
+    public void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green - Color.black * 0.7f;
+        Gizmos.DrawCube(this.transform.position, this.transform.lossyScale);
+    }
 }
