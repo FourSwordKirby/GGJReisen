@@ -6,6 +6,7 @@ public class CharacterMovementAnimator : MonoBehaviour
 {
     public CharacterMovement movement;
     public Animator animator;
+    public float bobModifier = 1.0f;
 
     public ParticleSystem dashParticleSystem;
     public float emitSpeed;
@@ -17,7 +18,7 @@ public class CharacterMovementAnimator : MonoBehaviour
         Vector3 velocityVector = movement.selfBody.velocity;
         bool isGrounded = gameObject.transform.position.y <= 0.3f;//Temporary y-position check bc too lazy to implement proper ECB based isGrounded check
 
-        float speedModifier = velocityVector.magnitude / movement.walkVelocity;
+        float speedModifier = velocityVector.magnitude / movement.walkVelocity * bobModifier;
         float bobbingModifier = speedModifier * (isGrounded ? 1 : 0);
         float swayingModifier = Mathf.Abs(velocityVector.x) / Mathf.Max(velocityVector.magnitude, 1);
 

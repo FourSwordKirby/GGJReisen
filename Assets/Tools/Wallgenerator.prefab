@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   go_next_fence_post: {fileID: 0}
-  GizmoScale: {x: 0.2, y: 1, z: 0.2}
+  GizmoScale: {x: 0.2, y: 2, z: 0.2}
