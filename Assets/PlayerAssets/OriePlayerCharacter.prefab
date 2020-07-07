@@ -38,15 +38,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4624d6a9890e12244ad50e2049016744,
         type: 3}
+    - target: {fileID: 114192062918017170, guid: 8490386e6898afa4691cab39c01ca4bc,
+        type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 774379388031448544, guid: 8490386e6898afa4691cab39c01ca4bc,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b2af92364c2dd474aa7e8fd3b1630ccb, type: 2}
+    - target: {fileID: 2096589720270148038, guid: 8490386e6898afa4691cab39c01ca4bc,
+        type: 3}
+      propertyPath: bobModifier
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5530946660503106705, guid: 8490386e6898afa4691cab39c01ca4bc,
         type: 3}
       propertyPath: m_Name
-      value: OriePlayerCharacter
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5530946660503106705, guid: 8490386e6898afa4691cab39c01ca4bc,
         type: 3}
@@ -56,17 +66,17 @@ PrefabInstance:
     - target: {fileID: 6980949529970985255, guid: 8490386e6898afa4691cab39c01ca4bc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.6009965
+      value: -0.26
       objectReference: {fileID: 0}
     - target: {fileID: 6980949529970985255, guid: 8490386e6898afa4691cab39c01ca4bc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2312388
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6980949529970985255, guid: 8490386e6898afa4691cab39c01ca4bc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.751773
+      value: -3.7152026
       objectReference: {fileID: 0}
     - target: {fileID: 6980949529970985255, guid: 8490386e6898afa4691cab39c01ca4bc,
         type: 3}

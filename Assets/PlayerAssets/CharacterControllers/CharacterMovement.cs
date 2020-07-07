@@ -28,8 +28,8 @@ public class CharacterMovement : MonoBehaviour
         selfBody.velocity += (Vector3.right * movementVector.x + Vector3.forward * movementVector.y).normalized;
 
         Vector3 vel = selfBody.velocity;
-        vel.x = Mathf.Min(Mathf.Abs(vel.x), speed) * Mathf.Sign(vel.x);
-        vel.z = Mathf.Min(Mathf.Abs(vel.z), speed) * Mathf.Sign(vel.z);
+        vel.x = Mathf.Min(Mathf.Abs(vel.x), speed * Mathf.Cos(Mathf.Atan2(Mathf.Abs(vel.z), Mathf.Abs(vel.x)))) * Mathf.Sign(vel.x);
+        vel.z = Mathf.Min(Mathf.Abs(vel.z), speed * Mathf.Sin(Mathf.Atan2(Mathf.Abs(vel.z), Mathf.Abs(vel.x)))) * Mathf.Sign(vel.z);
         selfBody.velocity = vel;
 
         if (Controls.jumpInputDown() && isGrounded)
