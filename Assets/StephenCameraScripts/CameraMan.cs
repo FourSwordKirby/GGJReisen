@@ -36,6 +36,18 @@ public class CameraMan : MonoBehaviour
     public float TranslatationLerpFactor = .5f;
     public float RotationLerpFactor = .5f;
 
+    public static CameraMan instance;
+
+    public void Awake()
+    {
+        if (CameraMan.instance == null)
+        {
+            instance = this;
+        }
+        else if (this != instance)
+            Destroy(this.gameObject);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
