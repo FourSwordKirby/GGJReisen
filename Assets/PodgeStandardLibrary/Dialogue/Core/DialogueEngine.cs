@@ -64,7 +64,6 @@ public class DialogueEngine
                 currentSpeaker = speaker;
             else if (currentSpeaker == "")
                 Debug.LogWarning("Speaker not specified");
-
             line = RemoveSpeaker(line);
 
             // processing jump statements
@@ -139,7 +138,15 @@ public class DialogueEngine
                 case LineType.SpeakingLine:
                 case LineType.Expression:
                     if (!string.IsNullOrEmpty(processedLine.jumpLabel))
-                        processedLine.nextLine = labeledLines[processedLine.jumpLabel];
+                        try
+                        {
+                            processedLine.nextLine = labeledLines[processedLine.jumpLabel];
+                        }
+                        catch(Exception e)
+                        {
+                            Debug.Log(processedLine.jumpLabel);
+                            throw e;
+                        }
                     break;
                 case LineType.Choice:
                     ((ChoiceLine)processedLine).InitJumps(labeledLines);
@@ -154,7 +161,7 @@ public class DialogueEngine
         List<string> conditions = new List<string>();
         if(line.StartsWith("?"))
         {
-            MatchCollection matches = Regex.Matches(line, @"(?<=\+).+?(?=\-)");
+            MatchCollection matches = Regex.Matches(line, @"(?<=\{).+?(?=\})");
             // Use foreach-loop.
             foreach (Match match in matches)
             {
@@ -165,8 +172,6 @@ public class DialogueEngine
                 }
             }
         }
-
-        Debug.Log(conditions.Count);
         return conditions;
     }
 
@@ -174,7 +179,7 @@ public class DialogueEngine
     {
         if (line.StartsWith("?"))
         {
-            line = Regex.Replace(line, @"\+.+?\-", "");
+            line = Regex.Replace(line, @"\{.+?\}", "");
             return line.Substring(1).Trim();
         }
         else
@@ -192,10 +197,14 @@ public class DialogueEngine
     }
     private static string RemoveLabel(string line)
     {
-        string[] tagSplit = line.Split('{');
-        if (tagSplit.Length > 1)
-            line = tagSplit[0];
-        return line.Trim();
+        if (!line.Contains("["))
+            return line;
+
+        string newLine = line.Substring(0, line.LastIndexOf('['));
+        if (line.Substring(line.LastIndexOf("[")).Contains("|"))
+            return line;
+        else
+            return newLine.Trim();
     }
     private static string RemoveJump(string line)
     {
@@ -247,13 +256,16 @@ public class DialogueEngine
     /// <returns></returns>
     public static string GetLabel(string line)
     {
-        Regex regex = new Regex("(?<=^\\}).+?(?=\\{)");
+        Regex regex = new Regex("(?<=^\\]).+?(?=\\[)");
         // reverse a string to make the non-greedy match work properly
         Match match = regex.Match(new string(line.Reverse().ToArray()));
 
         if (match.Success)
         {
-            return new string(match.Value.Reverse().ToArray());
+            if(!match.Value.Contains("|"))
+                return new string(match.Value.Reverse().ToArray());
+            else
+                return "";
         }
         else
             return "";

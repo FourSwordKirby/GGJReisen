@@ -69,6 +69,65 @@ public class KosuzuProgress : CharacterProgress
 }
 
 [Serializable]
+public class NitoriProgress : CharacterProgress
+{
+    public int Stage;
+    public int ElixirUsed;
+
+    public int GetStage()
+    {
+        return Stage;
+    }
+}
+
+[Serializable]
+public class AkyuProgress : CharacterProgress
+{
+    public int Stage;
+    public int ElixirUsed;
+
+    public int GetStage()
+    {
+        return Stage;
+    }
+}
+
+[Serializable]
+public class LunarReisenProgress : CharacterProgress
+{
+    public int Stage;
+    public int ElixirUsed;
+
+    public int GetStage()
+    {
+        return Stage;
+    }
+}
+
+
+[Serializable]
+public class MiyoiProgress : CharacterProgress
+{
+    public int Stage;
+
+    public int GetStage()
+    {
+        return Stage;
+    }
+}
+
+[Serializable]
+public class KogasaProgress : CharacterProgress
+{
+    public int Stage;
+
+    public int GetStage()
+    {
+        return Stage;
+    }
+}
+
+[Serializable]
 public enum Assignment
 {
     Hidden,
@@ -107,8 +166,24 @@ public class ReisenGameProgress: GameProgress
     public PlayerProgress Player;
     public KeineProgress Keine;
     public KosuzuProgress Kosuzu;
-}
+    public NitoriProgress Nitori;
+    public AkyuProgress Akyu;
+    public LunarReisenProgress LunarResisen;
 
+    public MiyoiProgress Miyoi;
+    public KogasaProgress Kogasa;
+
+
+    public const string KeineStage = "keine_stage";
+    public const string KosuzuStage = "kosuzu_stage";
+    public const string NitoriStage = "nitori_stage";
+    public const string AkyuStage = "akyu_stage";
+    public const string LunarReisenStage = "lunar_reisen_stage";
+
+
+    public const string MiyoiStage = "miyoi_stage";
+    public const string KogasaStage = "kogasa_stage";
+}
 
 // Interfaces to leverage for later
 public interface CharacterProgress

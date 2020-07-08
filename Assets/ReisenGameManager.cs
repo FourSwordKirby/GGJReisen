@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -48,16 +49,84 @@ public class ReisenGameManager : MonoBehaviour
     //Honestly this conditions satisfied logic being game specific is bad and can/should be adjusted qq
     internal bool ConditionsSatisfied(List<string> conditions)
     {
-        return true;
+        bool finalBool = true;
+        foreach(string condition in conditions)
+        {
+            string variable = condition.Split(new Char[] { '>', '=', '<' })[0];
+            int value = int.Parse(condition.Split(new Char[] { '>', '=', '<' })[1]);
+            Regex r = new Regex(@"\=|\>|\<");
+            string comparator = r.Match(condition).Value;
+
+            Debug.Log(variable + value + comparator);
+
+            bool conditionalResult = false;
+            if(comparator == "=")
+            {
+                if (variable == ReisenGameProgress.KeineStage)
+                    conditionalResult = gameProgress.Keine.Stage == value;
+                else if (variable == ReisenGameProgress.KosuzuStage)
+                    conditionalResult = gameProgress.Kosuzu.Stage == value;
+                else if (variable == ReisenGameProgress.NitoriStage)
+                    conditionalResult = gameProgress.Nitori.Stage == value;
+                else if (variable == ReisenGameProgress.AkyuStage)
+                    conditionalResult = gameProgress.Akyu.Stage == value;
+                else if (variable == ReisenGameProgress.LunarReisenStage)
+                    conditionalResult = gameProgress.LunarResisen.Stage == value;
+                else if (variable == ReisenGameProgress.MiyoiStage)
+                    conditionalResult = gameProgress.Miyoi.Stage == value;
+                else if (variable == ReisenGameProgress.KogasaStage)
+                    conditionalResult = gameProgress.Kogasa.Stage == value;
+                else
+                    throw new Exception("broken conditional" + variable);
+            }
+            else if (comparator == ">")
+            {
+                if (variable == ReisenGameProgress.KeineStage)
+                    conditionalResult = gameProgress.Keine.Stage > value;
+                else if (variable == ReisenGameProgress.KosuzuStage)
+                    conditionalResult = gameProgress.Kosuzu.Stage > value;
+                else if (variable == ReisenGameProgress.NitoriStage)
+                    conditionalResult = gameProgress.Nitori.Stage > value;
+                else if (variable == ReisenGameProgress.AkyuStage)
+                    conditionalResult = gameProgress.Akyu.Stage > value;
+                else if (variable == ReisenGameProgress.LunarReisenStage)
+                    conditionalResult = gameProgress.LunarResisen.Stage > value;
+                else if (variable == ReisenGameProgress.MiyoiStage)
+                    conditionalResult = gameProgress.Miyoi.Stage > value;
+                else if (variable == ReisenGameProgress.KogasaStage)
+                    conditionalResult = gameProgress.Kogasa.Stage > value;
+                else
+                    throw new Exception("broken conditional" + variable);
+            }
+            else if (comparator == "<")
+            {
+                if (variable == ReisenGameProgress.KeineStage)
+                    conditionalResult = gameProgress.Keine.Stage < value;
+                else if (variable == ReisenGameProgress.KosuzuStage)
+                    conditionalResult = gameProgress.Kosuzu.Stage < value;
+                else if (variable == ReisenGameProgress.NitoriStage)
+                    conditionalResult = gameProgress.Nitori.Stage < value;
+                else if (variable == ReisenGameProgress.AkyuStage)
+                    conditionalResult = gameProgress.Akyu.Stage < value;
+                else if (variable == ReisenGameProgress.LunarReisenStage)
+                    conditionalResult = gameProgress.LunarResisen.Stage < value;
+                else if (variable == ReisenGameProgress.MiyoiStage)
+                    conditionalResult = gameProgress.Miyoi.Stage < value;
+                else if (variable == ReisenGameProgress.KogasaStage)
+                    conditionalResult = gameProgress.Kogasa.Stage < value;
+                else
+                    throw new Exception("broken conditional" + variable);
+            }
+
+            finalBool &= conditionalResult;
+        }
+        return finalBool;
     }
 
     public void StartGamePauseProcess()
     {
         StartLoadProcess();
     }
-
-
-
 
     public void StartLoadProcess()
     {
@@ -94,5 +163,62 @@ public class ReisenGameManager : MonoBehaviour
         SceneManager.LoadScene(gameProgress.savePoint.sceneName);
 
         gameProgress.savePoint.SpawnPlayer(player);
+    }
+
+
+    public void addOneShard()
+    {
+        Shard shard = null;
+        Debug.Log("added shard");
+        gameProgress.Player.AddShard(shard);
+    }
+
+
+    public void addBook()
+    {
+        gameProgress.Player.TextBook = Assignment.Inventory;
+    }
+
+
+
+    //Scene transition things to manage later
+
+    public void SceneLoad(int sceneEntranceIndex)
+    {
+        player.transform.position = ReisenSceneManager.instance.sceneEntrances[sceneEntranceIndex].transform.position;
+    }
+
+    public void SceneExit(string targetSceneName, int sceneEntranceIndex)
+    {
+        StartCoroutine(SwitchSceneSequence(targetSceneName, sceneEntranceIndex));
+    }
+
+    IEnumerator SwitchSceneSequence(string sceneName, int sceneEntranceIndex)
+    {
+        TransitionManager.instance.SwitchSceneTransition();
+        Debug.Log("trying to load at this entrance" + sceneEntranceIndex);
+        SceneManager.LoadScene(sceneName);
+        SceneLoad(sceneEntranceIndex);
+        yield return null;
+
+
+
+        //AudioManager.instance.OnNextLevelUnlock();
+        //AudioManager.instance.OnPhaseAnyLevelFadeOut();
+
+        //List<string> dialogEntries = DialogEngine.CreateDialogComponents(closingBanter.text);
+        //ShmupGameManager.instance.PauseGameplay();
+        //ConversationController.instance.StartConversation(dialogEntries);
+        //yield return null;
+
+        //while (ShmupGameManager.instance.Paused)
+        //    yield return null;
+
+        //ChapterHud.instance.EndLevel();
+        //while (!ChapterHud.instance.AnimationFinished())
+        //{
+        //    yield return null;
+        //}
+        //SceneManager.LoadScene(2);
     }
 }
