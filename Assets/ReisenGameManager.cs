@@ -7,10 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class ReisenGameManager : MonoBehaviour
 {
-    public GameObject player;
     public ReisenGameProgress gameProgress;
-
     public static ReisenGameManager instance;
+    public int spawnLocation;
+
 
     public void Awake()
     {
@@ -20,6 +20,11 @@ public class ReisenGameManager : MonoBehaviour
             Destroy(this.gameObject);
 
         InitSceneState();
+    }
+
+    public void Start()
+    {
+        SceneLoad(RpgPlayer.instance.gameObject, 0);
     }
 
     private void Update()
@@ -57,7 +62,8 @@ public class ReisenGameManager : MonoBehaviour
             Regex r = new Regex(@"\=|\>|\<");
             string comparator = r.Match(condition).Value;
 
-            Debug.Log(variable + value + comparator);
+            //Debug.Log(variable + value + comparator);
+            //Debug.Log(variable + value + comparator);
 
             bool conditionalResult = false;
             if(comparator == "=")
@@ -162,7 +168,7 @@ public class ReisenGameManager : MonoBehaviour
         gameProgress = SaveManager.FetchGameProgress(saveName);
         SceneManager.LoadScene(gameProgress.savePoint.sceneName);
 
-        gameProgress.savePoint.SpawnPlayer(player);
+        gameProgress.savePoint.SpawnPlayer(RpgPlayer.instance.gameObject);
     }
 
 
@@ -182,10 +188,10 @@ public class ReisenGameManager : MonoBehaviour
 
 
     //Scene transition things to manage later
-
-    public void SceneLoad(int sceneEntranceIndex)
+    public void SceneLoad(GameObject player, int sceneEntranceIndex)
     {
-        player.transform.position = ReisenSceneManager.instance.sceneEntrances[sceneEntranceIndex].transform.position;
+        player.transform.position = FindObjectOfType<ReisenSceneManager>().sceneEntrances[sceneEntranceIndex].spawnArea.position;
+        Debug.Log(player.transform.position);
     }
 
     public void SceneExit(string targetSceneName, int sceneEntranceIndex)
@@ -195,10 +201,16 @@ public class ReisenGameManager : MonoBehaviour
 
     IEnumerator SwitchSceneSequence(string sceneName, int sceneEntranceIndex)
     {
+        GameObject player = RpgPlayer.instance.gameObject;
+
         TransitionManager.instance.SwitchSceneTransition();
         Debug.Log("trying to load at this entrance" + sceneEntranceIndex);
+        DontDestroyOnLoad(CameraMan.instance.gameObject);
+        DontDestroyOnLoad(player);
+        spawnLocation = sceneEntranceIndex;
+
         SceneManager.LoadScene(sceneName);
-        SceneLoad(sceneEntranceIndex);
+        //CameraMan.instance.TransformToTrack = RpgPlayer.instance.transform;
         yield return null;
 
 
