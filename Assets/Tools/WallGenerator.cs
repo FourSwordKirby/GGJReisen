@@ -37,8 +37,8 @@ public class WallGenerator : MonoBehaviour
         {
 
             //get Vector3's that are half the length of the fence pole heights, with the same rotations
-            v3_thishalflength = transform.TransformDirection(Vector3.up * transform.localScale.y / 2);
-            v3_nexthalflength = go_next_fence_post.transform.TransformDirection(Vector3.up * go_next_fence_post.transform.localScale.y / 2);
+            v3_thishalflength = transform.TransformDirection(Vector3.up * transform.lossyScale.y / 2);
+            v3_nexthalflength = go_next_fence_post.transform.TransformDirection(Vector3.up * go_next_fence_post.transform.lossyScale.y / 2);
 
             //get the Vector3 that's the distance  direction between these two fence posts
             v3_distance = go_next_fence_post.transform.position - transform.position;

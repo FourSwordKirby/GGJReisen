@@ -11,4 +11,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Testing/SampleScene1.unity
     guid: 2be981beb58508e42978038afff28815
+  - enabled: 1
+    path: Assets/Scenes/VillageAkyu.unity
+    guid: 4564383170c33ab47adfcec6b5980922
+  - enabled: 1
+    path: Assets/Scenes/VillageBusinessDistrict.unity
+    guid: aa8beff3065f68c4aaca58ecbae1a65b
+  - enabled: 1
+    path: Assets/Scenes/VillageEntrance.unity
+    guid: c5d4cab990e2ca748aff82b340a0d0f1
+  - enabled: 1
+    path: Assets/Scenes/VillageSchool.unity
+    guid: 76b4dc7e6cd79ed42ba60d8f6dbdd1c6
+  - enabled: 1
+    path: Assets/Scenes/VillageShack.unity
+    guid: 36c32dae679e6644db97c4d824396dc8
+  - enabled: 1
+    path: Assets/Scenes/VillageSuzunaan.unity
+    guid: e2d22e5d0f66ef34d83f0834bac98e4a
   m_configObjects: {}

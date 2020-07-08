@@ -1,47 +1,33 @@
 Kosuzu: *cough* Ack! Huff. Hmm? Ah! 
 
-Welcome to the… uh… what was this place again? 
+Welcome to the… uh… what was this place again?
 
 Right, the shop! Yes, the shop! We have… stuff! *cough* 
 
-Reisen: ?+test-+no really-+I promise- **Is she coughing? It’s hard to tell when they’re just cubes…
+Reisen: **Is she coughing? It’s hard to tell when they’re just cubes...
 
-//Choice 
-//
-//    Hand over the elixir 
-//
-//    Hand over the cough medicine 
-//
-//    Leave 
-//
-// 
-//
-//>Elixir 
-//
-//Bell: Oh? *cough* Is this the cough medicine I asked for? 
-//
-//Bell: Thanks for bringing it! 
-//
-// 
-//
-//>Cough medicine 
-//
-//Bell: Oh? *cough* Is this the cough medicine I asked for? 
-//
-//Bell: Thanks for bringing it! 
-//
-//Bell: Ah, my throat feels much better… Now back to working! 
-//
-//Hmm, I was supposed to deliver this merchandise to someone. 
-//
-//Hey miss, can you get this history book to the right person? 
-//
-//(+1 personality shard) 
-//
-//(+1 history book) 
-//
-// 
-//
-//>>Leave 
-//
-//Bell: *cough* Do come back again to our shop! 
+?{kosuzu_stage=0} [choice] [Hand over the elixir  | elixir] [Hand over the cough medicine  | cough] [Leave | leave]
+
+?{kosuzu_stage=1} [choice] [Leave | leave]
+
+?{kosuzu_stage=2} [choice] [Hand over the cough medicine  | no] [Leave | leave]
+
+>Elixir 
+
+Kosuzu: Oh? *cough* Is this the cough medicine I asked for? [elixir] (thanks)
+ 
+Kosuzu: Oh? *cough* Is this the cough medicine I asked for? [cough] (thanks)
+
+Kosuzu: Thanks for bringing it! [thanks]
+
+Kosuzu: Ah, my throat feels much better… Now back to working! 
+
+Hmm, I was supposed to deliver this merchandise to someone. 
+
+Hey miss, can you get this history book to the right person? 
+
+[instruction] addShard
+
+[instruction] addBook
+
+Kosuzu: *cough* Do come back again to our shop! [leave]
