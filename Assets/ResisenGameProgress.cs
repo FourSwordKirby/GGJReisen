@@ -23,7 +23,10 @@ public class Shard
     public static Shard Keine_HistoryIsImportant { get; } = new Shard(nameof(Keine_HistoryIsImportant), 1, "");
 
     public static Shard Kosuzu_CoughingMedicine { get; } = new Shard(nameof(Kosuzu_CoughingMedicine), 1, "");
-    public static Shard Kosuzu_CoughingMedicineElixir { get; } = new Shard(nameof(Kosuzu_CoughingMedicineElixir), 1, "");
+    public static Shard Kosuzu_QuestionCorrect { get; } = new Shard(nameof(Kosuzu_QuestionCorrect), 1, "");
+    public static Shard Kosuzu_MagazineBadEnd { get; } = new Shard(nameof(Kosuzu_MagazineBadEnd), 1, "");
+    public static Shard Kosuzu_GoodEnd { get; } = new Shard(nameof(Kosuzu_GoodEnd), 2, "");
+    public static Shard Kosuzu_Elixir { get; } = new Shard(nameof(Kosuzu_Elixir), 1, "");
 
     private static Dictionary<string, Shard> _shardDictionary;
     public static Dictionary<string, Shard> ShardDictionary
