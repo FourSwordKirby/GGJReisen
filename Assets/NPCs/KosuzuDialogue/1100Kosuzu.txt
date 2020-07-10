@@ -1,21 +1,11 @@
-Kosuzu: Whoa! What’s going on!? Everything’s blocky and gray! 
-
-Was I one of those blocky things too!? 
-
-Reisen: Yes, I cured you with one of my elixirs. 
-
-Kosuzu: Wow, jee thanks! Nice bunny ear head band. It’s very cute! 
-
-Reisen: Huh? O-oh. Yeah. (I can’t tell her these are real…) 
-
-Kosuzu: Wow this is so bizarre. Is this caused by youkai? 
-
-Hey you! You should get back home and stay safe. 
-
-It’s time for me to shine. I’ll figure out a way to solve this myself! 
-
-Reisen: (Huh? Did I make a mistake giving her the elixir?) 
-
-(+1 personality shard) 
-
--- KOSUZU END (elixir) -- 
+Kosuzu: Whoa! What’s going on!? Everything’s blocky and gray!
+Was I one of those blocky things too!?
+Reisen: Yes, I cured you with one of my elixirs.
+Kosuzu: Wow, jee thanks! Nice bunny ear head band. It’s very cute!
+Reisen: Huh? O-oh. Yeah.
+**I can’t tell her these are real…
+Kosuzu: Wow this is so bizarre. Is this caused by <b>youkai</b>?
+Hey you! You should get back home and stay safe.
+It’s time for me to shine. I’ll figure out a way to solve this myself!
+Reisen: **Huh? Did I make a mistake giving her the elixir?**
+[instruction] Stage1100

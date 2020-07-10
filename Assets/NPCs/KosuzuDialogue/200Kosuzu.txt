@@ -1,43 +1,45 @@
-Bell: Welcome to the book shop! We have a wide assortment of books! 
+Kosuzu: Hey, thanks for that coughing medicine earlier!
+Huh? Was everything always so dull and gray?
+We not only sell merchandise, but we also purchase it here. 
+What kind of merchandise? Umm, it’s that kind you know. Merchandise!
+Reisen: **Do I have something for her?
 
-Huh? You can’t tell the difference between the books? That’s weird. 
+?{elixir=1} {magazine=1} {scroll=1} [choice] [Hand over the Elixir | elixir] [Hand over the magazine | magazine] [Hand over the Youkai scroll | scroll] [Leave | end]
+?{elixir=1} {magazine=1} [choice] [Hand over the Elixir | elixir] [Hand over the magazine | magazine] [Leave | end]
+?{elixir=1} {scroll=1} [choice] [Hand over the Elixir | elixir] [Hand over the Youkai scroll | scroll] [Leave | end]
+?{elixir=1} [choice] [Hand over the Elixir | elixir] [Leave | end]
+?{magazine=1} {scroll=1} [choice] [Hand over the magazine | magazine] [Hand over the Youkai scroll | scroll] [Leave | end]
+?{magazine=1} [choice] [Hand over the magazine | magazine] [Leave | end]
+?{scroll=1} [choice] [Hand over the Youkai scroll | scroll] [Leave | end]
+[choice] [Leave | end]
 
-Look, this is a book about stuff. And this one is about different stuff! 
+Kosuzu: Oh? What’s this? [elixir]
+Reisen: It’s a second medicine to cure any additional illness that went with the cough.
+Kosuzu: Oh, thanks Miss Medicine Peddler!
+[instruction] Stage200_Elixir
+(end)
 
-Reisen: (They look like the same gray cubes to me…) 
+Kosuzu: Oh? This is a… [magazine]
+Reisen: It’s written in a language I don’t know. Is it valuable?
+Kosuzu: Hmm, this seems to be German? It’s a… technology magazine from the Outside world.
+This is neat. We can buy this off your hands. Here’s your payment.
+Reisen: Thanks.
+Kosuzu: Oh right, this is a <b>book shop</b>!
+Right, I should be selling and buying books! How did I forget?
+Thanks for jogging my memory!
+[instruction] Stage200_Magazine
+(end)
 
-Reisen: (It seems like I wasn’t able to restore her full individuality.) 
+Kosuzu: Whoa! How’d you come into possession of that!? [scroll]
+I’d be willing to pay for that right now! How much!?
+Reisen: Do you know what this is?
+Kosuzu: Err, I mean… it’s looks like a rare manuscript. It’s a very valuable piece of literary work. Yes.
+Reisen: **This is text written by a Youkai. Humans shouldn’t be able to read this but she seemed to recognize it immediately.
+Kosuzu: So, uh, are you willing to sell it, dear customer?
+Reisen: Sure thing.
+Kosuzu: Yay!
+Kosuzu: Oh right, this is <b>Suzunaan</b>, the local <b>book shop</b>!
+[instruction] Stage200_Scroll
+(end)
 
- 
-
- 
-
-Fourth Interaction 
-
-Reisen: Why did you want that scroll from earlier so much? 
-
-Kosuzu: Oh, are you curious? 
-
-I’m able to read it, you know? Pretty cool isn’t it? 
-
-Ah, but even though I can read it, it doesn’t really make any sense. 
-
-It seems to be a schematic for some kind of device. 
-
-Something about… reduced dimensionality travel? 
-
-By lowering the “complexity” of an object, it can be “transmitted” at much higher speeds. 
-
-This device has some kind of reversal process called “feature reconstruction” to rebuild “high dimensionality matter.” 
-
-What does that mean? I have no idea… 
-
-I don’t think this is from the Outside World. So, this must be some kind of magic, right? 
-
-Reisen: (This is for the Dimensionality Reducer outside!) 
-
-(+1 Information about the Dimensionality Reducer) 
-
--- KOSUZU END (good) – 
-
- 
+Kosuzu: See ya! [end]
