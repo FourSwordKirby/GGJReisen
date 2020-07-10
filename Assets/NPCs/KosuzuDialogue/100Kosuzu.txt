@@ -1,111 +1,53 @@
-100 - Second Interaction (after making a choice with the medicine) 
-
-Bell: Hey, thanks for that coughing medicine earlier! 
-
+Kosuzu: Hey, thanks for that coughing medicine earlier! 
 I’m really bored right now. 
-
 Some people say that being able to feel bored is a blessing in disguise. 
-
 But in the west, there’s a youkai known as the Boogeyman that comes children who have too much free time. 
-
 Heh heh, maybe I should keep being bored then? 
-
 What do you think? 
+Reisen: **I should choose my words carefully.
 
-Reisen: (I should choose my words carefully.) 
-
-Choice 
-
-    Would prefer being bored over working. 
-
-    I see boredom as an opportunity. 
-
-    I’d rather not get attacked by Youkai again. 
-
-    Give me a moment to think. 
-
- 
-
-> Work 
-
-Reisen: If you’re bored, that means you have the luxury of free time from work. 
-
+[choice] [Would prefer being bored over working. | work] [I see boredom as an opportunity. | opportunity] [I’d rather not get attacked by Youkai again. | youkai] [Give me a moment to think. | leave]
+    
+Reisen: If you’re bored, that means you have the luxury of free time from work. [work]
 I have to work every day. Sometimes, I envy you people who have time to do other things. 
-
-Bell: Hmm, I have to run this shop every day too. 
-
+Kosuzu: Hmm, I have to run this shop every day too. 
 It’s not like I don’t get what you mean, but… 
-
 Don’t you kinda wish that things could be more exciting sometimes? 
-
 If all you think about is work, work, work, is there any meaning to life? 
-
 You’d just be repeating what everyone else before you has done. 
-
 Reisen: There is no shame in carrying out your assigned duties. 
-
 Have you heard? The rabbits on the moon are content to pound mochi all day, in order to atone for their master’s sins. 
+Kosuzu: Haha, I can’t help but pity those rabbits… 
+Reisen: **I seem to have hit the wrong note. Talking to humans is exhausting...
+[instruction] Stage100_Wrong
+(end)
 
-Bell: Haha, I can’t help but pity those rabbits… 
-
-Reisen: (I seem to have hit the wrong note. Talking to humans is exhausting…) 
-
-Goto stage 200 
-
- 
-
->Opportunity 
-
-Reisen: I see boredom as an opportunity to try new things. 
-
+Reisen: I see boredom as an opportunity to try new things. [opportunity]
 Well, in my case, I need to be careful to only try things that aren’t against my master’s strict rules… 
-
-Bell: Ah, but there’s not much to do around here, is there? 
-
+Kosuzu: Ah, but there’s not much to do around here, is there? 
 Reisen: I’m sure you can find something if you try. 
-
 I don’t have very much free time, so I don’t get to experiment very often. 
-
 But if I did, I’d try to make a medicine on my own without help from my master. 
+Kosuzu: Heh, that sounds exciting. Do show me if you make something! 
+Reisen: **I ended up talking more about myself than she did.
+[instruction] Stage100_Wrong
+(end)
 
-Bell: Heh, that sounds exciting. Do show me if you make something! 
-
-Reisen: (… I ended up talking more about myself than she did.) 
-
-Goto stage 200 
-
- 
-
->Youkai 
-
-Reisen: It sounds awful that a Youkai would attack when somebody was finally able to have time to relax. 
-
+Reisen: It sounds awful that a Youkai would attack when somebody was finally able to have time to relax. [youkai]
 I’d really rather not have to deal with more random attacks… 
-
-Bell: Huh!? You’ve been attacked before? How are you still alive? 
-
+Kosuzu: Huh!? You’ve been attacked before? How are you still alive? 
 Reisen: A-ah, yeah. It was just a small youkai though. I managed to chase it off with some of the aromatics I carry though. 
-
-(That’s a lie. That was a full-on battle with a whimsical vampire…) 
-
-Bell: Wow, I didn’t know medicine peddlers could be so awesome! 
-
+**That’s a lie. That was a full-on battle with a whimsical vampire...
+Kosuzu: Wow, I didn’t know medicine peddlers could be so awesome! 
 There’s so much more to Youkai beyond what the human village is willing to talk about. 
-
 Getting caught up in a Youkai scheme of some sort, now that would be really exciting. 
-
 Ah, not saying that I want to be caught up in one, that’d be terrifying. 
-
 But you know, I can’t help but wonder! 
+Reisen: **Hm? Another personality shard!
+[instruction] Stage100_Correct
+(end)
 
-Reisen: (Hm? Another personality shard!) 
+Kosuzu: Sure, take your time. [leave]
+(end)
 
-+1 personality shard 
-
-Goto stage 200 
-
- 
-
->Give me a moment to think 
-
-Bell: Sure, take your time. 
+[end]
