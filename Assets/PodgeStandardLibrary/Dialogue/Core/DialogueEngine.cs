@@ -9,6 +9,7 @@ public delegate ScriptLine SpeakingLineGenerator(string speaker, string lineText
 public delegate ScriptLine ExpressionLineGenerator(string speaker, CharacterExpression expression);
 public delegate ScriptLine ChoiceLineGenerator(string speaker, List<ChoiceLineContent> choices);
 public delegate ScriptLine InstructionLineGenerator(DialogueInstruction instruction);
+public delegate bool LineChecker(List<string> conditions);
 
 
 public class DialogueEngine
@@ -17,15 +18,18 @@ public class DialogueEngine
     public static ExpressionLineGenerator GenerateExperssionLine;
     public static ChoiceLineGenerator GenerateChoiceLine;
     public static InstructionLineGenerator GenerateInstructionLine;
+    public static LineChecker IsLineValid;
     static bool initialized;
 
     public static void InitializeGenerators(SpeakingLineGenerator speakingLineGenerator, ExpressionLineGenerator expressionLineGenerator,
-                                            ChoiceLineGenerator choiceLineGenerator, InstructionLineGenerator instructionLineGenerator)
+                                            ChoiceLineGenerator choiceLineGenerator, InstructionLineGenerator instructionLineGenerator,
+                                            LineChecker isLineValid)
     {
         GenerateSpeakingLine = speakingLineGenerator;
         GenerateExperssionLine = expressionLineGenerator;
         GenerateChoiceLine = choiceLineGenerator;
         GenerateInstructionLine = instructionLineGenerator;
+        IsLineValid = isLineValid;
         initialized = true;
     }
 
@@ -50,28 +54,37 @@ public class DialogueEngine
 
             string line = rawLines[i];
 
+            // Dealing with commented out lines
+            if (line.StartsWith("//"))
+                continue;
+            
             // processing current speaker
             string speaker = GetSpeaker(line);
             if (speaker != "")
                 currentSpeaker = speaker;
             else if (currentSpeaker == "")
                 Debug.LogWarning("Speaker not specified");
-
             line = RemoveSpeaker(line);
-
+            
             // processing jump statements
             string jump = GetJump(line);
             line = RemoveJump(line);
-
+            
             // processing labels
             string label = GetLabel(line);
             line = RemoveLabel(line);
+
+            // Checking if the line is valid based on what the game says
+            // This is mainly used to filter out statements which should appear/not appear based on the game
+            List<string> conditions = GetConditions(line);
+            if (!IsLineValid(conditions))
+                continue;
+            line = RemoveConditions(line);
 
             switch (GetLineType(line))
             {
                 case LineType.SpeakingLine:
                     processedLine = GenerateSpeakingLine(currentSpeaker, GetSpokenLine(line), speakingLineNumber);
-                    speakingLineNumber++;
                     break;
                 case LineType.Expression:
                     CharacterExpression desiredExpression = GetExpression(line);
@@ -80,7 +93,6 @@ public class DialogueEngine
                 case LineType.Choice:
                     List<ChoiceLineContent> choices = GetChoices(line, currentSpeaker, speakingLineNumber);
                     processedLine = GenerateChoiceLine(currentSpeaker, choices);
-                    speakingLineNumber++;
                     break;
                 case LineType.Instruction:
                     if (AvailableInstructions != null)
@@ -108,10 +120,11 @@ public class DialogueEngine
             {
                 labeledLines.Add(label, processedLine);
                 processedLine.lineLabel = label;
-                processedLine.lineNumber = i;
+                processedLine.lineNumber = speakingLineNumber;
             }
 
             processedLines.Add(processedLine);
+            speakingLineNumber++;
         }
 
         // final scrub through of processed lines to set up proper routing to tags
@@ -124,7 +137,15 @@ public class DialogueEngine
                 case LineType.SpeakingLine:
                 case LineType.Expression:
                     if (!string.IsNullOrEmpty(processedLine.jumpLabel))
-                        processedLine.nextLine = labeledLines[processedLine.jumpLabel];
+                        try
+                        {
+                            processedLine.nextLine = labeledLines[processedLine.jumpLabel];
+                        }
+                        catch(Exception e)
+                        {
+                            Debug.Log(processedLine.jumpLabel);
+                            throw e;
+                        }
                     break;
                 case LineType.Choice:
                     ((ChoiceLine)processedLine).InitJumps(labeledLines);
@@ -133,6 +154,37 @@ public class DialogueEngine
         }
         return processedLines;
     }
+
+    private static List<string> GetConditions(string line)
+    {
+        List<string> conditions = new List<string>();
+        if(line.StartsWith("?"))
+        {
+            MatchCollection matches = Regex.Matches(line, @"(?<=\{).+?(?=\})");
+            // Use foreach-loop.
+            foreach (Match match in matches)
+            {
+                foreach (Capture capture in match.Captures)
+                {
+                    string condition = capture.Value;
+                    conditions.Add(condition);
+                }
+            }
+        }
+        return conditions;
+    }
+
+    private static string RemoveConditions(string line)
+    {
+        if (line.StartsWith("?"))
+        {
+            line = Regex.Replace(line, @"\{.+?\}", "");
+            return line.Substring(1).Trim();
+        }
+        else
+            return line;
+    }
+
 
     private static string RemoveSpeaker(string line)
     {
@@ -144,11 +196,17 @@ public class DialogueEngine
     }
     private static string RemoveLabel(string line)
     {
+        if (!line.Contains("[")) 
+            return line;
 
-        string[] tagSplit = line.Split('{');
-        if (tagSplit.Length > 1)
-            line = tagSplit[0];
-        return line.Trim();
+        if(line.StartsWith("["))
+            return line;
+
+        string newLine = line.Substring(0, line.LastIndexOf('['));
+        if (line.Substring(line.LastIndexOf("[")).Contains("|"))
+            return line;
+        else
+            return newLine.Trim();
     }
     private static string RemoveJump(string line)
     {
@@ -200,13 +258,16 @@ public class DialogueEngine
     /// <returns></returns>
     public static string GetLabel(string line)
     {
-        Regex regex = new Regex("(?<=^\\}).+?(?=\\{)");
+        Regex regex = new Regex("(?<=^\\]).+?(?=\\[)");
         // reverse a string to make the non-greedy match work properly
         Match match = regex.Match(new string(line.Reverse().ToArray()));
 
         if (match.Success)
         {
-            return new string(match.Value.Reverse().ToArray());
+            if(!match.Value.Contains("|"))
+                return new string(match.Value.Reverse().ToArray());
+            else
+                return "";
         }
         else
             return "";

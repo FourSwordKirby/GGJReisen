@@ -4,11 +4,20 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+public enum DialogueBubbleType
+{
+    Speech,
+    Thought,
+    Exclamation,
+    Whisper,
+    Weak
+}
+
 public class DialogueBubble : MonoBehaviour, IDialogueBubble
 {
     public bool loggable = true;
 
-    public MeshRenderer textFrame;
+    public MeshRenderer bubbleFrame;
     public Animator animator;
 
     public Transform anchorPoint;
@@ -16,9 +25,14 @@ public class DialogueBubble : MonoBehaviour, IDialogueBubble
     public Color focusColor;
     public Color blurColor;
 
+    public DialogueBubbleType bubbleType;
+    public List<Material> bubbleTypeMaterials;
+
     private void Start()
     {
         animator.speed = displayModifier == 0 ? 1 : displayModifier;
+        Debug.Assert((int)bubbleType < bubbleTypeMaterials.Count);
+        bubbleFrame.material = bubbleTypeMaterials[(int)bubbleType];
     }
 
     //currently the bubble only displays facing left or right depending on the argument
@@ -33,9 +47,15 @@ public class DialogueBubble : MonoBehaviour, IDialogueBubble
             this.transform.position = speakerPosition - anchorPoint.localPosition;
         else
         {
-            textFrame.transform.localScale -= Vector3.right * textFrame.transform.localScale.x * 2;
+            bubbleFrame.transform.localScale -= Vector3.right * bubbleFrame.transform.localScale.x * 2;
             this.transform.position = speakerPosition - anchorPoint.localPosition + Vector3.right * anchorPoint.localPosition.x * 2;
         }
+    }
+
+    public void SetDialogueBubbleType(DialogueBubbleType type)
+    {
+        bubbleType = type;
+        bubbleFrame.material = bubbleTypeMaterials[(int)bubbleType];
     }
 
     public virtual void Show()
@@ -45,12 +65,12 @@ public class DialogueBubble : MonoBehaviour, IDialogueBubble
 
     public virtual void Focus()
     {
-        textFrame.material.color = focusColor;
+        bubbleFrame.material.color = focusColor;
     }
 
     public virtual void Blur()
     {
-        textFrame.material.color = blurColor;
+        bubbleFrame.material.color = blurColor;
     }
 
     public virtual void Hide()

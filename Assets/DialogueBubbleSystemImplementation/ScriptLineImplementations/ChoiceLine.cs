@@ -80,7 +80,6 @@ public class ChoiceLine : ScriptLine
 
     public override ScriptLine GetNextLine()
     {
-        Debug.Log(dialogueChoices[chosenOptionIndex].jumpLine.lineLabel);
         return dialogueChoices[chosenOptionIndex].jumpLine;
     }
 
