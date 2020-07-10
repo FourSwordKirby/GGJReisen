@@ -33,7 +33,7 @@ public class ChoiceBubble : DialogueBubble
 
     public override void Focus()
     {
-        textFrame.material.color = focusColor;
+        bubbleFrame.material.color = focusColor;
 
         for(int i = 0; i < choicePanels.Count; i++)
         {
@@ -49,7 +49,7 @@ public class ChoiceBubble : DialogueBubble
 
     public override void Blur()
     {
-        textFrame.material.color = blurColor;
+        bubbleFrame.material.color = blurColor;
 
         for (int i = 0; i < choicePanels.Count; i++)
         {

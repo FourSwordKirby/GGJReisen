@@ -40,7 +40,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5932829280698991749}
   - component: {fileID: 5932829280698991744}
-  - component: {fileID: 5932829280698991751}
   - component: {fileID: 5932829280698991750}
   - component: {fileID: 5932829280698991745}
   m_Layer: 11
@@ -72,43 +71,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5932829280698991748}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &5932829280698991751
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5932829280698991748}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a691cf1f231d92443b87e74e5d10b31e, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!65 &5932829280698991750
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -135,14 +97,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 4900000, guid: d4251739f1823854193a2dc7f6c6417d, type: 3}
+  triggerActive: 1
   repeatingDialogue: 1
   forceDialogueOnEnter: 0
   forceBack: 0
   promptPosition: {fileID: 468556378347478728}
   cameraPosition: {fileID: 0}
-  questEvent:
+  postDialogueEvent:
     m_PersistentCalls:
       m_Calls: []
+  dialogueInstructions: []
 --- !u!1 &5932829281497447740
 GameObject:
   m_ObjectHideFlags: 0
