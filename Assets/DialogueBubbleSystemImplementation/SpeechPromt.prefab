@@ -20,9 +20,13 @@ PrefabInstance:
       value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 1203477145, guid: 6338e2a978e71cb4e929e5fe7fc312b4, type: 3}
-      propertyPath: displayModifier
-      value: 2
+      propertyPath: bubbleTypeMaterials.Array.size
+      value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1203477145, guid: 6338e2a978e71cb4e929e5fe7fc312b4, type: 3}
+      propertyPath: bubbleTypeMaterials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 126b275dcf4232c4286d67852b72d675, type: 2}
     - target: {fileID: 8278851158744064866, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -117,6 +121,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.lineCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278851160514969811, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8278851160758935610, guid: 6338e2a978e71cb4e929e5fe7fc312b4,
         type: 3}

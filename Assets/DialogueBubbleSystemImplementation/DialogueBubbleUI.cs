@@ -67,7 +67,7 @@ public class DialogueBubbleUI : MonoBehaviour
     }
 
     // Kinda hacked together choice system
-    internal void DisplayChoices(ChoiceLine line, Vector3 speakerPosition)
+    internal void DisplayChoices(ChoiceLine line, Vector3 speakerPosition, DialogueBubbleType type = DialogueBubbleType.Thought)
     {
         ready = false;
 
@@ -81,7 +81,7 @@ public class DialogueBubbleUI : MonoBehaviour
         float relativeYdisplacment = (Camera.main.pixelHeight / 2.0f - speakerScreenPosition.y) / Camera.main.pixelHeight + 0.1f; // The dialogue should always be in the upper portion of the screen 
         Vector2 displacementVector = new Vector2(relativeXdisplacment, relativeYdisplacment);
 
-        ChoiceBubble choiceBubble = DialogueUIController.GenerateChoiceBubblePrefab(choices.Count());
+        ChoiceBubble choiceBubble = DialogueUIController.GenerateChoiceBubblePrefab(choices.Count(), type);
         for(int i = 0; i < choices.Count; i++)
         {
             ChoiceLineContent content = choices[i];
@@ -97,7 +97,7 @@ public class DialogueBubbleUI : MonoBehaviour
     }
 
     //Displays the a speech bubble according to its text and position in the overall dialogue
-    public void DisplaySpeechBubble(SpeakingLineContent speakingLineContent, Vector3 speakerPosition)
+    public void DisplaySpeechBubble(SpeakingLineContent speakingLineContent, Vector3 speakerPosition, DialogueBubbleType type = DialogueBubbleType.Speech)
     {
         ready = false;
 
@@ -109,7 +109,7 @@ public class DialogueBubbleUI : MonoBehaviour
         Vector2 displacementVector = new Vector2(relativeXdisplacment, relativeYdisplacment);
 
         // *(offscreen dialogue we will need to handle seperately)
-        SpeechBubble speechBubble = DialogueUIController.GenerateSpeechBubblePrefab();
+        SpeechBubble speechBubble = DialogueUIController.GenerateSpeechBubblePrefab(type);
         speechBubble.SetDialogueBubbleContent(speakingLineContent);
         dialogueBubbles.Add(speechBubble);
 
@@ -173,12 +173,11 @@ public class DialogueBubbleUI : MonoBehaviour
                     if (targetLineNumber - onScreenSpeechBubbleLimit < i && i <= targetLineNumber)
                         DialogueUIController.DeployDialogueBubble(animatedSpeechBubble);
                     // a bunch of the log advance/roll backwards stuff just isn't going to work with the current branching choice system, commenting out for now
-                    //if (i <= targetLineNumber - onScreenSpeechBubbleLimit)
-                    //    DialogueUIController.HideDialogueBubble(animatedSpeechBubble);
-                    //if (i > targetLineNumber)
-                    //    DialogueUIController.HideDialogueBubble(animatedSpeechBubble);
-                    //if (i == targetLineNumber)
-                    if(i == dialogueBubbles.Count - 1)
+                    if (i <= targetLineNumber - onScreenSpeechBubbleLimit)
+                        DialogueUIController.HideDialogueBubble(animatedSpeechBubble);
+                    if (i > targetLineNumber)
+                        DialogueUIController.HideDialogueBubble(animatedSpeechBubble);
+                    if (i == targetLineNumber)
                         animatedSpeechBubble.Focus();
                     int currentPosition = Mathf.Clamp(currentLineNumber - i, 0, onScreenSpeechBubbleLimit);
                     int targetPosition = Mathf.Clamp(targetLineNumber - i, 0, onScreenSpeechBubbleLimit);

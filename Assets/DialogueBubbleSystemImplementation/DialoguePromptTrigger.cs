@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class DialoguePromptTrigger : MonoBehaviour
 {
     public TextAsset dialogue;
+    public bool triggerActive = true;
     public bool repeatingDialogue;
     public bool forceDialogueOnEnter = false;
     public bool forceBack;
@@ -23,6 +24,9 @@ public class DialoguePromptTrigger : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter(Collider col)
     {
+        if (!triggerActive)
+            return;
+
         triggerEnteredPosition = col.gameObject.transform.position;
 
         if (forceBack)
@@ -40,12 +44,18 @@ public class DialoguePromptTrigger : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
+        if (!triggerActive)
+            return;
+
         hidePrompt();
     }
 
     void OnTriggerStay(Collider col)
     {
-        if(Controls.confirmInputDown() && !dialogueActive)
+        if (!triggerActive)
+            return;
+
+        if (Controls.confirmInputDown() && !dialogueActive)
         {
             displayDialogue();
         }
@@ -67,6 +77,10 @@ public class DialoguePromptTrigger : MonoBehaviour
     private void hideDialogue()
     {
         postDialogueEvent?.Invoke();
+
+        // Bad game specific hack that should get addressed somehwere else
+        ReisenGameManager.instance.InitSceneState();
+
         dialogueActive = false;
         if(!forceDialogueOnEnter)
             displayPrompt(Vector3.zero);
@@ -92,6 +106,16 @@ public class DialoguePromptTrigger : MonoBehaviour
     private void destroy()
     {
         postDialogueEvent?.Invoke();
+
+        // Bad game specific hack that should get addressed somehwere else
+        ReisenGameManager.instance.InitSceneState();
+
         Destroy(gameObject.transform.parent.gameObject);
+    }
+
+    public void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green - Color.black * 0.7f;
+        Gizmos.DrawCube(this.transform.position, this.transform.lossyScale);
     }
 }

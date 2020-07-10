@@ -16,12 +16,11 @@ public class RpgGameManager : MonoBehaviour
             instance = this;
         else if (this != instance)
             Destroy(this.gameObject);
-
     }
 
     public void StartConversation(TextAsset dialogue, Vector3 speakerPosition, Transform cameraPosition = null, AfterDialogueEvent afterEvent = null, List<DialogueInstruction> AvailableInstructions = null)
     {
-        DialogueEngine.InitializeGenerators(SpeakingLine.CreateSpeakingLine, ExpressionLine.CreateInstructionLine, ChoiceLine.GenerateChoiceLine, InstructionLine.GenerateInstructionline);
+        DialogueEngine.InitializeGenerators(SpeakingLine.CreateSpeakingLine, ExpressionLine.CreateInstructionLine, ChoiceLine.GenerateChoiceLine, InstructionLine.GenerateInstructionline, ReisenGameManager.instance.ConditionsSatisfied);
         List<ScriptLine> lines = DialogueEngine.CreateDialogueComponents(dialogue.text, AvailableInstructions);
         Dialogue processedDialogue = new Dialogue(lines);
         StartCoroutine(PlayConversation(processedDialogue, cameraPosition, afterEvent));
@@ -97,19 +96,32 @@ public class RpgGameManager : MonoBehaviour
     }
 
     // Dependent on external player class
-    bool gamePaused = false;
-    public bool Paused { get { return gamePaused; } }
+    int pauseCount = 0;
+    public bool Paused { get { return pauseCount > 0; } }
     public void PauseGameplay()
     {
-        gamePaused = true;
-        foreach (CharacterMovement entity in GameObject.FindObjectsOfType<CharacterMovement>())
-            entity.enabled = false;
+        pauseCount++;
+        if (Paused)
+        {
+            foreach (CharacterMovement entity in GameObject.FindObjectsOfType<CharacterMovement>())
+                entity.enabled = false;
+
+            foreach (DialoguePromptTrigger dialogueTrigger in GameObject.FindObjectsOfType<DialoguePromptTrigger>())
+                dialogueTrigger.triggerActive = false;
+        }
     }
     public void ResumeGameplay()
     {
-        gamePaused = false;
-        foreach (CharacterMovement entity in GameObject.FindObjectsOfType<CharacterMovement>())
-            entity.enabled = true;
+        pauseCount--;
+        pauseCount = Mathf.Max(pauseCount, 0);
+        if(!Paused)
+        {
+            foreach (CharacterMovement entity in GameObject.FindObjectsOfType<CharacterMovement>())
+                entity.enabled = true;
+
+            foreach (DialoguePromptTrigger dialogueTrigger in GameObject.FindObjectsOfType<DialoguePromptTrigger>())
+                dialogueTrigger.triggerActive = true;
+        }
     }
 
 }

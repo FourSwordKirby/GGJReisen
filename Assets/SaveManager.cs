@@ -21,7 +21,22 @@ public class SaveManager : MonoBehaviour
         Debug.Log("Game Saved");
     }
 
-    public static ReisenGameProgress LoadGame(string saveName)
+    public static GGJReisenSave FetchSaveData(string saveName)
+    {
+        // 1
+        string jsonSavePath = string.Format("{0}/{1}.json", Application.persistentDataPath, saveName);
+        if (File.Exists(jsonSavePath))
+        {
+            GGJReisenSave save = JsonUtility.FromJson<GGJReisenSave>(File.ReadAllText(jsonSavePath));
+            return save;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    public static ReisenGameProgress FetchGameProgress(string saveName)
     {
         // 1
         string jsonSavePath = string.Format("{0}/{1}.json", Application.persistentDataPath, saveName);
@@ -41,12 +56,15 @@ public class SaveManager : MonoBehaviour
 [Serializable]
 public class GGJReisenSave
 {
-    private string saveName;
+    public string saveName;
+    public string saveTime;
     public ReisenGameProgress gameProgress;
 
     public GGJReisenSave(string saveName, ReisenGameProgress gameProgress)
     {
         this.saveName = saveName;
+        this.saveTime = DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString();
+        Debug.Log(saveTime);
         this.gameProgress = gameProgress;
     }
 }

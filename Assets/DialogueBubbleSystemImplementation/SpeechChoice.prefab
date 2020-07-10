@@ -13,18 +13,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loggable: 1
-  textFrame: {fileID: 5286151864653437798}
+  bubbleFrame: {fileID: 5286151864653437798}
   animator: {fileID: 7463734742546702614}
   anchorPoint: {fileID: 4303273389919380382}
   displayModifier: 0
   focusColor: {r: 1, g: 1, b: 1, a: 1}
   blurColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
+  bubbleType: 1
+  bubbleTypeMaterials:
+  - {fileID: 2100000, guid: c277f9d33f7ea144a933a81d8028977f, type: 2}
+  - {fileID: 2100000, guid: ffff89d78cb635348bd2bf6cc25a73a0, type: 2}
+  - {fileID: 2100000, guid: 2c5842ec335b1a347a8b65f4f46073e9, type: 2}
+  - {fileID: 2100000, guid: aa7cc3d082acdae4184323e39cf05843, type: 2}
+  - {fileID: 2100000, guid: 126b275dcf4232c4286d67852b72d675, type: 2}
   choiceCenter: {fileID: 5286151866167228753}
   choicePanels: []
   panelSpacing: 0.55
   panelOffset: 0.3
   panelZOffset: 0.1
-  activeChoiceIndex: 0
+  chosenOptionIndex: 0
   choicePanelPrefab: {fileID: 1933168996232153960, guid: 05f926a206bb43c4b8f86a95023bd69b,
     type: 3}
 --- !u!1001 &4303273389421341137
@@ -34,6 +41,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 575703631, guid: 6338e2a978e71cb4e929e5fe7fc312b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 575703631, guid: 6338e2a978e71cb4e929e5fe7fc312b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.72
+      objectReference: {fileID: 0}
     - target: {fileID: 1203477145, guid: 6338e2a978e71cb4e929e5fe7fc312b4, type: 3}
       propertyPath: loggable
       value: 1
