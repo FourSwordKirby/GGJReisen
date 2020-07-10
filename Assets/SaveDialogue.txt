@@ -1,4 +1,4 @@
 Player: Make an offering?
 [choice] [Yes | yes] [No | end]
-[instruction] save {yes} (end)
-{end}
+[instruction] save [yes] (end)
+[end]

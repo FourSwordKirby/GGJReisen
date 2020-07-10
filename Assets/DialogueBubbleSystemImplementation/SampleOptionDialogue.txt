@@ -4,8 +4,8 @@ I wonder how this should work?
 [choice] [Yeeee | yes] [noooope | no]
 [choice] [maybeeee | yes]
 [choice] [Yeeee | yes] [noooope | no] [maybeeee | yes]
-awww yes {yes}
+awww yes [yes]
 that's good (end)
-heeeeck np {no}
+heeeeck np [no]
 that's bad (end)
-we done {end}
+we done [end]
