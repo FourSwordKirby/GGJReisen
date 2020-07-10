@@ -25,7 +25,7 @@ public class CharacterMovementAnimator : MonoBehaviour
         animator.SetFloat("SpeedModifier", speedModifier);
         animator.SetFloat("BobbingModifier", bobbingModifier);
         animator.SetBool("Sway", isGrounded && Mathf.Abs(velocityVector.x) / velocityVector.magnitude > 0.4f);
-
+        
         animator.SetFloat("xDirection", velocityVector.x);
 
         float zAngle = Mathf.Atan2(velocityVector.z, velocityVector.x) * Mathf.Rad2Deg;

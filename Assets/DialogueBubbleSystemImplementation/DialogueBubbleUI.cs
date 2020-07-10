@@ -173,12 +173,11 @@ public class DialogueBubbleUI : MonoBehaviour
                     if (targetLineNumber - onScreenSpeechBubbleLimit < i && i <= targetLineNumber)
                         DialogueUIController.DeployDialogueBubble(animatedSpeechBubble);
                     // a bunch of the log advance/roll backwards stuff just isn't going to work with the current branching choice system, commenting out for now
-                    //if (i <= targetLineNumber - onScreenSpeechBubbleLimit)
-                    //    DialogueUIController.HideDialogueBubble(animatedSpeechBubble);
-                    //if (i > targetLineNumber)
-                    //    DialogueUIController.HideDialogueBubble(animatedSpeechBubble);
-                    //if (i == targetLineNumber)
-                    if(i == dialogueBubbles.Count - 1)
+                    if (i <= targetLineNumber - onScreenSpeechBubbleLimit)
+                        DialogueUIController.HideDialogueBubble(animatedSpeechBubble);
+                    if (i > targetLineNumber)
+                        DialogueUIController.HideDialogueBubble(animatedSpeechBubble);
+                    if (i == targetLineNumber)
                         animatedSpeechBubble.Focus();
                     int currentPosition = Mathf.Clamp(currentLineNumber - i, 0, onScreenSpeechBubbleLimit);
                     int targetPosition = Mathf.Clamp(targetLineNumber - i, 0, onScreenSpeechBubbleLimit);

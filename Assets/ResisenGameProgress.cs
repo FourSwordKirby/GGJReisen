@@ -130,13 +130,13 @@ public class KogasaProgress : CharacterProgress
 [Serializable]
 public enum Assignment
 {
-    Hidden,
     NotAcquired,
     Inventory,
     Keine,
     Kosuzu,
-    Hieda,
-    Aya,
+    Nitori,
+    Akyu,
+    LunarReisen
 }
 
 [Serializable]
@@ -145,15 +145,23 @@ public class PlayerProgress
     public string nameTag;
 
     public List<string> ShardsAcquired;
-    public Assignment Elixir1;
-    public Assignment Elixir2;
     public Assignment CoughingMedicine;
     public Assignment TextBook;
+    public Assignment Encyclopedia;
     public Assignment Newspaper;
-    public Assignment Manuscript;
+    public Assignment Smartphone;
+    public Assignment Magazine;
+    public Assignment Wrench;
+    public Assignment Scroll;
+    public Assignment Schematic;
+    public Assignment Novel;
+    public Assignment Elixir1;
+    public Assignment Elixir2;
+
 
     public void AddShard(Shard s)
     {
+        Debug.Log("addded shard");
         ShardsAcquired.Add(s.Id);
     }
 }
@@ -179,10 +187,22 @@ public class ReisenGameProgress: GameProgress
     public const string NitoriStage = "nitori_stage";
     public const string AkyuStage = "akyu_stage";
     public const string LunarReisenStage = "lunar_reisen_stage";
-
-
     public const string MiyoiStage = "miyoi_stage";
     public const string KogasaStage = "kogasa_stage";
+
+    public const string ShardCount = "shard_count";
+    public const string ElixirCount = "elixir";
+
+    public const string HasCough = "cough";
+    public const string HasTextbook = "textbook";
+    public const string HasEncyclopedia = "encyclopedia";
+    public const string HasNewspaper = "newspapaer";
+    public const string HasSmartphone = "smartphone";
+    public const string HasMagazine = "magazine";
+    public const string HasWrench = "wrench";
+    public const string HasScroll = "scroll";
+    public const string HasSchematic = "schematic";
+    public const string HasNovel = "novel";
 }
 
 // Interfaces to leverage for later

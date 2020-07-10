@@ -57,7 +57,7 @@ public class DialogueEngine
             // Dealing with commented out lines
             if (line.StartsWith("//"))
                 continue;
-
+            
             // processing current speaker
             string speaker = GetSpeaker(line);
             if (speaker != "")
@@ -65,11 +65,11 @@ public class DialogueEngine
             else if (currentSpeaker == "")
                 Debug.LogWarning("Speaker not specified");
             line = RemoveSpeaker(line);
-
+            
             // processing jump statements
             string jump = GetJump(line);
             line = RemoveJump(line);
-
+            
             // processing labels
             string label = GetLabel(line);
             line = RemoveLabel(line);
@@ -85,7 +85,6 @@ public class DialogueEngine
             {
                 case LineType.SpeakingLine:
                     processedLine = GenerateSpeakingLine(currentSpeaker, GetSpokenLine(line), speakingLineNumber);
-                    speakingLineNumber++;
                     break;
                 case LineType.Expression:
                     CharacterExpression desiredExpression = GetExpression(line);
@@ -94,7 +93,6 @@ public class DialogueEngine
                 case LineType.Choice:
                     List<ChoiceLineContent> choices = GetChoices(line, currentSpeaker, speakingLineNumber);
                     processedLine = GenerateChoiceLine(currentSpeaker, choices);
-                    speakingLineNumber++;
                     break;
                 case LineType.Instruction:
                     if (AvailableInstructions != null)
@@ -122,10 +120,11 @@ public class DialogueEngine
             {
                 labeledLines.Add(label, processedLine);
                 processedLine.lineLabel = label;
-                processedLine.lineNumber = i;
+                processedLine.lineNumber = speakingLineNumber;
             }
 
             processedLines.Add(processedLine);
+            speakingLineNumber++;
         }
 
         // final scrub through of processed lines to set up proper routing to tags
@@ -197,7 +196,10 @@ public class DialogueEngine
     }
     private static string RemoveLabel(string line)
     {
-        if (!line.Contains("["))
+        if (!line.Contains("[")) 
+            return line;
+
+        if(line.StartsWith("["))
             return line;
 
         string newLine = line.Substring(0, line.LastIndexOf('['));

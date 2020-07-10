@@ -54,7 +54,6 @@ public class DialogueUIController : MonoBehaviour
 
     public static void HideDialogueBubble(IDialogueBubble dialogueBubble)
     {
-        Debug.Log("hide");
         dialogueBubble.Blur();
         dialogueBubble.Hide();
     }

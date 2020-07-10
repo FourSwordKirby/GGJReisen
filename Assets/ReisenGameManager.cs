@@ -24,7 +24,7 @@ public class ReisenGameManager : MonoBehaviour
 
     public void Start()
     {
-        SceneLoad(RpgPlayer.instance.gameObject, 0);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void Update()
@@ -66,7 +66,32 @@ public class ReisenGameManager : MonoBehaviour
             //Debug.Log(variable + value + comparator);
 
             bool conditionalResult = false;
-            if(comparator == "=")
+
+            // Item ownership checks
+            if (variable == ReisenGameProgress.HasCough)
+                conditionalResult = gameProgress.Player.CoughingMedicine == Assignment.Inventory;
+            else if (variable == ReisenGameProgress.HasTextbook)
+                conditionalResult = gameProgress.Player.TextBook == Assignment.Inventory;
+            else if (variable == ReisenGameProgress.HasEncyclopedia)
+                conditionalResult = gameProgress.Player.Encyclopedia == Assignment.Inventory;
+            else if (variable == ReisenGameProgress.HasNewspaper)
+                conditionalResult = gameProgress.Player.Newspaper == Assignment.Inventory;
+            else if (variable == ReisenGameProgress.HasSmartphone)
+                conditionalResult = gameProgress.Player.Smartphone == Assignment.Inventory;
+            else if (variable == ReisenGameProgress.HasMagazine)
+                conditionalResult = gameProgress.Player.Magazine == Assignment.Inventory;
+            else if (variable == ReisenGameProgress.HasWrench)
+                conditionalResult = gameProgress.Player.Wrench == Assignment.Inventory;
+            else if (variable == ReisenGameProgress.HasScroll)
+                conditionalResult = gameProgress.Player.Scroll == Assignment.Inventory;
+            else if (variable == ReisenGameProgress.HasSchematic)
+                conditionalResult = gameProgress.Player.Schematic == Assignment.Inventory;
+            else if (variable == ReisenGameProgress.HasNovel)
+                conditionalResult = gameProgress.Player.Novel == Assignment.Inventory;
+            else if (variable == ReisenGameProgress.ElixirCount)
+                conditionalResult = gameProgress.Player.Elixir1 == Assignment.Inventory || gameProgress.Player.Elixir2 == Assignment.Inventory;
+            // character stage progress checks
+            else if (comparator == "=")
             {
                 if (variable == ReisenGameProgress.KeineStage)
                     conditionalResult = gameProgress.Keine.Stage == value;
@@ -167,31 +192,19 @@ public class ReisenGameManager : MonoBehaviour
     {
         gameProgress = SaveManager.FetchGameProgress(saveName);
         SceneManager.LoadScene(gameProgress.savePoint.sceneName);
+        spawnLocation = -1;
 
         gameProgress.savePoint.SpawnPlayer(RpgPlayer.instance.gameObject);
     }
 
-
-    public void addOneShard()
-    {
-        Shard shard = null;
-        Debug.Log("added shard");
-        gameProgress.Player.AddShard(shard);
-    }
-
-
-    public void addBook()
-    {
-        gameProgress.Player.TextBook = Assignment.Inventory;
-    }
-
-
-
     //Scene transition things to manage later
-    public void SceneLoad(GameObject player, int sceneEntranceIndex)
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        player.transform.position = FindObjectOfType<ReisenSceneManager>().sceneEntrances[sceneEntranceIndex].spawnArea.position;
-        Debug.Log(player.transform.position);
+        if(spawnLocation != -1)
+        {
+            GameObject player = RpgPlayer.instance.gameObject;
+            player.transform.position = FindObjectOfType<ReisenSceneManager>().sceneEntrances[spawnLocation].spawnArea.position;
+        }
     }
 
     public void SceneExit(string targetSceneName, int sceneEntranceIndex)
@@ -205,8 +218,7 @@ public class ReisenGameManager : MonoBehaviour
 
         TransitionManager.instance.SwitchSceneTransition();
         Debug.Log("trying to load at this entrance" + sceneEntranceIndex);
-        DontDestroyOnLoad(CameraMan.instance.gameObject);
-        DontDestroyOnLoad(player);
+        DontDestroyOnLoad(this.gameObject);
         spawnLocation = sceneEntranceIndex;
 
         SceneManager.LoadScene(sceneName);
