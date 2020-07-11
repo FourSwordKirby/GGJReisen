@@ -14,6 +14,11 @@ public abstract class ScriptLine
     public abstract ScriptLine GetNextLine();
 
     /// <summary>
+    /// Speaker/owner of this line
+    /// </summary>
+    public string speaker;
+
+    /// <summary>
     /// Used for navigating a dialogue tree when navigating dialogue
     /// </summary>
     public string lineLabel;

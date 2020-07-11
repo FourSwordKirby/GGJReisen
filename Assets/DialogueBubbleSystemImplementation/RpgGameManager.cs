@@ -18,15 +18,16 @@ public class RpgGameManager : MonoBehaviour
             Destroy(this.gameObject);
     }
 
-    public void StartConversation(TextAsset dialogue, Vector3 speakerPosition, Transform playerPosition = null, Transform cameraPosition = null, AfterDialogueEvent afterEvent = null, List<DialogueInstruction> AvailableInstructions = null)
+    public void StartConversation(TextAsset dialogue, Vector3 focusPosition, Transform playerPosition = null, Transform cameraPosition = null, AfterDialogueEvent afterEvent = null, List<DialogueInstruction> AvailableInstructions = null)
     {
         DialogueEngine.InitializeGenerators(SpeakingLine.CreateSpeakingLine, ExpressionLine.CreateInstructionLine, ChoiceLine.GenerateChoiceLine, InstructionLine.GenerateInstructionline, ReisenGameManager.instance.ConditionsSatisfied);
         List<ScriptLine> lines = DialogueEngine.CreateDialogueComponents(dialogue.text, AvailableInstructions);
-        Dialogue processedDialogue = new Dialogue(lines);
-        StartCoroutine(PlayConversation(processedDialogue, speakerPosition, playerPosition, cameraPosition, afterEvent));
+        HashSet<string> speakers = new HashSet<string>(lines.Select(x => x.speaker).Distinct());
+        Dialogue processedDialogue = new Dialogue(lines, speakers);
+        StartCoroutine(PlayConversation(processedDialogue, focusPosition, playerPosition, cameraPosition, afterEvent));
     }
 
-    internal IEnumerator PlayConversation(Dialogue dialogue, Vector3 speakerPosition, Transform playerPosition = null, Transform cameraPosition = null, AfterDialogueEvent afterEvent = null)
+    internal IEnumerator PlayConversation(Dialogue dialogue, Vector3 focusPosition, Transform playerPosition = null, Transform cameraPosition = null, AfterDialogueEvent afterEvent = null)
     {
         // If a special camera position was provided, tell the camera man to use it.
         ConversationPause();
@@ -36,23 +37,34 @@ public class RpgGameManager : MonoBehaviour
         if (cameraPosition != null)
             cameraMan.StartCinematicMode(cameraPosition);
 
-
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (playerPosition != null)
         {
-            yield return player.GetComponent<CharacterMovement>().moveCharacter(playerPosition.position, speakerPosition-playerPosition.position);
+            yield return player.GetComponent<CharacterMovement>().moveCharacter(playerPosition.position, focusPosition-playerPosition.position);
         }
-        player.GetComponent<CharacterDialogueAnimator>().startTalking();
 
         DialogueBubbleUI.instance.init(dialogue);
 
         //Dictionary<string, DialogueAnimator> speakerDict = DialogueEngine.GetSpeakers(dialogue.text).ToDictionary(x => x, x => GameObject.Find(x).GetComponent<DialogueAnimator>());
 
         int lineTracker = 0;
+        GameObject speaker = null;
         //string currentSpeaker = "";
         while (!dialogue.IsFinished)
         {
             ScriptLine line = dialogue.GetNextLine();
+            GameObject newSpeaker = GameObject.Find(line.speaker);
+            if (newSpeaker != null)
+            {
+                if(newSpeaker != speaker)
+                {
+                    speaker?.GetComponentInChildren<CharacterDialogueAnimator>().stopTalking();
+                    speaker = newSpeaker;
+                }
+                speaker.GetComponentInChildren<CharacterDialogueAnimator>().startTalking();
+                speaker.GetComponentInChildren<CharacterDialogueAnimator>().Turn(focusPosition.x - speaker.transform.position.x);
+            }
+
             line.PerformLine();
 
             while (!line.IsFinished())
@@ -78,6 +90,12 @@ public class RpgGameManager : MonoBehaviour
 
         while (!DialogueBubbleUI.instance.ready)
             yield return null;
+
+        foreach(string speakerName in dialogue.speakers)
+        {
+            GameObject newSpeaker = GameObject.Find(speakerName);
+            speaker?.GetComponentInChildren<CharacterDialogueAnimator>().stopTalking();
+        }
 
         ConversationUnpause();
 

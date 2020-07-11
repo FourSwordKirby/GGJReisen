@@ -109,6 +109,9 @@ public class DialogueEngine
                     break;
             }
 
+            //Redundant hacky coding
+            processedLine.speaker = currentSpeaker;
+
             // adding label to our repository of labels
             if (!string.IsNullOrEmpty(jump))
             {

@@ -22,19 +22,6 @@ public class SpeakingLine : ScriptLine
             lineText = lineText.Substring(2);
 
         content = new SpeakingLineContent(speaker, lineText, lineNumber);
-
-        try
-        {
-            // very per game specific stuff
-            speakerAnimator = GameObject.Find(speaker).GetComponent<DialogueAnimator>();
-            if(speakerAnimator == null)
-                speakerAnimator = GameObject.Find(speaker).GetComponentInChildren<DialogueAnimator>();
-        }
-        catch(Exception e)
-        {
-            Debug.Log("attempted speaker is " + speaker);
-            throw e;
-        }
     }
 
     public static SpeakingLine CreateSpeakingLine(string speaker, string lineText, int lineNumber)
@@ -49,6 +36,18 @@ public class SpeakingLine : ScriptLine
     {
         if (content.lineText == "")
             return;
+        try
+        {
+            // very per game specific stuff
+            speakerAnimator = GameObject.Find(speaker).GetComponent<DialogueAnimator>();
+            if (speakerAnimator == null)
+                speakerAnimator = GameObject.Find(speaker).GetComponentInChildren<DialogueAnimator>();
+        }
+        catch (Exception e)
+        {
+            Debug.Log("attempted speaker is " + speaker);
+            throw e;
+        }
         Vector3 speakerPosition = speakerAnimator.getSpeechOrigin();
 
         DialogueBubbleUI.instance.DisplaySpeechBubble(content, speakerPosition, type);

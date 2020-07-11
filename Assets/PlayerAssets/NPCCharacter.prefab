@@ -12,12 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fefde726bee40c4da03b214fa0c521e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 8298685762674244021, guid: 1e06c356479b8074588d0a081b061c48,
-    type: 3}
-  expressionAnimator: {fileID: 1201553596025570838, guid: 1e06c356479b8074588d0a081b061c48,
-    type: 3}
-  speechBubbleOrigin: {fileID: 5049445523660727955, guid: 1e06c356479b8074588d0a081b061c48,
-    type: 3}
+  animator: {fileID: 8209848363180512734}
+  expressionAnimator: {fileID: 114694558780981150}
+  speechBubbleOrigin: {fileID: 4960394887641139960}
 --- !u!114 &114694558780981150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30,8 +27,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 330b408d59f74e4468ded3f3cf53786e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 8298685762674244021, guid: 1e06c356479b8074588d0a081b061c48,
-    type: 3}
+  animator: {fileID: 8209848363180512734}
   expressionRendererFront: {fileID: 1879095412427492450, guid: 1e06c356479b8074588d0a081b061c48,
     type: 3}
   expressionRendererBack: {fileID: 9047221780459323559, guid: 1e06c356479b8074588d0a081b061c48,
@@ -113,11 +109,48 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 5666357525801514264, guid: 1ddd3313e4effa34b81036e579486c45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5895180349180339322, guid: 1ddd3313e4effa34b81036e579486c45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082791261155001716, guid: 1ddd3313e4effa34b81036e579486c45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8242130787107679514, guid: 1ddd3313e4effa34b81036e579486c45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656446985116280080, guid: 1ddd3313e4effa34b81036e579486c45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ddd3313e4effa34b81036e579486c45, type: 3}
 --- !u!1 &6820982160755974520 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2641305111734042822, guid: 1ddd3313e4effa34b81036e579486c45,
+    type: 3}
+  m_PrefabInstance: {fileID: 8795303725724213694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8209848363180512734 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 855701199872357472, guid: 1ddd3313e4effa34b81036e579486c45,
+    type: 3}
+  m_PrefabInstance: {fileID: 8795303725724213694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4960394887641139960 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4528913674466077510, guid: 1ddd3313e4effa34b81036e579486c45,
     type: 3}
   m_PrefabInstance: {fileID: 8795303725724213694}
   m_PrefabAsset: {fileID: 0}

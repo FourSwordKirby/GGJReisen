@@ -50,6 +50,7 @@ public class CharacterMovementAnimator : MonoBehaviour
     //bad hack
     public IEnumerator turnTowards(Vector3 dir)
     {
+        animator.SetFloat("SpeedModifier", 1.0f);
         animator.SetFloat("xDirection", dir.x);
         forcedMove = true;
         float timer = 0.5f;
