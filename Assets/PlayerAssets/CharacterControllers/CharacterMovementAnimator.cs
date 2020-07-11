@@ -12,9 +12,14 @@ public class CharacterMovementAnimator : MonoBehaviour
     public float emitSpeed;
     public ParticleSystem poofParticleSystem;
 
+    bool forcedMove;
+
     // Update is called once per frame
     void Update()
     {
+        if (forcedMove)
+            return;
+
         Vector3 velocityVector = movement.selfBody.velocity;
         bool isGrounded = gameObject.transform.position.y <= 0.3f;//Temporary y-position check bc too lazy to implement proper ECB based isGrounded check
 
@@ -40,5 +45,21 @@ public class CharacterMovementAnimator : MonoBehaviour
         {
             poofParticleSystem.Play();
         }
+    }
+
+    //bad hack
+    public IEnumerator turnTowards(Vector3 dir)
+    {
+        animator.SetFloat("xDirection", dir.x);
+        forcedMove = true;
+        float timer = 0.5f;
+
+        while(timer > 0)
+        {
+            timer -= Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        forcedMove = false;
+        yield return null;
     }
 }
