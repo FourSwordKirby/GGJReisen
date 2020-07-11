@@ -15,16 +15,18 @@ public class CharacterMovement : MonoBehaviour
 
     public Vector2 OverrideMovementVector = Vector2.zero;
 
+    public bool forcedMove;
+    public Vector3 targetPosition = Vector3.zero;
+    public Vector3 forwardDirection = Vector3.zero;
+
     public bool isGrounded;
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 movementVector = Controls.getDirection();
-        if (OverrideMovementVector != Vector2.zero)
-        {
-            movementVector = OverrideMovementVector;
-        }
+        Vector2 movementVector = Vector2.zero;
+        if (!forcedMove)
+            movementVector = Controls.getDirection();
         selfBody.velocity += (Vector3.right * movementVector.x + Vector3.forward * movementVector.y).normalized;
 
         Vector3 vel = selfBody.velocity;
@@ -37,5 +39,24 @@ public class CharacterMovement : MonoBehaviour
             isGrounded = false;
             selfBody.velocity += Vector3.up * jumpPower;
         }
+    }
+
+    public IEnumerator moveCharacter(Vector3 targetPosition, Vector3 facingDirection)
+    {
+        forcedMove = true;
+        Vector3 displacement = (targetPosition - this.transform.position);
+        Vector3 currentDisplacement = displacement;
+        while(currentDisplacement.magnitude > 0.4f)
+        {
+            currentDisplacement = (targetPosition - this.transform.position);
+            selfBody.velocity = (Vector3.right * currentDisplacement.x + Vector3.forward * currentDisplacement.y).normalized * 2.0f;
+            yield return new WaitForEndOfFrame();
+        }
+        //dumb hack for cutscen ease
+        yield return GetComponent<CharacterMovementAnimator>().turnTowards(facingDirection);
+
+        selfBody.velocity = Vector3.zero;
+        forcedMove = false;
+        yield return null;
     }
 }

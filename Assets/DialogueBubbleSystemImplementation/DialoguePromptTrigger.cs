@@ -11,6 +11,8 @@ public class DialoguePromptTrigger : MonoBehaviour
     public bool forceDialogueOnEnter = false;
     public bool forceBack;
     public Transform promptPosition;
+    public Transform leftSpeakingPosition;
+    public Transform rightSpeakingPosition;
     public Transform cameraPosition;
 
     public UnityEvent postDialogueEvent;
@@ -67,11 +69,15 @@ public class DialoguePromptTrigger : MonoBehaviour
         hidePrompt();
 
         Vector3 speakerPosition = transform.position;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        Vector3 displacement = (player.transform.position - this.transform.position);
+
+        Transform speakingPosition = displacement.x < 0 ? leftSpeakingPosition : rightSpeakingPosition;
 
         if (repeatingDialogue)
-            RpgGameManager.instance.StartConversation(dialogue, speakerPosition, cameraPosition, hideDialogue, dialogueInstructions);
+            RpgGameManager.instance.StartConversation(dialogue, speakerPosition, speakingPosition, cameraPosition, hideDialogue, dialogueInstructions);
         else
-            RpgGameManager.instance.StartConversation(dialogue, speakerPosition, cameraPosition, destroy, dialogueInstructions);
+            RpgGameManager.instance.StartConversation(dialogue, speakerPosition, speakingPosition, cameraPosition, destroy, dialogueInstructions);
     }
     
     private void hideDialogue()

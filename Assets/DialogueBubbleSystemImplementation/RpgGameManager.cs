@@ -18,15 +18,15 @@ public class RpgGameManager : MonoBehaviour
             Destroy(this.gameObject);
     }
 
-    public void StartConversation(TextAsset dialogue, Vector3 speakerPosition, Transform cameraPosition = null, AfterDialogueEvent afterEvent = null, List<DialogueInstruction> AvailableInstructions = null)
+    public void StartConversation(TextAsset dialogue, Vector3 speakerPosition, Transform playerPosition = null, Transform cameraPosition = null, AfterDialogueEvent afterEvent = null, List<DialogueInstruction> AvailableInstructions = null)
     {
         DialogueEngine.InitializeGenerators(SpeakingLine.CreateSpeakingLine, ExpressionLine.CreateInstructionLine, ChoiceLine.GenerateChoiceLine, InstructionLine.GenerateInstructionline, ReisenGameManager.instance.ConditionsSatisfied);
         List<ScriptLine> lines = DialogueEngine.CreateDialogueComponents(dialogue.text, AvailableInstructions);
         Dialogue processedDialogue = new Dialogue(lines);
-        StartCoroutine(PlayConversation(processedDialogue, cameraPosition, afterEvent));
+        StartCoroutine(PlayConversation(processedDialogue, speakerPosition, playerPosition, cameraPosition, afterEvent));
     }
 
-    internal IEnumerator PlayConversation(Dialogue dialogue, Transform cameraPosition = null, AfterDialogueEvent afterEvent = null)
+    internal IEnumerator PlayConversation(Dialogue dialogue, Vector3 speakerPosition, Transform playerPosition = null, Transform cameraPosition = null, AfterDialogueEvent afterEvent = null)
     {
         // If a special camera position was provided, tell the camera man to use it.
         ConversationPause();
@@ -38,6 +38,10 @@ public class RpgGameManager : MonoBehaviour
 
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (playerPosition != null)
+        {
+            yield return player.GetComponent<CharacterMovement>().moveCharacter(playerPosition.position, speakerPosition-playerPosition.position);
+        }
         player.GetComponent<CharacterDialogueAnimator>().startTalking();
 
         DialogueBubbleUI.instance.init(dialogue);
