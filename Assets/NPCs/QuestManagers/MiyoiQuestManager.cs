@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MiyoiQuestManager : MonoBehaviour
+public class MiyoiQuestManager : Npc
 {
     // Start is called before the first frame update
     public void addFirstShard()

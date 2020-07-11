@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeineQuestManager : MonoBehaviour
+public class KeineQuestManager : Npc
 {
     // Start is called before the first frame update
     public void addFirstShard()

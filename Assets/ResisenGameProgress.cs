@@ -179,7 +179,7 @@ public class ReisenGameProgress: GameProgress
     public KosuzuProgress Kosuzu;
     public NitoriProgress Nitori;
     public AkyuProgress Akyu;
-    public LunarReisenProgress LunarResisen;
+    public LunarReisenProgress LunarReisen;
 
     public MiyoiProgress Miyoi;
     public KogasaProgress Kogasa;

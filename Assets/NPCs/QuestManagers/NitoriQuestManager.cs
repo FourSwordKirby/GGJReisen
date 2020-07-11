@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NitoriQuestManager : MonoBehaviour
+public class NitoriQuestManager : Npc
 {
     // Start is called before the first frame update
     public void addFirstShard()
