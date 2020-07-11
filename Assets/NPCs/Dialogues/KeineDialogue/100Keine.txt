@@ -1,0 +1,29 @@
+Keine: Oh, welcome to the human village. You're not a human are you? 
+
+Reisen: Oh shoot, I forgot my disguise!  
+
+Keine: Well, it's okay. There are already a bunch of other <b>youkai</b> coming in and out. 
+
+Please try not to cause any trouble for anyone here. 
+
+Reisen: To be so calm in front of a <b>youkai</b>, and even to lecture me...  
+
+Aren't humans taught to fear <b>youkai</b>? Who are you? 
+
+Keine: I'm... Hm? I'm a <b>person</b>. 
+
+Reisen: No, like your <b>name</b>. 
+
+Keine: For some reason, <b>I don't remember</b>. I'm pretty sure I'm a human though. 
+
+Reisen: Is there any possibility that you aren't? 
+
+Keine: That's weird. There's no way that I'm not. I don't know why I had such a thought.  
+
+Reisen: Suspicious... 
+
+[expression]: worry
+
+**Agh! I've never talked to people here much. I can't tell who she is!
+
+[instruction] Stage101

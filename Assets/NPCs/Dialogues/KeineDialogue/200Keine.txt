@@ -1,0 +1,42 @@
+//200 – history Lesson 
+
+Keine: Now that I've remembered that I'm a history teacher, would you care to learn? 
+Reisen: **To manifest a <b>Personality Shard</b>, I have to talk to these people more.
+[expression] think
+**I should choose my words carefully.
+[choice] [What's the point of learning history?  | point] [Tell me more about your history.  | tell] [Give me a moment to think. | leave]
+  
+
+[expression] normal [point[
+Reisen: What's the point of learning history? 
+There's so much baggage in the past. 
+I'd rather look forward and not be bogged down... 
+Keine: What's the point? Sheesh, kids are too fragile these days. 
+Listen, it is important to heed to warnings embedded in the stories of the past. 
+If you do not learn fear from past tales, then you may end up hurting yourself in ignorance. 
+Reisen: Ahh.... Is that so... 
+**To think I'd get scolded here...
+**Hm?
+**Another personality shard!
+
+[instruction] Stage200_Correct
+(end)
+
+ 
+
+>Tell me more 
+Reisen: I'd like to learn more about your village's history.  
+Keine: Sure thing! Well, things happened. First, an event happened. And then, another event... 
+Reisen: That's not very specific... 
+Keine: Oh, would you like me to go into more detail? 
+In the first event, there were two people. And they did three things together... 
+Reisen: **This isn't helping... The virus has <b>simplified their</b> entire history that its unidentifiable...
+Keine: ... Are you paying attention? Is it not interesting to you? 
+*sigh* Well, do as you will... 
+[instruction] Stage200_Wrong
+(end)
+
+Keine: Sure, take your time. [leave]
+(end)
+
+[end]

@@ -1,0 +1,49 @@
+// 300 – Knowing too much history 
+
+Reisen: You... seem to be thinking deeply about something. 
+**Did I guess right?
+Keine: Yeah, something has been bothering me for a while. 
+I know that, as my job, I'm supposed to know a lot of history... 
+But some of these events... feel incredibly real to me? 
+It's almost like I was there. 
+But that can't be, these events I'm thinking about are from a several generations ago. 
+There's no way I was alive during that time, right? 
+Reisen: How should I know? 
+**This person seems to on the verge of remembering themselves.
+**Do I have anything that can give them the final push? 
+
+
+?{elixir=1} {encyclopedia=1} [choice] [Hand over the elixir  | elixir] [Hand over the encyclopedia | encyclopedia] [Leave | leave]
+?{encyclopedia=1} [choice] [Hand over the encyclopedia  | encyclopedia] [Leave | leave]
+?{elixir=1} [choice] [Hand over the elixir  | elixir] [Leave | leave]
+[choice] [Leave | leave]
+
+Keine: What is this?  [elixir]
+Reisen: It's a potion to make you see the same things I do. 
+There is something afflicting the human village right now, and I need you to see it. 
+Keine: Afflicting the human village? 
+... Alright, for the sake of everyone here, I'll trust you on this. 
+//Swap Keine blocks with Keine sprite 
+//Goto Stage 1000 
+
+[instruction] Stage300_Elixir
+(end) 
+
+Keine: This is... wow, this is really old. [encyclopedia]
+This is part of the set that the old emperor Huang Di had transcribed. 
+I am surprised that it is still around... 
+Though I suppose if it is in Gensokyo, it has been lost to the outside world, and has passed into fantasy. 
+Yes... since you are a youkai, I suppose it is safe to tell you. 
+This encyclopedia volume. Its information was given to Emperor Huang Di by my ancestors, the Hakutaku. 
+Distant ancestors... I am barely a part of them. 
+I am the were-Hakutaku, <b>Keine Kamishirasawa</b>.
+
+//Keine blocks is replaced with her proper sprite. 
+//Goto Stage 1100 
+
+[instruction] Stage300_Encyclopedia
+
+[expression] worry
+Reisen: **No good I'm still missing something!  [leave]
+(end)
+
