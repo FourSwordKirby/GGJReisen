@@ -1,0 +1,23 @@
+ 
+
+Akyu: ... 
+
+N-no... It's no use... 
+
+I still can't remember which memories belonged to <b>me</b>... 
+
+Reisen: Huh!? No way! That was an elixir made by my master! 
+
+Akyu: I know... 
+
+I had heard of Miss Yagokoro's medicines of having miraculous powers to cure anything... 
+
+But maybe I was overly optimistic. 
+
+I'm sorry Reisen... 
+
+... Um, I'm not feeling great. Let's talk later, okay? 
+
+[instruction] Stage1002
+//+1 Personality Shard 
+//Goto Stage 1001 

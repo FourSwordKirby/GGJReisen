@@ -1,0 +1,67 @@
+Miyoi: Oh Reisen!  
+
+Come in, come in. Business is slow today so take any seat in the house. 
+
+Reisen: Oh, uh... I'm just passing through 
+
+[expression]: sad 
+
+Miyoi: Boo hoo 
+
+And after you promised during last nights party... 
+
+Reisen: Right, uh I don't really remember. What's your name? 
+
+Miyoi: Whaaaaa-? 
+
+Don't tell me you forgot the <b>Poster Girl of Geidontei?</b> 
+
+It's me! <b>Miyoi Okunoda. </b>
+
+Reisen: Ohhh, its coming back to me now! You brought that really good sake and stewed vegtables 
+
+[expression] smile  
+
+Miyoi: Yeah! 
+
+[expression] normal 
+
+Anyways, it's good to see a familiar face.  
+
+Everyone looks so different today 
+
+Is it some sort of holiday? 
+
+Reisen: Wait, you can see whats going on? 
+
+Miyoi: Well, I can tell there's some sort of incident 
+
+After all none of the regulars have come around today, and I couldn't find the owner anywhere. 
+
+Reisen: It's strange that you weren't affected. 
+
+Myoi: Maybe the instigators just forgot about me 
+
+Wouldn't be the first time heh heh.... 
+
+[expression] frown   
+
+... 
+
+[expression] think
+
+A-anyways 
+
+[expression] smile 
+
+To make up for forgetting your promise you better come by later ok! 
+
+And bring any friends you meet too! 
+
+Reisen: Sure thing 
+
+**what a hardworking girl
+
+**I hope master treats me to good meal after this is all done
+
+[instruction] Stage000

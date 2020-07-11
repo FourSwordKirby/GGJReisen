@@ -1,0 +1,84 @@
+ 
+
+Akyu: It's been great to meet you, but I must return to my work. 
+
+There is much information I need to record from my <b>previous visitor</b>... 
+
+I do hope the reference material I requested from the <b>shop</b> arrives soon... 
+
+Oh, and please visit again! 
+
+I have many questions for you and your mistress! 
+
+Reisen: **Do I have something for her? 
+
+?{elixir=1} Reisen: **I have an elixir, but... 
+
+?{elixir=1} Reisen: **I can't shake this ominous feeling about giving her one... 
+
+?{elixir=1} {textbook=1} [choice] [Hand over the elixir  | elixir] [Hand over the history book  | textbook] [Leave | leave]
+?{elixir=1} [choice] [Hand over the elixir  | elixir]  [Leave | leave]
+?{textbook=1} [choice] [Hand over the history book  | textbook] [Leave | leave]
+[choice] [Leave | end] 
+ 
+
+Akyu: Hm? What's this? [elixir]
+
+Reisen: It's medication from my master. 
+
+It should help you with that forgetful spell you're feeling. 
+
+Akyu: Is that really...!? Please let me have it! 
+
+Reisen: **Whoa, she's fast! 
+
+[instruction] Stage001_Elixir (end)
+
+//Akyu blocks swapped with Akyu sprite 
+//Goto Stage 1000 (bad end) 
+
+
+
+Reisen: Is this the <b>reference material</b> you needed? [textbook]
+
+Akyu: Oh my! To think the medicine peddler is also doing book deliveries now too. 
+
+Yes, it is. Thank you very much. 
+
+Reisen: Um, no problem... 
+
+Akyu: Since you're already here, could I trouble you with one more delivery? 
+
+Reisen: Ah... um... sure I guess. 
+
+Akyu: This is an old encyclopedia that I had acquired. 
+
+It contains descriptions of various <b>Youkai</b> and methods of dealing with them. 
+
+I've finished <b>transcribing</b> what I need from it. 
+
+A <b>school teacher</b> in the village was asking to borrow it. 
+
+Can you bring this to them? 
+
+Reisen: A <b>school teacher</b>? 
+
+**... Did I meet such a person? 
+
+**They must have been one of the cubes. 
+
+Sure, I will try. 
+
+Akyu: Thank you very much. 
+
+//+1 Personality Shard 
+//Goto Stage 100 
+[instruction] Stage001_Book 
+(end)
+
+
+ 
+
+Akyu: Have a nice day. [leave]
+
+[end]

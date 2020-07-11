@@ -1,0 +1,21 @@
+//000 – Shoo 
+
+Reisen: **What's a person doing all the way out here? 
+
+Hello? 
+
+Nitori: Ack! 
+
+Reisen: Huh!? 
+
+Nitori: Oh it's just a rabbit. 
+
+Reisen: ... Excuse me? 
+
+Nitori: Shoo, go away, you're getting in the way of <b>important work</b> 
+
+Reisen: **I want to say I'm annoyed, but saying that I've been upset by a box would be a new kind of low... 
+
+**Who is this <b>person?</b>
+
+[instruction] Stage000 

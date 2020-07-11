@@ -1,0 +1,86 @@
+003 – Pass me the tool 
+
+Nitori: Hey, did you find my <b>tool</b>? 
+
+?{elixir=1} {smartphone=1} {wrench=1} [choice] [Hand over the elixir  | elixir] [Hand over the smartphone  | smartphone] [Hand over the wrench | wrench] [Leave | leave]
+?{elixir=1} {smartphone=1} [choice] [Hand over the elixir  | elixir] [Hand over the smartphone  | smartphone] [Leave | leave]
+?{elixir=1} {wrench=1} [choice] [Hand over the elixir  | elixir] [Hand over the wrench | wrench] [Leave | leave]
+?{elixir=1} [choice] [Hand over the elixir  | elixir]  [Leave | leave]
+?{smartphone=1} {wrench=1} [choice] [Hand over the smartphone  | smartphone] [Hand over the wrench | wrench] [Leave | leave]
+?{smartphone=1} [choice] [Hand over the smartphone  | smartphone] [Leave | leave]
+?{wrench=1} [Hand over the wrench | wrench] [Leave | leave]
+[choice] [Leave | end] 
+
+Nitori: ... What is this? [elixir]
+
+Reisen: It's a powerful elixir. Drink it. 
+
+You don't see the incident happening around you because you've already been infected by it. 
+
+Nitori: First, you were calling me suspicious... 
+
+Don't think I'm dumb enough to take your words at face value. 
+
+Hmm... 
+
+Reisen: ... What are those cubes you just brought out? 
+
+Nitori: Cubes? These are tools to help me perform a litmus test. 
+
+... Wait, this is... !! 
+
+Let me take a sip! 
+
+Replace Nitori block with Nitori sprites 
+
+[instruction] Stage003_Elixir
+(end)
+
+ 
+Nitori: This is...! [smartphone]
+
+Reisen: This was found near the contraption at the school. 
+
+Nitori: Oh! Oh, yeah! Thanks for finding it! 
+
+Reisen: Where did you get that from? 
+
+Nitori: Geh.  
+
+Reisen: Geh? 
+
+Nitori: A-ah, you know. I found it discarded along the river stream. 
+
+It looked interesting, so I was going to disassemble it. 
+
+But I guess I dropped it! Whoops, imagine that! 
+
+Reisen: Hey, wait, so it's not yours- 
+
+Nitori: Ah, you wanted to hear about the contraption, right? Right? 
+[instruction] Stage003_Smartphone
+(end)
+
+  
+
+Reisen: Is this yours?  [wrench]
+
+Nitori: Oh, you found it. Guess rabbits can be capable sometimes. 
+
+Reisen: **This stupid cube really... 
+
+Nitori: It's hard to do any <b>engineering</b> without one of these puppies, yeah? 
+
+Reisen: Sure... 
+
+So, what do you know about the <b>contraption</b>? 
+
+Nitori: Right, that's what you wanted to know about.  
+//Goto stage 100 
+[instruction] Stage003_Wrench
+(end)
+
+
+[expression] worry [leave]
+Reisen: **Did I see a tool somewhere? 
+(end)

@@ -1,0 +1,31 @@
+Nitori: Oh right, thanks for bringing me that magazine. 
+
+You were interested in that contraption in the village, right? 
+
+In exchange for bringing me the magazine, how about I give you this? 
+
+Reisen: This is... some kind of scroll? 
+
+Nitori: Open it up. 
+
+Reisen: No way! This is a diagram of the <b>Dimensionality Reducer</b>? 
+
+Nitori: The contraption, yeah! 
+
+Reisen: But what kind of writing is this...? 
+
+Nitori: That's the problem... 
+
+I dug it up in our storage shed here, but I can't read it... 
+
+Well, given how simple the diagram is, it's not useful to me anyways. 
+
+I think it's some kind of user manual. 
+
+Reisen: Huh. Well, any hints, no matter how small, should aid with the investigation. 
+
+Nitori:  Investigation? Whoa! 
+
+Why's everything so blocky!? 
+
+[instruction] Stage1101

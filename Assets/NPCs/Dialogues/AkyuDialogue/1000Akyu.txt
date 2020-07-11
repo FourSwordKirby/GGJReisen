@@ -1,0 +1,30 @@
+//1000 – Elixir Bad Ending 1 
+
+Akyu: ... 
+
+"Is it painful? Is it sad?" 
+
+"Not even knowing myself." 
+
+Yes, there indeed was a song like that. 
+
+Reisen: Um...? 
+
+Akyu: Ah, thank you Reisen for that medicine. 
+
+Unfortunately, I don't think it quite worked. 
+
+Reisen: I mean, you're not a cube anymore, right? 
+
+I don't understand. 
+
+Akyu: I can't shake the feeling that there's something important I've forgotten. 
+
+A vital piece of <b>me</b>... 
+
+[instruction] Stage1000 
+
+ 
+
+//+1 Personality Shard 
+//Goto Stage 1001 

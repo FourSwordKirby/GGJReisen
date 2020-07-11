@@ -1,0 +1,37 @@
+Miyoi: Ah... there's so much work to do when the owner isn't around 
+
+With all of the stores lookin' the same you can't even tell that this is Geidontei! 
+
+Reisen: Yeah I imagine it'd be hard. 
+
+At least your sign seems to have been fixed. 
+
+[expression] smile 
+
+Miyoi: Yeah! I'm so glad it was restored too! 
+
+Reisen: You mean you weren't the one that fixed it? 
+
+Miyoi: Nope, it must be because of the hard work you've done in resolving the incident. 
+
+I look forward to the grand feast you'll have here after you finish workin' 
+
+Reisen: Yeah 
+
+Speaking of which, isn't this an odd way to write <b>Geidon</b>? 
+
+Why specifically use the female kanji for whale over the male one 
+
+Miyoi: I guess the owner wanted to make pub to sound more approachable? 
+
+The word Geidon is refers to when a powerful creature swallows a smaller one in one gulp 
+
+Though it makes sense as a customer enjoying a hearty drink 
+
+Its common uses refers to the invasions of smaller lands by larger ones. 
+
+If you think about it that way, it feels a little imposing. 
+
+Though you'll find no friendlier face in the village than me! 
+
+[instruction] Stage010
