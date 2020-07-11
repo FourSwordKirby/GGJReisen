@@ -1,0 +1,29 @@
+Keine: If this is your first time here, you should have a look around. 
+
+There are all sorts of <b>stuff</b> and <b>people</b> around. 
+
+Reisen: That's awfully vague. 
+
+Keine: Is it? Look over there. That's a <b>building</b>.  
+
+Reisen: Are you pulling my leg here!? 
+
+Keine: No? I'm trying to be helpful here. 
+
+Reisen: Can you be more specific? What kind of building is that? 
+
+It looks like a gray cube to me. 
+
+Keine: Gray cube? I guess it is cube-like, but I wouldn't really call it that. 
+
+Can't you tell from the sign in the front? It's a <b>building</b> that a <b>person</b> works in. 
+
+Reisen: What sign...? I just see cubes... 
+
+Keine: ... Is your vision okay? Wait, are you feeling okay? Do you have a fever? 
+
+Reisen: Am I the lunatic here!? 
+
+**... Is this an effect of the virus? Do they not see what's going on?
+
+[instruction] Stage103

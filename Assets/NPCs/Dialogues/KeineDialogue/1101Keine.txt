@@ -1,0 +1,9 @@
+Keine: Oh hey, while I was investigating the contraption this morning, I found this nearby. 
+
+It's some kind of card sized piece of metal with glass attached to it. 
+
+Reisen: This is a... <b>Lunarian Smartphone!</b> 
+
+Keine: Maybe it will help you in your investigation. 
+
+[instruction] Stage1101

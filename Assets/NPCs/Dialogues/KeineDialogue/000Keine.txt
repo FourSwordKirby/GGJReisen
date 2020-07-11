@@ -1,0 +1,11 @@
+Keine: There’s some sort of <b>contraption</b> over there that I’ve never seen before. 
+
+I wonder what it is? 
+
+I saw someone fiddling with it earlier this morning. 
+
+Reisen: **I should check out that <b>contraption</b>. It might be related to the incident.
+
+**Also, it looks like this person <b>has more to say.</b>
+
+[instruction] Stage100

@@ -6,8 +6,10 @@ public enum CharacterExpression
 {
     normal = 0,
     smile = 1,
-    yandere = 2,
-    think = 3
+    laugh = 2,
+    think = 3,
+    frown = 4,
+    worry = 5
 }
 
 public enum Symbol

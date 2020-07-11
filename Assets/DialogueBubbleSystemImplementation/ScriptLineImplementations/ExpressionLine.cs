@@ -28,6 +28,8 @@ public class ExpressionLine : ScriptLine
         {
             // very per game specific stuff
             CharacterDialogueAnimator speakerAnimator = GameObject.Find(speaker).GetComponent<CharacterDialogueAnimator>();
+            if (speakerAnimator == null)
+                speakerAnimator = GameObject.Find(speaker).GetComponentInChildren<CharacterDialogueAnimator>();
             speakerAnimator.changeExpression(desiredExpression);
         }
         catch (Exception e)

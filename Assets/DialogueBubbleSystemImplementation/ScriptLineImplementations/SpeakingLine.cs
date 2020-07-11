@@ -4,7 +4,6 @@ using System;
 public class SpeakingLine : ScriptLine
 {
     SpeakingLineContent content;
-    DialogueAnimator speakerAnimator;
     public DialogueBubbleType type;
 
     public SpeakingLine(string speaker, string lineText, int lineNumber, string label = "" ): base(label)
@@ -39,18 +38,19 @@ public class SpeakingLine : ScriptLine
         try
         {
             // very per game specific stuff
+            DialogueAnimator speakerAnimator;
             speakerAnimator = GameObject.Find(speaker).GetComponent<DialogueAnimator>();
             if (speakerAnimator == null)
                 speakerAnimator = GameObject.Find(speaker).GetComponentInChildren<DialogueAnimator>();
+            Vector3 speakerPosition = speakerAnimator.getSpeechOrigin();
+
+            DialogueBubbleUI.instance.DisplaySpeechBubble(content, speakerPosition, type);
         }
         catch (Exception e)
         {
             Debug.Log("attempted speaker is " + speaker);
             throw e;
         }
-        Vector3 speakerPosition = speakerAnimator.getSpeechOrigin();
-
-        DialogueBubbleUI.instance.DisplaySpeechBubble(content, speakerPosition, type);
     }
 
     public override bool IsFinished()

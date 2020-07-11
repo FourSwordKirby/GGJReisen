@@ -28,7 +28,7 @@ public class CharacterDialogueAnimator : DialogueAnimator
 
     public void changeExpression(CharacterExpression expression)
     {
-        expressionAnimator.changeExpression(expression);
+        expressionAnimator?.changeExpression(expression);
     }
 
     public override Vector3 getSpeechOrigin()
