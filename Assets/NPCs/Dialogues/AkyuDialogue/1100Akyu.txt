@@ -1,0 +1,41 @@
+Akyu: ... 
+
+Reisen: How do you feel? 
+
+Akyu: Yes! I think that did the trick. 
+
+My name is <b>Hieda no Akyu</b>, the ninth Child of Miare. 
+
+Oh phew, now that I think about it, the way I was talking was way outdated, wasn't it? 
+
+Reisen: **Wow, what a dramatic shift in personality. 
+
+Akyu: Please let Miss Yagokoro know I am eternally grateful. 
+
+And also, thank you Reisen for your help. 
+
+I always knew you were different from other Youkai rabbits. 
+
+But it still surprises me how willing you are to help humans. 
+
+Reisen: I have my reasons. 
+
+Akyu: ... 
+
+Well, I've gotten the sense that you're not a social type to begin with. 
+
+So I'll reign in my curiosity for now. 
+
+Please take care. 
+
+And let me know if you ever feel like chatting. 
+
+I really would love to learn more about our village's elusive medicine peddler. 
+
+Reisen: ... I'll consider it. 
+
+So long as my master permits. 
+
+[instruction] Stage1100 
+//+2 Personality Shard 
+//Goto Stage 1101 
