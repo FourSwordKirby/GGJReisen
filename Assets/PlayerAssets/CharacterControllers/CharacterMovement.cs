@@ -46,10 +46,10 @@ public class CharacterMovement : MonoBehaviour
         forcedMove = true;
         Vector3 displacement = (targetPosition - this.transform.position);
         Vector3 currentDisplacement = displacement;
-        while(currentDisplacement.magnitude > 0.4f)
+        while(currentDisplacement.sqrMagnitude > 0.2f)
         {
             currentDisplacement = (targetPosition - this.transform.position);
-            selfBody.velocity = (Vector3.right * currentDisplacement.x + Vector3.forward * currentDisplacement.y).normalized * 2.0f;
+            selfBody.velocity = (Vector3.right * currentDisplacement.x + Vector3.forward * currentDisplacement.z).normalized * 2.0f;
             yield return new WaitForEndOfFrame();
         }
         //dumb hack for cutscen ease

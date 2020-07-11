@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+public enum DialogueTriggerSpeakerConfig
+{
+    None,
+    Automatic,
+    ForceLeft,
+    ForceRight
+}
+
 public class DialoguePromptTrigger : MonoBehaviour
 {
     public TextAsset dialogue;
@@ -11,6 +19,8 @@ public class DialoguePromptTrigger : MonoBehaviour
     public bool forceDialogueOnEnter = false;
     public bool forceBack;
     public Transform promptPosition;
+
+    public DialogueTriggerSpeakerConfig speakingPositionConfig = DialogueTriggerSpeakerConfig.Automatic;
     public Transform leftSpeakingPosition;
     public Transform rightSpeakingPosition;
     public Transform cameraPosition;
@@ -72,14 +82,30 @@ public class DialoguePromptTrigger : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         Vector3 displacement = (player.transform.position - this.transform.position);
 
-        Transform speakingPosition = displacement.x < 0 ? leftSpeakingPosition : rightSpeakingPosition;
+        Transform speakingPosition = null;
+        switch (speakingPositionConfig)
+        {
+            case DialogueTriggerSpeakerConfig.None:
+                break;
+            case DialogueTriggerSpeakerConfig.Automatic:
+                speakingPosition = displacement.x < 0 ? leftSpeakingPosition : rightSpeakingPosition;
+                break;
+            case DialogueTriggerSpeakerConfig.ForceLeft:
+                speakingPosition = leftSpeakingPosition;
+                break;
+            case DialogueTriggerSpeakerConfig.ForceRight:
+                speakingPosition = rightSpeakingPosition;
+                break;
+        }
+
+        Vector3 focusPosition = (speakerPosition + speakingPosition.position) * 0.5f;
 
         if (repeatingDialogue)
-            RpgGameManager.instance.StartConversation(dialogue, speakerPosition, speakingPosition, cameraPosition, hideDialogue, dialogueInstructions);
+            RpgGameManager.instance.StartConversation(dialogue, focusPosition, speakingPosition, cameraPosition, hideDialogue, dialogueInstructions);
         else
-            RpgGameManager.instance.StartConversation(dialogue, speakerPosition, speakingPosition, cameraPosition, destroy, dialogueInstructions);
+            RpgGameManager.instance.StartConversation(dialogue, focusPosition, speakingPosition, cameraPosition, destroy, dialogueInstructions);
     }
-    
+
     private void hideDialogue()
     {
         postDialogueEvent?.Invoke();

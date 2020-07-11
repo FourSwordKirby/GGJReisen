@@ -7,10 +7,10 @@ public class Dialogue
 {
     List<ScriptLine> lines;
     public int currentPosition = -1;
+    public HashSet<string> speakers;
 
     const string END_LABEL = "end";
 
-    private bool isFinished = false;
     public bool IsFinished { get => currentPosition >= lines.Count - 1 || (currentPosition > 0 && lines[currentPosition].jumpLabel == END_LABEL); }
 
     //temporary variables for getting this working with the current implementation
@@ -18,9 +18,10 @@ public class Dialogue
         get => lines.Where(x => x.GetLineType() == DialogueEngine.LineType.SpeakingLine).ToList().Count;
     }
 
-    public Dialogue (List<ScriptLine> lines)
+    public Dialogue (List<ScriptLine> lines, HashSet<string> speakers)
     {
         this.lines = lines;
+        this.speakers = speakers;
         currentPosition = -1;
     }
 

@@ -23,7 +23,7 @@ public class ChoiceLine : ScriptLine
         }
         catch (Exception e)
         {
-            Debug.Log("attempted speaker is " + speaker);
+            Debug.Log("attempted speaker for this choice is " + speaker);
             throw e;
         }
 

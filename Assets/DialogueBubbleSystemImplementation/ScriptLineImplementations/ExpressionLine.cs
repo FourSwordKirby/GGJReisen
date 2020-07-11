@@ -32,7 +32,7 @@ public class ExpressionLine : ScriptLine
         }
         catch (Exception e)
         {
-            Debug.Log("attempted speaker is " + speaker);
+            Debug.Log("attempted speaker for this expression is " + speaker);
             throw e;
         }
     }

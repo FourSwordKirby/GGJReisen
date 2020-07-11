@@ -9,9 +9,16 @@ public class CharacterDialogueAnimator : DialogueAnimator
 
     public Transform speechBubbleOrigin;
 
+    public void Turn(float direction)
+    {
+        animator.SetFloat("SpeedModifier", 1.0f);
+        animator.SetFloat("xDirection", direction);
+    }
+
     public override void startTalking()
     {
         animator.SetBool("Talking", true);
+
     }
 
     public override void stopTalking()
