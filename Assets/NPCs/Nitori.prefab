@@ -462,6 +462,48 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &114603481155592042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412433169982396306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f90d652ff1454646957acfc93f0e33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - stage: 0
+    dialogue: {fileID: 4900000, guid: 1f13cb52f369f6b4084c08fb3e0ecc3d, type: 3}
+  - stage: 1
+    dialogue: {fileID: 4900000, guid: f0c4af7b888f64545a2a647429f64109, type: 3}
+  - stage: 2
+    dialogue: {fileID: 4900000, guid: 0688a980956303444909faabe34f2d9a, type: 3}
+  - stage: 3
+    dialogue: {fileID: 4900000, guid: 39f9f2a55b5882649b637f65dcbc7caf, type: 3}
+  - stage: 100
+    dialogue: {fileID: 4900000, guid: 2cb992292cc948443b8d6bd09be69d95, type: 3}
+  - stage: 101
+    dialogue: {fileID: 4900000, guid: 512a15441fff150479b92e1481a3f1d6, type: 3}
+  - stage: 200
+    dialogue: {fileID: 4900000, guid: 64807df193281ab4cb718a8929727fe8, type: 3}
+  - stage: 300
+    dialogue: {fileID: 4900000, guid: 8129e83f8b65c7148bbfd9f7c45dc2fe, type: 3}
+  - stage: 301
+    dialogue: {fileID: 4900000, guid: faeb4257844066f4f848615a1608ac7b, type: 3}
+  - stage: 1000
+    dialogue: {fileID: 4900000, guid: ecbed14bae9bdfb4993928f1b5b889c2, type: 3}
+  - stage: 1001
+    dialogue: {fileID: 4900000, guid: ec73889ea55d468498bde155c71e2e74, type: 3}
+  - stage: 1100
+    dialogue: {fileID: 4900000, guid: f3dab31c2e5df4543893c2b78d490859, type: 3}
+  - stage: 1101
+    dialogue: {fileID: 4900000, guid: 97bda90194c9f154a992de5d6a7517d8, type: 3}
+  - stage: 1102
+    dialogue: {fileID: 4900000, guid: 7c51f231e88682444a46cb3a2363e6ea, type: 3}
+  dialoguePromptTrigger: {fileID: 5328716728628604056}
 --- !u!1001 &4233096890982290479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -472,7 +514,7 @@ PrefabInstance:
     - target: {fileID: 541249608831779773, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_Name
-      value: GenericNPC
+      value: Nitori
       objectReference: {fileID: 0}
     - target: {fileID: 541249608831779774, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -544,11 +586,35 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.6900365
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3305827054220190912, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 140421137813915342, guid: 8247f7c181319ac4a8e7f0d741cc1563, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8247f7c181319ac4a8e7f0d741cc1563, type: 3}
+--- !u!1 &4412433169982396306 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 541249608831779773, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+    type: 3}
+  m_PrefabInstance: {fileID: 4233096890982290479}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2204163777366415125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2605394467221013306, guid: 8247f7c181319ac4a8e7f0d741cc1563,
     type: 3}
   m_PrefabInstance: {fileID: 4233096890982290479}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5328716728628604056 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+    type: 3}
+  m_PrefabInstance: {fileID: 4233096890982290479}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c135b33c59a4e794c8afde1480af1566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

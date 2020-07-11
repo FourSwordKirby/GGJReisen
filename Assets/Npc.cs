@@ -37,7 +37,7 @@ public class Npc : MonoBehaviour
 
     public void SetLunarReisenStage(int stage)
     {
-        ReisenGameManager.instance.gameProgress.LunarResisen.Stage = stage;
+        ReisenGameManager.instance.gameProgress.LunarReisen.Stage = stage;
     }
 
     public void SetMiyoiStage(int stage)

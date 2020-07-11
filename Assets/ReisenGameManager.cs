@@ -44,9 +44,34 @@ public class ReisenGameManager : MonoBehaviour
     public void InitSceneState()
     {
         // bunch of bad game specific object goes here
-        GameObject Kosuzu = GameObject.Find("Kosuzu");
-        if (Kosuzu != null)
-            Kosuzu.GetComponent<Npc>().InitNpcState(gameProgress.Kosuzu);
+        GameObject Npc = GameObject.Find("Keine");
+        if (Npc != null)
+            Npc.GetComponent<Npc>().InitNpcState(gameProgress.Keine);
+
+        Npc = GameObject.Find("Kosuzu");
+        if (Npc != null)
+            Npc.GetComponent<Npc>().InitNpcState(gameProgress.Kosuzu);
+
+        Npc = GameObject.Find("Nitori");
+        if (Npc != null)
+            Npc.GetComponent<Npc>().InitNpcState(gameProgress.Nitori);
+
+        Npc = GameObject.Find("Akyu");
+        if (Npc != null)
+            Npc.GetComponent<Npc>().InitNpcState(gameProgress.Akyu);
+
+        Npc = GameObject.Find("LunarReisen");
+        if (Npc != null)
+            Npc.GetComponent<Npc>().InitNpcState(gameProgress.LunarReisen);
+
+        Npc = GameObject.Find("Miyoi");
+        if (Npc != null)
+            Npc.GetComponent<Npc>().InitNpcState(gameProgress.Miyoi);
+
+        Npc = GameObject.Find("Kogasa");
+        if (Npc != null)
+            Npc.GetComponent<Npc>().InitNpcState(gameProgress.Kogasa);
+
     }
 
     //PARSE CONDITIONALS HERE
@@ -102,7 +127,7 @@ public class ReisenGameManager : MonoBehaviour
                 else if (variable == ReisenGameProgress.AkyuStage)
                     conditionalResult = gameProgress.Akyu.Stage == value;
                 else if (variable == ReisenGameProgress.LunarReisenStage)
-                    conditionalResult = gameProgress.LunarResisen.Stage == value;
+                    conditionalResult = gameProgress.LunarReisen.Stage == value;
                 else if (variable == ReisenGameProgress.MiyoiStage)
                     conditionalResult = gameProgress.Miyoi.Stage == value;
                 else if (variable == ReisenGameProgress.KogasaStage)
@@ -121,7 +146,7 @@ public class ReisenGameManager : MonoBehaviour
                 else if (variable == ReisenGameProgress.AkyuStage)
                     conditionalResult = gameProgress.Akyu.Stage > value;
                 else if (variable == ReisenGameProgress.LunarReisenStage)
-                    conditionalResult = gameProgress.LunarResisen.Stage > value;
+                    conditionalResult = gameProgress.LunarReisen.Stage > value;
                 else if (variable == ReisenGameProgress.MiyoiStage)
                     conditionalResult = gameProgress.Miyoi.Stage > value;
                 else if (variable == ReisenGameProgress.KogasaStage)
@@ -140,7 +165,7 @@ public class ReisenGameManager : MonoBehaviour
                 else if (variable == ReisenGameProgress.AkyuStage)
                     conditionalResult = gameProgress.Akyu.Stage < value;
                 else if (variable == ReisenGameProgress.LunarReisenStage)
-                    conditionalResult = gameProgress.LunarResisen.Stage < value;
+                    conditionalResult = gameProgress.LunarReisen.Stage < value;
                 else if (variable == ReisenGameProgress.MiyoiStage)
                     conditionalResult = gameProgress.Miyoi.Stage < value;
                 else if (variable == ReisenGameProgress.KogasaStage)

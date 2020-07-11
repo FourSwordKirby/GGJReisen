@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LunarReisenQuestManager : MonoBehaviour
+public class LunarReisenQuestManager : Npc
 {
     // Start is called before the first frame update
     public void addFirstShard()

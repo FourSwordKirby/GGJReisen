@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KogasaQuestManager : MonoBehaviour
+public class KogasaQuestManager : Npc
 {
     // Start is called before the first frame update
     public void addFirstShard()
