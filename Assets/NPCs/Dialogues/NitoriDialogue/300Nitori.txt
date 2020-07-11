@@ -1,0 +1,41 @@
+Nitori: Thanks for bringing that magazine. 
+
+I figured out what I should do now to move forward. 
+
+I'm going to pay that <b>person</b> a visit for help. 
+
+You were interested in that contraption in the village, right? 
+
+In exchange for bringing me the magazine, how about I give this? 
+
+Reisen: This is... some kind of scroll? 
+
+Nitori: Open it up. 
+
+Reisen: No way! This is a diagram of the <b>Dimensionality Reducer</b>? 
+
+Nitori: The contraption, yeah! 
+
+Reisen: But what kind of writing is this...? 
+
+Nitori: That's the problem... 
+
+I dug it up in our storage shed here, but I can't read it... 
+
+Well, given how simple the diagram is, it's not useful to me anyways. 
+
+I think it's some kind of user manual. 
+
+Reisen: Huh. Well, this should help with the investigation. 
+
+Nitori:  Right, good luck with whatever that is. 
+
+See ya. 
+
+Reisen: **... Somehow, I feel unsatisfied with how that ended.  
+
+//+1 Youkai Scroll 
+//No Personality Shard awarded 
+//Goto stage 501 (Bad end 2) 
+
+[instruction] Stage300

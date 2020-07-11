@@ -1,0 +1,96 @@
+//101 – Inspiration 
+
+Nitori: Hmm, I'm not making very much progress... 
+
+Reisen: On recreating the storage unit? 
+
+Nitori: Oh, it's the rabbit again. 
+
+Didn't I tell you I'm in the middle of very important work? 
+
+Reisen: **I should choose my words carefully...
+
+[expression] think
+
+[choice] [Lunarian science is too advanced for you. | science] [Are you the culprit of this incident?   | culprit] [(Leave them to their work.)  | leave]
+
+
+
+
+Reisen: I doubt you'd be able to comprehend something as amazing as Lunarian science over a day. [science]
+Nitori: You're awfully arrogant for a rabbit that only knows how to pound mochi. 
+Reisen: I'll have you know I'm a moon rabbit. 
+We're far superior to those silly bunnies you have on Earth. 
+Nitori: Is... that so? You all look the same to me. 
+Huh? Wait, then you can explain how that <b>simplification </b>phenomenon works right? 
+Reisen: For the <b>Dimensionality Reducer</b>? Yeah of course! 
+Nitori: Oh! So how does it work!? 
+Reisen: Yeah, it... 
+... 
+[expression] worry
+... *sweats* 
+
+Nitori: I see Moon Rabbits are just as disappointing as Earth Rabbits... 
+
+Reisen: No that's not it! It's just... not my field of expertise... 
+
+[expression] normal
+I'd be glad to tell you about the wave mathematics used in its moonlight power cells... 
+But even I'm not sure how the data compression algorithm inside works... 
+Nitori: ... Not interested. Water power already works at all times of the day. 
+I don't need something that's obviously going to stop working when a new moon rolls around. 
+*sigh* Back to square one, I guess. 
+But still, a Lunarian, huh? 
+Reisen: An alien to you, I suppose. 
+Nitori: I might have some questions for you later. Let's keep in touch. 
+Reisen: Oh? 
+
+//+1 personality Shard 
+//Goto stage 200 
+
+[instruction] Stage101_Correct
+(end)
+ 
+
+
+Reisen: **This cube doesn't seem to have eyes, so I'll rely on sound instead. [culprit]
+**Okay, here it goes... L u n a t i c   R e d   E y e s 
+You said you broke one of the contraptions in the village? 
+
+Nitori: Huh? Oh, maybe? I don't know. 
+
+Reisen: I figured I might as well ask, but... 
+
+Are you the one responsible for this incident? 
+
+Nitori: You were babbling something like that earlier too. 
+
+What incident? I haven't done anything. 
+
+Reisen: There's a <b>simplification </b>virus afflicting the whole village! 
+
+Nitori: A virus? 
+
+The humans looked healthy when I left this morning. 
+
+Did something happen? 
+
+Reisen: Yes, just look at yourself! 
+
+Nitori: I don't feel sick. 
+
+I guess I can run some tests when I get home just in case. 
+
+Reisen: ... 
+
+**There was no quiver of deceit in her vocal waves. 
+
+**I guess she isn't lying. 
+
+[instruction] Stage101_Wrong
+(end)
+
+ 
+Nitori: Hm... what am I missing? [leave] (end)
+
+[end]

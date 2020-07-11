@@ -1,0 +1,23 @@
+[instruction] Boo
+
+Kogasa: Boo! 
+
+Reisen: [expression] worry
+
+Reisen: Eeeep! 
+
+Kogasa: W-wait that actually worked? 
+
+And on a visiting yokai nonetheless 
+
+Reisen: [expression] frown
+
+Reisen: W-well, anyone would be terrified by someone appearing out of thin air 
+
+Kogasa: Out of thin air? But I was just standing here 
+
+"Boo!" is just my usual greeting 
+
+Reisen: **Is this another effect of the dimensionality reduction? 
+
+[instruction] Stage000

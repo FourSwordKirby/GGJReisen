@@ -1,0 +1,103 @@
+Akyu: "Is it painful? Is it sad?" 
+
+"Not even knowing myself." 
+
+Yes, there indeed was a song like that... 
+
+Oh, greetings Reisen. 
+
+What brings the elusive Youkai rabbit to the Hieda estate? 
+
+Reisen: **Do I have something for her? 
+
+?{elixir=1} Reisen: **I have an elixir, but... 
+
+?{elixir=1} Reisen: **I can't shake this ominous feeling about giving her one... 
+
+
+?{elixir=1} {novel=1} [choice] [Hand over the elixir  | elixir] [Hand over the Agatha Chris-Q Novel | novel] [Leave | leave]
+?{elixir=1} [choice] [Hand over the elixir  | elixir]  [Leave | leave]
+?{novel=1} [choice] [Hand over the  Agatha Chris-Q Novel | novel] [Leave | leave]
+[choice] [Leave | end] 
+ 
+
+
+Akyu: Hm? What's this? [elixir]
+
+Reisen: It's medication from my master. 
+
+It should help you remember yourself. 
+
+Akyu: From Miss Yagokoro!? Is that really... Please let me have it! 
+
+Reisen: **Whoa, she's fast! 
+
+[instruction] Stage101_Elixir 
+//Akyu blocks swapped with Akyu sprite 
+//Goto Stage 1002 (bad end 2) 
+(end)
+ 
+
+
+Akyu: This is a... mystery novel? [novel]
+
+Reisen: By a Gensokyo native named Agatha Chris-Q. 
+
+The rabbit I got it from said it was very good. 
+
+It's part of a series, which is apparently still ongoing. 
+
+Akyu: Aah... yes, how could I have forgotten... 
+
+It was because <b>Kosuzu</b> was so insistent on selling mystery novels... 
+
+Reisen: Hm? 
+
+Akyu: I didn't mention this earlier, but as a Child of Miare... 
+
+I only retain memories related to the <b>Gensokyo Chronicles</b> from my past lives. 
+
+There are very few personal memories included... 
+
+Something as goofy as this, I shouldn't remember but... 
+
+Reisen: Um... I don't follow... 
+
+Akyu: This novel just reminded me of a very precious memory. 
+
+One that I had somehow forgotten. 
+
+Agatha Chris-Q is <b>my</b> pen name. 
+
+Yes, this mystery novel is written by <b>me</b>. 
+
+Not as a member of the esteemed Hieda chroniclers... 
+
+But as a silly girl who wanted to try something fun with her friend. 
+
+Indeed, this is a part of <b>me</b> that no other Child of Miare can claim. 
+
+Reisen: I feel like I'm missing something... 
+
+But I guess this means you've remembered who you are? 
+
+Akyu: Yes... I think so... 
+
+Thank you for bringing this to me. 
+
+If you want to read my series, you can get them at the book shop. 
+
+The shop keeper, Kosuzu, is who inspired me into writing them. 
+
+Reisen: **A personality shard manifested! 
+
+[instruction] Stage101_Novel 
+(end)
+//+1 Personality Shard 
+//Goto Stage 200 if player still has an Elixir available 
+//Otherwise goto stage 500 
+
+ 
+Akyu: What was my name...? [leave] 
+
+[end]

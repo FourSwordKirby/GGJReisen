@@ -40,10 +40,10 @@ I am the were-Hakutaku, <b>Keine Kamishirasawa</b>.
 
 //Keine blocks is replaced with her proper sprite. 
 //Goto Stage 1100 
-
 [instruction] Stage300_Encyclopedia
+(end)
 
-[expression] worry
-Reisen: **No good I'm still missing something!  [leave]
+[expression] worry [leave]
+Reisen: **No good I'm still missing something! 
 (end)
 

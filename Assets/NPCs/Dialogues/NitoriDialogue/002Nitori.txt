@@ -1,0 +1,31 @@
+//002 – Fetch Quest 
+
+Nitori: Huh? It seems like I dropped my <b>tool</b> somewhere. 
+
+Hey rabbit, why don't you make yourself useful and find it for me. 
+
+Reisen: Why would I listen to such a rude request? 
+
+Nitori: Do you have anything better to do? 
+
+Reisen: I'm in a middle of solving an incident! 
+
+Nitori: An incident? Is there something like that happening? 
+
+Reisen: Look around you! 
+
+Nitori: ... Not sure what I'm looking for. 
+
+Does it have something to do with that <b>contraption</b> next to the school? 
+
+Reisen: Do you know about it? 
+
+Nitori: ... Maybe a thing or two. 
+
+I probably dropped my <b>tool</b> somewhere around there. 
+
+Why don't you pick it up for me and I'll share? 
+
+Reisen: *sigh* 
+
+[instruction] Stage002
