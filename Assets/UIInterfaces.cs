@@ -46,8 +46,12 @@ public abstract class ControllableGridMenuElement : MonoBehaviour, ISelectableMe
     public void Select()
     {
         SelectionEvent.Invoke();
-        if(closeParent)
+        if (closeParent)
+        {
             parentMenu?.Close();
+        }
+        else
+            parentMenu?.Blur();
     }
 }
 
