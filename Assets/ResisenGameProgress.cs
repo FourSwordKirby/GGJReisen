@@ -34,6 +34,13 @@ public class Shard
     public static Shard Kosuzu_GoodEnd { get; } = new Shard(nameof(Kosuzu_GoodEnd), 2, "Suzunaan, Opened for Business", "Looks like the book shop is in order again.");
     public static Shard Kosuzu_Elixir { get; } = new Shard(nameof(Kosuzu_Elixir), 1, "A New Incident Solver on the Case!", "Perfectly honest, I don't think that human is able to do anything about this incident...");
 
+    public static Shard Nitori_Tool_Smartphone { get; } = new Shard(nameof(Nitori_Tool_Smartphone), 1, "", "");
+    public static Shard Nitori_Tool_Wrench { get; } = new Shard(nameof(Nitori_Tool_Wrench), 1, "", "");
+    public static Shard Nitori_QuestionCorrect { get; } = new Shard(nameof(Nitori_QuestionCorrect), 1, "", "");
+    public static Shard Nitori_GoodEnd { get; } = new Shard(nameof(Kosuzu_CoughingMedicine), 2, "", "");
+    public static Shard Nitori_Elixir { get; } = new Shard(nameof(Kosuzu_CoughingMedicine), 1, "", "");
+
+
     private static Dictionary<string, Shard> _shardDictionary;
     public static Dictionary<string, Shard> ShardDictionary
     {
