@@ -1,67 +1,69 @@
 ﻿public class KosuzuQuestManager : Npc
 {
+    public override ReisenNpcCharacterProgress NpcProgress => GameProgress.Kosuzu;
+
     public void Kosuzu_Stage000_CoughMedicine()
     {
         GameProgress.Player.CoughingMedicine = Assignment.Kosuzu;
         GameProgress.Player.TextBook = Assignment.Inventory;
         GameProgress.Player.AddShard(Shard.Kosuzu_CoughingMedicine);
-        GameProgress.Kosuzu.Stage = 100;
+        Stage = 100;
     }
 
     public void Kosuzu_Stage000_Elixir()
     {
         AssignAvailableElixir(Assignment.Kosuzu);
         TransformToNormalSprite();
-        GameProgress.Kosuzu.Stage = 1100;
+        Stage = 1100;
     }
 
     public void Kosuzu_Stage100_Correct()
     {
         GameProgress.Player.AddShard(Shard.Kosuzu_QuestionCorrect);
-        GameProgress.Kosuzu.Stage = 200;
+        Stage = 200;
     }
 
     public void Kosuzu_Stage100_Wrong()
     {
-        GameProgress.Kosuzu.Stage = 200;
+        Stage = 200;
     }
 
     public void Kosuzu_Stage200_Elixir()
     {
         AssignAvailableElixir(Assignment.Kosuzu);
         TransformToNormalSprite();
-        GameProgress.Kosuzu.Stage = 1100;
+        Stage = 1100;
     }
 
     public void Kosuzu_Stage200_Magazine()
     {
         GameProgress.Player.Magazine = Assignment.Kosuzu;
         GameProgress.Player.AddShard(Shard.Kosuzu_MagazineBadEnd);
-        GameProgress.Kosuzu.Stage = 600;
+        Stage = 600;
     }
 
     public void Kosuzu_Stage200_Scroll()
     {
         GameProgress.Player.Scroll = Assignment.Kosuzu;
         TransformToNormalSprite();
-        GameProgress.Kosuzu.Stage = 1000;
+        Stage = 1000;
     }
 
     public void Kosuzu_Stage1000()
     {
         GameProgress.Player.AddShard(Shard.Kosuzu_GoodEnd);
-        GameProgress.Kosuzu.Stage = 1001;
+        Stage = 1001;
     }
 
     public void Kosuzu_Stage1001()
     {
         GameProgress.Player.Schematic = Assignment.Inventory;
-        GameProgress.Kosuzu.Stage = 1002;
+        Stage = 1002;
     }
 
     public void Kosuzu_Stage1100()
     {
         GameProgress.Player.AddShard(Shard.Kosuzu_Elixir);
-        GameProgress.Kosuzu.Stage = 1101;
+        Stage = 1101;
     }
 }

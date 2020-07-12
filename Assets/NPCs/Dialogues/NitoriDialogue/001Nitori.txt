@@ -6,7 +6,7 @@ Nitori: You're still poking around?
 
 Reisen: What are you doing in an abandoned area like this? 
 
-Nitori: <b<Very important work.</b> 
+Nitori: <b>Very important work.</b> 
 
 Reisen: Sounds suspicious... 
 

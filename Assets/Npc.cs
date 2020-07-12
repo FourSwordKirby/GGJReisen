@@ -1,6 +1,4 @@
-﻿using JetBrains.Annotations;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,10 +6,34 @@ public class Npc : MonoBehaviour
 {
     public List<NpcDialogue> dialogues;
     public DialoguePromptTrigger dialoguePromptTrigger;
+    public virtual ReisenNpcCharacterProgress NpcProgress
+    {
+        get
+        {
+            Debug.LogWarning($"A Generic NPC is not expected to have any CharacterProgress state. Be sure to override the {nameof(NpcProgress)} property for each specific character");
+            return null;
+        }
+    }
+
+    public int Stage
+    {
+        get
+        {
+            return NpcProgress.Stage;
+        }
+        set
+        {
+            NpcProgress.Stage = value;
+            StageWasUpdated = true;
+        }
+    }
+
+    public bool StageWasUpdated = false;
 
     public void InitNpcState(CharacterProgress characterProgress)
     {
-        dialoguePromptTrigger.dialogue = dialogues.Find(x => x.stage == characterProgress.GetStage()).dialogue;
+        TextAsset dialogueTextForStage = dialogues.Find(x => x.stage == characterProgress.GetStage()).dialogue;
+        dialoguePromptTrigger.SetDialogueText(dialogueTextForStage, !characterProgress.StageDialogueHasBeenRead);
     }
 
     public ReisenGameProgress GameProgress => ReisenGameManager.instance.gameProgress;
@@ -36,6 +58,12 @@ public class Npc : MonoBehaviour
     {
         // TODO
         // For now a placeholder to know where we need it
+    }
+
+    public void DefaultDialogueEndEvent()
+    {
+        NpcProgress.DialogueRead = !StageWasUpdated;
+        StageWasUpdated = false;
     }
 }
 

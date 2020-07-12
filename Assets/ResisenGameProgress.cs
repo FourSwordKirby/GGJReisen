@@ -59,83 +59,13 @@ public class Shard
     }
 }
 
-
 [Serializable]
-public class KeineProgress: CharacterProgress
+public class ReisenNpcCharacterProgress : CharacterProgress
 {
     public int Stage;
-    public int ElixirUsed;
+    public bool DialogueRead = false; // Default
 
-    public int GetStage()
-    {
-        return Stage;
-    }
-}
-
-[Serializable]
-public class KosuzuProgress : CharacterProgress
-{
-    public int Stage;
-    public int ElixirUsed;
-
-    public int GetStage()
-    {
-        return Stage;
-    }
-}
-
-[Serializable]
-public class NitoriProgress : CharacterProgress
-{
-    public int Stage;
-    public int ElixirUsed;
-
-    public int GetStage()
-    {
-        return Stage;
-    }
-}
-
-[Serializable]
-public class AkyuProgress : CharacterProgress
-{
-    public int Stage;
-    public int ElixirUsed;
-
-    public int GetStage()
-    {
-        return Stage;
-    }
-}
-
-[Serializable]
-public class LunarReisenProgress : CharacterProgress
-{
-    public int Stage;
-    public int ElixirUsed;
-
-    public int GetStage()
-    {
-        return Stage;
-    }
-}
-
-
-[Serializable]
-public class MiyoiProgress : CharacterProgress
-{
-    public int Stage;
-
-    public int GetStage()
-    {
-        return Stage;
-    }
-}
-
-[Serializable]
-public class KogasaProgress : CharacterProgress
-{
-    public int Stage;
+    public bool StageDialogueHasBeenRead => DialogueRead;
 
     public int GetStage()
     {
@@ -188,14 +118,14 @@ public class ReisenGameProgress: GameProgress
     public ReisenSavePoint savePoint;
 
     public PlayerProgress Player;
-    public KeineProgress Keine;
-    public KosuzuProgress Kosuzu;
-    public NitoriProgress Nitori;
-    public AkyuProgress Akyu;
-    public LunarReisenProgress LunarReisen;
+    public ReisenNpcCharacterProgress Keine;
+    public ReisenNpcCharacterProgress Kosuzu;
+    public ReisenNpcCharacterProgress Nitori;
+    public ReisenNpcCharacterProgress Akyu;
+    public ReisenNpcCharacterProgress LunarReisen;
 
-    public MiyoiProgress Miyoi;
-    public KogasaProgress Kogasa;
+    public ReisenNpcCharacterProgress Miyoi;
+    public ReisenNpcCharacterProgress Kogasa;
 
 
     public const string KeineStage = "keine_stage";
@@ -225,6 +155,7 @@ public class ReisenGameProgress: GameProgress
 public interface CharacterProgress
 {
     int GetStage();
+    bool StageDialogueHasBeenRead { get; }
 }
 
 public interface GameProgress
