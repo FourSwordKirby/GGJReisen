@@ -1,0 +1,49 @@
+﻿LunarReisen: Wahhh, I can't remember what I lost!
+... Maybe I should just run away.
+Maybe I can get that girl who interviewed me to take me in.
+I could just read mystery novels all day...
+Reisen: **Do I have something for this person?
+
+?{elixir=1} {smartphone=1} [choice] [Hand over elixir | elixir] [Hand over smartphone | smartphone] [Leave | leave]
+?{elixir=1} {smartphone=0} [choice] [Hand over elixir | elixir] [Leave | leave]
+?{elixir=0} {smartphone=1} [choice] [Hand over smartphone | smartphone] [Leave | leave]
+?{elixir=0} {smartphone=0} [choice] [Leave | leave]
+
+Reisen: Here, take this. [elixir]
+LunarReisen: Huh? What is that?
+Reisen: It's medicine that can help you remember what you're looking for.
+LunarReisen: Eh? Oh? Uh... su-sure?
+... This is kind of suspicious, but for some reason I feel like I can trust you.
+[instruction] Stage003_Elixir
+(end)
+
+Reisen: Would this happen to be yours? [smartphone]
+LunarReisen: Ah, no way, you found it!
+This smartphone was entrusted to me by my master...
+Ahhh! I'm so glad you found it!
+They would have been furious with me!
+Reisen: Hold on, that's a Lunarian smartphone.
+Are you... a Lunarian? Or maybe, your masters are...?
+LunarReisen: Huh? Yes, I guess you Gensokyo folks would call me a Lunarian.
+Are you also interested in hearing about the moon?
+Earthlings are quite curious, aren't they?
+Never in my life would I have imagined so.
+The Lunar Capital calls Earth a wasteland of impurity.
+The people here aren't the monsters I thought they'd be.
+Here, I found this rare magazine while I was looking around.
+Consider it thanks for finding my phone!
+[instruction] Stage003_Smartphone
+(end)
+
+Reisen: Is this wrench yours?
+LunarReisen: Oh!
+... Yes, I think?
+I don't think that's the lost item I was thinking of.
+But I do need it fix something...
+I think.
+Thanks for bringing it!
+Reisen: **Was that right...?
+[instruction] Stage003_Wrench
+(end)
+
+[end]
