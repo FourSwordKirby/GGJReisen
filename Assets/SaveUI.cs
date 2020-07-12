@@ -10,8 +10,31 @@ public class SaveUI : MenuUI
 
     public int selectedSaveIndex;
 
+    //redundant with menuUI but we bear with it
     public new void Update()
     {
+        if (!InFocus())
+        {
+            if (gainFocus)
+            {
+                Init();
+                inFocus = true;
+            }
+            else
+            {
+                foreach (SavePanelUI menuElement in savePanels)
+                    menuElement.Blur();
+            }
+
+            return;
+        }
+
+        if (!gainFocus)
+        {
+            inFocus = false;
+            return;
+        }
+
         InputDirection dir = Controls.getInputDirectionDown();
         if (dir == InputDirection.N)
         {
@@ -38,13 +61,21 @@ public class SaveUI : MenuUI
             else
             {
                 ReisenGameManager.instance.LoadGame(savePanels[selectedSaveIndex].fileName);
-                this.Close();
+                if (!persistOnExit)
+                    this.Close();
+                else
+                    this.Blur();
+                this.previousMenu?.Close();
             }
         }
         if (Controls.cancelInputDown())
         {
             if (!isGameplayMenu)
             {
+                if (persistOnExit)
+                    this.Blur();
+                else
+                    this.Close();
                 previousMenu?.Open();
             }
             else
@@ -89,14 +120,13 @@ public class SaveUI : MenuUI
     {
         this.mode = SavePanelMode.Loading;
         this.previousMenu = previousMenu;
-        this.enabled = true;
         Open();
         Init();
     }
 
     public void Hide()
     {
-        this.enabled = false;
+        Blur();
         Close();
     }
 
