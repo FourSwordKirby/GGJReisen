@@ -4753,6 +4753,7 @@ MonoBehaviour:
   - stage: 0
     dialogue: {fileID: 0}
   dialoguePromptTrigger: {fileID: 8308469029863536823}
+  StageWasUpdated: 0
 --- !u!1 &541249609163452599
 GameObject:
   m_ObjectHideFlags: 0
@@ -10321,6 +10322,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 541249608831779774}
     m_Modifications:
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 140421137813915342}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DefaultDialogueEndEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5932829281497447740, guid: fbcfb14599707e2499bfbe397f90fd3c,
         type: 3}
       propertyPath: m_Name

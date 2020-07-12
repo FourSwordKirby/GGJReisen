@@ -97,6 +97,7 @@ MonoBehaviour:
   - stage: 200
     dialogue: {fileID: 4900000, guid: 0ff6f080ef88b714abfc159e7a79fed5, type: 3}
   dialoguePromptTrigger: {fileID: 7362446124304477413}
+  StageWasUpdated: 0
 --- !u!1 &3912888429596432107
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +493,36 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 3878084824129566714}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5905781504674114690}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DefaultDialogueEndEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8533716769590238428, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_UseGravity
