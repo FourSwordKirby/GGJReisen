@@ -48,6 +48,8 @@ MonoBehaviour:
     type: 3}
   speechPromptPrefab: {fileID: 2446626285042191379, guid: ad101fde4dc33e64e80c5fde64075587,
     type: 3}
+  speechNewPromptPrefab: {fileID: 7196100319447899848, guid: 7335bbe7d6bbbe74f826cfb885898f64,
+    type: 3}
   speechChoicePrefab: {fileID: 5286151866013731307, guid: b398e83519e7aa643bfe03e7af4b7b10,
     type: 3}
 --- !u!114 &2407429745865529466
@@ -618,23 +620,25 @@ MonoBehaviour:
       Elixir2: 0
     Keine:
       Stage: 0
-      ElixirUsed: 0
+      DialogueRead: 0
     Kosuzu:
       Stage: 0
-      ElixirUsed: 0
+      DialogueRead: 0
     Nitori:
       Stage: 0
-      ElixirUsed: 0
+      DialogueRead: 0
     Akyu:
       Stage: 0
-      ElixirUsed: 0
+      DialogueRead: 0
     LunarReisen:
       Stage: 0
-      ElixirUsed: 0
+      DialogueRead: 0
     Miyoi:
       Stage: 0
+      DialogueRead: 0
     Kogasa:
       Stage: 0
+      DialogueRead: 0
   spawnLocation: 0
 --- !u!114 &7710735857685672541
 MonoBehaviour:

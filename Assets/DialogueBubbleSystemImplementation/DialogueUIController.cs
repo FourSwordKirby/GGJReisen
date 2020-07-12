@@ -7,10 +7,12 @@ public class DialogueUIController : MonoBehaviour
 {
     public GameObject speechBubblePrefab;
     public GameObject speechPromptPrefab;
+    public GameObject speechNewPromptPrefab;
     public GameObject speechChoicePrefab;
 
     public static GameObject staticSpeechBubblePrefab;
     public static GameObject staticSpeechPromptPrefab;
+    public static GameObject staticSpeechNewPromptPrefab;
     public static GameObject staticSpeechChoicePrefab;
 
     public static DialogueUIController instance;
@@ -25,12 +27,21 @@ public class DialogueUIController : MonoBehaviour
 
         staticSpeechBubblePrefab = speechBubblePrefab;
         staticSpeechPromptPrefab = speechPromptPrefab;
+        staticSpeechNewPromptPrefab = speechNewPromptPrefab;
         staticSpeechChoicePrefab = speechChoicePrefab;
     }
 
-    public static IDialogueBubble DisplaySpeechPrompt(Vector3 speakerPosition, Vector2 displacementVector)
+    public static IDialogueBubble DisplaySpeechPrompt(Vector3 speakerPosition, Vector2 displacementVector, bool useNewPrompt)
     {
-        IDialogueBubble speechPrompt = Instantiate(staticSpeechPromptPrefab).GetComponent<IDialogueBubble>();
+        IDialogueBubble speechPrompt; 
+        if (useNewPrompt)
+        {
+            speechPrompt = Instantiate(staticSpeechNewPromptPrefab).GetComponent<IDialogueBubble>();
+        }
+        else
+        {
+            speechPrompt = Instantiate(staticSpeechPromptPrefab).GetComponent<IDialogueBubble>();
+        }
         speechPrompt.DeployAt(speakerPosition, displacementVector);
 
         return speechPrompt;

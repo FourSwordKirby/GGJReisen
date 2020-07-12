@@ -20,6 +20,11 @@ public class DialoguePromptTrigger : MonoBehaviour
     public bool forceBack;
     public Transform promptPosition;
 
+    // Determines whether "!" or "..." should be displayed
+    public bool useNewPrompt = false;
+    // Set to true if the dropdown prompt icon should change between "!" and "..." after an interaction
+    public bool trackNewDialogue = true;
+
     public DialogueTriggerSpeakerConfig speakingPositionConfig = DialogueTriggerSpeakerConfig.Automatic;
     public Transform leftSpeakingPosition;
     public Transform rightSpeakingPosition;
@@ -125,7 +130,7 @@ public class DialoguePromptTrigger : MonoBehaviour
     private void displayPrompt(Vector3 triggerEnteredPosition)
     {
         Vector3 displacementVector = Vector3.Scale(triggerEnteredPosition, -Vector3.one);
-        speechPrompt = DialogueUIController.DisplaySpeechPrompt(promptPosition.position, displacementVector);
+        speechPrompt = DialogueUIController.DisplaySpeechPrompt(promptPosition.position, displacementVector, useNewPrompt);
     }
 
 
@@ -153,5 +158,19 @@ public class DialoguePromptTrigger : MonoBehaviour
     {
         Gizmos.color = Color.green - Color.black * 0.7f;
         Gizmos.DrawCube(this.transform.position, this.transform.lossyScale);
+    }
+
+    public void SetDialogueText(TextAsset newText, bool isNew)
+    {
+        SetDialogueAsNew(isNew);
+        dialogue = newText;
+    }
+
+    public void SetDialogueAsNew(bool isNew)
+    {
+        if (trackNewDialogue)
+        {
+            useNewPrompt = isNew;
+        }
     }
 }
