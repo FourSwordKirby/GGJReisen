@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class PauseUI : MonoBehaviour {
     public SaveUI saveUI;
+    public MenuUI pauseMenuUI;
+
     public static PauseUI instance;
 
     public void Awake()

@@ -193,7 +193,9 @@ public class ReisenGameManager : MonoBehaviour
 
     public void StartLoadProcess()
     {
-        PauseUI.instance.saveUI.Show(SavePanelMode.Loading);
+        PauseUI.instance.pauseMenuUI.Open();
+
+        //PauseUI.instance.saveUI.Show(SavePanelMode.Loading);
 
         RpgGameManager.instance.PauseGameplay();
     }

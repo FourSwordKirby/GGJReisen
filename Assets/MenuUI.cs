@@ -9,7 +9,7 @@ public class MenuUI : ControllableGridMenu
     //hacky
     public bool isTitle;
     public bool isGameplayMenu;
-
+    public bool persistOnExit;
 
     void Start()
     {
@@ -29,15 +29,18 @@ public class MenuUI : ControllableGridMenu
             if (isTitle)
                 return;
 
-            this.Close();
             if (!isGameplayMenu)
             {
                 Debug.Assert(!isTitle && previousMenu != null);
 
+                Blur();
+                if (!persistOnExit)
+                    Close();
                 previousMenu?.Open();
             }
             else
             {
+                Close();
                 RpgGameManager.instance.ResumeGameplay();
             }
         }
@@ -52,19 +55,21 @@ public class MenuUI : ControllableGridMenu
 
     public override void Focus()
     {
-        throw new System.NotImplementedException();
+        this.enabled = true;
     }
     public override void Blur()
     {
-        throw new System.NotImplementedException();
+        this.enabled = false;
     }
 
     public override void Open()
     {
+        Focus();
         this.gameObject.SetActive(true);
     }
     public override void Close()
     {
+        Blur();
         this.gameObject.SetActive(false);
     }
 
