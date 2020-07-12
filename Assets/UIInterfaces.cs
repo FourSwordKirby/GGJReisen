@@ -30,6 +30,7 @@ public interface IMenu
     void Close();
     void Focus();
     void Blur();
+    bool InFocus();
 }
 
 
@@ -58,10 +59,12 @@ public abstract class ControllableGridMenuElement : MonoBehaviour, ISelectableMe
 public abstract class ControllableGridMenu : MonoBehaviour, IMenu
 {
     public ControllableGridMenu previousMenu;
+    public bool inFocus;
 
     public abstract void Blur();
     public abstract void Close();
     public abstract void Focus();
+
     public abstract void Init();
     public abstract void Open();
 
@@ -69,6 +72,11 @@ public abstract class ControllableGridMenu : MonoBehaviour, IMenu
     {
         this.previousMenu = previousMenu;
         Open();
+    }
+
+    public bool InFocus()
+    {
+        return inFocus;
     }
 }
 
@@ -102,21 +110,43 @@ public abstract class ControllableGridMenuGroup : MonoBehaviour, ISelectableMenu
         menuElements[i].Select();
     }
 
-    public void FocusNextElementInDirection(InputDirection dir)
+
+    public bool hortizontal;
+    public virtual void FocusNextElementInDirection(InputDirection dir)
     {
-        if (dir == InputDirection.N || dir == InputDirection.W)
+        if(hortizontal)
         {
-            currentMenuElementIndex--;
-            if (currentMenuElementIndex < 0)
-                currentMenuElementIndex = menuElements.Count - 1;
-            FocusElement(currentMenuElementIndex);
+            if (dir == InputDirection.W)
+            {
+                currentMenuElementIndex--;
+                if (currentMenuElementIndex < 0)
+                    currentMenuElementIndex = menuElements.Count - 1;
+                FocusElement(currentMenuElementIndex);
+            }
+            else if (dir == InputDirection.E)
+            {
+                currentMenuElementIndex++;
+                if (currentMenuElementIndex >= menuElements.Count)
+                    currentMenuElementIndex = 0;
+                FocusElement(currentMenuElementIndex);
+            }
         }
-        else if (dir == InputDirection.S || dir == InputDirection.E)
+        else
         {
-            currentMenuElementIndex++;
-            if (currentMenuElementIndex >= menuElements.Count)
-                currentMenuElementIndex = 0;
-            FocusElement(currentMenuElementIndex);
+            if (dir == InputDirection.N)
+            {
+                currentMenuElementIndex--;
+                if (currentMenuElementIndex < 0)
+                    currentMenuElementIndex = menuElements.Count - 1;
+                FocusElement(currentMenuElementIndex);
+            }
+            else if (dir == InputDirection.S)
+            {
+                currentMenuElementIndex++;
+                if (currentMenuElementIndex >= menuElements.Count)
+                    currentMenuElementIndex = 0;
+                FocusElement(currentMenuElementIndex);
+            }
         }
     }
 }

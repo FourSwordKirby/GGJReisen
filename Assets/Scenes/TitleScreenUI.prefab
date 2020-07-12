@@ -257,6 +257,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousMenu: {fileID: 0}
   group: {fileID: 9116032892323929675}
+  isTitle: 0
+  isGameplayMenu: 0
+  persistOnExit: 0
 --- !u!1 &9116032890994093605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,6 +1764,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousMenu: {fileID: 0}
   group: {fileID: 9116032891616868012}
+  isTitle: 0
+  isGameplayMenu: 0
+  persistOnExit: 0
 --- !u!1001 &9116032891345396420
 PrefabInstance:
   m_ObjectHideFlags: 0
