@@ -11,22 +11,28 @@ public class Shard
 {
     public string Id;
     public int ShardValue;
+    public string FriendlyName;
     public string Description;
 
-    public Shard(string id, int shardValue, string description)
+    public Shard(string id, int shardValue, string friendlyName, string description)
     {
         Id = id;
+        FriendlyName = friendlyName;
         ShardValue = shardValue;
         Description = description;
     }
 
-    public static Shard Keine_HistoryIsImportant { get; } = new Shard(nameof(Keine_HistoryIsImportant), 1, "");
+    public static Shard Keine_TextBook { get; } = new Shard(nameof(Keine_TextBook), 1, "Don't forget your textbook!", "Well, figures that a history teacher teaches from a history text book.");
+    public static Shard Keine_Elixir { get; } = new Shard(nameof(Keine_Elixir), 1, "Medical History", "I better work fast to resolve the incident before Keine kills me...");
+    public static Shard Keine_Newspaper { get; } = new Shard(nameof(Keine_Newspaper), 1, "Scandal with the Teacher!", "The Bunbunmaru newspaper sure doesn't hesistate to kill reputations.");
+    public static Shard Keine_QuestionCorrect { get; } = new Shard(nameof(Keine_QuestionCorrect), 1, "Get lectured by the teacher", "\"Those who fail to learn from history are doomed to repeat it.\" so the humans say.");
+    public static Shard Keine_GoodEnd { get; } = new Shard(nameof(Keine_GoodEnd), 2, "Rich History", "\"A rich history is one with many relationships.\" Maybe I can put a little more effort...");
 
-    public static Shard Kosuzu_CoughingMedicine { get; } = new Shard(nameof(Kosuzu_CoughingMedicine), 1, "");
-    public static Shard Kosuzu_QuestionCorrect { get; } = new Shard(nameof(Kosuzu_QuestionCorrect), 1, "");
-    public static Shard Kosuzu_MagazineBadEnd { get; } = new Shard(nameof(Kosuzu_MagazineBadEnd), 1, "");
-    public static Shard Kosuzu_GoodEnd { get; } = new Shard(nameof(Kosuzu_GoodEnd), 2, "");
-    public static Shard Kosuzu_Elixir { get; } = new Shard(nameof(Kosuzu_Elixir), 1, "");
+    public static Shard Kosuzu_CoughingMedicine { get; } = new Shard(nameof(Kosuzu_CoughingMedicine), 1, "Medicine Peddler Arrives!", "Wonder if the coughing was due to allergies.");
+    public static Shard Kosuzu_QuestionCorrect { get; } = new Shard(nameof(Kosuzu_QuestionCorrect), 1, "Youkai Enthusiast", "Living dangerously. Well it might be fun... Don't get me involved though.");
+    public static Shard Kosuzu_MagazineBadEnd { get; } = new Shard(nameof(Kosuzu_MagazineBadEnd), 1, "Buy and Sell Used Books", "I never asked for the book shop keeper's name, huh?");
+    public static Shard Kosuzu_GoodEnd { get; } = new Shard(nameof(Kosuzu_GoodEnd), 2, "Suzunaan, Opened for Business", "Looks like the book shop is in order again.");
+    public static Shard Kosuzu_Elixir { get; } = new Shard(nameof(Kosuzu_Elixir), 1, "A New Incident Solver on the Case!", "Perfectly honest, I don't think that human is able to do anything about this incident...");
 
     private static Dictionary<string, Shard> _shardDictionary;
     public static Dictionary<string, Shard> ShardDictionary

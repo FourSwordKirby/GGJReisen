@@ -1,0 +1,12 @@
+﻿LunarReisen: Oh no!
+Reisen: Yes!?
+LunarReisen: I dropped something <b>important</b>!
+... But what was it? I don't remember.
+Reisen: Don't ask me!
+LunarReisen: Ah it's the girl I know but don't know.
+Do you know what I dropped?
+Reisen: How would I know!?
+LunarReisen: Oh no... it was really important...
+<b>Someone</b> is going to yell at me for losing it...
+Reisen: **Ah, how pitiful...
+**I know how you feel.... I guess.

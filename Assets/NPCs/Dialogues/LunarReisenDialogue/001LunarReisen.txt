@@ -1,0 +1,10 @@
+LunarReisen: Ah!
+Reisen: !?
+LunarReisen: It's you!
+Reisen: Yes!?
+LunarReisen: ... Who are you?
+Reisen: That's my question!
+LunarReisen: Oh... my head is kind of hazy.
+Sorry, I thought I recognized you.
+Reisen: **What a bizarre cube...
+**Err, person I guess.
