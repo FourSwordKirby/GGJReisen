@@ -7263,7 +7263,12 @@ PrefabInstance:
     - target: {fileID: 3858822209627832226, guid: bd9e5984462cbbb4ba7b550dc4b24560,
         type: 3}
       propertyPath: savePoint.locationName
-      value: Testing grounds
+      value: Village Entrance
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858822209627832226, guid: bd9e5984462cbbb4ba7b550dc4b24560,
+        type: 3}
+      propertyPath: savePoint.sceneName
+      value: VillageEntrance
       objectReference: {fileID: 0}
     - target: {fileID: 3858822209627832227, guid: bd9e5984462cbbb4ba7b550dc4b24560,
         type: 3}
@@ -7352,7 +7357,7 @@ PrefabInstance:
     - target: {fileID: 3570052165668538350, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.8500004
+      value: -6.28
       objectReference: {fileID: 0}
     - target: {fileID: 3570052165668538350, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
@@ -7362,22 +7367,22 @@ PrefabInstance:
     - target: {fileID: 3570052167220379949, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.13262509
+      value: 0.13327973
       objectReference: {fileID: 0}
     - target: {fileID: 3570052167220379949, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9911663
+      value: 0.9910785
       objectReference: {fileID: 0}
     - target: {fileID: 3570052167220379949, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.548045
+      value: 2.5583107
       objectReference: {fileID: 0}
     - target: {fileID: 3570052167220379949, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.46694088
+      value: 0.44724894
       objectReference: {fileID: 0}
     - target: {fileID: 5605456161494871071, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}

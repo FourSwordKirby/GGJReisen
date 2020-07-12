@@ -135,7 +135,7 @@ Transform:
   m_GameObject: {fileID: 5932829280698991748}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10.238781, y: 0.28611168, z: 3.916602}
+  m_LocalScale: {x: 10.238781, y: 2.0283606, z: 3.916602}
   m_Children: []
   m_Father: {fileID: 5932829281497447741}
   m_RootOrder: 0
@@ -179,6 +179,7 @@ MonoBehaviour:
   forceDialogueOnEnter: 0
   forceBack: 0
   promptPosition: {fileID: 468556378347478728}
+  speakingPositionConfig: 1
   leftSpeakingPosition: {fileID: 3282068927747725378}
   rightSpeakingPosition: {fileID: 405987035818678890}
   cameraPosition: {fileID: 0}

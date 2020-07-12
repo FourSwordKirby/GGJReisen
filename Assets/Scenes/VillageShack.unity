@@ -1523,6 +1523,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SavePoint
       objectReference: {fileID: 0}
+    - target: {fileID: 3858822209627832226, guid: bd9e5984462cbbb4ba7b550dc4b24560,
+        type: 3}
+      propertyPath: savePoint.locationName
+      value: Abandoned Shed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858822209627832226, guid: bd9e5984462cbbb4ba7b550dc4b24560,
+        type: 3}
+      propertyPath: savePoint.sceneName
+      value: VillageShack
+      objectReference: {fileID: 0}
     - target: {fileID: 3858822209627832227, guid: bd9e5984462cbbb4ba7b550dc4b24560,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2369,12 +2379,12 @@ PrefabInstance:
     - target: {fileID: 3570052165668538350, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.5
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3570052167220379949, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.13376966
+      value: 0.13376978
       objectReference: {fileID: 0}
     - target: {fileID: 3570052167220379949, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
@@ -2384,12 +2394,12 @@ PrefabInstance:
     - target: {fileID: 3570052167220379949, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.565996
+      value: 2.5659976
       objectReference: {fileID: 0}
     - target: {fileID: 3570052167220379949, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.43250847
+      value: 0.43250465
       objectReference: {fileID: 0}
     - target: {fileID: 5605456161494871071, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
