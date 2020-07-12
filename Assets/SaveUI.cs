@@ -5,7 +5,6 @@ using UnityEngine;
 public class SaveUI : MenuUI
 {
     public SavePanelMode mode;
-    public GameObject canvas;
     public List<SavePanelUI> savePanels;
     public ReisenSavePoint currentSavePoint;
 

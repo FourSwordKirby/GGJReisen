@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TransitionManager : MonoBehaviour
 {
+    public ScreenFader screenFader;
+
     public static TransitionManager instance;
 
     public void Awake()
@@ -12,10 +14,7 @@ public class TransitionManager : MonoBehaviour
             instance = this;
         else if (this != instance)
             Destroy(this.gameObject);
-    }
 
-    public void SwitchSceneTransition()
-    {
-        Debug.Log("switching scene");
+        DontDestroyOnLoad(this.gameObject);
     }
 }

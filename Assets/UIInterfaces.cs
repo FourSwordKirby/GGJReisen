@@ -100,14 +100,14 @@ public abstract class ControllableGridMenuGroup : MonoBehaviour, ISelectableMenu
 
     public void FocusNextElementInDirection(InputDirection dir)
     {
-        if (dir == InputDirection.N)
+        if (dir == InputDirection.N || dir == InputDirection.W)
         {
             currentMenuElementIndex--;
             if (currentMenuElementIndex < 0)
                 currentMenuElementIndex = menuElements.Count - 1;
             FocusElement(currentMenuElementIndex);
         }
-        else if (dir == InputDirection.S)
+        else if (dir == InputDirection.S || dir == InputDirection.E)
         {
             currentMenuElementIndex++;
             if (currentMenuElementIndex >= menuElements.Count)
