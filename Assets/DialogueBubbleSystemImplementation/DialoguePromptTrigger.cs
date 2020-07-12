@@ -98,7 +98,11 @@ public class DialoguePromptTrigger : MonoBehaviour
                 break;
         }
 
-        Vector3 focusPosition = (speakerPosition + speakingPosition.position) * 0.5f;
+        Vector3 focusPosition;
+        if (speakingPosition != null)
+            focusPosition = (speakerPosition + speakingPosition.position) * 0.5f;
+        else
+            focusPosition = speakerPosition;
 
         if (repeatingDialogue)
             RpgGameManager.instance.StartConversation(dialogue, focusPosition, speakingPosition, cameraPosition, hideDialogue, dialogueInstructions);

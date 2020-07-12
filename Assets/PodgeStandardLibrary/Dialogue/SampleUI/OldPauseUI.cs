@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class PauseUI : MonoBehaviour {
+public class OldPauseUI : MonoBehaviour {
     public GameObject lastSelect;
     public EventSystem eventSystem;
 

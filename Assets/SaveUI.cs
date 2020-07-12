@@ -2,26 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SaveUI : MonoBehaviour
+public class SaveUI : MenuUI
 {
     public SavePanelMode mode;
-    public GameObject canvas;
     public List<SavePanelUI> savePanels;
     public ReisenSavePoint currentSavePoint;
 
     public int selectedSaveIndex;
 
-    public static SaveUI instance;
-
-    public void Awake()
-    {
-        if (SaveUI.instance == null)
-            instance = this;
-        else if (this != instance)
-            Destroy(this.gameObject);
-    }
-
-    public void Update()
+    public new void Update()
     {
         InputDirection dir = Controls.getInputDirectionDown();
         if (dir == InputDirection.N)
@@ -44,14 +33,27 @@ public class SaveUI : MonoBehaviour
             if(mode == SavePanelMode.Saving && currentSavePoint != null)
             {
                 ReisenGameManager.instance.SaveGame(savePanels[selectedSaveIndex].fileName, currentSavePoint);
-                InitializeSavePanels();
+                Init();
             }
             else
+            {
                 ReisenGameManager.instance.LoadGame(savePanels[selectedSaveIndex].fileName);
+                this.Close();
+            }
         }
         if (Controls.cancelInputDown())
         {
-            ReisenGameManager.instance.EndSaveProcess();
+            this.Close();
+            if (!isGameplayMenu)
+            {
+                Debug.Assert(!isTitle && previousMenu != null);
+
+                previousMenu?.Open();
+            }
+            else
+            {
+                RpgGameManager.instance.ResumeGameplay();
+            }
         }
     }
 
@@ -71,19 +73,35 @@ public class SaveUI : MonoBehaviour
 
     public void Show(SavePanelMode mode)
     {
+        this.gameObject.SetActive(true);
         this.mode = mode;
+        Init();
+    }
+
+    public void Show(int mode)
+    {
+        this.gameObject.SetActive(true);
+        this.mode = (SavePanelMode) mode;
+        Open();
+        Init();
+    }
+
+    public void ShowLoadMenu(ControllableGridMenu previousMenu)
+    {
+        this.mode = SavePanelMode.Loading;
+        this.previousMenu = previousMenu;
         this.enabled = true;
-        canvas.SetActive(true);
-        InitializeSavePanels();
+        Open();
+        Init();
     }
 
     public void Hide()
     {
         this.enabled = false;
-        canvas.SetActive(false);
+        Close();
     }
 
-    public void InitializeSavePanels()
+    public override void Init()
     {
         foreach(SavePanelUI panel in savePanels)
         {

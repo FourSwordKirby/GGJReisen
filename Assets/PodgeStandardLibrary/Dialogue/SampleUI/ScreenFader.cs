@@ -27,7 +27,7 @@ public class ScreenFader : MonoBehaviour
             if (timer < fadeTime)
             {
                 screen.color = Color.Lerp(initialColor, Color.black, timer / fadeTime);
-                yield return new WaitForSeconds(0.01f);
+                yield return new WaitForEndOfFrame();
             }
         }
         screen.color = Color.black;
@@ -48,7 +48,7 @@ public class ScreenFader : MonoBehaviour
             if (timer < fadeTime)
             {
                 screen.color = Color.Lerp(initialColor, Color.black - Color.black, timer / fadeTime);
-                yield return new WaitForSeconds(0.01f);
+                yield return new WaitForEndOfFrame();
             }
         }
         fading = false;

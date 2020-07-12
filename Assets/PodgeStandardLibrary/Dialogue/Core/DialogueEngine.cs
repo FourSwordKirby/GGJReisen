@@ -202,7 +202,7 @@ public class DialogueEngine
         if (!line.Contains("[")) 
             return line;
 
-        if(line.StartsWith("["))
+        if(line.StartsWith("[choice]"))
             return line;
 
         string newLine = line.Substring(0, line.LastIndexOf('['));
