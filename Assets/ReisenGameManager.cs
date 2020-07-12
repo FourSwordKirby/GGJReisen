@@ -248,6 +248,8 @@ public class ReisenGameManager : MonoBehaviour
             GameObject player = RpgPlayer.instance.gameObject;
             player.transform.position = FindObjectOfType<ReisenSceneManager>().sceneEntrances[spawnLocation].spawnArea.position;
         }
+
+        InitSceneState();
     }
 
     public void SceneExit(string targetSceneName, int sceneEntranceIndex)
