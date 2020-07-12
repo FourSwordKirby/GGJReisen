@@ -10,6 +10,7 @@ public class MenuUI : ControllableGridMenu
     public bool isTitle;
     public bool isGameplayMenu;
     public bool persistOnExit;
+    protected bool gainFocus;
 
     void Start()
     {
@@ -18,6 +19,22 @@ public class MenuUI : ControllableGridMenu
 
     public void Update()
     {
+        if (!InFocus())
+        {
+            if (gainFocus)
+            {
+                inFocus = true;
+            }
+
+            return;
+        }
+
+        if (!gainFocus)
+        {
+            inFocus = false;
+            return;
+        };
+
         InputDirection dir = Controls.getInputDirectionDown();
         group.FocusNextElementInDirection(dir);
         if (Controls.confirmInputDown())
@@ -55,22 +72,26 @@ public class MenuUI : ControllableGridMenu
 
     public override void Focus()
     {
-        this.enabled = true;
+        Init();
+        gainFocus = true;
+        Debug.Log(gainFocus);
     }
+
     public override void Blur()
     {
-        this.enabled = false;
+        gainFocus = false;
     }
 
     public override void Open()
     {
-        Focus();
         this.gameObject.SetActive(true);
+        Focus();
     }
     public override void Close()
     {
-        Blur();
+        Debug.Log("close");
         this.gameObject.SetActive(false);
+        Blur();
     }
 
     #endregion

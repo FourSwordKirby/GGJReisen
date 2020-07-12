@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 616268525716181283}
-  - component: {fileID: 616268525716181282}
   - component: {fileID: 616268525716181293}
   m_Layer: 0
   m_Name: ScreenFader
@@ -33,19 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &616268525716181282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616268525716181292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6840321c9cdda3d42b4d84b989f0aeeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  screenFader: {fileID: 616268525716181293}
 --- !u!114 &616268525716181293
 MonoBehaviour:
   m_ObjectHideFlags: 0
