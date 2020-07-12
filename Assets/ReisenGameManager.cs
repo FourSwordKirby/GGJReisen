@@ -19,6 +19,7 @@ public class ReisenGameManager : MonoBehaviour
         else if (this != instance)
             Destroy(this.gameObject);
 
+        DontDestroyOnLoad(this.gameObject);
         InitSceneState();
     }
 
@@ -39,6 +40,12 @@ public class ReisenGameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
             InitSceneState();
+    }
+
+    public void StartNewGame()
+    {
+        Debug.Log("starting new game");
+        throw new Exception("not yet implemented");
     }
 
     public void InitSceneState()
@@ -186,24 +193,17 @@ public class ReisenGameManager : MonoBehaviour
 
     public void StartLoadProcess()
     {
-        SaveUI.instance.Show(SavePanelMode.Loading);
+        PauseUI.instance.saveUI.Show(SavePanelMode.Loading);
 
         RpgGameManager.instance.PauseGameplay();
     }
 
     public void StartSaveProcess(ReisenSavePoint savePoint)
     {
-        SaveUI.instance.currentSavePoint = savePoint;
-        SaveUI.instance.Show(SavePanelMode.Saving);
+        PauseUI.instance.saveUI.currentSavePoint = savePoint;
+        PauseUI.instance.saveUI.Show(SavePanelMode.Saving);
 
         RpgGameManager.instance.PauseGameplay();
-    }
-
-    public void EndSaveProcess()
-    {
-        SaveUI.instance.Hide();
-
-        RpgGameManager.instance.ResumeGameplay();
     }
 
     public void SaveGame(string saveName, ReisenSavePoint savePoint)
@@ -219,7 +219,12 @@ public class ReisenGameManager : MonoBehaviour
         SceneManager.LoadScene(gameProgress.savePoint.sceneName);
         spawnLocation = -1;
 
+        Debug.Log(gameProgress.savePoint);
+        Debug.Log(gameProgress.savePoint.spawnLocation);
+
         gameProgress.savePoint.SpawnPlayer(RpgPlayer.instance.gameObject);
+
+        RpgGameManager.instance.ResumeGameplay();
     }
 
     //Scene transition things to manage later
@@ -243,7 +248,6 @@ public class ReisenGameManager : MonoBehaviour
 
         TransitionManager.instance.SwitchSceneTransition();
         Debug.Log("trying to load at this entrance" + sceneEntranceIndex);
-        DontDestroyOnLoad(this.gameObject);
         spawnLocation = sceneEntranceIndex;
 
         SceneManager.LoadScene(sceneName);
