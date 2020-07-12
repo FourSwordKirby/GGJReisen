@@ -15,9 +15,14 @@ public class ReisenGameManager : MonoBehaviour
     public void Awake()
     {
         if (ReisenGameManager.instance == null)
+        {
             instance = this;
+        }
         else if (this != instance)
+        {
             Destroy(this.gameObject);
+            return;
+        }
 
         DontDestroyOnLoad(this.gameObject);
         InitSceneState();
@@ -243,6 +248,8 @@ public class ReisenGameManager : MonoBehaviour
             GameObject player = RpgPlayer.instance.gameObject;
             player.transform.position = FindObjectOfType<ReisenSceneManager>().sceneEntrances[spawnLocation].spawnArea.position;
         }
+
+        InitSceneState();
     }
 
     public void SceneExit(string targetSceneName, int sceneEntranceIndex)

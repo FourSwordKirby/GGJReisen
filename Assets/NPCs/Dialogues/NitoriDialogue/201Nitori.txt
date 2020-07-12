@@ -1,9 +1,11 @@
-201 – A Fair Trade 
+//201 – A Fair Trade 
 
-Nitori: Maybe if I had some kind of reference... 
-
-Reisen: **Should I give her something? 
-
+Nitori: It's no good. I'm not getting anywhere...
+Hm? It's you again?
+You don't need to keep checking on me.
+I'm about to quit soon.
+Reisen: **They seem to be struggling.
+**Should I give her something?
 
 ?{elixir=1} {smartphone=1} {magazine=1} [choice] [Hand over the elixir  | elixir] [Hand over the smartphone  | smartphone] [Hand over the magazine | magazine] [Leave | leave]
 ?{elixir=1} {smartphone=1} [choice] [Hand over the elixir  | elixir] [Hand over the smartphone  | smartphone] [Leave | leave]
@@ -11,110 +13,60 @@ Reisen: **Should I give her something?
 ?{elixir=1} [choice] [Hand over the elixir  | elixir]  [Leave | leave]
 ?{smartphone=1} {magazine=1} [choice] [Hand over the smartphone  | smartphone] [Hand over the magazine | magazine] [Leave | leave]
 ?{smartphone=1} [choice] [Hand over the smartphone  | smartphone] [Leave | leave]
-?{magazine=1} [Hand over the magazine | magazine] [Leave | leave]
-[choice] [Leave | end] 
- 
+?{magazine=1} [choice] [Hand over the magazine | magazine] [Leave | leave]
+[choice] [Leave | leave]
 
 Nitori: ... What is this? [elixir]
-
 Reisen: It's a powerful elixir. Drink it. 
-
 You don't see the incident happening around you because you've already been infected by it. 
-
 Nitori: First, you were calling me suspicious... 
-
 Don't think I'm dumb enough to take your words at face value. 
-
 Hmm... 
-
 Reisen: ... What are those cubes you just brought out? 
-
 Nitori: Cubes? These are tools to help me perform a litmus test. 
-
 ... Wait, this is... !! 
-
 Let me take a sip! 
-
-//Replace Nitori blocks with Nitori sprite 
-//Goto stage 1000 
-[instruction] Stage200_Elixir
- 
-
->Smartphone 
-
-Nitori: Whoa! What is that!? 
-
-Reisen: It's a Lunarian Smartphone. 
-
-I figured it might help you with your slump. 
-
-Nitori: Let me see! Let me see! 
-
-Reisen: **I still don't know what's that doing here... 
-
-**Did another rabbit drop it during the invasion of Gensokyo? 
-
-Nitori: Wow, this is amazing. 
-
-Hey, do you want to trade for this? 
-
-Reisen: Huh!? Uh, I'm not sure if I should be trading someone's— 
-
-Nitori: You were interested in that contraption in the village, right? 
-
-How about I trade you this? 
-
-Reisen: This is... some kind of scroll? 
-
-Nitori: Open it up. 
-
-Reisen: No way! This is a diagram of the <b>Dimensionality Reducer</b>? 
-
-Nitori: The contraption, yeah! 
-
-Reisen: But what kind of writing is this...? 
-
-Nitori: That's the problem... 
-
-I dug it up in our storage shed here, but I can't read it... 
-
-Well, given how simple the diagram is, it's not useful to me anyways. 
-
-I think it's some kind of user manual. 
-
-Reisen: Hm, if it can help resolve the incident... 
-
-Alright, sure, I'll trade. 
-
-Nitori: Yay! I'm gonna get working on this phone right away. 
-
-Reisen: **Was it really a good idea to give it to her...? 
-
-//+1 Youkai Scroll 
-//No personality shard awarded. This is to reinforce the fact that this was not the right choice. 
-//Goto stage 500 (Bad End 1) 
-
-[instruction] Stage200_Smartphone
-
->Magazine 
-
-Nitori: A magazine? 
-
-Reisen: Yeah, from the Outside World it looks like. 
-
-I figured it would help with your slump. 
-
-Nitori: Hmm...? Oh, it's a technology magazine. 
-
-This is neat stuff, but it's not really... 
-
-Oh huh, this pair of ear muffs seems to be named after two people. 
-
-... Maybe what I actually need is a brainstorming session. 
-//If player answered the question in Stage 101 correctly (Lunarian Science is too advanced for you), then go to stage 301 (good end). You can check for the personality shard from stage 101 to verify this condition. 
-//If the player did not answer correctly in Stage 101 (Did you cause this incident?), then goto stage 300 (Bad end 2). 
-[instruction] Stage200_Magazine
-
-[expression] worry [leave]
-Reisen: **What should I give her though?
+[instruction] Stage201_Elixir
 (end)
+ 
+Nitori: Whoa! What is that!? [smartphone]
+Reisen: It's a Lunarian Smartphone. 
+I figured it might help you with your slump. 
+Nitori: Let me see! Let me see! 
+Reisen: **I still don't know what's that doing here... 
+**Did another rabbit drop it during the invasion of Gensokyo? 
+Nitori: Wow, this is amazing. 
+Hey, do you want to trade for this? 
+Reisen: Huh!? Uh, I'm not sure if I should be trading someone's-
+Nitori: You were interested in that contraption in the village, right? 
+How about I trade you this? 
+Reisen: This is... some kind of scroll? 
+Nitori: Open it up. 
+Reisen: No way! This is a diagram of the <b>Dimensionality Reducer</b>? 
+Nitori: The contraption, yeah! 
+Reisen: But what kind of writing is this...? 
+Nitori: That's the problem... 
+I dug it up in our storage shed here, but I can't read it... 
+Well, given how simple the diagram is, it's not useful to me anyways. 
+I think it's some kind of user manual. 
+Reisen: Hm, if it can help resolve the incident... 
+Alright, sure, I'll trade. 
+Nitori: Yay! I'm gonna get working on this phone right away. 
+Reisen: **Was it really a good idea to give it to her...? 
+[instruction] Stage201_Smartphone
+(end)
+
+Nitori: A magazine?  [magazine]
+Reisen: Yeah, from the Outside World it looks like. 
+I figured it would help with your slump. 
+Nitori: Hmm...? Oh, it's a technology magazine. 
+This is neat stuff, but it's not really... 
+Oh huh, this pair of ear muffs seems to be named after two people. 
+... Maybe what I actually need is a brainstorming session. 
+[instruction] Stage201_Magazine
+(end)
+
+Reisen: **What should I give her though? [leave]
+(end)
+
+[end]

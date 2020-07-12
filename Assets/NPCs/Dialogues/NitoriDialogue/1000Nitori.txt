@@ -1,19 +1,13 @@
- 
-
 //1000 – Elixir Ending 
 
 Nitori: Wow, this Elixir is amazing stuff. 
 
-Reisen: It was made by my master. Of course it's amazing! 
+Reisen: It was made by my master! Of course it's amazing! 
 
 Nitori: I've gotta figure out how this was made! 
 
 Reisen: Wait, where are you going!? 
-
 **Did I make a mistake in giving it to her? 
-
 **Oh wait, she dropped a personality shard. 
-
-//+1 Personality Shard 
 
 [instruction] Stage1000

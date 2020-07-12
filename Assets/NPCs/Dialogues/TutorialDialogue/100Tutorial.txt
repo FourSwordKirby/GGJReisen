@@ -4,7 +4,7 @@ These shapes… seem nostalgic for some reason.
 
 Is this technology from the Lunar Capital on the moon? 
 
-[instruction] EnterOrb (yin yang orb gameobject is “fixed”, orb is animated to come in from off screen, A yin-yang orb zooms into view, hovering next to Reisen. From the orb, a voice speaks out. ) 
+[instruction] EnterOrb
 
 Reimu: Oh? You’re the moon rabbit from the bamboo forest, aren’t you? 
 

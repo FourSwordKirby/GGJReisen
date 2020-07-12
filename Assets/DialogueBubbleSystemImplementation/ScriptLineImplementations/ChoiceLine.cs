@@ -90,11 +90,14 @@ public class ChoiceLine : ScriptLine
         for (int i = 0; i < dialogueChoices.Count; i++)
         {
             ChoiceLineContent choice = dialogueChoices[i];
-            string jumpLabel = choice.jumpLabel;
-            if (labeledLines[jumpLabel] == null)
-                throw new Exception("line wasn't tagged in this dialogue");
+            if (labeledLines.TryGetValue(choice.jumpLabel, out ScriptLine jumpline))
+            {
+                choice.jumpLine = jumpline;
+            }
             else
-                choice.jumpLine = labeledLines[jumpLabel];
+            {
+                throw new Exception($"Line {choice.lineNumber}: Choice with text '{choice.lineText}' was unable to find label '{jumpLabel}'");
+            }
             reInitDialogueChoices.Add(choice);
         }
 

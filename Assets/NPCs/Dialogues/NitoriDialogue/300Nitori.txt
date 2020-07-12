@@ -1,12 +1,12 @@
 Nitori: Thanks for bringing that magazine. 
 
-I figured out what I should do now to move forward. 
+I figured out what I should do now.
 
-I'm going to pay that <b>person</b> a visit for help. 
+I'm going to ask "that person" for help. 
 
-You were interested in that contraption in the village, right? 
+Anyways, you were interested in that contraption in the village, right? 
 
-In exchange for bringing me the magazine, how about I give this? 
+In exchange for bringing me the magazine, how 'bout I give this? 
 
 Reisen: This is... some kind of scroll? 
 
@@ -26,16 +26,12 @@ Well, given how simple the diagram is, it's not useful to me anyways.
 
 I think it's some kind of user manual. 
 
-Reisen: Huh. Well, this should help with the investigation. 
+Reisen: Huh. Well, even small hints should help...
 
-Nitori:  Right, good luck with whatever that is. 
+Nitori:  Right, good luck with whatever you're up to.
 
 See ya. 
 
 Reisen: **... Somehow, I feel unsatisfied with how that ended.  
-
-//+1 Youkai Scroll 
-//No Personality Shard awarded 
-//Goto stage 501 (Bad end 2) 
 
 [instruction] Stage300
