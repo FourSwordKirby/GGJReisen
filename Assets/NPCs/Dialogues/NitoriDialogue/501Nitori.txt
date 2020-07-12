@@ -1,10 +1,8 @@
- 
-
-Nitori: I said I was going to visit that <b>person</b>, but... 
+Nitori: I said I was going to visit "that person," but... 
 
 What was their <b>name</b> again? And where did they live? 
 
-<b>That location</b>, right? 
+"That location," right? 
 
 But what does "<b>that location</b>" mean? 
 

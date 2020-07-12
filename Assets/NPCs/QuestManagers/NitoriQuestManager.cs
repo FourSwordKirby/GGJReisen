@@ -52,15 +52,10 @@
     public void Nitori_Stage101_Correct()
     {
         GameProgress.Player.AddShard(Shard.Nitori_QuestionCorrect);
-        Stage = 200;
+        Stage = 201;
     }
 
     public void Nitori_Stage101_Wrong()
-    {
-        Stage = 200;
-    }
-
-    public void Nitori_Stage200()
     {
         Stage = 201;
     }

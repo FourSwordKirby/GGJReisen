@@ -6,7 +6,7 @@ Reisen: Ex-Lunarian.
 
 Nitori: What's your name? 
 
-I'm <b>Nitori Kawashiro</b>. A Kappa, in case that concept is foreign to you. 
+I'm <b>Nitori Kawashiro</b>. I'm a Kappa, in case that's a foreign concept to ya. 
 
 Reisen: Reisen Udonge'in Inaba. 
 
@@ -64,11 +64,11 @@ You'll need inspiration from all perspectives, even if they're a human.
 
 Reisen: I'm not sure if I could trust a human... 
 
-Nitori: And that's why Lunarian technology is bound to be leaps behind. 
+Nitori: And that's why Lunar tech is bound to be leaps behind Kappa tech.
 
-When you're stuck in a bubble, you'll never gain anything new. 
+If you hide yourself in a bubble, you'll never gain anything new. 
 
-Kappa have historically been friends with the humans, so it's nothing new for us. 
+Kappa have always been friends with the humans, so it's nothing new for us. 
 
 Well, it also helps when the human in question isn't really a human. 
 
@@ -76,7 +76,6 @@ Reisen: And avoid shrine maidens?
 
 Nitori: Took the words right out of my mouth... 
 
-Reisen: **Whoa a really big Personality Shard manifested! 
-//+2 Personality Shards 
-//Goto stage 1101 
+Reisen: **Whoa a really big Personality Shard manifested!
+
 [instruction] Stage1100
