@@ -123,12 +123,6 @@ public class Npc : MonoBehaviour
     }
     #endregion
 
-    public void AddShard()
-    {
-        Shard s = new Shard("0", 0, "testing");
-        ReisenGameManager.instance.gameProgress.Player.AddShard(s);
-    }
-
     public ReisenGameProgress GameProgress => ReisenGameManager.instance.gameProgress;
 
     public void AssignAvailableElixir(Assignment a)
