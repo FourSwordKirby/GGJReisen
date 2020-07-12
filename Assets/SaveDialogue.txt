@@ -1,4 +1,4 @@
-Reisen: Shall I make an offering?
+Reisen: **Shall I store a copy of my current brainwaves?
 [choice] [Yes | yes] [No | end]
 [instruction] save [yes] (end)
 [end]
