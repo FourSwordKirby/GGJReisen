@@ -22,6 +22,7 @@ public class KeineQuestManager : Npc
     public void Keine_Stage103_Elixir()
     {
         AssignAvailableElixir(Assignment.Keine);
+        TransformToNormalSprite();
         GameProgress.Keine.Stage = 1000;
     }
 
@@ -53,12 +54,14 @@ public class KeineQuestManager : Npc
     public void Keine_Stage300_Elixir()
     {
         AssignAvailableElixir(Assignment.Keine);
+        TransformToNormalSprite();
         GameProgress.Keine.Stage = 1000;
     }
 
     public void Keine_Stage300_Encyclopedia()
     {
         GameProgress.Player.Encyclopedia = Assignment.Keine;
+        TransformToNormalSprite();
         GameProgress.Keine.Stage = 1100;
     }
 

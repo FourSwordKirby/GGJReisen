@@ -11,6 +11,7 @@
     public void Kosuzu_Stage000_Elixir()
     {
         AssignAvailableElixir(Assignment.Kosuzu);
+        TransformToNormalSprite();
         GameProgress.Kosuzu.Stage = 1100;
     }
 
@@ -27,6 +28,8 @@
 
     public void Kosuzu_Stage200_Elixir()
     {
+        AssignAvailableElixir(Assignment.Kosuzu);
+        TransformToNormalSprite();
         GameProgress.Kosuzu.Stage = 1100;
     }
 
@@ -40,6 +43,7 @@
     public void Kosuzu_Stage200_Scroll()
     {
         GameProgress.Player.Scroll = Assignment.Kosuzu;
+        TransformToNormalSprite();
         GameProgress.Kosuzu.Stage = 1000;
     }
 
@@ -52,6 +56,7 @@
     public void Kosuzu_Stage1001()
     {
         GameProgress.Player.Schematic = Assignment.Inventory;
+        GameProgress.Kosuzu.Stage = 1002;
     }
 
     public void Kosuzu_Stage1100()
