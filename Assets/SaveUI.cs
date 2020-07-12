@@ -43,15 +43,13 @@ public class SaveUI : MenuUI
         }
         if (Controls.cancelInputDown())
         {
-            this.Close();
             if (!isGameplayMenu)
             {
-                Debug.Assert(!isTitle && previousMenu != null);
-
                 previousMenu?.Open();
             }
             else
             {
+                this.Close();
                 RpgGameManager.instance.ResumeGameplay();
             }
         }
@@ -75,6 +73,7 @@ public class SaveUI : MenuUI
     {
         this.gameObject.SetActive(true);
         this.mode = mode;
+        Open();
         Init();
     }
 
