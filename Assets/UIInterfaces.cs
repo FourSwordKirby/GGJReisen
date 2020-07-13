@@ -117,8 +117,11 @@ public abstract class ControllableGridMenuGroup : MonoBehaviour, ISelectableMenu
 
     public void SelectElement(int i)
     {
-        FocusElement(i);
-        menuElements[i].Select();
+        if (menuElements.Count > 0)
+        {
+            FocusElement(i);
+            menuElements[i].Select();
+        }
     }
 
 
