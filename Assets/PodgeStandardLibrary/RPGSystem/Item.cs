@@ -12,9 +12,8 @@ namespace Assets.PodgeStandardLibrary.RPGSystem
     /// </summary>
     public abstract class Item
     {
-        public string ItemName { get; }
-        public string ItemDescription { get; }
-
+        public string ItemName { get; set; }
+        public string ItemDescription { get; set; }
 
         /// <summary>
         /// returns a string that distinctly identifies this item
@@ -64,6 +63,12 @@ namespace Assets.PodgeStandardLibrary.RPGSystem
 
     public class KeyItem : Item
     {
+        public KeyItem(string itemName, string itemDescription)
+        {
+            ItemName = itemName;
+            ItemDescription = itemDescription;
+        }
+
         public KeyItemType type;
 
         public override string GetItemType()
