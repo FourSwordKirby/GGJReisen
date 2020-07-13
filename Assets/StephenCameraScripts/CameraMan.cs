@@ -124,7 +124,7 @@ public class CameraMan : MonoBehaviour
             else if (ZTracking == ZTrackingStrategy.Lerp)
             {
                 // CameraMan stays locked to his the XY-plane
-                TargetPosition.z = TransformToTrack.position.z - OffsetVectorToTrackedTransform.z;
+                //TargetPosition.z = TransformToTrack.position.z - OffsetVectorToTrackedTransform.z;
 
                 float minZ = DeadZone.min.z;
                 float maxZ = DeadZone.max.z;
