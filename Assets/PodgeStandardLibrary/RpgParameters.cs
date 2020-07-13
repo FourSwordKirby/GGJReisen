@@ -5,11 +5,14 @@ using System.Collections;
 public enum CharacterExpression
 {
     normal = 0,
-    smile = 1,
-    laugh = 2,
-    think = 3,
-    frown = 4,
-    worry = 5
+    angry = 1,
+    annoy = 2,
+    happy = 3,
+    heh = 4,
+    sad = 5,
+    shock = 6,
+    sweat = 7,
+    ugh = 8,
 }
 
 public enum Symbol
