@@ -199,23 +199,35 @@ public class DialogueEngine
     }
     private static string RemoveLabel(string line)
     {
-        if (!line.Contains("[")) 
-            return line;
+        string originalLine = line;
 
         if (line.StartsWith("[choice]"))
-            return line;
+            return originalLine;
 
-        string targetLine = line;
+        // Strip out the [expression] or [instruction] command and save it for later
+        string prefix = "";
         if (line.StartsWith("[expression]") || line.StartsWith("[instruction]"))
         {
-            targetLine = line.Substring(0, line.IndexOf("]") + 1);
+            int indexAfterBracket = line.IndexOf("]") + 1;
+            prefix = line.Substring(0, indexAfterBracket);
+            line = line.Substring(indexAfterBracket);
         }
+
+        // It's possible that the remaining stuff doesn't have a label.
+        // In which case, return the original line.
+        if (!line.Contains("[")) 
+            return originalLine;
 
         string newLine = line.Substring(0, line.LastIndexOf('['));
         if (line.Substring(line.LastIndexOf("[")).Contains("|"))
+        {
             return line;
+        }
         else
-            return newLine.Trim();
+        {
+            // Ensure any spaces at the start of the newLine persist, in case prefix is non-empty
+            return prefix + newLine.TrimEnd();
+        }
     }
     private static string RemoveJump(string line)
     {
