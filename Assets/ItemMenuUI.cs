@@ -60,7 +60,7 @@ public class ItemMenuUI : MenuUI
     {
         if (group.menuElements.Count == 0)
         {
-            pauseMenuUI.ShowDescription("Gah where did all of my inventory go!", CharacterExpression.frown);
+            pauseMenuUI.ShowDescription("I don't have any items right now...", CharacterExpression.sweat);
         }
         else
         {

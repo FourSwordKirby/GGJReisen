@@ -56,7 +56,7 @@ public class ShardMenuUI : MenuUI
     {
         if (group.menuElements.Count == 0)
         {
-            pauseMenuUI.ShowDescription("I haven't found any shards yet...", CharacterExpression.frown);
+            pauseMenuUI.ShowDescription("I haven't found any shards yet...", CharacterExpression.sad);
         }
         else
         {

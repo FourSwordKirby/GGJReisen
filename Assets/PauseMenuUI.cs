@@ -87,6 +87,7 @@ public class PauseMenuUI : MenuUI
     {
         CharacterProp.Turn(-1);
         CharacterProp.startTalking();
+        CharacterProp.changeExpression(expression);
         ItemDescriptionBubble.gameObject.SetActive(true);
         ItemDescriptionBubble.SetDialogueBubbleContent(description);
         ItemDescriptionBubble.Show();
@@ -97,6 +98,7 @@ public class PauseMenuUI : MenuUI
     {
         CharacterProp.Turn(0);
         CharacterProp.stopTalking();
+        CharacterProp.changeExpression(CharacterExpression.normal);
         ItemDescriptionBubble.Hide();
         Debug.Log("hiding description");
     }
