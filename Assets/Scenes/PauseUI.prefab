@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 163259665180085739}
   - component: {fileID: 4329688817824445613}
   - component: {fileID: 7246298189799446179}
-  - component: {fileID: 8640045336810354850}
+  - component: {fileID: 6927079248544458301}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -53,7 +53,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 1554236310362283333}
-  m_PlaneDistance: 96.97
+  m_PlaneDistance: 665
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &8640045336810354850
+--- !u!114 &6927079248544458301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 206857541745850415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4534e0e845c455a41970443d6284c20f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1506c326f7ff536479d50adfbbe9afd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   menuElements:
@@ -120,8 +120,6 @@ MonoBehaviour:
   - {fileID: 860022842654872826}
   currentMenuElementIndex: 0
   hortizontal: 1
-  ItemDescription: {fileID: 2791858123754936679}
-  CharacterProp: {fileID: 5066329927590757618}
 --- !u!1 &296446165684132639
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,20 +296,50 @@ MonoBehaviour:
         m_MethodName: Open
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1775662465373677502}
+          m_ObjectArgument: {fileID: 4559797156110450510}
           m_ObjectArgumentAssemblyTypeName: ControllableGridMenu, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  parentMenu: {fileID: 1775662465373677502}
-  closeParent: 0
+  parentMenu: {fileID: 4559797156110450510}
+  parentMenuOnSelectMode: 0
   text: {fileID: 0}
   focusColor: {r: 0, g: 0, b: 0, a: 0}
   blurColor: {r: 0, g: 0, b: 0, a: 0}
   activeTab: {fileID: 8992123009611311877}
   inactiveTab: {fileID: 1675844695860829347}
+--- !u!1 &420624859930068202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1600514178593419495}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1600514178593419495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420624859930068202}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.27, y: -1.52, z: 2.29}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1663538852982279370}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &760798914085539831
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,12 +368,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760798914085539831}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.27, y: -1.52, z: 2.29}
+  m_LocalPosition: {x: 1.27, y: -5.344, z: 2.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8023157906471316209}
   m_Father: {fileID: 1663538852982279370}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2722747172792761174
 Rigidbody:
@@ -551,12 +579,16 @@ MonoBehaviour:
   isTitle: 0
   isGameplayMenu: 0
   persistOnExit: 1
+  gainFocus: 0
+  focusSubmenu: 0
+  prevMenuMode: 0
   isPauseMenuVersion: 1
+  pauseMenuUI: {fileID: 4559797156110450510}
   shardMenuElement: {fileID: 3178497554491291146, guid: 16fb8c46ca61a2d4a94e80dde3c7283e,
     type: 3}
   initialPosition: {fileID: 130738551172123679}
-  rows: 1
-  cols: 2
+  rows: 5
+  cols: 5
   xspacing: 100
   yspacing: 100
 --- !u!1 &1294224129909876283
@@ -1201,7 +1233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8771824529983679294}
-  - component: {fileID: 1775662465373677502}
+  - component: {fileID: 4559797156110450510}
   m_Layer: 0
   m_Name: PauseMenuElements
   m_TagString: Untagged
@@ -1225,7 +1257,7 @@ Transform:
   m_Father: {fileID: 6676633499638891235}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1775662465373677502
+--- !u!114 &4559797156110450510
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1234,15 +1266,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 2511219765610540833}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de87010faa533b0458d7238b1e4f3b4d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4534e0e845c455a41970443d6284c20f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   previousMenu: {fileID: 0}
   inFocus: 0
-  group: {fileID: 8640045336810354850}
+  group: {fileID: 6927079248544458301}
   isTitle: 0
   isGameplayMenu: 1
   persistOnExit: 1
+  gainFocus: 0
+  focusSubmenu: 1
+  prevMenuMode: 0
+  ItemDescriptionBubble: {fileID: 2791858123754936679}
+  CharacterProp: {fileID: 6268429926466818344}
+  startingPositon: {fileID: 1600514178593419495}
+  ReisenVisible: 0
 --- !u!1 &2903393322571364576
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,15 +1349,15 @@ MonoBehaviour:
         m_MethodName: Open
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1775662465373677502}
+          m_ObjectArgument: {fileID: 4559797156110450510}
           m_ObjectArgumentAssemblyTypeName: ControllableGridMenu, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  parentMenu: {fileID: 1775662465373677502}
-  closeParent: 0
+  parentMenu: {fileID: 4559797156110450510}
+  parentMenuOnSelectMode: 0
   text: {fileID: 0}
   focusColor: {r: 0, g: 0, b: 0, a: 0}
   blurColor: {r: 0, g: 0, b: 0, a: 0}
@@ -2019,6 +2058,10 @@ MonoBehaviour:
   isTitle: 0
   isGameplayMenu: 0
   persistOnExit: 1
+  gainFocus: 0
+  focusSubmenu: 0
+  prevMenuMode: 0
+  pauseMenuUI: {fileID: 4559797156110450510}
   ItemMenuElement: {fileID: 7019039703294387951, guid: 340594f4f5e686f48bc0ca79d58b9630,
     type: 3}
   initialPosition: {fileID: 3506062078473263647}
@@ -2228,10 +2271,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuElements: []
-  currentMenuElementIndex: 3
+  currentMenuElementIndex: 0
   hortizontal: 0
-  rows: 2
-  cols: 3
+  rows: 5
+  cols: 5
 --- !u!1 &5968302530698590734
 GameObject:
   m_ObjectHideFlags: 0
@@ -2436,8 +2479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1506c326f7ff536479d50adfbbe9afd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuElements:
-  - {fileID: 0}
+  menuElements: []
   currentMenuElementIndex: 0
   hortizontal: 0
 --- !u!1 &6882348617844754663
@@ -2704,7 +2746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveUI: {fileID: 4008440522739788345}
-  pauseMenuUI: {fileID: 1775662465373677502}
+  pauseMenuUI: {fileID: 4559797156110450510}
 --- !u!1 &8639212809765445834
 GameObject:
   m_ObjectHideFlags: 0
@@ -2955,15 +2997,15 @@ MonoBehaviour:
         m_MethodName: Open
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1775662465373677502}
+          m_ObjectArgument: {fileID: 4559797156110450510}
           m_ObjectArgumentAssemblyTypeName: ControllableGridMenu, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  parentMenu: {fileID: 1775662465373677502}
-  closeParent: 0
+  parentMenu: {fileID: 4559797156110450510}
+  parentMenuOnSelectMode: 0
   text: {fileID: 0}
   focusColor: {r: 0, g: 0, b: 0, a: 0}
   blurColor: {r: 0, g: 0, b: 0, a: 0}
@@ -3070,6 +3112,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7959057099750243863}
+  - {fileID: 1600514178593419495}
   - {fileID: 2787280282663793217}
   m_Father: {fileID: 8771824529983679294}
   m_RootOrder: 0
@@ -3238,12 +3281,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e56999fa30690534ebeda8b78ee5c307, type: 3}
---- !u!4 &7959057099750243863 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5286151866013731306, guid: e56999fa30690534ebeda8b78ee5c307,
-    type: 3}
-  m_PrefabInstance: {fileID: 2821627616118552573}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2791858123754936679 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114493751893569178, guid: e56999fa30690534ebeda8b78ee5c307,
@@ -3256,6 +3293,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad17a213fefbeb948a546cbf33d80916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &7959057099750243863 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5286151866013731306, guid: e56999fa30690534ebeda8b78ee5c307,
+    type: 3}
+  m_PrefabInstance: {fileID: 2821627616118552573}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7355531881119870716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3336,7 +3379,7 @@ PrefabInstance:
     - target: {fileID: 5098573538010058287, guid: 5a59339b7e5092e4497f1d27ffccef8c,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5098573538010058287, guid: 5a59339b7e5092e4497f1d27ffccef8c,
         type: 3}
@@ -3347,6 +3390,11 @@ PrefabInstance:
         type: 3}
       propertyPath: persistOnExit
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5098573538010058287, guid: 5a59339b7e5092e4497f1d27ffccef8c,
+        type: 3}
+      propertyPath: focusSubmenu
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8365266419038666817, guid: 5a59339b7e5092e4497f1d27ffccef8c,
         type: 3}
@@ -3432,7 +3480,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 7355531881119870716}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1fe5035bbbce5c48a130b4c5bfe8254, type: 3}
   m_Name: 
@@ -3927,6 +3975,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a59339b7e5092e4497f1d27ffccef8c, type: 3}
+--- !u!4 &6006404069191516174 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2466312716012971032, guid: 5a59339b7e5092e4497f1d27ffccef8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8169832039942743062}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4008440522739788345 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5098573538010058287, guid: 5a59339b7e5092e4497f1d27ffccef8c,
@@ -3939,9 +3993,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1fe5035bbbce5c48a130b4c5bfe8254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &6006404069191516174 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2466312716012971032, guid: 5a59339b7e5092e4497f1d27ffccef8c,
-    type: 3}
-  m_PrefabInstance: {fileID: 8169832039942743062}
-  m_PrefabAsset: {fileID: 0}
