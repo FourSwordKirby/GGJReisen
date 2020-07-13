@@ -256,10 +256,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previousMenu: {fileID: 0}
+  inFocus: 0
   group: {fileID: 9116032892323929675}
-  isTitle: 0
+  isTitle: 1
   isGameplayMenu: 0
   persistOnExit: 0
+  gainFocus: 1
+  prevMenuMode: 1
 --- !u!1 &9116032890994093605
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +651,7 @@ MonoBehaviour:
   - {fileID: 9116032891929116480}
   - {fileID: 9116032892154637751}
   currentMenuElementIndex: 0
+  hortizontal: 0
 --- !u!1 &9116032891764128597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,6 +1368,7 @@ MonoBehaviour:
   - {fileID: 9116032891013971130}
   - {fileID: 9116032890755456904}
   currentMenuElementIndex: 0
+  hortizontal: 0
 --- !u!1 &9116032892529672945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,10 +1768,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previousMenu: {fileID: 0}
+  inFocus: 0
   group: {fileID: 9116032891616868012}
   isTitle: 0
   isGameplayMenu: 0
   persistOnExit: 0
+  gainFocus: 0
+  prevMenuMode: 1
 --- !u!1001 &9116032891345396420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1849,6 +1857,11 @@ PrefabInstance:
       propertyPath: previousMenu
       value: 
       objectReference: {fileID: 9116032890911633301}
+    - target: {fileID: 5098573538010058287, guid: 5a59339b7e5092e4497f1d27ffccef8c,
+        type: 3}
+      propertyPath: prevMenuMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8365266419038666817, guid: 5a59339b7e5092e4497f1d27ffccef8c,
         type: 3}
       propertyPath: m_LocalPosition.z

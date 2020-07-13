@@ -747,31 +747,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5605456161494871071}
     m_Modifications:
-    - target: {fileID: 2366040003256918227, guid: 174c1e9d211f11a45a52896f08f46f76,
-        type: 3}
-      propertyPath: previousMenu
-      value: 
-      objectReference: {fileID: 8901498263368256038}
-    - target: {fileID: 2366040003256918227, guid: 174c1e9d211f11a45a52896f08f46f76,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2511219765610540833, guid: 174c1e9d211f11a45a52896f08f46f76,
+    - target: {fileID: 296832025481962093, guid: 174c1e9d211f11a45a52896f08f46f76,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3285917177074949936, guid: 174c1e9d211f11a45a52896f08f46f76,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -36.998993
-      objectReference: {fileID: 0}
-    - target: {fileID: 5865858410274219841, guid: 174c1e9d211f11a45a52896f08f46f76,
-        type: 3}
-      propertyPath: pauseMenuUI
-      value: 
-      objectReference: {fileID: 8901498263368256038}
     - target: {fileID: 6676633499638891235, guid: 174c1e9d211f11a45a52896f08f46f76,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -837,6 +817,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7983752017863609243, guid: 174c1e9d211f11a45a52896f08f46f76,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8992123009611311877, guid: 174c1e9d211f11a45a52896f08f46f76,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 174c1e9d211f11a45a52896f08f46f76, type: 3}
 --- !u!4 &4576845603228020603 stripped
@@ -845,18 +835,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7146106605657255320}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8901498263368256038 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1775662465373677502, guid: 174c1e9d211f11a45a52896f08f46f76,
-    type: 3}
-  m_PrefabInstance: {fileID: 7146106605657255320}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de87010faa533b0458d7238b1e4f3b4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7170772161272314950
 PrefabInstance:
   m_ObjectHideFlags: 0

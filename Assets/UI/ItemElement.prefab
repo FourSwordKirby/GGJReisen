@@ -164,7 +164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4150761604179737945}
-  - component: {fileID: 4208443035528577358}
+  - component: {fileID: 114400749552933224}
   m_Layer: 5
   m_Name: ItemElement
   m_TagString: Untagged
@@ -194,7 +194,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4208443035528577358
+--- !u!114 &114400749552933224
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7019039703294387951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a4986ec7343540489c9dd8270fa1a3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 388e5caf2aae7d34da658b2ee28ac412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parentGroup: {fileID: 0}
@@ -211,10 +211,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   parentMenu: {fileID: 0}
-  closeParent: 0
+  parentMenuOnSelectMode: 0
   text: {fileID: 5179056781706948621}
-  focusColor: {r: 0.78983116, g: 1, b: 0, a: 1}
-  blurColor: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 0.69803923}
+  focusColor: {r: 0, g: 0, b: 0, a: 0}
+  blurColor: {r: 0, g: 0, b: 0, a: 0}
+  text: {fileID: 0}
+  focusColor: {r: 0, g: 0, b: 0, a: 0}
+  blurColor: {r: 0, g: 0, b: 0, a: 0}
+  pauseMenuUI: {fileID: 0}
 --- !u!1 &7481785997147524869
 GameObject:
   m_ObjectHideFlags: 0

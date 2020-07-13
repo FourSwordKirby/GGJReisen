@@ -33,13 +33,19 @@ public interface IMenu
     bool InFocus();
 }
 
+public enum ParentMenuStatusPostSelect
+{
+    blur,
+    close,
+    none
+}
 
 public abstract class ControllableGridMenuElement : MonoBehaviour, ISelectableMenuElement
 {
     public ControllableGridMenuGroup parentGroup;
     public UnityEvent SelectionEvent;
     public ControllableGridMenu parentMenu;
-    public bool closeParent;
+    public ParentMenuStatusPostSelect parentMenuOnSelectMode;
 
     public abstract void Blur();
     public abstract void Focus();
@@ -47,12 +53,17 @@ public abstract class ControllableGridMenuElement : MonoBehaviour, ISelectableMe
     public void Select()
     {
         SelectionEvent.Invoke();
-        if (closeParent)
+        switch (parentMenuOnSelectMode)
         {
-            parentMenu?.Close();
+            case ParentMenuStatusPostSelect.blur:
+                parentMenu?.Blur();
+                break;
+            case ParentMenuStatusPostSelect.close:
+                parentMenu?.Close();
+                break;
+            case ParentMenuStatusPostSelect.none:
+                break;
         }
-        else
-            parentMenu?.Blur();
     }
 }
 
