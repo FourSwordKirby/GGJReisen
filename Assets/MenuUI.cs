@@ -10,14 +10,17 @@ public class MenuUI : ControllableGridMenu
     public bool isTitle;
     public bool isGameplayMenu;
     public bool persistOnExit;
-    protected bool gainFocus;
+    public bool gainFocus;
+    public bool focusSubmenu = true;
+
+    public ParentMenuStatusPostSelect prevMenuMode;
 
     void Start()
     {
         Init();
     }
 
-    public void Update()
+    public virtual void Update()
     {
         if (!InFocus())
         {
@@ -53,7 +56,19 @@ public class MenuUI : ControllableGridMenu
                 Blur();
                 if (!persistOnExit)
                     Close();
-                previousMenu?.Open();
+
+
+                switch (prevMenuMode)
+                {
+                    case ParentMenuStatusPostSelect.blur:
+                        previousMenu?.Focus();
+                        break;
+                    case ParentMenuStatusPostSelect.close:
+                        previousMenu?.Open();
+                        break;
+                    case ParentMenuStatusPostSelect.none:
+                        break;
+                }
             }
             else
             {
@@ -66,13 +81,21 @@ public class MenuUI : ControllableGridMenu
     #region interface implementation
     public override void Init()
     {
-        group.FocusElement(group.currentMenuElementIndex);
+        if(gainFocus || inFocus)
+        {
+            group.FocusElement(group.currentMenuElementIndex);
+        }
+        else
+        {
+            Blur();
+        }
     }
 
 
     public override void Focus()
     {
-        Init();
+        if (focusSubmenu)
+            group.FocusElement(group.currentMenuElementIndex);
         gainFocus = true;
         Debug.Log(gainFocus);
     }
@@ -80,6 +103,14 @@ public class MenuUI : ControllableGridMenu
     public override void Blur()
     {
         gainFocus = false;
+        if(group != null)
+        {
+            for (int i = 0; i < group.menuElements.Count; i++)
+            {
+                ControllableGridMenuElement menuElement = group.menuElements[i];
+                menuElement.Blur();
+            }
+        }
     }
 
     public override void Open()
