@@ -1,4 +1,6 @@
-﻿public class NitoriQuestManager : Npc
+﻿using System.Linq;
+
+public class NitoriQuestManager : Npc
 {
     public override ReisenNpcCharacterProgress NpcProgress => GameProgress.Nitori;
 
@@ -77,7 +79,7 @@
     public void Nitori_Stage201_Magazine()
     {
         GameProgress.Player.Magazine = Assignment.Nitori;
-        if (GameProgress.Player.ShardsAcquired.Contains(Shard.Nitori_QuestionCorrect.Id))
+        if (GameProgress.Player.ShardsAcquired.Any(x => x.Id == Shard.Nitori_QuestionCorrect.Id))
         {
             Stage = 301;
         }

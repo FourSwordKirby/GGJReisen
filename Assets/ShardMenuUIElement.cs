@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShardMenuUIElement : ControllableGridMenuElement
+public class ShardMenuUIElement : MenuUIElement
 {
     public Color FoundColor;
     public Color MissingColor;

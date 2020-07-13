@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.PodgeStandardLibrary.RPGSystem;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -90,7 +91,7 @@ public class PlayerProgress
 {
     public string nameTag;
 
-    public List<string> ShardsAcquired;
+    public List<Shard> ShardsAcquired;
     public Assignment CoughingMedicine;
     public Assignment TextBook;
     public Assignment Encyclopedia;
@@ -108,9 +109,43 @@ public class PlayerProgress
     public void AddShard(Shard s)
     {
         Debug.Log("addded shard");
-        ShardsAcquired.Add(s.Id);
+        ShardsAcquired.Add(s);
+    }
+
+    public List<KeyItem> GetKeyItemsInInventory()
+    {
+        List<KeyItem> inventoryItems = new List<KeyItem>();
+        
+        if (CoughingMedicine == Assignment.Inventory)
+            inventoryItems.Add(new KeyItem("Coughing Medicine", "medicine description"));
+        if (TextBook == Assignment.Inventory)
+            inventoryItems.Add(new KeyItem("History Book", "medicine description"));
+        if (Encyclopedia == Assignment.Inventory)
+            inventoryItems.Add(new KeyItem("Encyclopeida", "medicine description"));
+        if (Newspaper == Assignment.Inventory)
+            inventoryItems.Add(new KeyItem("Newspaper", "medicine description"));
+        if (Smartphone == Assignment.Inventory)
+            inventoryItems.Add(new KeyItem("Smartphone", "medicine description"));
+        if (Magazine == Assignment.Inventory)
+            inventoryItems.Add(new KeyItem("Magazine", "medicine description"));
+        if (Wrench == Assignment.Inventory)
+            inventoryItems.Add(new KeyItem("Wrench", "medicine description"));
+        if (Scroll == Assignment.Inventory)
+            inventoryItems.Add(new KeyItem("Scroll", "medicine description"));
+        if (Schematic == Assignment.Inventory)
+            inventoryItems.Add(new KeyItem("Schematic", "medicine description"));
+        if (Novel == Assignment.Inventory)
+            inventoryItems.Add(new KeyItem("Novel", "medicine description"));
+        if (Elixir1 == Assignment.Inventory)
+            inventoryItems.Add(new KeyItem("Elixir", "medicine description"));
+        if (Elixir2 == Assignment.Inventory)
+            inventoryItems.Add(new KeyItem("Elixir", "medicine description"));
+
+        return inventoryItems;
     }
 }
+
+
 
 [Serializable]
 public class ReisenGameProgress: GameProgress
