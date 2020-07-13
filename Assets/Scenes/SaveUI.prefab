@@ -239,11 +239,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previousMenu: {fileID: 0}
+  inFocus: 0
   group: {fileID: 0}
   isTitle: 0
   isGameplayMenu: 0
+  persistOnExit: 0
+  gainFocus: 0
+  focusSubmenu: 0
+  prevMenuMode: 0
   mode: 0
-  canvas: {fileID: 8365266419038666821}
   savePanels:
   - {fileID: 8365266419884020203}
   - {fileID: 2157753325990478877}

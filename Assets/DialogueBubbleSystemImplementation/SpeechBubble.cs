@@ -12,4 +12,10 @@ public class SpeechBubble : DialogueBubble, ISpeechBubble
     {
         textMesh.text = content.lineText;
     }
+
+    //Hack for the reisengame
+    public void SetDialogueBubbleContent(string content)
+    {
+        textMesh.text = content;
+    }
 }

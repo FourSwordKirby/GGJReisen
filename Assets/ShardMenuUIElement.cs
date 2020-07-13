@@ -11,6 +11,9 @@ public class ShardMenuUIElement : MenuUIElement
     public Image ShardSprite;
     public Image ShardSelectionHighlight;
 
+    public PauseMenuUI pauseMenuUI;
+    public Shard shardData;
+
     public override void Blur()
     {
         ShardSprite.color = Color.black;
@@ -18,6 +21,7 @@ public class ShardMenuUIElement : MenuUIElement
 
     public override void Focus()
     {
+        pauseMenuUI.ShowDescription(shardData.Description);
         ShardSprite.color = Color.white;
     }
 }

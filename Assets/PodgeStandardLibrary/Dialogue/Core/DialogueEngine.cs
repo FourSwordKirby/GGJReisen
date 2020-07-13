@@ -202,10 +202,14 @@ public class DialogueEngine
         if (!line.Contains("[")) 
             return line;
 
-        if(line.StartsWith("[choice]")
-        || line.StartsWith("[expression]")
-        || line.StartsWith("[instruction]"))
+        if (line.StartsWith("[choice]"))
             return line;
+
+        string targetLine = line;
+        if (line.StartsWith("[expression]") || line.StartsWith("[instruction]"))
+        {
+            targetLine = line.Substring(0, line.IndexOf("]") + 1);
+        }
 
         string newLine = line.Substring(0, line.LastIndexOf('['));
         if (line.Substring(line.LastIndexOf("[")).Contains("|"))
