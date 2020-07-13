@@ -194,7 +194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3570052165668538352}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.74, z: -12.530001}
+  m_LocalPosition: {x: 1, y: 0.29999995, z: -12.530001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3570052167220379949}
@@ -228,10 +228,10 @@ MonoBehaviour:
   LowZTransform: {fileID: 3570052166032015008}
   HighZTransform: {fileID: 3570052167012221791}
   DeadZone:
-    m_Center: {x: 1, y: 1, z: -6.2500005}
-    m_Extent: {x: 1, y: 1, z: 3}
-  OffsetVectorToTrackedTransform: {x: 0, y: 0.26, z: 6.28}
-  TargetPosition: {x: 1, y: 0.74, z: -12.530001}
+    m_Center: {x: 1, y: -0.96, z: -6.2500005}
+    m_Extent: {x: 1, y: 0.4, z: 3}
+  OffsetVectorToTrackedTransform: {x: 0, y: -0.7, z: 6.28}
+  TargetPosition: {x: 1, y: 0.29999995, z: -12.530001}
   TargetRotation: {x: -0, y: -0, z: -0, w: 1}
   TranslatationLerpFactor: 0.05
   RotationLerpFactor: 0.05
