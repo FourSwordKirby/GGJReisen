@@ -8,8 +8,12 @@ public class ShardMenuUIElement : MenuUIElement
     public Color FoundColor;
     public Color MissingColor;
 
+    public bool revealed = false;
+
     public Image ShardSprite;
     public Image ShardSelectionHighlight;
+
+    public bool isPauseMenuVersion;
 
     public PauseMenuUI pauseMenuUI;
     public Shard shardData;
@@ -21,7 +25,10 @@ public class ShardMenuUIElement : MenuUIElement
 
     public override void Focus()
     {
-        pauseMenuUI.ShowDescription(shardData.Description);
+        if (isPauseMenuVersion)
+            pauseMenuUI.ShowDescription(shardData.Description);
+        else
+            Debug.Log("description goes here on the title screen");
         ShardSprite.color = Color.white;
     }
 }

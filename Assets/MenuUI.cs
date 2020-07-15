@@ -7,7 +7,6 @@ public class MenuUI : ControllableGridMenu
     public MenuUIGroup group;
 
     //hacky
-    public bool isTitle;
     public bool isGameplayMenu;
     public bool persistOnExit;
     public bool gainFocus;
@@ -46,13 +45,8 @@ public class MenuUI : ControllableGridMenu
         }
         if (Controls.cancelInputDown())
         {
-            if (isTitle)
-                return;
-
             if (!isGameplayMenu)
             {
-                Debug.Assert(!isTitle && previousMenu != null);
-
                 Blur();
                 if (!persistOnExit)
                     Close();

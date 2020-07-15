@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SaveUI : MenuUI
 {
+    public bool isTitleScreenVersion;
     public SavePanelMode mode;
     public List<SavePanelUI> savePanels;
     public ReisenSavePoint currentSavePoint;
@@ -60,7 +61,11 @@ public class SaveUI : MenuUI
             }
             else
             {
-                ReisenGameManager.instance.LoadGame(savePanels[selectedSaveIndex].fileName);
+                if (isTitleScreenVersion)
+                    TitleScreenUtils.instance.LoadGame(savePanels[selectedSaveIndex].fileName);
+                else
+                    ReisenGameManager.instance.LoadGame(savePanels[selectedSaveIndex].fileName);
+
                 if (!persistOnExit)
                     this.Close();
                 else
@@ -132,9 +137,11 @@ public class SaveUI : MenuUI
 
     public override void Init()
     {
-        foreach(SavePanelUI panel in savePanels)
+        for(int i = 0; i < SaveManager.saveNames.Count; i++)
         {
-            string saveName = panel.fileName;
+            string saveName = SaveManager.saveNames[i];
+            SavePanelUI panel = savePanels[i];
+            panel.fileName = saveName;
             GGJReisenSave saveData = SaveManager.FetchSaveData(saveName);
             if(saveData != null)
                 panel.InitializeSavePanel(saveData);
