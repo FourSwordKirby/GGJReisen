@@ -41,16 +41,18 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    public IEnumerator moveCharacter(Vector3 targetPosition, Vector3 facingDirection)
+    public IEnumerator moveCharacter(Vector3 targetPosition, Vector3 facingDirection, float timeLimit)
     {
         forcedMove = true;
         Vector3 displacement = (targetPosition - this.transform.position);
         Vector3 currentDisplacement = displacement;
-        while(currentDisplacement.sqrMagnitude > 0.2f)
+        float elapsedTime = 0f;
+        while(currentDisplacement.sqrMagnitude > 0.2f && elapsedTime < timeLimit)
         {
             currentDisplacement = (targetPosition - this.transform.position);
             selfBody.velocity = (Vector3.right * currentDisplacement.x + Vector3.forward * currentDisplacement.z).normalized * 2.0f;
             yield return new WaitForEndOfFrame();
+            elapsedTime += Time.deltaTime;
         }
         //dumb hack for cutscen ease
         yield return GetComponent<CharacterMovementAnimator>().turnTowards(facingDirection);
