@@ -34,13 +34,48 @@ public class RpgGameManager : MonoBehaviour
 
         //External library dependency
         CameraMan cameraMan = FindObjectOfType<CameraMan>();
+
+        // Start Cinematic Mode right away
         if (cameraPosition != null)
+        {
             cameraMan.StartCinematicMode(cameraPosition);
+            while (!cameraMan.InDesiredPosition())
+            {
+                yield return null;
+            }
+        }
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (playerPosition != null)
         {
-            yield return player.GetComponent<CharacterMovement>().moveCharacter(playerPosition.position, focusPosition-playerPosition.position);
+            // Locate the other speaker
+            GameObject otherSpeaker = null;
+            foreach (string speakerName in dialogue.speakers)
+            {
+                GameObject speakerObject = GameObject.Find(speakerName);
+                if (speakerObject != player)
+                {
+                    otherSpeaker = speakerObject;
+                }
+            }
+
+            SetNpcCollisionBoxes(otherSpeaker, false); // Disable NPC collision boxes while player is moving.
+            yield return player.GetComponent<CharacterMovement>().moveCharacter(playerPosition.position, focusPosition-playerPosition.position, 6f);
+            SetNpcCollisionBoxes(otherSpeaker, true);
+
+            // If no cinematic camera position was given, and there is another "speaker" (probably an NPC),
+            // put the camera into a magic "dialogue angle"
+            if (cameraPosition == null && otherSpeaker != null)
+            {
+                Vector3 cameraOffset = new Vector3(0f, 2f, -4.5f); // Magical camera offset vector for 4:3 size.
+                Vector3 midpointBetweenSpeakers = (otherSpeaker.transform.position + player.transform.position) * .5f;
+                cameraMan.StartCinematicMode(midpointBetweenSpeakers + cameraOffset, Quaternion.identity);
+
+                while(!cameraMan.InDesiredPosition())
+                {
+                    yield return null;
+                }
+            }
         }
 
         DialogueBubbleUI.instance.init(dialogue);
@@ -86,7 +121,9 @@ public class RpgGameManager : MonoBehaviour
             lineTracker++;
         }
         DialogueBubbleUI.instance.finishDialogue();
-        player.GetComponent<CharacterDialogueAnimator>().stopTalking();
+        CharacterDialogueAnimator playerCda = player.GetComponent<CharacterDialogueAnimator>();
+        playerCda.stopTalking();
+        playerCda.changeExpression(CharacterExpression.normal);
 
         while (!DialogueBubbleUI.instance.ready)
             yield return null;
@@ -99,9 +136,7 @@ public class RpgGameManager : MonoBehaviour
 
         ConversationUnpause();
 
-        /*
         cameraMan.EndCinematicMode();
-        */
 
         afterEvent();
         yield return null;
@@ -115,6 +150,28 @@ public class RpgGameManager : MonoBehaviour
     private void ConversationUnpause()
     {
         ResumeGameplay();
+    }
+
+
+    private void SetNpcCollisionBoxes(GameObject npcObject, bool enabled)
+    {
+        if (npcObject == null)
+        {
+            return;
+        }
+
+        var allColiders = npcObject.GetComponentsInChildren<Collider>();
+        if (allColiders == null)
+        {
+            return;
+        }
+
+        // Assumption that NPCs don't have rigidbodies, and won't fall through the floor if we disable their colliders
+        var colliders = allColiders.Where(c => !c.isTrigger);
+        foreach (Collider c in colliders)
+        {
+            c.enabled = enabled;
+        }
     }
 
     // Dependent on external player class

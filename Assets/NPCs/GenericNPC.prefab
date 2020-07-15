@@ -10322,6 +10322,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 541249608831779774}
     m_Modifications:
+    - target: {fileID: 405987035818678890, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3282068927747725378, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
         type: 3}
       propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.size

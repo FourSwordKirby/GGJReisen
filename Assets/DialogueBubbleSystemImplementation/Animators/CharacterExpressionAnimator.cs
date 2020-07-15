@@ -16,8 +16,11 @@ public class CharacterExpressionAnimator : MonoBehaviour
 
     public void changeExpression(CharacterExpression expression)
     {
-        targetExpression = expression;
-        animator.SetTrigger("NormalExpression");
+        if (targetExpression != expression) // Don't play the animation if we're already on the correct expression.
+        {
+            targetExpression = expression;
+            animator.SetTrigger("NormalExpression");
+        }
     }
 
     private void animateExpression()

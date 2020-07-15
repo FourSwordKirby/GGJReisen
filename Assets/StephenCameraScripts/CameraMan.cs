@@ -8,9 +8,27 @@ public class CameraMan : MonoBehaviour
 {
     public enum ZTrackingStrategy
     {
+        /// <summary>
+        /// CameraMan uses the z-offset from OffsetVectorToTrackedTransform as the exact distance
+        /// between himself and the tracked target.
+        /// </summary>
         Exact,
+
+        /// <summary>
+        /// CamearMan won't move from his initial Z coordinate
+        /// </summary>
         Frozen,
-        Lerp
+
+        /// <summary>
+        /// CameraMan will follow tracked object if it leaves the deadzone.
+        /// Will also move Camera between LowZTransform and HighZTransform position, depending on where object is in the dead zone.
+        /// </summary>
+        Lerp,
+
+        /// <summary>
+        /// // CameraMan will follow tracked object if it leaves the dead zone
+        /// </summary>
+        Normal
     }
 
     public Camera MyCamera;
@@ -59,9 +77,14 @@ public class CameraMan : MonoBehaviour
 
     public void StartCinematicMode(Transform cameraPosition)
     {
+        StartCinematicMode(cameraPosition.position, cameraPosition.rotation);
+    }
+
+    public void StartCinematicMode(Vector3 position, Quaternion rotation)
+    {
         IsCinematic = true;
-        TargetPosition = cameraPosition.position;
-        TargetRotation = cameraPosition.rotation;
+        TargetPosition = position;
+        TargetRotation = rotation;
 
         //make sure the projected Camera is always in the final desired position for accurate worldToScreen tracking
         ProjectedCamera.transform.position = TargetPosition;
@@ -118,7 +141,7 @@ public class CameraMan : MonoBehaviour
             
             if (ZTracking == ZTrackingStrategy.Frozen)
             {
-                // CameraMan stays locked to his the XY-plane
+                // CameraMan stays locked to the original XY-plane (z-coordinate)
                 TargetPosition.z = this.transform.position.z; 
             }
             else if (ZTracking == ZTrackingStrategy.Lerp)
@@ -134,6 +157,14 @@ public class CameraMan : MonoBehaviour
 
                 MyCamera.transform.position = Vector3.Lerp(MyCamera.transform.position, targetCameraPosition, TranslatationLerpFactor);
                 MyCamera.transform.rotation = Quaternion.Lerp(MyCamera.transform.rotation, targetCameraRotation, RotationLerpFactor);
+            }
+            else if (ZTracking == ZTrackingStrategy.Exact)
+            {
+                TargetPosition.z = TransformToTrack.position.z - OffsetVectorToTrackedTransform.z;
+            }
+            else if (ZTracking == ZTrackingStrategy.Normal)
+            {
+                // Do nothing. This is taken care of by the dead zone code above
             }
             
             this.transform.position = TargetPosition;

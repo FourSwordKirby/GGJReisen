@@ -23,8 +23,7 @@ public class ChoiceLine : ScriptLine
         }
         catch (Exception e)
         {
-            Debug.Log("attempted speaker for this choice is " + speaker);
-            throw e;
+            throw new Exception($"Cannot determine speaker '{speaker}'", e);
         }
 
     }
