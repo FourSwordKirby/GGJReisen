@@ -1,21 +1,25 @@
 //000 – Shoo 
 
-Reisen: **What's a person doing all the way out here? 
-
-Hello? 
+Reisen: [expression] sweat
+**What's a person doing all the way out here? 
+[expression] normal
+Hello?
 
 Nitori: Ack! 
 
-Reisen: Huh!? 
+Reisen: [expression] shock
+Huh!? 
 
-Nitori: Oh it's just a rabbit. 
+Nitori: Oh, it's just a rabbit. 
 
-Reisen: ... Excuse me? 
+Reisen: [expression] angry
+... Excuse me? 
 
-Nitori: Shoo, go away, you're getting in the way of <b>important work</b> 
+Nitori: Shoo. You're getting in the way of <b>important work</b>!
 
-Reisen: **I want to say I'm annoyed, but saying that I've been upset by a box would be a new kind of low... 
-
+Reisen: [expression] annoy
+**I'm annoyed, but admitting a trash cube upset me is kind of... 
+[expression] ugh
 **Who is this <b>person?</b>
 
 [instruction] Stage000 

@@ -18,8 +18,8 @@ public class Shard
     public Shard(string id, int shardValue, string friendlyName, string description)
     {
         Id = id;
-        FriendlyName = friendlyName;
         ShardValue = shardValue;
+        FriendlyName = friendlyName;
         Description = description;
     }
 
@@ -38,9 +38,14 @@ public class Shard
     public static Shard Nitori_Tool_Smartphone { get; } = new Shard(nameof(Nitori_Tool_Smartphone), 1, "", "");
     public static Shard Nitori_Tool_Wrench { get; } = new Shard(nameof(Nitori_Tool_Wrench), 1, "", "");
     public static Shard Nitori_QuestionCorrect { get; } = new Shard(nameof(Nitori_QuestionCorrect), 1, "", "");
-    public static Shard Nitori_GoodEnd { get; } = new Shard(nameof(Kosuzu_CoughingMedicine), 2, "", "");
-    public static Shard Nitori_Elixir { get; } = new Shard(nameof(Kosuzu_CoughingMedicine), 1, "", "");
+    public static Shard Nitori_GoodEnd { get; } = new Shard(nameof(Nitori_GoodEnd), 2, "", "");
+    public static Shard Nitori_Elixir { get; } = new Shard(nameof(Nitori_Elixir), 1, "", "");
 
+    public static Shard Akyu_Textbook { get; } = new Shard(nameof(Akyu_Textbook), 1, "", "");
+    public static Shard Akyu_Novel { get; } = new Shard(nameof(Akyu_Novel), 1, "", "");
+    public static Shard Akyu_BadElixir1 { get; } = new Shard(nameof(Akyu_BadElixir1), 1, "", "");
+    public static Shard Akyu_BadElixir2 { get; } = new Shard(nameof(Akyu_BadElixir2), 1, "", "");
+    public static Shard Akyu_GoodEnd { get; } = new Shard(nameof(Akyu_GoodEnd), 1, "", "");
 
     private static Dictionary<string, Shard> _shardDictionary;
     public static Dictionary<string, Shard> ShardDictionary
@@ -105,6 +110,7 @@ public class PlayerProgress
     public Assignment Elixir1;
     public Assignment Elixir2;
 
+    public bool HasAvailableElixir => (Elixir1 == Assignment.Inventory) || (Elixir2 == Assignment.Inventory);
 
     public void AddShard(Shard s)
     {
