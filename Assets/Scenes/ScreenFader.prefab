@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 616268525716181283}
   - component: {fileID: 616268525716181293}
+  - component: {fileID: 5987940130238604406}
   m_Layer: 0
   m_Name: ScreenFader
   m_TagString: Untagged
@@ -46,6 +47,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screen: {fileID: 616268526814688993}
   fading: 0
+--- !u!114 &5987940130238604406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616268525716181292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6840321c9cdda3d42b4d84b989f0aeeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenFader: {fileID: 616268525716181293}
 --- !u!1 &616268526774247787
 GameObject:
   m_ObjectHideFlags: 0

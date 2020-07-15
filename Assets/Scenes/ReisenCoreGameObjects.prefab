@@ -194,7 +194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3570052165668538352}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.29999995, z: -12.530001}
+  m_LocalPosition: {x: 1, y: 0.29999998, z: -12.530001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3570052167220379949}
@@ -228,10 +228,10 @@ MonoBehaviour:
   LowZTransform: {fileID: 3570052166032015008}
   HighZTransform: {fileID: 3570052167012221791}
   DeadZone:
-    m_Center: {x: 1, y: -0.96, z: -6.2500005}
+    m_Center: {x: 1, y: -0.4, z: -6.2500005}
     m_Extent: {x: 1, y: 0.4, z: 3}
   OffsetVectorToTrackedTransform: {x: 0, y: -0.7, z: 6.28}
-  TargetPosition: {x: 1, y: 0.29999995, z: -12.530001}
+  TargetPosition: {x: 1, y: 0.29999998, z: -12.530001}
   TargetRotation: {x: -0, y: -0, z: -0, w: 1}
   TranslatationLerpFactor: 0.05
   RotationLerpFactor: 0.05
@@ -558,7 +558,6 @@ GameObject:
   - component: {fileID: 5605456161494871071}
   - component: {fileID: 6212093637441878869}
   - component: {fileID: 7710735857685672541}
-  - component: {fileID: 763197981061093840}
   m_Layer: 0
   m_Name: ReisenCoreGameObjects
   m_TagString: Untagged
@@ -652,19 +651,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7238cefbdfd27bb47afd842954fafe03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &763197981061093840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8750121352881991921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6840321c9cdda3d42b4d84b989f0aeeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  screenFader: {fileID: 7714349211561782635}
 --- !u!1001 &4985676574885569105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -915,15 +901,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7170772161272314950}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7714349211561782635 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 616268525716181293, guid: 86be1572d57980e4d8de60db910a56d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7170772161272314950}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9c775aa445025348a48abd72b90e8ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
