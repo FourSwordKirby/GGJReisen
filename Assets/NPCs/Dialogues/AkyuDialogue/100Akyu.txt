@@ -1,84 +1,68 @@
 Akyu: "Am I dreaming? Or seeing nothing?" 
-
 There was a song like that, wasn't there...? 
 
-Reisen: Hello? 
+Reisen: [expression] happy
+Hello.
 
-Akyu: Good afternoon, Miss Reisen. 
+Akyu: Good afternoon, Miss Reisen.
+Akyu: I must be rather lucky today to finally meet the elusive youkai rabbit. 
 
-I must be rather lucky today to finally meet the elusive youkai rabbit. 
-
-Reisen: Hm? We talked earlier today, didn't we? 
+Reisen: [expression] sad
+Hm? We talked earlier today, didn't we? 
 
 Akyu: Oh, is that so? My apologies. 
-
 It felt like such a distant time ago, I wasn't sure if we had met in this lifetime. 
 
-Reisen: I'm pretty sure it was less than 20 minutes ago... 
+Reisen: [expression] ugh
+I'm pretty sure it was less than 20 minutes ago...
 
 Akyu: You must forgive me. My memory is in shambles today. 
-
 Whether something had happened 10 minutes ago or 1000 years ago... 
-
 They all feel equally close and distant... 
 
-Reisen: Are you okay? That sounds rather bad. 
-
-Wait what? Memories from 1000 years ago!? 
+Reisen: [expression] sweat
+Are you okay? That sounds rather bad.
+[expression] shock
+^^Wait what? Memories from 1000 years ago!? 
 
 Akyu: Yes, I am a special descendant of the <b>Hieda</b> house. 
-
 I am this era's <b>Child of Miare</b>. 
-
-The reincarnation of the Hieda no Are, who appears once every hundred years. 
-
+The reincarnation of the Hieda no Are, who reappears every hundred years. 
 I serve to write the <b>Gensokyo Chronicle</b>. 
-
 For that duty, I have been gifted the ability to remember all my past lives. 
 
-Reisen: That's rather convenient. 
-
+Reisen: [expression] normal
+That's rather convenient. 
+[expression] sweat
 For a normal human, that's basically one step short of immortality. 
 
+Reisen: [expression] shock
 Akyu: Yes! It is pretty amazing! 
-
 ... Or, maybe not. 
 
-As many memories I have of being proud of this ability, 
-
+Reisen: [expression] normal
+Akyu: As many memories I have of being proud of this ability, 
 There are equal number of bitter moments where I have cursed this fate. 
-
 How did the current generation me feel about it? 
-
 I don't remember. 
 
-Reisen: What does that mean? 
+Reisen: [expression] sweat
+What does that mean? 
 
 Akyu: I am a reincarnation of Hieda no Are, not the same person. 
-
 I carry 10 people's worth of memories. 
-
-Normally, the older memories feel much more distant.... 
-
-And I can say, "yes, those were the thoughts of the me from 1000 years ago." 
-
+Normally, the older memories feel very distant.... 
+And I can say, "those are my ancestor's memories, not mine." 
 But right now... 
-
-I feel as though all of my past emotions and memories have blended together... 
-
-Which generation of memories are the correct me? 
-
-If we had talked just yesterday, am I speaking the same way today? 
-
-Or is the me from 1000 years ago speaking to you right now? 
-
+I feel that my past emotions and memories have all blended together... 
+Which generation of memories belong to <b>me</b>? 
+If we had talked just yesterday, am I speaking the same way today?
+Or is it the me from 1000 years ago speaking right now? 
 I don't know... 
-
 And that thought scares me... 
 
-Reisen: I'm... sorry to hear that...  
-
+Reisen: [expression] sad
+I'm... sorry to hear that...  
 **Is this an effect of the simplification virus? 
 
- 
 [instruction] Stage100

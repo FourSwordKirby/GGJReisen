@@ -42,8 +42,10 @@ Reisen: [expression] annoy
 Reisen: Well, that's not entirely wrong. 
 Reisen: [expression] normal
 I'd rather not intrude for too long. 
-Though right now, I have business with the whole village. 
+Though right now, I have business with the whole village.
+[expression] shock
 Actually, I'm surprised you're able to remember your <b>sense of self</b>. 
+[expression] normal
 The entire village is under a spell of sorts right now... 
 
 Akyu: ... 

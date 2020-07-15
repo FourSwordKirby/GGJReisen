@@ -562,8 +562,6 @@ MonoBehaviour:
     dialogue: {fileID: 4900000, guid: 16907ef5b0f005e4c9e285cd43ee0548, type: 3}
   - stage: 200
     dialogue: {fileID: 4900000, guid: 939bfda9fd48b8040ac9d37c44d31bac, type: 3}
-  - stage: 500
-    dialogue: {fileID: 4900000, guid: f835707a441dcd04eb617efa827c025d, type: 3}
   - stage: 1000
     dialogue: {fileID: 4900000, guid: ee54d6a103d5f7d4584f23c33f781e13, type: 3}
   - stage: 1001
