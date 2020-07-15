@@ -1,41 +1,39 @@
 Akyu: ... 
 
-Reisen: How do you feel? 
+Reisen: [expression] sweat
+How do you feel? 
 
-Akyu: Yes! I think that did the trick. 
-
+Akyu: ^^Yes!
+I think that did the trick. 
 My name is <b>Hieda no Akyu</b>, the ninth Child of Miare. 
+Oh phew!
+Now that I think about it, I was talking in a really outdated fashion, wasn't I? 
 
-Oh phew, now that I think about it, the way I was talking was way outdated, wasn't it? 
+Reisen: [expression] shock
+**Wow, what a dramatic shift in personality. 
 
-Reisen: **Wow, what a dramatic shift in personality. 
-
-Akyu: Please let Miss Yagokoro know I am eternally grateful. 
-
+Akyu: Please let Miss Yagokoro know I'm eternally grateful. 
 And also, thank you Reisen for your help. 
-
 I always knew you were different from other Youkai rabbits. 
+But still, it's surprising how willing you are to help humans. 
 
-But it still surprises me how willing you are to help humans. 
+Reisen: [expression] sad
+I have my reasons. 
+[expression] normal
 
-Reisen: I have my reasons. 
-
-Akyu: ... 
-
-Well, I've gotten the sense that you're not a social type to begin with. 
-
+Akyu: ...
+I have a lot of questions for you.
+But, I get the sense that you're not a social type to begin with. 
 So I'll reign in my curiosity for now. 
-
 Please take care. 
-
-And let me know if you ever feel like chatting. 
-
+Let me know if you ever feel like chatting. 
 I really would love to learn more about our village's elusive medicine peddler. 
 
-Reisen: ... I'll consider it. 
-
+Reisen: [expression] sad
+...
+[expression] heh
+I'll consider it. 
+[expression] annoy
 So long as my master permits. 
 
-[instruction] Stage1100 
-//+2 Personality Shard 
-//Goto Stage 1101 
+[instruction] Stage1100

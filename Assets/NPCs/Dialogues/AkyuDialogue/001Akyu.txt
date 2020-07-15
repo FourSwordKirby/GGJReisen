@@ -2,7 +2,7 @@ Akyu: I do hope the reference material from the <b>shop</b> arrives soon...
 Reisen: **Do I have something for her? 
 
 ?{elixir=1} **I do have an elixir, but... 
-?{elixir=1} [expression] sweat
+?{elixir=1} [expression] sad
 ?{elixir=1} **I can't shake this ominous feeling about giving her one... 
 
 ?{elixir=1} {textbook=1} [choice] [Hand over the elixir  | elixir] [Hand over the history book  | textbook] [Leave | leave]
@@ -10,40 +10,57 @@ Reisen: **Do I have something for her?
 ?{textbook=1} [choice] [Hand over the history book  | textbook] [Leave | leave]
 [choice] [Leave | leave]
 
+
 Reisen: [expression] normal [elixir]
+
 Akyu: Hm? What's this? 
+
 Reisen: It's medication from my master. 
-It should help you with that forgetful spell you're feeling. 
-Akyu: Is that really...!? Please let me have it! 
+It should help you with that forgetful spell you're feeling.
+
+Akyu: ^^From Miss Yagokoro!?
+Is that really...
+^^Please let me have it! 
+
 Reisen: [expression] shock
-Reisen: **Whoa, she's fast! 
+**Whoa, she's fast! 
+
 [instruction] Stage001_Elixir
 (end)
 
+
 Reisen: [expression] normal [textbook]
-Reisen: Is this the <b>reference material</b> you needed?
+Is this the <b>reference material</b> you needed?
+
 Akyu: Oh my! Yes, it is. Thank you very much. 
-To think the medicine peddler is also doing book deliveries now too.
+To think the medicine peddler is also doing book deliveries now.
+
 Reisen: Um, no problem...
-Reisen: [expression] ugh
+[expression] ugh
 **How did I end up running errands for other people?
+
 Akyu: Since you're already here, could I trouble you with one more delivery?
+
 Reisen: [expression] sweat
-Reisen: Ah... um... sure I guess. 
+Ah... um... sure I guess. 
+
 Akyu: This is an old encyclopedia that I had acquired. 
 It contains entries on many <b>Youkai</b> and methods of dealing with them. 
 I've finished transcribing what I need from it. 
 A <b>school teacher</b> in the village was asking to borrow it. 
 Can you bring this to them? 
-Reisen: [expression] ugh
-Reisen: A <b>school teacher</b>? 
-Reisen: [expression] sad
-**... Did I meet such a person? 
+
 Reisen: [expression] sweat
+A <b>school teacher</b>? 
+[expression] sad
+**... Did I meet such a person? 
+[expression] ugh
 **They must have been one of the cubes. 
-Reisen: [expression] happy
-Sure, I will try. 
-Akyu: Thank you very much. 
+[expression] happy
+Sure, I will try.
+
+Akyu: Thank you very much.
+
 [instruction] Stage001_Textbook 
 (end)
 

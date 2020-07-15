@@ -1,39 +1,35 @@
- 
-
-Akyu: So long as I hold onto this book... 
-
+Akyu: So long as I hold onto this novel... 
 Even if my memories are all blended together, 
-
-I can still make out which memories belonged to the me of now.  
+I can still make out which memories belonged to the real me.  
 
 Reisen: **She seems to still be affected by the simplification virus. 
 
 ?{elixir=1} Reisen: **I think it should be okay to give her an elixir now. 
-
 ?{elixir=1} Reisen: **Should I do it?  
-
-?{elixir=0} Reisen: **I'm not sure what more I can do here. (leave) 
-
 ?{elixir=1} [choice] [Hand over the elixir | elixir] [Leave | leave] 
 
- 
+// No elixir case
+Reisen: **I'm not sure what more I can do here. (leave) 
 
->Elixir 
 
-Akyu: Hm? What's this? [elixir] 
+Akyu: Hm? What's this? [elixir]
 
-Reisen: It's medication from my master. 
-
+Reisen: It's medication from my master.
+[expression] happy
 It should help you remember yourself. 
 
-Akyu: From Miss Yagokoro!? Is that really... Please let me have it! 
+Akyu: ^^From Miss Yagokoro!?
+Is that really...
+^^Please let me have it! 
 
-Reisen: **Whoa, she's fast! 
+Reisen: [expression] shock
+**Whoa, she's fast! 
 
-[instruction] Stage200 
-//Akyu blocks swapped with Akyu sprite 
-//Goto Stage 1100 (good end) 
+[instruction] Stage200_Elixir
+(end)
 
-Akyu: What was my name...? [leave] 
+
+Akyu: But, what was my name...? [leave]
+
 
 [end]
