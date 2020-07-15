@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ShardMenuUI : MenuUI
@@ -19,14 +20,20 @@ public class ShardMenuUI : MenuUI
 
     public override void Init()
     {
-        ReisenGameProgress gameProgress = ReisenGameManager.instance.gameProgress;
-
+        List<Shard> totalShardData = SaveManager.FetchSeenShardData()?.shardData;
         List<Shard> shardsToDisplay;
 
         if (isPauseMenuVersion)
-            shardsToDisplay = new List<Shard>();
+        {
+            ReisenGameProgress gameProgress = ReisenGameManager.instance.gameProgress;
+            shardsToDisplay = new List<Shard>() { new Shard("0", 0, "titletesting", "why not"), new Shard("0", 0, "testing2", "why not2"),
+                                                    new Shard("0", 0, "titletesting2", "why not3"), new Shard("0", 0, "testing2", "why not2"),
+                                                    new Shard("0", 0, "titletesting3", "why not3"), new Shard("0", 0, "testing2", "why not2") };
+        }
         else
-            shardsToDisplay = new List<Shard>() { new Shard("0", 0, "testing", "why not"), new Shard("0", 0, "testing2", "why not2") };
+        {
+            shardsToDisplay = Shard.ShardDictionary.Select(x => x.Value).ToList();
+        }
 
         foreach (MenuUIElement oldElement in group.menuElements)
         {
@@ -44,10 +51,17 @@ public class ShardMenuUI : MenuUI
             element.transform.position = initialPosition.position + ((i % cols) * Vector3.right * xspacing) + ((i / rows) * Vector3.down * yspacing);
             element.parentMenu = this;
             element.parentGroup = group;
+            element.isPauseMenuVersion = isPauseMenuVersion;
             element.pauseMenuUI = pauseMenuUI;
             element.parentMenuOnSelectMode = ParentMenuStatusPostSelect.none;
             element.shardData = shard;
             group.menuElements.Add(element);
+
+            if (isPauseMenuVersion)
+                element.revealed = true;
+            else
+                element.revealed = totalShardData.Any(x => x.Id == shard.Id);
+
         }
         base.Init();
     }

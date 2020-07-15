@@ -220,7 +220,7 @@ public class ReisenGameManager : MonoBehaviour
         SaveManager.SaveGame(saveName, gameProgress);
     }
 
-    public void LoadGame(string saveName)
+    public virtual void LoadGame(string saveName)
     {
         StartCoroutine(LoadGameSequence(saveName));
     }
