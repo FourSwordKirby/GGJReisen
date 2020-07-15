@@ -41,11 +41,11 @@ public class Shard
     public static Shard Nitori_GoodEnd { get; } = new Shard(nameof(Nitori_GoodEnd), 2, "", "");
     public static Shard Nitori_Elixir { get; } = new Shard(nameof(Nitori_Elixir), 1, "", "");
 
-    public static Shard Akyu_Textbook { get; } = new Shard(nameof(Akyu_Textbook), 1, "", "");
-    public static Shard Akyu_Novel { get; } = new Shard(nameof(Akyu_Novel), 1, "", "");
-    public static Shard Akyu_BadElixir1 { get; } = new Shard(nameof(Akyu_BadElixir1), 1, "", "");
-    public static Shard Akyu_BadElixir2 { get; } = new Shard(nameof(Akyu_BadElixir2), 1, "", "");
-    public static Shard Akyu_GoodEnd { get; } = new Shard(nameof(Akyu_GoodEnd), 1, "", "");
+    public static Shard Akyu_Textbook { get; } = new Shard(nameof(Akyu_Textbook), 1, "Book Shop Intern", "I met the Gensokyo Chronicler... she was singing a weird song to herself.");
+    public static Shard Akyu_Novel { get; } = new Shard(nameof(Akyu_Novel), 1, "Case closed!", "A chronicler working as novelist as a side job. I wonder if she gets fact and fiction mixed up.");
+    public static Shard Akyu_BadElixir1 { get; } = new Shard(nameof(Akyu_BadElixir1), 1, "Malfunctioning Elixir?", "I cured the Hieda girl's cube form, but it seems like she's still forgetting something...");
+    public static Shard Akyu_BadElixir2 { get; } = new Shard(nameof(Akyu_BadElixir2), 1, "Not All Powerful", "Master Yagokoro's elixir didn't work!?");
+    public static Shard Akyu_GoodEnd { get; } = new Shard(nameof(Akyu_GoodEnd), 2, "One in a Thousand", "Akyu looked very young, but to think that she might be as old as Mokou...");
 
     private static Dictionary<string, Shard> _shardDictionary;
     public static Dictionary<string, Shard> ShardDictionary
