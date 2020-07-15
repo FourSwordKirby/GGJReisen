@@ -591,17 +591,17 @@ PrefabInstance:
     - target: {fileID: 541249608831779774, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.132
+      value: 0.15248251
       objectReference: {fileID: 0}
     - target: {fileID: 541249608831779774, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.065
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 541249608831779774, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.14
+      value: -3.6515017
       objectReference: {fileID: 0}
     - target: {fileID: 541249608831779774, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -670,6 +670,61 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
+      propertyPath: dialogueInstructions.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[0].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[1].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[2].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[3].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[4].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[5].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[6].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[7].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[8].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[9].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
       propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -682,8 +737,7 @@ PrefabInstance:
         type: 3}
       propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 954150422264083650, guid: f3511b58b6138ea4b85da88aaa2c8791,
-        type: 3}
+      objectReference: {fileID: 954150422264083650}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -693,6 +747,206 @@ PrefabInstance:
         type: 3}
       propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[0].name
+      value: Stage000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[0].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 954150422264083650}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[0].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Akyu_Stage000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[0].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[1].name
+      value: Stage001_Elixir
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[1].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 954150422264083650}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[1].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Akyu_Stage001_Elixir
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[1].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[2].name
+      value: Stage001_Textbook
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[2].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 954150422264083650}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[2].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Akyu_Stage001_Textbook
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[2].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[3].name
+      value: Stage100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[3].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 954150422264083650}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[3].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Akyu_Stage100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[3].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[4].name
+      value: Stage101_Elixir
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[4].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 954150422264083650}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[4].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Akyu_Stage101_Elixir
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[4].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[5].name
+      value: Stage101_Novel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[5].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 954150422264083650}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[5].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Akyu_Stage101_Novel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[5].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[6].name
+      value: Stage200_Elixir
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[6].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 954150422264083650}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[6].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Akyu_Stage200_Elixir
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[6].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[7].name
+      value: Stage1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[7].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 954150422264083650}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[7].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Akyu_Stage1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[7].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[8].name
+      value: Stage1002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[8].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 954150422264083650}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[8].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Akyu_Stage1002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[8].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[9].name
+      value: Stage1100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[9].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 954150422264083650}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[9].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Akyu_Stage1100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[9].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 140421137813915342, guid: 8247f7c181319ac4a8e7f0d741cc1563, type: 3}

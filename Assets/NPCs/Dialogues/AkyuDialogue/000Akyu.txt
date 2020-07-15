@@ -4,12 +4,12 @@ Akyu: "Even in the midst of flowing time, I feel languid."
 "See? Round and round, I spin..." 
 There was a song like that, wasn't there? 
 
-[expression] sweat
+Reisen: [expression] sweat
 Reisen: Hello...? 
 
 Akyu: Ah, please excuse my ramblings. How can I help you? 
 
-[expression] sad
+Reisen: [expression] sad
 Reisen: Erm... I thought I'd just say hello. 
 **At least that's what Yukari said to do. 
 
@@ -18,9 +18,9 @@ But my, this is rather unexpected.
 For elusive Youkai rabbits to show one after another... 
 Did your mistress at Eientei ask you to start making friends? 
 
-[expression] sweat
+Reisen: [expression] sweat
 Reisen: Um, no that's not quite it. 
-[expression] normal
+Reisen: [expression] normal
 Or rather, who are you? 
 How do you know about my master and me? 
 
@@ -29,7 +29,7 @@ I know all there needs to be known about <b>Gensokyo</b>.
 Of course, that includes you, Reisen. 
 I also know how difficult it is to have a conversation with you. 
 
-[expression] sad
+Reisen: [expression] ugh
 Reisen: I think I speak more reasonably than many folks running around here... 
 
 Akyu: That's not quite what I meant. 
@@ -38,9 +38,9 @@ Never saying a word more than necessary for your medicine business.
 And even if someone does find you, you vanish before their very eyes. 
 Something like that? 
 
-[expression] annoy
+Reisen: [expression] annoy
 Reisen: Well, that's not entirely wrong. 
-[expression] normal
+Reisen: [expression] normal
 I'd rather not intrude for too long. 
 Though right now, I have business with the whole village. 
 Actually, I'm surprised you're able to remember your <b>sense of self</b>. 
@@ -51,8 +51,16 @@ Is that how I seem?
 I definitely feel as though I've forgotten something <b>important</b>. 
 It might not be wrong to say I've been afflicted too. 
 
-[expression] annoy
+Reisen: [expression] annoy
 Reisen: **Well, you certainly are a cube. 
 **But I don't think you've noticed that. 
+
+Akyu: It's been great to meet you, but I must return work. 
+There is much information I need to record from my <b>previous visitor</b>... 
+Please visit again! 
+I have many questions for you and your mistress! 
+
+Reisen: [expression] sweat
+Reisen: Ah, okay...
 
 [instruction] Stage000
