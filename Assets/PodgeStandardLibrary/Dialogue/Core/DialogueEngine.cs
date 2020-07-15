@@ -58,6 +58,13 @@ public class DialogueEngine
             if (line.StartsWith("//"))
                 continue;
             
+            // Checking if the line is valid based on what the game says
+            // This is mainly used to filter out statements which should appear/not appear based on the game
+            List<string> conditions = GetConditions(line);
+            if (!IsLineValid(conditions))
+                continue;
+            line = RemoveConditions(line);
+
             // processing current speaker
             string speaker = GetSpeaker(line);
             if (speaker != "")
@@ -73,13 +80,6 @@ public class DialogueEngine
             // processing labels
             string label = GetLabel(line);
             line = RemoveLabel(line);
-
-            // Checking if the line is valid based on what the game says
-            // This is mainly used to filter out statements which should appear/not appear based on the game
-            List<string> conditions = GetConditions(line);
-            if (!IsLineValid(conditions))
-                continue;
-            line = RemoveConditions(line);
 
             switch (GetLineType(line))
             {
@@ -347,6 +347,11 @@ public class DialogueEngine
 
                 string choiceLine = choice.Split('|')[0].Trim();
                 string jumpLabel = choice.Split('|')[1].Trim();
+
+                if (string.IsNullOrWhiteSpace(jumpLabel))
+                {
+                    throw new Exception($"Line {line}: Jump label for choice option '{choiceLine}' is empty");
+                }
 
                 ChoiceLineContent content = new ChoiceLineContent(speaker, choiceLine, lineNumber, jumpLabel);
 
