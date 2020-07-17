@@ -4,7 +4,7 @@ Come in, come in. Business is slow today so take any seat in the house.
 
 Reisen: Oh, uh... I'm just passing through 
 
-[expression]: sad 
+Miyoi: [expression] sad 
 
 Miyoi: Boo hoo 
 
@@ -20,11 +20,11 @@ It's me! <b>Miyoi Okunoda. </b>
 
 Reisen: Ohhh, its coming back to me now! You brought that really good sake and stewed vegtables 
 
-[expression] smile  
+Miyoi: [expression] happy  
 
 Miyoi: Yeah! 
 
-[expression] normal 
+Miyoi: [expression] normal 
 
 Anyways, it's good to see a familiar face.  
 
@@ -40,19 +40,21 @@ After all none of the regulars have come around today, and I couldn't find the o
 
 Reisen: It's strange that you weren't affected. 
 
-Myoi: Maybe the instigators just forgot about me 
+Miyoi: Maybe the instigators just forgot about me 
+
+[expression] heh
 
 Wouldn't be the first time heh heh.... 
 
-[expression] frown   
+[expression] sad   
 
 ... 
 
-[expression] think
+[expression] shock
 
 A-anyways 
 
-[expression] smile 
+[expression] happy 
 
 To make up for forgetting your promise you better come by later ok! 
 
@@ -60,7 +62,11 @@ And bring any friends you meet too!
 
 Reisen: Sure thing 
 
+[expression] annoy 
+
 **what a hardworking girl
+
+[expression] ugh 
 
 **I hope master treats me to good meal after this is all done
 

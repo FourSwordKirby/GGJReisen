@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8550956348830282073
 CanvasRenderer:
@@ -138,14 +138,22 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   parentMenu: {fileID: 0}
-  closeParent: 2
+  parentMenuOnSelectMode: 0
   text: {fileID: 0}
   focusColor: {r: 0, g: 0, b: 0, a: 0}
   blurColor: {r: 0, g: 0, b: 0, a: 0}
   FoundColor: {r: 1, g: 1, b: 1, a: 1}
   MissingColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
+  revealed: 0
   ShardSprite: {fileID: 3714298378112313196}
   ShardSelectionHighlight: {fileID: 8067842099332091692}
+  isPauseMenuVersion: 0
+  pauseMenuUI: {fileID: 0}
+  shardData:
+    Id: 
+    ShardValue: 0
+    FriendlyName: 
+    Description: 
 --- !u!1 &8923183015237156979
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +189,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4073745278858711778
 CanvasRenderer:

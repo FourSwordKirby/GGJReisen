@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VillageCrossroads.unity
     guid: d695ea1eecc340a4bb270bb260f0baaa
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 025ab6ab8d817414f81a54214654ed7f
   m_configObjects: {}

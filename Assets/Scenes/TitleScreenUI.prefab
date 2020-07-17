@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 386.7578, y: 50}
+  m_AnchoredPosition: {x: -0.000024796, y: 0}
+  m_SizeDelta: {x: 446.54126, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &814189702
 CanvasRenderer:
@@ -65,16 +65,17 @@ MonoBehaviour:
       m_Calls: []
   m_text: Clear Shard Collection
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3ee69e3ebc8d6ef43ba2516768adb144, type: 2}
+  m_sharedMaterial: {fileID: 21939675089312552, guid: 3ee69e3ebc8d6ef43ba2516768adb144,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
-  m_enableVertexGradient: 0
+    rgba: 1946157056
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0.45490196}
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
@@ -219,11 +220,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  parentMenu: {fileID: 0}
-  parentMenuOnSelectMode: 0
+  parentMenu: {fileID: 9116032891078180320}
+  parentMenuOnSelectMode: 1
   text: {fileID: 814189701}
-  focusColor: {r: 1, g: 1, b: 1, a: 1}
-  blurColor: {r: 0.3679245, g: 0.32800817, b: 0.32800817, a: 0.60784316}
+  focusColor: {r: 0, g: 0, b: 0, a: 1}
+  blurColor: {r: 0, g: 0, b: 0, a: 0.5803922}
 --- !u!1 &1347143641
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,22 +278,22 @@ MonoBehaviour:
   SelectionEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9116032892656915135}
+      - m_Target: {fileID: 7270479690507366712}
         m_MethodName: Open
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 9116032891078180320}
           m_ObjectArgumentAssemblyTypeName: ControllableGridMenu, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  parentMenu: {fileID: 0}
-  parentMenuOnSelectMode: 0
+  parentMenu: {fileID: 9116032891078180320}
+  parentMenuOnSelectMode: 1
   text: {fileID: 1748724668}
-  focusColor: {r: 1, g: 1, b: 1, a: 1}
-  blurColor: {r: 0.3679245, g: 0.32800817, b: 0.32800817, a: 0.60784316}
+  focusColor: {r: 0, g: 0, b: 0, a: 1}
+  blurColor: {r: 0, g: 0, b: 0, a: 0.5803922}
 --- !u!1 &1748724666
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,16 +359,17 @@ MonoBehaviour:
       m_Calls: []
   m_text: Shard Collection
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3ee69e3ebc8d6ef43ba2516768adb144, type: 2}
+  m_sharedMaterial: {fileID: 21939675089312552, guid: 3ee69e3ebc8d6ef43ba2516768adb144,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
-  m_enableVertexGradient: 0
+    rgba: 1946157056
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0.45490196}
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
@@ -826,18 +828,18 @@ MonoBehaviour:
         m_MethodName: Open
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 9116032891078180320}
           m_ObjectArgumentAssemblyTypeName: ControllableGridMenu, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  parentMenu: {fileID: 0}
-  parentMenuOnSelectMode: 0
+  parentMenu: {fileID: 9116032891078180320}
+  parentMenuOnSelectMode: 1
   text: {fileID: 9116032891348815387}
-  focusColor: {r: 1, g: 1, b: 1, a: 1}
-  blurColor: {r: 0.3679245, g: 0.32800817, b: 0.32800817, a: 0.60784316}
+  focusColor: {r: 0, g: 0, b: 0, a: 1}
+  blurColor: {r: 0, g: 0, b: 0, a: 0.5803922}
 --- !u!1 &9116032890911633304
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,7 +929,6 @@ MonoBehaviour:
   previousMenu: {fileID: 0}
   inFocus: 0
   group: {fileID: 9116032892323929675}
-  isTitle: 1
   isGameplayMenu: 0
   persistOnExit: 0
   gainFocus: 1
@@ -953,6 +954,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9116032890994093603}
+  - component: {fileID: 47215539}
   m_Layer: 0
   m_Name: TitleScreenUI
   m_TagString: Untagged
@@ -977,6 +979,59 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &47215539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9116032890994093605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cded307d41599cb45948c1771b15dee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadedGameProgress:
+    savePoint:
+      sceneName: 
+      locationName: 
+      spawnLocation: {x: 0, y: 0, z: 0}
+    Player:
+      nameTag: 
+      ShardsAcquired: []
+      CoughingMedicine: 0
+      TextBook: 0
+      Encyclopedia: 0
+      Newspaper: 0
+      Smartphone: 0
+      Magazine: 0
+      Wrench: 0
+      Scroll: 0
+      Schematic: 0
+      Novel: 0
+      Elixir1: 0
+      Elixir2: 0
+    Keine:
+      Stage: 0
+      DialogueRead: 0
+    Kosuzu:
+      Stage: 0
+      DialogueRead: 0
+    Nitori:
+      Stage: 0
+      DialogueRead: 0
+    Akyu:
+      Stage: 0
+      DialogueRead: 0
+    LunarReisen:
+      Stage: 0
+      DialogueRead: 0
+    Miyoi:
+      Stage: 0
+      DialogueRead: 0
+    Kogasa:
+      Stage: 0
+      DialogueRead: 0
 --- !u!1 &9116032891013971132
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,7 +1066,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -202.20001}
+  m_AnchoredPosition: {x: 0, y: -232}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9116032891013971130
@@ -1034,18 +1089,18 @@ MonoBehaviour:
         m_MethodName: ShowLoadMenu
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 9116032891078180320}
           m_ObjectArgumentAssemblyTypeName: ControllableGridMenu, Assembly-CSharp
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  parentMenu: {fileID: 0}
-  parentMenuOnSelectMode: 0
+  parentMenu: {fileID: 9116032891078180320}
+  parentMenuOnSelectMode: 1
   text: {fileID: 9116032892529672943}
-  focusColor: {r: 1, g: 1, b: 1, a: 1}
-  blurColor: {r: 0.3679245, g: 0.32800817, b: 0.32800817, a: 0.60784316}
+  focusColor: {r: 0, g: 0, b: 0, a: 1}
+  blurColor: {r: 0, g: 0, b: 0, a: 0.5803922}
 --- !u!1 &9116032891189362635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,16 +1243,17 @@ MonoBehaviour:
       m_Calls: []
   m_text: Options
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3ee69e3ebc8d6ef43ba2516768adb144, type: 2}
+  m_sharedMaterial: {fileID: 21939675089312552, guid: 3ee69e3ebc8d6ef43ba2516768adb144,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
-  m_enableVertexGradient: 0
+    rgba: 1946157056
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0.45490196}
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
@@ -1532,7 +1588,7 @@ MonoBehaviour:
   SelectionEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 47215539}
         m_MethodName: StartNewGame
         m_Mode: 1
         m_Arguments:
@@ -1543,11 +1599,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  parentMenu: {fileID: 0}
-  parentMenuOnSelectMode: 0
+  parentMenu: {fileID: 9116032891078180320}
+  parentMenuOnSelectMode: 1
   text: {fileID: 9116032892209590123}
-  focusColor: {r: 1, g: 1, b: 1, a: 1}
-  blurColor: {r: 0.3679245, g: 0.32800817, b: 0.32800817, a: 0.60784316}
+  focusColor: {r: 0, g: 0, b: 0, a: 1}
+  blurColor: {r: 0, g: 0, b: 0, a: 0.5803922}
 --- !u!1 &9116032892154637753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,8 +1959,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3ee69e3ebc8d6ef43ba2516768adb144, type: 2}
+  m_sharedMaterial: {fileID: 21939675089312552, guid: 3ee69e3ebc8d6ef43ba2516768adb144,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2119,16 +2176,17 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3ee69e3ebc8d6ef43ba2516768adb144, type: 2}
+  m_sharedMaterial: {fileID: 21939675089312552, guid: 3ee69e3ebc8d6ef43ba2516768adb144,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
-  m_enableVertexGradient: 0
+    rgba: 1946157056
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0.45490196}
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
@@ -2455,7 +2513,6 @@ MonoBehaviour:
   previousMenu: {fileID: 0}
   inFocus: 0
   group: {fileID: 9116032891616868012}
-  isTitle: 0
   isGameplayMenu: 0
   persistOnExit: 0
   gainFocus: 0
@@ -2591,6 +2648,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7737860466551917706}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7270479690507366712 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1119014605801110962, guid: 3eb6ca052feade04d9b020b0f1303b5c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7737860466551917706}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59943383e267c0e43a7ed426856d2dba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &9116032891345396420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2676,6 +2745,11 @@ PrefabInstance:
     - target: {fileID: 5098573538010058287, guid: 5a59339b7e5092e4497f1d27ffccef8c,
         type: 3}
       propertyPath: prevMenuMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5098573538010058287, guid: 5a59339b7e5092e4497f1d27ffccef8c,
+        type: 3}
+      propertyPath: isTitleScreenVersion
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8365266419038666817, guid: 5a59339b7e5092e4497f1d27ffccef8c,

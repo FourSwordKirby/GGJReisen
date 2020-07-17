@@ -6,7 +6,7 @@ Reisen: Yeah I imagine it'd be hard.
 
 At least your sign seems to have been fixed. 
 
-[expression] smile 
+Miyoi: [expression] happy 
 
 Miyoi: Yeah! I'm so glad it was restored too! 
 
@@ -16,22 +16,32 @@ Miyoi: Nope, it must be because of the hard work you've done in resolving the in
 
 I look forward to the grand feast you'll have here after you finish workin' 
 
-Reisen: Yeah 
+Reisen: Yeah.
 
-Speaking of which, isn't this an odd way to write <b>Geidon</b>? 
+Speaking of which are you really the poster girl of <b>Geidontei</b>?
 
-Why specifically use the female kanji for whale over the male one 
+The signage all over the pub uses a normal whale.
 
-Miyoi: I guess the owner wanted to make pub to sound more approachable? 
+Miyoi: Weeeeell. Even if I'm not on the poster, that doesn't mean I'm not the poster girl.
 
 The word Geidon is refers to when a powerful creature swallows a smaller one in one gulp 
 
-Though it makes sense as a customer enjoying a hearty drink 
+So a whale definitely matches that description!
 
-Its common uses refers to the invasions of smaller lands by larger ones. 
+Reisen: Doesn't <b>Geidon</b> commonly refer to large countries swallowing up smaller ones
 
-If you think about it that way, it feels a little imposing. 
+[expression] ugh
 
-Though you'll find no friendlier face in the village than me! 
+Though I guess for this incident we're getting swallowed up by the smaller Lunar Kingdom.
+
+Miyoi: If you think about it that way, it feels a little imposing. 
+
+But that makes my job that much more important.
+
+An imposing figure only needs a friendly face to be welcoming.
+
+[expression] happy
+
+And you'll find no friendlier face in the village than me! 
 
 [instruction] Stage010

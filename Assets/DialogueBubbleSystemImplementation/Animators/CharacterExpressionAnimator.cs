@@ -10,6 +10,7 @@ public class CharacterExpressionAnimator : MonoBehaviour
     public SpriteRenderer expressionRendererBack;
 
     public List<Texture2D> expressions;
+    // We should probably make it so this derives from the above cleanly somehow :T
     public List<Sprite> expressionSprites;
 
     public CharacterExpression? targetExpression = null;

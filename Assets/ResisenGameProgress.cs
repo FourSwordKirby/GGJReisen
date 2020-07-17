@@ -47,6 +47,14 @@ public class Shard
     public static Shard Akyu_BadElixir2 { get; } = new Shard(nameof(Akyu_BadElixir2), 1, "Not All Powerful", "Master Yagokoro's elixir didn't work!?");
     public static Shard Akyu_GoodEnd { get; } = new Shard(nameof(Akyu_GoodEnd), 2, "One in a Thousand", "Akyu looked very young, but to think that she might be as old as Mokou...");
 
+    public static Shard LunarReisen_Smartphone { get; } = new Shard(nameof(LunarReisen_Smartphone), 1, "", "");
+    public static Shard LunarReisen_GoodEnd { get; } = new Shard(nameof(LunarReisen_GoodEnd), 2, "", "");
+    public static Shard LunarReisen_Elixir { get; } = new Shard(nameof(LunarReisen_Elixir), 1, "", "");
+
+    public static Shard Miyoi_Company { get; } = new Shard(nameof(Miyoi_Company), 2, "Poster Girl of Geidontei", "I guess some people really love their work");
+    public static Shard Kogasa_Spook { get; } = new Shard(nameof(Kogasa_Spook), 1, "Quite the Surprise", "I never liked scary movie nights at Eientei");
+
+
     private static Dictionary<string, Shard> _shardDictionary;
     public static Dictionary<string, Shard> ShardDictionary
     {
