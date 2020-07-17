@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShardMenuUI : MenuUI
 {
@@ -16,7 +18,10 @@ public class ShardMenuUI : MenuUI
 
     public float xspacing;
     public float yspacing;
-    
+
+    public TextMeshProUGUI shardTitle;
+    public TextMeshProUGUI shardDescription;
+    public Image shardImage;
 
     public override void Init()
     {
@@ -28,7 +33,8 @@ public class ShardMenuUI : MenuUI
             ReisenGameProgress gameProgress = ReisenGameManager.instance.gameProgress;
             shardsToDisplay = new List<Shard>() { new Shard("0", 0, "titletesting", "why not"), new Shard("0", 0, "testing2", "why not2"),
                                                     new Shard("0", 0, "titletesting2", "why not3"), new Shard("0", 0, "testing2", "why not2"),
-                                                    new Shard("0", 0, "titletesting3", "why not3"), new Shard("0", 0, "testing2", "why not2") };
+                                                    new Shard("0", 0, "titletesting3", "why not3"), new Shard("0", 0, "testing2", "why not2"),
+                                                    new Shard("0", 0, "titletesting3", "why not3"), new Shard("0", 0, "testing2", "why not2")  };
         }
         else
         {
@@ -48,11 +54,11 @@ public class ShardMenuUI : MenuUI
             ShardMenuUIElement element = Instantiate(shardMenuElement).GetComponent<ShardMenuUIElement>();
             element.transform.parent = group.transform;
             Debug.Log((i % cols) + " " + (i / rows));
-            element.transform.position = initialPosition.position + ((i % cols) * Vector3.right * xspacing) + ((i / rows) * Vector3.down * yspacing);
+            element.transform.position = initialPosition.position + ((i % cols) * Vector3.right * xspacing) + ((i / cols) * Vector3.down * yspacing);
             element.parentMenu = this;
             element.parentGroup = group;
             element.isPauseMenuVersion = isPauseMenuVersion;
-            element.pauseMenuUI = pauseMenuUI;
+            element.shardMenuUI = this;
             element.parentMenuOnSelectMode = ParentMenuStatusPostSelect.none;
             element.shardData = shard;
             group.menuElements.Add(element);
@@ -66,11 +72,26 @@ public class ShardMenuUI : MenuUI
         base.Init();
     }
 
+    public void ShowDescription(Shard shardData)
+    {
+        if (isPauseMenuVersion)
+            pauseMenuUI.ShowDescription(shardData.Description);
+        else
+        {
+            shardTitle.text = shardData.FriendlyName;
+            shardDescription.text = shardData.Description;
+        }
+
+    }
+
     public override void Open()
     {
         if (group.menuElements.Count == 0)
         {
-            pauseMenuUI.ShowDescription("I haven't found any shards yet...", CharacterExpression.sad);
+            if (isPauseMenuVersion)
+                pauseMenuUI.ShowDescription("I haven't found any shards yet...", CharacterExpression.sad);
+            else
+                Debug.Log("non pause verion");
         }
         else
         {

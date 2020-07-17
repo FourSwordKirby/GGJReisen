@@ -27,7 +27,7 @@ public class ShardMenuUIGroup : MenuUIGroup
         {
             currentMenuElementIndex -= cols;
             if (currentMenuElementIndex < 0)
-                currentMenuElementIndex = menuElements.Count - cols + (currentMenuElementIndex % cols);
+                currentMenuElementIndex = Mathf.Min(menuElements.Count - 1, (menuElements.Count/cols) * cols + ((currentMenuElementIndex + cols) % cols));
             FocusElement(currentMenuElementIndex);
         }
         else if (dir == InputDirection.S)

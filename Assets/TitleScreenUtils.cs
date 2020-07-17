@@ -38,6 +38,7 @@ public class TitleScreenUtils : MonoBehaviour
 
     public void StartNewGame()
     {
+        Debug.Log("Loading intro scene");
         SceneManager.LoadScene("Intro");
     }
 }

@@ -30,7 +30,7 @@ public class Npc : MonoBehaviour
 
     public bool StageWasUpdated = false;
 
-    public void InitNpcState(CharacterProgress characterProgress)
+    public virtual void InitNpcState(CharacterProgress characterProgress)
     {
         TextAsset dialogueTextForStage = dialogues.Find(x => x.stage == characterProgress.GetStage()).dialogue;
         dialoguePromptTrigger.SetDialogueText(dialogueTextForStage, !characterProgress.StageDialogueHasBeenRead);

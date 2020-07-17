@@ -67,6 +67,8 @@ public class StartMenuUI : MenuUI
         }
         AddMenuElement(optionsElement, activeMenuElement);
         activeMenuElement++;
+
+        group.FocusElement(group.currentMenuElementIndex);
     }
 
     void AddMenuElement(MenuUIElement element, int index)

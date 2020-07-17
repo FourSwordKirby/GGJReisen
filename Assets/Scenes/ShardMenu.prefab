@@ -52,7 +52,6 @@ MonoBehaviour:
   previousMenu: {fileID: 0}
   inFocus: 0
   group: {fileID: 7617215390890649083}
-  isTitle: 0
   isGameplayMenu: 0
   persistOnExit: 1
   gainFocus: 0
@@ -63,10 +62,13 @@ MonoBehaviour:
   shardMenuElement: {fileID: 3178497554491291146, guid: 16fb8c46ca61a2d4a94e80dde3c7283e,
     type: 3}
   initialPosition: {fileID: 3201639936593195382}
-  rows: 5
-  cols: 5
-  xspacing: 100
-  yspacing: 100
+  rows: 7
+  cols: 4
+  xspacing: 85
+  yspacing: 85
+  shardTitle: {fileID: 0}
+  shardDescription: {fileID: 0}
+  shardImage: {fileID: 0}
 --- !u!1 &4007697739100130627
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +101,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -378, y: 258}
+  m_AnchoredPosition: {x: -400, y: 250}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &9207244607594006782
@@ -154,5 +156,5 @@ MonoBehaviour:
   menuElements: []
   currentMenuElementIndex: 0
   hortizontal: 0
-  rows: 5
-  cols: 5
+  rows: 7
+  cols: 4

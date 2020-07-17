@@ -15,7 +15,7 @@ public class ShardMenuUIElement : MenuUIElement
 
     public bool isPauseMenuVersion;
 
-    public PauseMenuUI pauseMenuUI;
+    public ShardMenuUI shardMenuUI;
     public Shard shardData;
 
     public override void Blur()
@@ -25,10 +25,7 @@ public class ShardMenuUIElement : MenuUIElement
 
     public override void Focus()
     {
-        if (isPauseMenuVersion)
-            pauseMenuUI.ShowDescription(shardData.Description);
-        else
-            Debug.Log("description goes here on the title screen");
+        shardMenuUI.ShowDescription(shardData);
         ShardSprite.color = Color.white;
     }
 }

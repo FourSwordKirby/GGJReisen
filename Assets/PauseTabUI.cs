@@ -4,18 +4,29 @@ using UnityEngine;
 
 public class PauseTabUI : MenuUIElement
 {
-    public GameObject activeTab;
-    public GameObject inactiveTab;
+    public GameObject tabTitleDropShadow;
+    public GameObject tabPanel;
+    public GameObject blurPanel;
+
 
     public override void Blur()
     {
-        inactiveTab.SetActive(true);
-        activeTab.SetActive(false);
+        tabTitleDropShadow.SetActive(false);
+        tabPanel.SetActive(false);
+        blurPanel.SetActive(false);
     }
 
     public override void Focus()
     {
-        inactiveTab.SetActive(false);
-        activeTab.SetActive(true);
+        blurPanel.transform.SetSiblingIndex(1);
+        tabTitleDropShadow.SetActive(true);
+        tabPanel.SetActive(true);
+        blurPanel.SetActive(true);
+    }
+
+    public override void Select()
+    {
+        blurPanel.transform.SetAsFirstSibling();
+        base.Select();
     }
 }

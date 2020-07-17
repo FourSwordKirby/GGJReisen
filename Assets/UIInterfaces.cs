@@ -50,7 +50,7 @@ public abstract class ControllableGridMenuElement : MonoBehaviour, ISelectableMe
     public abstract void Blur();
     public abstract void Focus();
 
-    public void Select()
+    public virtual void Select()
     {
         SelectionEvent.Invoke();
         switch (parentMenuOnSelectMode)
