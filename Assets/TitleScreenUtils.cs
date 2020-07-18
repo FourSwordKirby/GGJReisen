@@ -38,7 +38,14 @@ public class TitleScreenUtils : MonoBehaviour
 
     public void StartNewGame()
     {
-        Debug.Log("Loading intro scene");
-        SceneManager.LoadScene("Intro");
+        StartCoroutine(NewGameSequence());
+    }
+
+
+    IEnumerator NewGameSequence()
+    {
+        yield return TransitionManager.instance.screenFader.FadeOut();
+        SceneManager.LoadScene("Prologue");
+        SceneManager.sceneLoaded -= TransitionManager.instance.FadeInScene;
     }
 }

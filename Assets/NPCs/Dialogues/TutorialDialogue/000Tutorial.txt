@@ -1,19 +1,19 @@
-[instruction] EnterReisen
-
 Reisen: Oh, haha… this must be one of those fever dreams I have after getting punished by master. 
 
-[expression] laugh
+[expression] heh
 
 I’ll wake up any second now… I have to, or else I’m going to be late for today’s deliveries. 
 
-[expression] think
+[expression] sweat
 
 Yes… any second… now… 
 
 … 
 
-[expression] worry
+[expression] shock
 
 Ahhh! Are you kidding me, is this for real? 
+
+[instruction] cantleave
 
 [end]

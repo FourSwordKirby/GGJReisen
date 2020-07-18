@@ -306,13 +306,13 @@ MonoBehaviour:
   masterMixer: {fileID: 24100000, guid: 75c952b2ffee7f246ab17a688ee09940, type: 2}
   bgmController: {fileID: 456247859300951826}
   audioMixes:
-  - name: 
-    track: {fileID: 8300000, guid: de1e229c833177d488c40a8fd3ce671f, type: 3}
-  - name: 
-    track: {fileID: 8300000, guid: 6115e596a23084546ab0927e81b292d9, type: 3}
-  - name: 
-    track: {fileID: 8300000, guid: e0f16ed9fb7fdc949bb057d627bfd998, type: 3}
-  battleStart: {fileID: 8300000, guid: d7a887effb735f942ab3fa55017eee8f, type: 3}
+  - name: Title
+    track: {fileID: 8300000, guid: f7ec8f6083fdb5e499eb5beb01849b0b, type: 3}
+  - name: Prologue
+    track: {fileID: 8300000, guid: f7ec8f6083fdb5e499eb5beb01849b0b, type: 3}
+  - name: Village
+    track: {fileID: 8300000, guid: ee4b416afd167f9459f6081923a7520d, type: 3}
+  battleStart: {fileID: 8300000, guid: 055302fcc2aaf74429a8782639d43c9c, type: 3}
   masterVolume: 1
   bgmVolume: 1
   sfxVolume: 0

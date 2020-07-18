@@ -1,6 +1,6 @@
-Prologue VN scene 
+Reisen: My name is Reisen Udonge’in Inaba. 
 
-My name is Reisen Udonge’in Inaba. 
+[instruction] LoadVillage
 
 I am a moon rabbit that abandoned the moon during the war between the Moon and the Earth. 
 
@@ -9,7 +9,9 @@ Now, I live as refugee in the fantastical lands of Gensokyo on Earth.
 My caretaker and master, Eirin Yagokoro, is also a fugitive of the moon. 
  
 
-***************
+
+[instruction] Prologue1
+
 
 
 For decades, we hid ourselves in the Bamboo Forest of the Lost, but due to a recent incident, we’re now living more openly with our neighbors. 
@@ -25,7 +27,10 @@ Every day, I march a long 2-hours from our home in the bamboo grove to the nearb
 In accordance with my master’s strict orders, I kept my interactions terse and professional. 
 
 
-***************
+
+[instruction] Prologue2
+
+
 
 
 Today, without fail, I woke up early in the morning to prepare for my trek to the village. 
@@ -35,7 +40,10 @@ Master Eirin was not present, but a neatly packaged bag of medicine lay waiting 
 Medicine in tow, I exited a silent house, whispering a quick “And I’m off.” 
 
 
-***************
+
+[instruction] Prologue3
+
+
 
 
 The bright spring sky flooded my vision as I stepped out of the thick bamboo forest. 
@@ -47,7 +55,7 @@ They say on days like these, you might be able to see the moon while the sun is 
 My thoughts turned to my fellow moon rabbits who I had unexpectedly met again a few weeks ago. 
 
 
-*************** 
+[instruction] Prologue4
 
 
 The recent lunar invasion of Gensokyo… it was over now. 
@@ -59,7 +67,7 @@ Yes, I had to be a professional solider for the sake of Gensokyo.
 It felt like a wasted chance to catch up. 
 
 
-*************** 
+[instruction] Prologue5
  
 
 And now I’m back to the normal days of walking back-and-forth to the village again. 
@@ -67,7 +75,10 @@ And now I’m back to the normal days of walking back-and-forth to the village a
 Of being a professional medicine peddler for the human village. 
 
 
-*************** 
+
+
+[instruction] Prologue6
+
  
 
 But when I crested the final hill leading to the village’s wooden gate entrance, 
@@ -77,7 +88,11 @@ The sight that awaited reminded me that here, on earthen lands of Gensokyo,
 Life is never without a dull moment. 
 
 
-*************** 
+
+[instruction] Prologue7
+
  
 
 But really, why do I have to be the one to get caught up in another incident? 
+
+//[instruction] LoadVillage

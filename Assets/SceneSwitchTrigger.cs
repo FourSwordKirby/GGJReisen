@@ -6,11 +6,15 @@ public class SceneSwitchTrigger : MonoBehaviour
 {
     public string targetScene;
     public int sceneEntranceIndex;
+
+    public bool triggerActive = true;
     public Transform spawnArea;
+    public Transform spawnFinalPosition;
 
     private void OnTriggerEnter(Collider col)
     {
-        ReisenGameManager.instance.SceneExit(targetScene, sceneEntranceIndex);
+        if(triggerActive)
+            ReisenGameManager.instance.SceneExit(targetScene, sceneEntranceIndex, this);
     }
 
     private void OnDrawGizmos()
@@ -20,5 +24,8 @@ public class SceneSwitchTrigger : MonoBehaviour
 
         Gizmos.color = Color.blue;
         Gizmos.DrawSphere(spawnArea.position, 0.5f);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(spawnFinalPosition.position, 0.5f);
     }
 }
