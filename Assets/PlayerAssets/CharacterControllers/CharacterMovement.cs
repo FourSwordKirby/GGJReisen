@@ -41,16 +41,21 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    public IEnumerator moveCharacter(Vector3 targetPosition, Vector3 facingDirection, float timeLimit)
+    public void externalMoveCharacter(Vector3 targetPosition, Vector3 facingDirection, float timeLimit, float speed = 2.0f)
+    {
+        StartCoroutine(moveCharacter(targetPosition, facingDirection, timeLimit, speed));
+    }
+
+    public IEnumerator moveCharacter(Vector3 targetPosition, Vector3 facingDirection, float timeLimit, float speed = 2.0f)
     {
         forcedMove = true;
         Vector3 displacement = (targetPosition - this.transform.position);
         Vector3 currentDisplacement = displacement;
         float elapsedTime = 0f;
-        while(currentDisplacement.sqrMagnitude > 0.2f && elapsedTime < timeLimit)
+        while(currentDisplacement.sqrMagnitude > 0.4f && elapsedTime < timeLimit)
         {
             currentDisplacement = (targetPosition - this.transform.position);
-            selfBody.velocity = (Vector3.right * currentDisplacement.x + Vector3.forward * currentDisplacement.z).normalized * 2.0f;
+            selfBody.velocity = (Vector3.right * currentDisplacement.x + Vector3.forward * currentDisplacement.z).normalized * speed;
             yield return new WaitForEndOfFrame();
             elapsedTime += Time.deltaTime;
         }

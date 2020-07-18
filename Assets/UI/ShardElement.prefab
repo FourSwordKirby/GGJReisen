@@ -140,15 +140,17 @@ MonoBehaviour:
   parentMenu: {fileID: 0}
   parentMenuOnSelectMode: 0
   text: {fileID: 0}
-  focusColor: {r: 0, g: 0, b: 0, a: 0}
-  blurColor: {r: 0, g: 0, b: 0, a: 0}
+  focusColor: {r: 0, g: 0, b: 0, a: 1}
+  blurColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 0.5529412}
   FoundColor: {r: 1, g: 1, b: 1, a: 1}
-  MissingColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
+  MissingColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0.5882353}
   revealed: 0
-  ShardSprite: {fileID: 3714298378112313196}
+  singleShardSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  doubleShardSprite: {fileID: 21300000, guid: 410c565572d1a04419047b0da8dbd280, type: 3}
+  ShardImage: {fileID: 3714298378112313196}
   ShardSelectionHighlight: {fileID: 8067842099332091692}
   isPauseMenuVersion: 0
-  pauseMenuUI: {fileID: 0}
+  shardMenuUI: {fileID: 0}
   shardData:
     Id: 
     ShardValue: 0

@@ -121,6 +121,11 @@ PrefabInstance:
       propertyPath: speed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114192062918017170, guid: 8490386e6898afa4691cab39c01ca4bc,
+        type: 3}
+      propertyPath: jumpPower
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 774379388031448544, guid: 8490386e6898afa4691cab39c01ca4bc,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -131,10 +136,35 @@ PrefabInstance:
       propertyPath: bobModifier
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 2793605653266809167, guid: 8490386e6898afa4691cab39c01ca4bc,
+        type: 3}
+      propertyPath: m_Name
+      value: GroundFrictionECB
+      objectReference: {fileID: 0}
     - target: {fileID: 3304194313435485845, guid: 8490386e6898afa4691cab39c01ca4bc,
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.1336282
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304276542742913679, guid: 8490386e6898afa4691cab39c01ca4bc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.177
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304276542742913679, guid: 8490386e6898afa4691cab39c01ca4bc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.12639898
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304276542742913679, guid: 8490386e6898afa4691cab39c01ca4bc,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.018501084
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304276542742913679, guid: 8490386e6898afa4691cab39c01ca4bc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.12639898
       objectReference: {fileID: 0}
     - target: {fileID: 4591082737827547012, guid: 8490386e6898afa4691cab39c01ca4bc,
         type: 3}
@@ -150,6 +180,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.12639898
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591082737827547012, guid: 8490386e6898afa4691cab39c01ca4bc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.12510002
       objectReference: {fileID: 0}
     - target: {fileID: 5530946660503106705, guid: 8490386e6898afa4691cab39c01ca4bc,
         type: 3}

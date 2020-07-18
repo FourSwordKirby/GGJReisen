@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2077702299496918640
 Transform:
   m_ObjectHideFlags: 0
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 2077702299496918607}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.14303984, y: 0.14303984, z: 0.14303984}
   m_Children: []
   m_Father: {fileID: 2077702300666240753}
   m_RootOrder: 0
@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 2077702300666240753}
   - component: {fileID: 2077702300666240754}
   - component: {fileID: 2077702300666240755}
+  - component: {fileID: 384605480}
   m_Layer: 0
   m_Name: YinYangOrb
   m_TagString: Untagged
@@ -110,6 +111,7 @@ Transform:
   m_Children:
   - {fileID: 2077702299496918640}
   - {fileID: 4773409909862516257}
+  - {fileID: 335369753230861667}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -126,7 +128,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ReimuColor: {r: 1, g: 0.6556604, b: 0.6556604, a: 1}
-  YukariColor: {r: 0, g: 0, b: 0, a: 0}
+  YukariColor: {r: 0.59758115, g: 0, b: 0.7169812, a: 1}
+  orbSprite: {fileID: 2077702299496918643}
+  orbLight: {fileID: 7372851116440538854}
 --- !u!95 &2077702300666240755
 Animator:
   serializedVersion: 3
@@ -146,6 +150,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &384605480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077702300666240752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fefde726bee40c4da03b214fa0c521e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2077702300666240755}
+  expressionAnimator: {fileID: 0}
+  speechBubbleOrigin: {fileID: 335369753230861667}
 --- !u!1 &4738750975565941417
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4773409909862516257
 Transform:
   m_ObjectHideFlags: 0
@@ -172,7 +191,7 @@ Transform:
   m_GameObject: {fileID: 4738750975565941417}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.38282, y: 0.38282, z: 0.38282}
   m_Children: []
   m_Father: {fileID: 2077702300666240753}
   m_RootOrder: 1
@@ -187,7 +206,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.9433962, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.6556604, b: 0.6556604, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -215,3 +234,33 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &6763404895956934181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 335369753230861667}
+  m_Layer: 0
+  m_Name: SpeechOrigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &335369753230861667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6763404895956934181}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2077702300666240753}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

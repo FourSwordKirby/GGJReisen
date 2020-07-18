@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &102373075006449469
+--- !u!1 &4768072319531905265
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 102373075006449471}
-  - component: {fileID: 102373075006449470}
-  - component: {fileID: 102373075006449464}
+  - component: {fileID: 4768072319531905267}
+  - component: {fileID: 4768072319531905264}
+  - component: {fileID: 4768072319531905266}
   m_Layer: 11
   m_Name: SceneSwitchTrigger
   m_TagString: Untagged
@@ -18,50 +18,53 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &102373075006449471
+--- !u!4 &4768072319531905267
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 102373075006449469}
+  m_GameObject: {fileID: 4768072319531905265}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.74, y: 0.99, z: -6.46}
+  m_LocalPosition: {x: 4.6, y: 0, z: -11.3}
   m_LocalScale: {x: 3.6365, y: 3.6365, z: 3.6365}
   m_Children:
-  - {fileID: 4003175061634748511}
+  - {fileID: 4768072320807031795}
+  - {fileID: 3693131257640123673}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &102373075006449470
+--- !u!114 &4768072319531905264
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 102373075006449469}
+  m_GameObject: {fileID: 4768072319531905265}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7883fa4078abf748b9ae3ab260652b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: VillageEntrance
-  sceneEntranceIndex: 0
-  spawnArea: {fileID: 4003175061634748511}
---- !u!65 &102373075006449464
+  targetScene: VillageCrossroads
+  sceneEntranceIndex: 1
+  triggerActive: 1
+  spawnArea: {fileID: 4768072320807031795}
+  spawnFinalPosition: {fileID: 3693131257640123673}
+--- !u!65 &4768072319531905266
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 102373075006449469}
+  m_GameObject: {fileID: 4768072319531905265}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &5689111565335087370
+--- !u!1 &4768072320807031792
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,7 +72,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4003175061634748511}
+  - component: {fileID: 4768072320807031795}
   m_Layer: 11
   m_Name: SpawnArea
   m_TagString: Untagged
@@ -77,17 +80,47 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4003175061634748511
+--- !u!4 &4768072320807031795
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5689111565335087370}
+  m_GameObject: {fileID: 4768072320807031792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.214, y: 0, z: 0}
+  m_LocalPosition: {x: -0.236, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 102373075006449471}
+  m_Father: {fileID: 4768072319531905267}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5631799983133665257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3693131257640123673}
+  m_Layer: 11
+  m_Name: SpawnFinalArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3693131257640123673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5631799983133665257}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.256, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4768072319531905267}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

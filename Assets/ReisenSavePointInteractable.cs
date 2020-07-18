@@ -41,5 +41,7 @@ public class ReisenSavePoint
     public void SpawnPlayer(GameObject player)
     {
         player.transform.position = spawnLocation;
+
+        player.GetComponent<CharacterMovement>().selfBody.velocity = Vector3.zero;
     }
 }

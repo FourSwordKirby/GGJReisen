@@ -10,7 +10,7 @@ public class ReisenGameManager : MonoBehaviour
     public ReisenGameProgress gameProgress;
     public static ReisenGameManager instance;
     public int spawnLocation;
-
+    public static bool isNewGame;
 
     public void Awake()
     {
@@ -25,12 +25,26 @@ public class ReisenGameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
-        InitSceneState();
     }
 
     public void Start()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
+        if(isNewGame)
+        {
+            InitSceneState();
+            if (spawnLocation != -1)
+            {
+                StartCoroutine(SpawnPlayerAtEntrance());
+                GameObject newGameObjects = GameObject.Find("NewGameTutorialObjects");
+                for(int i = 0; i < newGameObjects.transform.childCount; i++)
+                {
+                    GameObject tutorialObject = newGameObjects.transform.GetChild(i).gameObject;
+                    tutorialObject.SetActive(!tutorialObject.activeSelf);
+                }
+            }
+            isNewGame = false;
+        }
     }
 
     private void Update()
@@ -193,14 +207,7 @@ public class ReisenGameManager : MonoBehaviour
 
     public void StartGamePauseProcess()
     {
-        StartLoadProcess();
-    }
-
-    public void StartLoadProcess()
-    {
         PauseUI.instance.pauseMenuUI.Open();
-
-        //PauseUI.instance.saveUI.Show(SavePanelMode.Loading);
 
         RpgGameManager.instance.PauseGameplay();
     }
@@ -222,6 +229,7 @@ public class ReisenGameManager : MonoBehaviour
 
     public virtual void LoadGame(string saveName)
     {
+        spawnLocation = -1;
         StartCoroutine(LoadGameSequence(saveName));
     }
 
@@ -243,32 +251,46 @@ public class ReisenGameManager : MonoBehaviour
     //Scene transition things to manage later
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if(spawnLocation != -1)
-        {
-            GameObject player = RpgPlayer.instance.gameObject;
-            player.transform.position = FindObjectOfType<ReisenSceneManager>().sceneEntrances[spawnLocation].spawnArea.position;
-        }
-
         InitSceneState();
+        if (spawnLocation != -1)
+        {
+            StartCoroutine(SpawnPlayerAtEntrance());
+        }
     }
 
-    public void SceneExit(string targetSceneName, int sceneEntranceIndex)
-    {
-        StartCoroutine(SwitchSceneSequence(targetSceneName, sceneEntranceIndex));
-    }
-
-    IEnumerator SwitchSceneSequence(string sceneName, int sceneEntranceIndex)
+    IEnumerator SpawnPlayerAtEntrance()
     {
         GameObject player = RpgPlayer.instance.gameObject;
+
+        SceneSwitchTrigger entrance = FindObjectOfType<ReisenSceneManager>().sceneEntrances[spawnLocation];
+        entrance.triggerActive = false;
+        Vector3 spawnPosition = entrance.spawnArea.position;
+        Vector3 spawnDestination = entrance.spawnFinalPosition.position;
+        player.transform.position = spawnPosition;
+
+        Debug.Log("hihihi");
+        yield return player.GetComponent<CharacterMovement>().moveCharacter(spawnDestination, spawnPosition-spawnDestination, 3.5f, 5.0f);
+        entrance.triggerActive = true;
+    }
+
+
+    public void SceneExit(string targetSceneName, int sceneEntranceIndex, SceneSwitchTrigger exit)
+    {
+        StartCoroutine(SwitchSceneSequence(targetSceneName, sceneEntranceIndex, exit));
+    }
+
+    IEnumerator SwitchSceneSequence(string sceneName, int sceneEntranceIndex, SceneSwitchTrigger exit)
+    {
+        GameObject player = RpgPlayer.instance.gameObject;
+        Vector3 spawnArea = exit.spawnArea.position;
 
         Debug.Log("trying to load at this entrance" + sceneEntranceIndex);
         spawnLocation = sceneEntranceIndex;
 
+        player.GetComponent<CharacterMovement>().externalMoveCharacter(spawnArea, Vector3.zero, 1.5f, 5.0f);
         yield return TransitionManager.instance.screenFader.FadeOut();
-
+        
         SceneManager.LoadScene(sceneName);
-
-        yield return TransitionManager.instance.screenFader.FadeIn();
 
         yield return null;
         //AudioManager.instance.OnNextLevelUnlock();
