@@ -46,6 +46,8 @@ public class CameraMan : MonoBehaviour
     public Transform HighZTransform;
     public Bounds DeadZone = new Bounds();
 
+    public Bounds CameraBounds;
+
     public Vector3 OffsetVectorToTrackedTransform;
 
     public Vector3 TargetPosition;
@@ -69,6 +71,7 @@ public class CameraMan : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         //if (TransformToTrack != null)
         //{
         //    OffsetVectorToTrackedTransform = TransformToTrack.position - this.transform.position;
@@ -166,7 +169,10 @@ public class CameraMan : MonoBehaviour
             {
                 // Do nothing. This is taken care of by the dead zone code above
             }
-            
+
+            if(CameraBounds != null)
+                TargetPosition = CameraBounds.ClosestPoint(TargetPosition);
+
             this.transform.position = TargetPosition;
             this.transform.rotation = TargetRotation;
         }

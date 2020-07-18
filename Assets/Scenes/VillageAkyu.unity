@@ -577,6 +577,16 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3570052165625753719, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570052165625753719, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4115325427648171011, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -3933,6 +3943,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 076c7b6cf92bf654c8c2e00c583f0507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraBounds:
+    m_Center: {x: 0, y: 0, z: 10.51}
+    m_Extent: {x: 24.26, y: 22.03, z: 21.43}
   sceneEntrances:
   - {fileID: 284968603}
   - {fileID: 1984584307}

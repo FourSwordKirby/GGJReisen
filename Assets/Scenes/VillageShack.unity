@@ -393,6 +393,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 076c7b6cf92bf654c8c2e00c583f0507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraBounds:
+    m_Center: {x: -24.66, y: 0, z: 0}
+    m_Extent: {x: 5.7, y: 19.59, z: 13.01}
   sceneEntrances:
   - {fileID: 1863089819}
 --- !u!4 &296285703
@@ -2446,6 +2449,11 @@ PrefabInstance:
     - target: {fileID: 3570052165625753719, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570052165625753719, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3570052165668538350, guid: c2f4dd1d06becac4fae7721a65118f70,

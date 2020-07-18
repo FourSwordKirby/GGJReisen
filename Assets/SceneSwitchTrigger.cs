@@ -19,7 +19,7 @@ public class SceneSwitchTrigger : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.green - Color.black * 0.5f;
         Gizmos.DrawCube(this.transform.position, this.transform.localScale);
 
         Gizmos.color = Color.blue;

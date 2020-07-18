@@ -260,6 +260,8 @@ public class ReisenGameManager : MonoBehaviour
 
     IEnumerator SpawnPlayerAtEntrance()
     {
+        CameraMan.instance.CameraBounds = FindObjectOfType<ReisenSceneManager>().CameraBounds;
+
         GameObject player = RpgPlayer.instance.gameObject;
 
         SceneSwitchTrigger entrance = FindObjectOfType<ReisenSceneManager>().sceneEntrances[spawnLocation];
@@ -268,7 +270,6 @@ public class ReisenGameManager : MonoBehaviour
         Vector3 spawnDestination = entrance.spawnFinalPosition.position;
         player.transform.position = spawnPosition;
 
-        Debug.Log("hihihi");
         yield return player.GetComponent<CharacterMovement>().moveCharacter(spawnDestination, spawnPosition-spawnDestination, 3.5f, 5.0f);
         entrance.triggerActive = true;
     }
