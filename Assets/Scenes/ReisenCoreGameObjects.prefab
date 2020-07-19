@@ -227,6 +227,7 @@ MonoBehaviour:
   ZTracking: 2
   LowZTransform: {fileID: 3570052166032015008}
   HighZTransform: {fileID: 3570052167012221791}
+  smoothMovement: 1
   DeadZone:
     m_Center: {x: 1, y: -0.4, z: -6.2500005}
     m_Extent: {x: 1, y: 0.4, z: 3}
@@ -662,6 +663,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5605456161494871071}
     m_Modifications:
+    - target: {fileID: 5301924835301837827, guid: 29106920630a2e244a4a6c90c14bd60d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4195167
+      objectReference: {fileID: 0}
     - target: {fileID: 6660005880930143507, guid: 29106920630a2e244a4a6c90c14bd60d,
         type: 3}
       propertyPath: m_Name

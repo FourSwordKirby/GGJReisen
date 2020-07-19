@@ -46,4 +46,7 @@ Reisen: **Was that right...?
 [instruction] Stage003_Wrench
 (end)
 
+Reisen: **I should think this over carefully [leave]
+(end)
+
 [end]
