@@ -1,31 +1,32 @@
-Nitori: Oh right, thanks for bringing me that magazine. 
-
+Nitori: Thanks for bringing me that magazine. 
+In exchange, how about I give you this?
 You were interested in that contraption in the village, right? 
 
-In exchange for bringing me the magazine, how about I give you this? 
-
-Reisen: This is... some kind of scroll? 
+Reisen: [expression] sad
+This is... some kind of scroll?
 
 Nitori: Open it up. 
 
-Reisen: No way! This is a diagram of the <b>Dimensionality Reducer</b>? 
+Reisen: [expression] shock
+This is a diagram of the <b>Dimensionality Reducer</b>!?
 
-Nitori: The contraption, yeah! 
+Nitori: The contraption, yeah!
 
-Reisen: But what kind of writing is this...? 
+Reisen: [expression] sad
+But what kind of writing is this...? 
 
 Nitori: That's the problem... 
-
 I dug it up in our storage shed here, but I can't read it... 
+Well, given how simple the diagram is, I doubt its usefulness.
 
-Well, given how simple the diagram is, it's not useful to me anyways. 
+Reisen: [expression] annoy
+I'll take anything to get closer to solving this incident...
 
-I think it's some kind of user manual. 
-
-Reisen: Huh. Well, even small hints should help...
-
-Nitori: Investigation? Whoa! 
-
+Nitori: Incident?
+Whoa!
 Why's everything so blocky!? 
+
+Reisen: [expression] shock
+**Did you only just notice!?
 
 [instruction] Stage1101

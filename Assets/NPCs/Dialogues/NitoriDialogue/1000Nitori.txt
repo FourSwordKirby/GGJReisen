@@ -2,12 +2,18 @@
 
 Nitori: Wow, this Elixir is amazing stuff. 
 
-Reisen: It was made by my master! Of course it's amazing! 
+Reisen: [expression] heh
+It was made by my master!
+Of course it's amazing! 
 
 Nitori: I've gotta figure out how this was made! 
 
-Reisen: Wait, where are you going!? 
+Reisen: [expression] shock
+Wait, where are you going!? 
+**She just ran off!
+[expression] sad
 **Did I make a mistake in giving it to her? 
-**Oh wait, she dropped a personality shard. 
+[expression] sweat
+**Oh wait, she dropped a <b>personality shard</b>. 
 
 [instruction] Stage1000

@@ -1,11 +1,8 @@
-Nitori: I said I was going to visit "that person," but... 
-
+Nitori: I was going to visit <i>that person</i>, but... 
 What was their <b>name</b> again? And where did they live? 
+<i>That location</i>, right? 
+But what does "<i>that location</i>" mean? 
 
-"That location," right? 
-
-But what does "<b>that location</b>" mean? 
-
-Reisen: **Looks like I wasn't able to overcome the simplification virus's effect. 
-
+Reisen: [expression] sad
+**Looks like I failed to cure the simplification virus. 
 **There doesn't seem to be anymore I can do here. 

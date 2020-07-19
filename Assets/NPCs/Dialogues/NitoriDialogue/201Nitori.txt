@@ -1,70 +1,107 @@
 //201 – A Fair Trade 
 
-Nitori: It's no good. I'm not getting anywhere...
+Nitori: I'm not getting anywhere...
 Hm? It's you again?
 You don't need to keep checking on me.
-I'm about to quit soon.
-Reisen: **They seem to be struggling.
+I'm about to leave soon.
+Reisen: **She's struggling with the storage box idea.
 **Should I give her something?
 
-?{elixir=1} {smartphone=1} {magazine=1} [choice] [Hand over the elixir  | elixir] [Hand over the smartphone  | smartphone] [Hand over the magazine | magazine] [Leave | leave]
-?{elixir=1} {smartphone=1} [choice] [Hand over the elixir  | elixir] [Hand over the smartphone  | smartphone] [Leave | leave]
-?{elixir=1} {magazine=1} [choice] [Hand over the elixir  | elixir] [Hand over the magazine | magazine] [Leave | leave]
-?{elixir=1} [choice] [Hand over the elixir  | elixir]  [Leave | leave]
-?{smartphone=1} {magazine=1} [choice] [Hand over the smartphone  | smartphone] [Hand over the magazine | magazine] [Leave | leave]
-?{smartphone=1} [choice] [Hand over the smartphone  | smartphone] [Leave | leave]
-?{magazine=1} [choice] [Hand over the magazine | magazine] [Leave | leave]
+?{elixir=1} {smartphone=1} {magazine=1} [choice] [Give elixir  | elixir] [Give smartphone  | smartphone] [Give magazine | magazine] [Leave | leave]
+?{elixir=1} {smartphone=1} [choice] [Give elixir  | elixir] [Give smartphone  | smartphone] [Leave | leave]
+?{elixir=1} {magazine=1} [choice] [Give elixir  | elixir] [Give magazine | magazine] [Leave | leave]
+?{elixir=1} [choice] [Give elixir  | elixir]  [Leave | leave]
+?{smartphone=1} {magazine=1} [choice] [Give smartphone  | smartphone] [Give magazine | magazine] [Leave | leave]
+?{smartphone=1} [choice] [Give smartphone  | smartphone] [Leave | leave]
+?{magazine=1} [choice] [Give magazine | magazine] [Leave | leave]
 [choice] [Leave | leave]
 
 Nitori: ... What is this? [elixir]
 Reisen: It's a powerful elixir. Drink it. 
-You don't see the incident happening around you because you've already been infected by it. 
-Nitori: First, you were calling me suspicious... 
-Don't think I'm dumb enough to take your words at face value. 
+The incident this time is a wide spread virus.
+You've already contracted it.
+This should cure you.
+
+Nitori: And you were the one calling me suspicious... 
+Don't think I'm dumb enough to just believe you. 
 Hmm... 
-Reisen: ... What are those cubes you just brought out? 
-Nitori: Cubes? These are tools to help me perform a litmus test. 
-... Wait, this is... !! 
-Let me take a sip! 
+
+Reisen: [expression] sweat
+**She's stirring the medicine with something...
+
+Nitori: Wait, this is...!!
+I'll take a sip!
+
 [instruction] Stage201_Elixir
 (end)
- 
+
+
 Nitori: Whoa! What is that!? [smartphone]
+
 Reisen: It's a Lunarian Smartphone. 
-I figured it might help you with your slump. 
+[expression] sweat
+Maybe it'll help you with your slump?
+
 Nitori: Let me see! Let me see! 
-Reisen: **I still don't know what's that doing here... 
-**Did another rabbit drop it during the invasion of Gensokyo? 
-Nitori: Wow, this is amazing. 
+
+Reisen: [expression] sad
+**I still don't know why a Lunarian smartphone is here... 
+**Did another <b>Moon Rabbit</b> drop it recently? 
+
+Nitori: Wow, this is amazing!
 Hey, do you want to trade for this? 
-Reisen: Huh!? Uh, I'm not sure if I should be trading someone's-
-Nitori: You were interested in that contraption in the village, right? 
-How about I trade you this? 
-Reisen: This is... some kind of scroll? 
-Nitori: Open it up. 
-Reisen: No way! This is a diagram of the <b>Dimensionality Reducer</b>? 
-Nitori: The contraption, yeah! 
-Reisen: But what kind of writing is this...? 
+
+Reisen: [expression] sweat
+Uh, I'm not sure if I should be trading-
+
+Nitori: You were interested in the <b>contraptions</b>, right?
+How about I trade you this?
+
+Reisen: [expression] sad
+This is... some kind of scroll?
+
+Nitori: Open it up.
+
+Reisen: [expression] shock
+This is a diagram of the <b>Dimensionality Reducer</b>!?
+
+Nitori: The contraption, yeah!
+
+Reisen: [expression] sad
+But what kind of writing is this...? 
+
 Nitori: That's the problem... 
 I dug it up in our storage shed here, but I can't read it... 
-Well, given how simple the diagram is, it's not useful to me anyways. 
-I think it's some kind of user manual. 
-Reisen: Hm, if it can help resolve the incident... 
-Alright, sure, I'll trade. 
-Nitori: Yay! I'm gonna get working on this phone right away. 
-Reisen: **Was it really a good idea to give it to her...? 
+Well, given how simple the diagram is, I doubt its usefulness.
+
+Reisen: [expression] annoy
+I'll take anything to get closer to solving this incident...
+[expression] normal
+Ok, I'll trade.
+
+Nitori: Yay! I'm gonna get working on this phone right away.
+
+Reisen: [expression] sad
+**Was it really a good idea to give it to her...? 
+
 [instruction] Stage201_Smartphone
 (end)
 
-Nitori: A magazine?  [magazine]
-Reisen: Yeah, from the Outside World it looks like. 
-I figured it would help with your slump. 
-Nitori: Hmm...? Oh, it's a technology magazine. 
+
+Nitori: A magazine? [magazine]
+Reisen: Yeah, from the Outside World.
+[expression] sweat
+Maybe it'll help with your slump?
+
+Nitori: Hmm...? It's a technology magazine.
 This is neat stuff, but it's not really... 
-Oh huh, this pair of ear muffs seems to be named after two people. 
-... Maybe what I actually need is a brainstorming session. 
+Oh huh, this pair of ear muffs is named after two people. 
+Maybe what I need is a brainstorming session...
+I have an idea.
+
 [instruction] Stage201_Magazine
 (end)
+
 
 Reisen: **What should I give her though? [leave]
 (end)

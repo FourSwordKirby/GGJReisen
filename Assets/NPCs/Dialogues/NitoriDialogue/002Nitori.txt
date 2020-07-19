@@ -1,31 +1,34 @@
 //002 – Fetch Quest 
 
-Nitori: Huh? It seems like I dropped my <b>tool</b> somewhere. 
+Nitori: I seem to have lost my <b>tool</b>...
+Hey rabbit, make yourself useful and find it for me.
 
-Hey rabbit, why don't you make yourself useful and find it for me. 
-
-Reisen: Why would I listen to such a rude request? 
+Reisen: [expression] angry
+Why would I listen to such a rude request? 
 
 Nitori: Do you have anything better to do? 
 
 Reisen: I'm in a middle of solving an incident! 
 
-Nitori: An incident? Is there something like that happening? 
+Nitori: An <b>incident</b>?
+Is there something like that happening? 
 
-Reisen: Look around you! 
+Reisen: Look around you!
 
 Nitori: ... Not sure what I'm looking for. 
+Does this involve the new <b>contraptions</b> around town? 
 
-Does it have something to do with that <b>contraption</b> next to the school? 
+Reisen: [expression] sweat
+**Is she talking about the <b>Dimensionality Reducers</b>?
+[expression] normal
+Do you know about them?
 
-Reisen: Do you know about it? 
+Nitori: ...
+... Maybe a thing or two.
+If you can find my <b>tool</b>, I'll share what I know. 
+I probably dropped it near the <b>school</b>. 
 
-Nitori: ... Maybe a thing or two. 
-
-I probably dropped my <b>tool</b> somewhere around there. 
-
-Why don't you pick it up for me and I'll share? 
-
-Reisen: *sigh* 
+Reisen: [expression] sad
+*sigh*
 
 [instruction] Stage002

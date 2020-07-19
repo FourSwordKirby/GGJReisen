@@ -1,39 +1,45 @@
-Reisen: **Now that I think about, this person recognized me as a Youaki, didn't they? 
-
+Reisen: [expression] sweat
+**Now that I think about...
+**This person recognized me as a Youaki, didn't they?
 **Maybe they aren't human... 
 
-Nitori: You're still poking around? 
+Nitori: You're still poking around?
 
-Reisen: What are you doing in an abandoned area like this? 
+Reisen: [expression] normal
+What are you doing in an abandoned area like this? 
 
-Nitori: <b>Very important work.</b> 
+Nitori: Very important work.
 
-Reisen: Sounds suspicious... 
+Reisen: [expression] annoy
+Sounds suspicious... 
 
-Nitori: Look, I'm building <b>something</b>. It might be a huge breakthrough for all I know. 
+Nitori: Look, I'm building something.
+It might be a huge breakthrough for all I know.
+I didn't want my peers to find out, so I'm out here. 
 
-I didn't want any of <b>the other people</b> to find out, so I'm doing it out here. 
+Reisen: [expression] sweat
+When you put it like that, I almost want to root for you.
+[expression] ugh
+But wait, that doesn't make you any less suspicious.
 
-Reisen: Is that so? When you put it like that, I almost want to root for you. 
-
-But wait, that doesn't make you any less suspicious.  
-
-Nitori: I can guarantee you it's nothing dangerous... 
-
-I found an <b>object</b> which inspired me to try <b>something</b> with this other <b>thing</b>. 
-
-And if it works, I can build that into a <b>device</b>, and attach it to another <b>object</b>. 
-
-The resulting tool will be very useful for <b>doing stuff. </b>
-
+Nitori: I guarantee you it's nothing dangerous... 
+I'm trying to combine this <i>thing</i> with this other <i>thing</i>. 
+If it works, I can build a <i>thing</i> to attach to another <i>thing</i>.
+The resulting <i>thing</i> will be very useful.
 See, harmless, right? 
 
-Reisen: No, I didn't understand a word of that... 
+Reisen: [expression] annoy
+No, I didn't understand a word of that... 
 
 Nitori: Well, I figured as much. 
 
-Reisen: I don't think anyone would understand an explanation as vague as that. 
+Reisen: [expression] angry
+Nobody could understand an explanation that vague.
 
-**Is this an effect of the virus?  
+Nitori: Huh? I was pretty specific though...
+
+Reisen: [expression] sad
+**She said <i>thing</i> a bunch of times.
+**Is the virus censoring her speech?
 
 [instruction] Stage001

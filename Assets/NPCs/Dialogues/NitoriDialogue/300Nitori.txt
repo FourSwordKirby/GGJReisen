@@ -1,37 +1,38 @@
-Nitori: Thanks for bringing that magazine. 
-
+Nitori: Thanks for bringing that magazine.
 I figured out what I should do now.
+I'm going to ask <i>that person</i> for help. 
 
-I'm going to ask "that person" for help. 
+Reisen: [expression] sweat
+**Who's <i>that person</i>?
+**Is that more censoring by the virus?
 
-Anyways, you were interested in that contraption in the village, right? 
+Nitori: You were interested in those <b>contraption</b>, right? 
+For bringing me the magazine, how 'bout I give this? 
 
-In exchange for bringing me the magazine, how 'bout I give this? 
+Reisen: [expression] sad
+This is... some kind of scroll?
 
-Reisen: This is... some kind of scroll? 
+Nitori: Open it up.
 
-Nitori: Open it up. 
+Reisen: [expression] shock
+This is a diagram of the <b>Dimensionality Reducer</b>!?
 
-Reisen: No way! This is a diagram of the <b>Dimensionality Reducer</b>? 
+Nitori: The contraption, yeah!
 
-Nitori: The contraption, yeah! 
-
-Reisen: But what kind of writing is this...? 
+Reisen: [expression] sad
+But what kind of writing is this...? 
 
 Nitori: That's the problem... 
-
 I dug it up in our storage shed here, but I can't read it... 
+Well, given how simple the diagram is, I doubt its usefulness.
 
-Well, given how simple the diagram is, it's not useful to me anyways. 
+Reisen: [expression] annoy
+I'll take anything to get closer to solving this incident...
 
-I think it's some kind of user manual. 
-
-Reisen: Huh. Well, even small hints should help...
-
-Nitori:  Right, good luck with whatever you're up to.
-
+Nitori: Right. Good luck with whatever that is.
 See ya. 
 
-Reisen: **... Somehow, I feel unsatisfied with how that ended.  
+Reisen: [expression] sad
+**Somehow, I feel unsatisfied with how that ended.  
 
 [instruction] Stage300
