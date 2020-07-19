@@ -31,9 +31,9 @@ public class ReisenGameManager : MonoBehaviour
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         CameraMan.instance.gameObject.transform.position = RpgPlayer.instance.transform.position;
+        InitSceneState();
         if (isNewGame)
         {
-            InitSceneState();
             if (spawnLocation != -1)
             {
                 StartCoroutine(SpawnPlayerAtEntrance());
