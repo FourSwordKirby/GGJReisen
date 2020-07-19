@@ -571,6 +571,8 @@ MonoBehaviour:
   - stage: 1101
     dialogue: {fileID: 4900000, guid: e03582368d265934da70891c87cc23b6, type: 3}
   dialoguePromptTrigger: {fileID: 6700266958078961106}
+  cubeForm: {fileID: 4429709484136992534}
+  stickForm: {fileID: 5800961428576573308}
   StageWasUpdated: 0
 --- !u!1001 &3436736745411763557
 PrefabInstance:
@@ -1167,6 +1169,18 @@ PrefabInstance:
 --- !u!4 &835846172231261791 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2605394467221013306, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+    type: 3}
+  m_PrefabInstance: {fileID: 3436736745411763557}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4429709484136992534 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1353543425162924659, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+    type: 3}
+  m_PrefabInstance: {fileID: 3436736745411763557}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5800961428576573308 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9164995063544039961, guid: 8247f7c181319ac4a8e7f0d741cc1563,
     type: 3}
   m_PrefabInstance: {fileID: 3436736745411763557}
   m_PrefabAsset: {fileID: 0}

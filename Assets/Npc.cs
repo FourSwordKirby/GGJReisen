@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,10 @@ public class Npc : MonoBehaviour
 {
     public List<NpcDialogue> dialogues;
     public DialoguePromptTrigger dialoguePromptTrigger;
+
+    public GameObject cubeForm;
+    public GameObject stickForm;
+
     public virtual ReisenNpcCharacterProgress NpcProgress
     {
         get
@@ -58,7 +63,18 @@ public class Npc : MonoBehaviour
     {
         // TODO
         // For now a placeholder to know where we need it
+        Debug.Log("tranforming to normal");
+        StartCoroutine(TranformationSequence());
     }
+
+    IEnumerator TranformationSequence()
+    {
+        this.GetComponentInChildren<CharacterExpressionAnimator>().changeExpression(CharacterExpression.normal);
+        yield return new WaitForSeconds(0.2f);
+        stickForm.SetActive(true);
+        cubeForm.SetActive(false);
+    }
+
 
     public void DefaultDialogueEndEvent()
     {

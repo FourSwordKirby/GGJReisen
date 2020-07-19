@@ -1,4 +1,6 @@
-﻿public class KosuzuQuestManager : Npc
+﻿using System.Collections.Generic;
+
+public class KosuzuQuestManager : Npc
 {
     public override ReisenNpcCharacterProgress NpcProgress => GameProgress.Kosuzu;
 
@@ -7,6 +9,7 @@
         GameProgress.Player.CoughingMedicine = Assignment.Kosuzu;
         GameProgress.Player.TextBook = Assignment.Inventory;
         GameProgress.Player.AddShard(Shard.Kosuzu_CoughingMedicine);
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Cough Medicine -1", "Textbook +1", "Shard +2" });
         Stage = 100;
     }
 

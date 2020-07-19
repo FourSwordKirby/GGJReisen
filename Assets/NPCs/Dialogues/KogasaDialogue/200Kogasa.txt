@@ -1,14 +1,14 @@
 [instruction] Boo
 
-Kogasa: Boo! 
+Reisen: [expression] shock
 
-Reisen: [expression] worry
+Kogasa: Boo! 
 
 Reisen: Eeep! 
 
 Kogasa: Hooray! This just keeps working! 
 
-Reisen: [expression] frown
+Reisen: [expression] sad
 
 Reisen: **I'll never get used to this
 
