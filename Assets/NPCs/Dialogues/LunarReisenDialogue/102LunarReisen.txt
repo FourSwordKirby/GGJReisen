@@ -1,0 +1,85 @@
+LunarReisen: I'm not doing anything suspicious. I swear... 
+
+If I just sit here and read, will you leave me alone? 
+
+Reisen: **She's reading a mystery novel. 
+
+Reisen: **Do I have something for her? 
+
+?{elixir=1} {schematic=1} [choice] [Hand over elixir | elixir] [Hand over schematic | schematic] [Leave | leave]
+?{elixir=1} {schematic=0} [choice] [Hand over elixir | elixir] [Leave | leave]
+?{elixir=0} {schematic=1} [choice] [Hand over schematic | schematic] [Leave | leave]
+?{elixir=0} {smartphone=0} [choice] [Leave | leave]
+
+
+
+Reisen: Here, take this. [elixir]
+
+LunarReisen: What is this? Medicine? 
+
+Reisen: It should help you remember anything you've forgotten. 
+
+LunarReisen: ... 
+
+I don't want it... 
+
+I'd rather just wait here until my masters come get me... 
+
+Reisen: Is that so...? 
+
+LunarReisen: ... well, also, this mystery novel is actually really interesting. 
+
+Why don't they just use DNA tracing to find the culprit? 
+
+Earth technology is so weird... 
+
+**She just wants to read!? (end)
+
+
+Reisen: I've been investigating throughout the village [schematic]
+
+And I've got reason to believe you might not be the culprit anymore. 
+
+LunarReisen: Oh, is that so... 
+
+Reisen: Erm... 
+
+I found an old diagram of the <b>Dimensionality Reducers</b>. 
+
+From what I learned, those devices have a <b>simplification algorithm</b>. 
+
+A Kappa seems to have broken one of devices. 
+
+I suspect that might've caused the algorithm to get unleashed on the village. 
+
+She didn't seem aware of that fact though. 
+
+LunarReisen: Aaaah... 
+
+Reisen: There is good news though. 
+
+The <b>Dimensionality Reducers</b> should have a feature to undo the simplification. 
+
+I don't know how to invoke it though. 
+
+LunarReisen: Ah! 
+
+Right, it's all coming back to me now. 
+
+The honorable <b>Watatsuki Sisters</b> sent me here! 
+
+I need to stop the simplification leakage in the case it happened! 
+
+I don't have time to be reading! 
+
+Reisen: **Oh, she dropped the book. 
+
+**What is this? 
+
+** "A mystery novel by the acclaimed Agatha Chris-Q"? 
+
+[instruction] Stage102 (end)
+
+Reisen: **I don't think anything here would work [leave]
+
+[end]

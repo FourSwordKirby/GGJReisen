@@ -1,0 +1,95 @@
+Reisen: Ah! 
+
+LunarReisen: Ah! 
+
+Reisen: It's you! 
+
+LunarReisen: Right, I remember now! 
+
+You're <b>Reisen</b>!  
+
+You're my masters' previous pet that ran away to Earth! 
+
+Reisen: Y-yeah. And you're also <b>Reisen</b>, right? 
+
+You're my replacement at the Lunar Capital now... 
+
+LunarReisen: ... 
+
+Reisen: ... Life's rough up there, isn't it? 
+
+LunarReisen: ...Yes. As usual... 
+
+Reisen: So what was that about the Watatsuki Sisters? 
+
+What are the lunar princesses doing, interfering with Earth again? 
+
+LunarReisen: Right! The <b>Dimensionality Reducers</b>! 
+
+We were transporting those from the moon to the earth via a quantum tunnel. 
+
+But some outside interference knocked them off trajectory, 
+
+and they crash landed in the village. 
+
+I was sent to make sure they hadn't broken- 
+
+Though I guess it's too late now. 
+
+Reisen: So I was on the money, wasn't I? 
+
+This cube phenomenon isn't really a virus, 
+
+But an effect of the reducer's <b>simplification algorithm</b> leaking out. 
+
+LunarReisen: Yes. But it's okay. 
+
+Lady Toyohime taught me how to invoke the reversal algorithm. 
+
+I had somehow forgotten when I arrived... 
+
+Reisen: Well, get moving. I'd like to get this phenomenon fixed finally. 
+
+LunarReisen: R-right! 
+
+Um... there's a small problem. 
+
+Reisen: Oh no... what now? 
+
+LunarReisen: The <b>simplification algorithm</b> works by removing information to compress data. 
+
+The excess information is usually stored as a small key. 
+
+We need that key to fully reconstruct everything that was simplified. 
+
+Otherwise, the reversal process will only be 90% correct. 
+
+Reisen: Okay... so where do we get the key? 
+
+LunarReisen: Well, I don't know. 
+
+One is made each time you put something into the container. 
+
+But since the simplification leaked out of the container, 
+
+I don't know where that key could be... 
+
+Reisen: What's it look like? 
+
+LunarReisen: Tiny rock shards, I guess? 
+
+Reisen: **... Could that be the <b>Personality Shards</b>? 
+
+Like these things? 
+
+LunarReisen: Yes those! 
+
+Great, this will work out perfectly then! 
+
+Please bring me all of the shards you've collected when you're ready! 
+
+Make sure you've got all of them! 
+
+Otherwise we might end up with 90% of a human in a village! 
+
+[instruction] Stage1000 
