@@ -1,0 +1,11 @@
+Reisen: A copy of Bunbunmaru Newspaper?
+
+It says here this is a super special extra edition
+
+[expression] ugh
+
+What does that tengu hope to gain by making even more papers...
+
+[instruction] PickupItem
+
+[end]

@@ -91,7 +91,6 @@ public class MenuUI : ControllableGridMenu
         if (focusSubmenu)
             group.FocusElement(group.currentMenuElementIndex);
         gainFocus = true;
-        Debug.Log(gainFocus);
     }
 
     public override void Blur()
@@ -114,7 +113,6 @@ public class MenuUI : ControllableGridMenu
     }
     public override void Close()
     {
-        Debug.Log("close");
         this.gameObject.SetActive(false);
         Blur();
     }

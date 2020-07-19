@@ -99,6 +99,13 @@ public enum Assignment
     LunarReisen
 }
 
+public enum ReisenPickupItemType
+{
+    Wrench,
+    Newspaper,
+    Shard
+}
+
 [Serializable]
 public class PlayerProgress
 {

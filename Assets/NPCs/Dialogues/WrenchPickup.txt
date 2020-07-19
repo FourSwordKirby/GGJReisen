@@ -1,0 +1,7 @@
+Reisen: A wrench?
+
+What's it doing here on the roof?
+
+[instruction] PickupItem
+
+[end]

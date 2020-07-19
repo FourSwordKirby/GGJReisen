@@ -752,6 +752,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 17.099998
       objectReference: {fileID: 0}
+    - target: {fileID: 4565603282221992038, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5247206386909854843, guid: b21610cf10db37248aa466140bf79f63,
         type: 3}
       propertyPath: m_IsActive
@@ -807,6 +812,11 @@ PrefabInstance:
       propertyPath: shardDescription
       value: 
       objectReference: {fileID: 1668796225}
+    - target: {fileID: 8518398384525039220, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 9116032890699227193, guid: b21610cf10db37248aa466140bf79f63,
         type: 3}
       propertyPath: m_LocalPosition.z

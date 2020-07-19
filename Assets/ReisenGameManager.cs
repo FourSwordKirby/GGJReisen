@@ -30,7 +30,8 @@ public class ReisenGameManager : MonoBehaviour
     public void Start()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        if(isNewGame)
+        CameraMan.instance.gameObject.transform.position = RpgPlayer.instance.transform.position;
+        if (isNewGame)
         {
             InitSceneState();
             if (spawnLocation != -1)
@@ -243,7 +244,9 @@ public class ReisenGameManager : MonoBehaviour
 
         gameProgress.savePoint.SpawnPlayer(RpgPlayer.instance.gameObject);
 
+        CameraMan.instance.smoothMovement = false;
         yield return TransitionManager.instance.screenFader.FadeIn();
+        CameraMan.instance.smoothMovement = true;
 
         RpgGameManager.instance.ResumeGameplay();
     }
@@ -261,6 +264,7 @@ public class ReisenGameManager : MonoBehaviour
     IEnumerator SpawnPlayerAtEntrance()
     {
         CameraMan.instance.CameraBounds = FindObjectOfType<ReisenSceneManager>().CameraBounds;
+        CameraMan.instance.smoothMovement = false;
 
         GameObject player = RpgPlayer.instance.gameObject;
 
@@ -271,6 +275,7 @@ public class ReisenGameManager : MonoBehaviour
         player.transform.position = spawnPosition;
 
         yield return player.GetComponent<CharacterMovement>().moveCharacter(spawnDestination, spawnPosition-spawnDestination, 3.5f, 5.0f);
+        CameraMan.instance.smoothMovement = true;
         entrance.triggerActive = true;
     }
 
@@ -294,22 +299,5 @@ public class ReisenGameManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
 
         yield return null;
-        //AudioManager.instance.OnNextLevelUnlock();
-        //AudioManager.instance.OnPhaseAnyLevelFadeOut();
-
-        //List<string> dialogEntries = DialogEngine.CreateDialogComponents(closingBanter.text);
-        //ShmupGameManager.instance.PauseGameplay();
-        //ConversationController.instance.StartConversation(dialogEntries);
-        //yield return null;
-
-        //while (ShmupGameManager.instance.Paused)
-        //    yield return null;
-
-        //ChapterHud.instance.EndLevel();
-        //while (!ChapterHud.instance.AnimationFinished())
-        //{
-        //    yield return null;
-        //}
-        //SceneManager.LoadScene(2);
     }
 }

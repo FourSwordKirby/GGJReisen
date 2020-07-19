@@ -1,6 +1,7 @@
 ﻿using Assets.PodgeStandardLibrary.RPGSystem;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ItemMenuUI : MenuUI
@@ -12,6 +13,8 @@ public class ItemMenuUI : MenuUI
 
     public float spacing;
 
+    public TextMeshProUGUI emptyText;
+
     public override void Init()
     {
         ReisenGameProgress gameProgress = ReisenGameManager.instance.gameProgress;
@@ -22,6 +25,8 @@ public class ItemMenuUI : MenuUI
             Destroy(oldElement.gameObject);
         }
         group.menuElements.Clear();
+
+        emptyText.gameObject.SetActive(inventoryKeyItems.Count == 0);
 
         for (int i = 0; i < inventoryKeyItems.Count; i++)
         {
@@ -54,7 +59,6 @@ public class ItemMenuUI : MenuUI
 
         base.Init();
     }
-
 
     public override void Open()
     {
