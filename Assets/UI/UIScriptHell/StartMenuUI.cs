@@ -43,7 +43,7 @@ public class StartMenuUI : MenuUI
         hasShardData = hasShardData || (shardData != null);
 
         newGameElement.gameObject.SetActive(true);
-        optionsElement.gameObject.SetActive(true);
+        //optionsElement.gameObject.SetActive(true);
         continueGameElement.gameObject.SetActive(hasSaveData);
 
 
@@ -65,7 +65,7 @@ public class StartMenuUI : MenuUI
             AddMenuElement(clearShardDataElement, activeMenuElement);
             activeMenuElement++;
         }
-        AddMenuElement(optionsElement, activeMenuElement);
+        //AddMenuElement(optionsElement, activeMenuElement);
         activeMenuElement++;
 
         group.FocusElement(group.currentMenuElementIndex);

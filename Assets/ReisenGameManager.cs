@@ -300,4 +300,31 @@ public class ReisenGameManager : MonoBehaviour
 
         yield return null;
     }
+
+    internal void ReturnToTitle()
+    {
+        StartCoroutine(ReturnToTitleSequence());
+    }
+
+    IEnumerator ReturnToTitleSequence()
+    {
+        yield return TransitionManager.instance.screenFader.FadeOut();
+
+        RpgGameManager.instance.ResumeGameplay();
+
+        SceneManager.LoadScene("TitleScreen");
+
+        Destroy(this.gameObject);
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    internal void QuitGame()
+    {
+        StartCoroutine(QuitGameSequence());
+    }
+    IEnumerator QuitGameSequence()
+    {
+        yield return TransitionManager.instance.screenFader.FadeOut();
+        Application.Quit();
+    }
 }
