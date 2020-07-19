@@ -644,6 +644,8 @@ MonoBehaviour:
       Stage: 0
       DialogueRead: 0
   spawnLocation: 0
+  statusTextPrefab: {fileID: 2022352952880849763, guid: 854dea0d69b472c4cbf30d71d81047c2,
+    type: 3}
 --- !u!114 &7710735857685672541
 MonoBehaviour:
   m_ObjectHideFlags: 0

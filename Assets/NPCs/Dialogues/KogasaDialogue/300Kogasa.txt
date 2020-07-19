@@ -1,0 +1,20 @@
+[instruction] Boo
+
+Reisen: [expression] shock
+
+Kogasa: Boo!
+
+Reisen: Eeep! 
+
+Kogasa: Wow you're such a good sport 
+
+It feels good to know that I'm doing a good job
+
+Reisen: [expression] sad
+
+Reisen: **This darn yokai!
+
+[instruction] Stage300
+
+**Wait, did a shard just manifest from this exchange?!
+

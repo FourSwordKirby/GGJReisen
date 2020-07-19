@@ -4753,6 +4753,8 @@ MonoBehaviour:
   - stage: 0
     dialogue: {fileID: 0}
   dialoguePromptTrigger: {fileID: 8308469029863536823}
+  cubeForm: {fileID: 1353543425162924659}
+  stickForm: {fileID: 9164995063544039961}
   StageWasUpdated: 0
 --- !u!1 &541249609163452599
 GameObject:

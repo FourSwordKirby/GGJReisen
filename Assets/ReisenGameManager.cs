@@ -160,7 +160,7 @@ public class ReisenGameManager : MonoBehaviour
                 else if (variable == ReisenGameProgress.KogasaStage)
                     conditionalResult = gameProgress.Kogasa.Stage == value;
                 else
-                    throw new Exception("broken conditional" + variable);
+                    throw new Exception("broken conditional " + variable);
             }
             else if (comparator == ">")
             {
@@ -299,6 +299,25 @@ public class ReisenGameManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
 
         yield return null;
+    }
+
+
+    //Wheeee more hacking
+    public GameObject statusTextPrefab;
+    public void ShowItemTransaction(List<string> transactions)
+    {
+        StartCoroutine(TransactionNotificationSequence(transactions));
+    }
+
+    public IEnumerator TransactionNotificationSequence(List<string> transactions)
+    {
+        foreach(string transaction in transactions)
+        {
+            StatusText statusText = Instantiate(statusTextPrefab).GetComponent<StatusText>();
+            statusText.transform.position = RpgPlayer.instance.transform.position + Vector3.up;
+            statusText.text.text = transaction;
+            yield return new WaitForSeconds(1.5f);
+        }
     }
 
     internal void ReturnToTitle()

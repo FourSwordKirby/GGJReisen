@@ -398,6 +398,7 @@ MonoBehaviour:
     m_Extent: {x: 5.7, y: 19.59, z: 13.01}
   sceneEntrances:
   - {fileID: 1863089819}
+  renderGizmo: 0
 --- !u!4 &296285703
 Transform:
   m_ObjectHideFlags: 0
@@ -2530,6 +2531,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212093637441878869, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: gameProgress.Nitori.Stage
+      value: 201
       objectReference: {fileID: 0}
     - target: {fileID: 7714349210501684526, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
