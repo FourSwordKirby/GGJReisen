@@ -1,55 +1,59 @@
  //100 – <b>Dimensionality Reducer</b>s 
 
-Nitori: Perfectly honest, I don't know much about the <b>contraptions</b>. 
+Nitori: So, perfectly honest...
+I don't know much about those <b>contraptions</b>. 
 
-Reisen: You little! 
+Reisen: [expression] angry
+You little! 
 
-Nitori: Hold on. The reason I don't is because it's <b>Lunarian Technology</b>. 
+Nitori: Hold on.
+The reason I don't is because they're <b>Lunarian Technology</b>. 
 
-Reisen: **Well, I knew that much. 
+Reisen: [expression] sad
+**Well, I knew that much. 
 
-Nitori: I found a bunch of them in the village this morning at sunrise. 
+Nitori: They were already there when I arrived early this morning.
+I was curious, so I tinkered with the one near the school.
+It turns out, they're just <b>storage boxes</b>.
+But the cool part is...
+They can hold more stuff inside than their physical size suggests!
 
-They looked interesting, so I tried tinkering with one. 
+Reisen: [expression] annoy
+**Yep. I knew that already.
 
-Reisen: Oh, so you were the one fiddling with it. 
+Nitori:
+Now I'm just guessing, but...
+I think they work by "<b>simplifying</b>" the objects they store. 
+There's less "information" in simple objects...
+So these boxes can fit more things than usual in the same volume. 
 
-Nitori: Huh? Yeah, I guess so? I was just curious what they did. 
+Reisen: [expression] shock
+**Is that how a <b>Dimensionality Reducer</b> works? 
+[expression] sad
+**I knew they were supersized metaphysical containers...
+[expression] ugh
+**But not how they actually worked.
 
-It turns out, they're just fancy <b>storage boxes</b>. 
+Nitori: In any case, the one at the school is unusable now. 
 
-But the catch is, they can hold more stuff inside than their physical size. 
+Reisen: [expression] sweat
+Huh? Why's that?
 
-Now the rest is guesswork, but I think they do that by "<b>simplifying</b>" the object to store. 
+Nitori: I might've clipped something bad while tinkering. 
+It made a weird sound.
 
-There's less "information" in simple objects,
-
-So they're able to fit more things than usual into the same space. 
-
-Reisen: **Is that how a <b>Dimensionality Reducer</b> works? 
-
-**I knew they were supersized metaphysical containers, but not the details... 
-
-Nitori: In any case, one of them is unusable now. 
-
-Reisen: Huh? Why's that? 
-
-Nitori: I might've clipped something I shouldn't have while tinkering. 
-
-It made a weird sound, and then powered down. 
-
-Reisen: Did you break it...? 
+Reisen: [expression] sad
+**But, it was working when I tried it...
+[expression] annoy
+Did you trigger something...? 
 
 Nitori: Beats me. 
-
-The humans in the village were waking up at that point, so I ditched. 
-
+The humans were waking up at that point, so I ditched. 
 In the meantime, I've been thinking about how to recreate one.
+I could fit a whole harvest of cucumbers into one box if I had one!
+Oh, but don't tell the other <b>Kappa</b> about that yet.
 
-Imagine being able to fit a whole harvest of cucumbers in a single refrigerator!
-
-Oh, don't tell the other <b>Kappa</b> yet. 
-
-Reisen: **A personality shard just manifested! 
+Reisen: [expression] shock
+**A personality shard just manifested! 
 
 [instruction] Stage100

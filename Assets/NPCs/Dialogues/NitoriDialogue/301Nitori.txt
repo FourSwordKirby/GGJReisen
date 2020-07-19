@@ -1,33 +1,29 @@
 // 301 – Witch of the Forest 
 
 Nitori: Thanks for bringing that magazine. 
-
 I figured out what I should do now.
-
 I'm going to ask <b>Marisa</b> to help figure out the <b>simplification</b> process. 
 
-Reisen: Marisa? That quirky human magician in the Forest of Magic? 
+Reisen: [expression] shock
+Marisa!?
+That quirky human magician in the Forest of Magic? 
 
-Nitori: Yep, she's actually pretty sharp when it comes to experimentation. 
+Nitori: Yep, she's pretty sharp when it comes to experimentation. 
 
-Reisen: I don't remember her being very smart. 
+Reisen: [expression] sad
+I don't remember her being very smart. 
 
-Nitori: She's always stealing stuff and acting like a ditz, so it's hard to imagine. 
-
-But, did you know? She doesn't have a master. A magician without a master. 
-
-Imagine figuring out <b>Magic</b> all by yourself. No teacher or text book to teach you. 
-
+Nitori: She's always acting like a ditz, so it's hard to imagine. 
+But, did you know?
+She doesn't have a master. A magician without a master. 
+Imagine figuring out <b>Magic</b> all by yourself.
+No teacher or text book to teach you. 
 She wrote her own spells and grimoires through trial and error. 
-
 We <b>Kappa</b> don't really understand <b>Magic</b>. 
-
 But I can appreciate the scientific method when I see it. 
-
 Hate to admit it, but she's pretty good for a <b>human</b>. 
 
-Reisen: **Wah! What's happening!? 
-
-//Replace Nitori blocks with Nitori sprite 
+Reisen: [expression] shock
+**Wah! What's happening!? 
 
 [instruction] Stage301

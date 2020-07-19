@@ -1,11 +1,17 @@
 Nitori: So this is what you meant by incident... 
 ... shoot, did I cause this? 
-Reisen: By breaking the <b>Dimensionality Reducer</b>?
+
+Reisen: [expression] sweat
+By breaking the <b>Dimensionality Reducer</b>?
 Yeah, maybe.
+
 Nitori: No, I uh...
 That couldn't have caused something this bad, right?
-Hahah... 
-Reisen: Well there's no helping it now...
-The remaining mystery is why they were here in the first place. 
+Haha...
+
+Reisen: [expression] sad
+Well there's no helping it now...
+The remaining mystery is why they were here in the first place.
+[expression] normal
 Don't worry, I'll take care of this. 
 As an ex-Lunarian. 
