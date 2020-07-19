@@ -44,6 +44,7 @@ public class CameraMan : MonoBehaviour
     public ZTrackingStrategy ZTracking = ZTrackingStrategy.Exact;
     public Transform LowZTransform;
     public Transform HighZTransform;
+    public bool smoothMovement = true;
     public Bounds DeadZone = new Bounds();
 
     public Bounds CameraBounds;
@@ -57,6 +58,9 @@ public class CameraMan : MonoBehaviour
     public float RotationLerpFactor = .5f;
 
     public static CameraMan instance;
+
+    public float CameraMoveSpeed = 10.0f;
+    public float CameraTurnSpeed = 10.0f;
 
     public void Awake()
     {
@@ -173,8 +177,18 @@ public class CameraMan : MonoBehaviour
             if(CameraBounds != null)
                 TargetPosition = CameraBounds.ClosestPoint(TargetPosition);
 
-            this.transform.position = TargetPosition;
-            this.transform.rotation = TargetRotation;
+            //MyCamera.transform.position = Vector3.Lerp(MyCamera.transform.position, TargetPosition, TranslatationLerpFactor);
+            //MyCamera.transform.rotation = Quaternion.Lerp(MyCamera.transform.rotation, TargetRotation, RotationLerpFactor);
+            if(smoothMovement)
+            {
+                this.transform.position = Vector3.MoveTowards(this.transform.position, TargetPosition, CameraMoveSpeed * Time.deltaTime);
+                this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, TargetRotation, CameraTurnSpeed * Time.deltaTime);
+            }
+            else
+            {
+                this.transform.position = TargetPosition;
+                this.transform.rotation = TargetRotation;            
+            }
         }
         else
         {

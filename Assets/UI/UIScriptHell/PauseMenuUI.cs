@@ -10,9 +10,14 @@ public class PauseMenuUI : MenuUI
     public SpeechBubble ItemDescriptionBubble;
     public CharacterDialogueAnimator CharacterProp;
 
+    public ItemMenuUI itemUI;
+    public ShardMenuUI shardUI;
+
     public Transform startingPositon;
 
     public bool ReisenVisible;
+
+    public Animator menuAnimator;
 
     public override void Update()
     {
@@ -25,14 +30,23 @@ public class PauseMenuUI : MenuUI
 
     public override void Open()
     {
-        ItemDescriptionBubble.gameObject.SetActive(false);
         base.Open();
+        itemUI.Init();
+        shardUI.Init();
+        ItemDescriptionBubble.gameObject.SetActive(false);
+
+        menuAnimator.SetTrigger("Open");
     }
 
     public override void Close()
     {
         HideDescription();
         HideReisen();
+        menuAnimator.SetTrigger("Close");
+    }
+
+    public void CompleteClose()
+    {
         base.Close();
     }
 
@@ -54,7 +68,7 @@ public class PauseMenuUI : MenuUI
         if(!ReisenVisible)
         {
             ReisenVisible = true;
-            StartCoroutine(MoveProp(startingPositon.position));
+            StartCoroutine(MoveProp(startingPositon.localPosition));
         }
     }
 
@@ -63,21 +77,21 @@ public class PauseMenuUI : MenuUI
         if (ReisenVisible)
         {
             ReisenVisible = false;
-            StartCoroutine(MoveProp(startingPositon.position + Vector3.down * 5f));
+            StartCoroutine(MoveProp(startingPositon.localPosition + Vector3.down * 5f));
         }
     }
 
     private IEnumerator MoveProp(Vector3 targetPosition)
     {
-        Vector3 originalPos = CharacterProp.transform.position;
+        Vector3 originalPos = CharacterProp.transform.localPosition;
         float distance = (originalPos - targetPosition).magnitude;
 
         float timer = 0.0f;
         float totalTime = 0.4f;
-        while ((CharacterProp.transform.position - targetPosition).magnitude > 0.01f)
+        while ((CharacterProp.transform.localPosition - targetPosition).magnitude > 0.01f)
         {
             timer += Time.deltaTime;
-            CharacterProp.transform.position = Vector3.Lerp(originalPos, targetPosition, timer/ totalTime);
+            CharacterProp.transform.localPosition = Vector3.Lerp(originalPos, targetPosition, timer/ totalTime);
             yield return new WaitForEndOfFrame();
         }
         yield return null;

@@ -81,7 +81,10 @@ public class SaveUI : MenuUI
                     this.Blur();
                 else
                     this.Close();
-                previousMenu?.Open();
+                if (prevMenuMode == ParentMenuStatusPostSelect.close)
+                    previousMenu?.Open();
+                else
+                    previousMenu?.Focus();
             }
             else
             {

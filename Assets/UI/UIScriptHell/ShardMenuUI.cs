@@ -23,6 +23,8 @@ public class ShardMenuUI : MenuUI
     public TextMeshProUGUI shardDescription;
     public Image shardImage;
 
+    public TextMeshProUGUI emptyText;
+
     public override void Init()
     {
         List<Shard> totalShardData = SaveManager.FetchSeenShardData()?.shardData;
@@ -47,12 +49,14 @@ public class ShardMenuUI : MenuUI
         }
         group.menuElements.Clear();
 
+        emptyText.gameObject.SetActive(shardsToDisplay.Count == 0);
+
         for (int i = 0; i < shardsToDisplay.Count; i++)
         {
             Shard shard = shardsToDisplay[i];
 
             ShardMenuUIElement element = Instantiate(shardMenuElement).GetComponent<ShardMenuUIElement>();
-            element.transform.parent = group.transform;
+            element.transform.SetParent(group.transform, false);
             Debug.Log((i % cols) + " " + (i / rows));
             element.transform.position = initialPosition.position + ((i % cols) * Vector3.right * xspacing) + ((i / cols) * Vector3.down * yspacing);
             element.parentMenu = this;
