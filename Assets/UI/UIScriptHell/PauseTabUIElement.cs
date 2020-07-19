@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseTabUI : MenuUIElement
+public class PauseTabUIElement : MenuUIElement
 {
     public GameObject tabTitleDropShadow;
     public GameObject tabPanel;
