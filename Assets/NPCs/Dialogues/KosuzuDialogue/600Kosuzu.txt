@@ -1,5 +1,8 @@
-Kosuzu: Welcome to the book shop! We have a wide assortment of books!
-Huh? You can't tell the difference between the books? That's weird.
-Look, this is a book about <b>stuff</b>. And this one is about different <b>stuff</b>!
-Reisen: **They look like the same gray cubes to me...
-Reisen: **It seems like I wasn't able to restore her full individuality.
+Kosuzu: Welcome to the book shop!
+We have a wide assortment of books!
+Yeah, this one is about <i>things</i>!
+And this one is about other <i>things</i>!
+
+Reisen: [expression] ugh
+**They all look like cubes to me...
+**It seems like I failed to cure the <b>virus</b> affecting her...

@@ -34,6 +34,7 @@ public class Npc : MonoBehaviour
     }
 
     public bool StageWasUpdated = false;
+    public bool NextDialogueIsRead = false;
 
     public virtual void InitNpcState(CharacterProgress characterProgress)
     {
@@ -83,11 +84,17 @@ public class Npc : MonoBehaviour
         cubeForm.SetActive(false);
     }
 
+    public void MarkNextDialogueAsRead()
+    {
+        NextDialogueIsRead = true;
+    }
 
     public void DefaultDialogueEndEvent()
     {
-        NpcProgress.DialogueRead = !StageWasUpdated;
+        NpcProgress.DialogueRead = NextDialogueIsRead || !StageWasUpdated;
+
         StageWasUpdated = false;
+        NextDialogueIsRead = false;
     }
 }
 

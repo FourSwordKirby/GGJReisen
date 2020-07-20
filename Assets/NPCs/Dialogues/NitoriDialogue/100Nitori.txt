@@ -33,6 +33,8 @@ Reisen: [expression] shock
 **I knew they were supersized metaphysical containers...
 [expression] ugh
 **But not how they actually worked.
+[expression] normal
+**I wonder if the <b>simplifying</b> is related to the virus...
 
 Nitori: In any case, the one at the school is unusable now. 
 
@@ -48,7 +50,7 @@ Reisen: [expression] sad
 Did you trigger something...? 
 
 Nitori: Beats me. 
-The humans were waking up at that point, so I ditched. 
+The humans were waking up at that point, so I ditched.
 In the meantime, I've been thinking about how to recreate one.
 I could fit a whole harvest of cucumbers into one box if I had one!
 Oh, but don't tell the other <b>Kappa</b> about that yet.

@@ -570,10 +570,13 @@ MonoBehaviour:
     dialogue: {fileID: 4900000, guid: f74e382b9e1b80d44861594fc99b832b, type: 3}
   - stage: 1101
     dialogue: {fileID: 4900000, guid: e03582368d265934da70891c87cc23b6, type: 3}
+  - stage: 99
+    dialogue: {fileID: 4900000, guid: da3384b96d7fcf74897130f389f5b868, type: 3}
   dialoguePromptTrigger: {fileID: 6700266958078961106}
   cubeForm: {fileID: 4429709484136992534}
   stickForm: {fileID: 5800961428576573308}
   StageWasUpdated: 0
+  NextDialogueIsRead: 0
 --- !u!1001 &3436736745411763557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -611,6 +614,27 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressionSprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressions.Array.data[0]
+      value: 
+      objectReference: {fileID: 2800000, guid: 2eaff01c0abfd36478a46509879d9cf8, type: 3}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressionSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2eaff01c0abfd36478a46509879d9cf8,
+        type: 3}
     - target: {fileID: 541249608831779773, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_Name
@@ -681,6 +705,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1353543425162924659, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2257679838649051404, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -720,6 +749,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049049504856623737, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9371611
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049049504856623737, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75657856
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536817, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}

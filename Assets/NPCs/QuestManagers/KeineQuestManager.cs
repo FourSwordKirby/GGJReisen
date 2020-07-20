@@ -31,6 +31,13 @@ public class KeineQuestManager : Npc
     public void Keine_Stage103_Textbook()
     {
         GameProgress.Player.TextBook = Assignment.Keine;
+
+        // When trading textbook, increment Kosuzu's plotline too
+        if (GameProgress.Kosuzu.Stage < 100)
+        {
+            GameProgress.Kosuzu.Stage = 100;
+        }
+
         GameProgress.Player.AddShard(Shard.Keine_TextBook);
         Stage = 200;
     }
