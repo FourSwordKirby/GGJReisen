@@ -412,14 +412,14 @@ MonoBehaviour:
     dialogue: {fileID: 4900000, guid: 489f37649ceb11144b0f3947b8143860, type: 3}
   - stage: 1002
     dialogue: {fileID: 4900000, guid: e57f3aa1db3d07149a8c56cc1412342c, type: 3}
-  - stage: 1100
-    dialogue: {fileID: 4900000, guid: cb41beb2a82e533408af79044c34331c, type: 3}
-  - stage: 1101
-    dialogue: {fileID: 4900000, guid: 5a14643406f138141ab2ed1bbfe75f46, type: 3}
   - stage: 1200
     dialogue: {fileID: 4900000, guid: 621b0412e12b5194397ea35ba292974a, type: 3}
   - stage: 1201
     dialogue: {fileID: 4900000, guid: 41becb6295d3a0140933dfcb8f029de4, type: 3}
+  - stage: 2
+    dialogue: {fileID: 4900000, guid: da151b5aecb9c504a8dc6e5f4df49d43, type: 3}
+  - stage: 3
+    dialogue: {fileID: 4900000, guid: 7293587725554a340bbc3cba1bbbd232, type: 3}
   dialoguePromptTrigger: {fileID: 3900393675777100529}
   cubeForm: {fileID: 6315638087181443125}
   stickForm: {fileID: 4205796360517466207}
@@ -439,7 +439,7 @@ PrefabInstance:
     - target: {fileID: 541249608831779774, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 11.25
       objectReference: {fileID: 0}
     - target: {fileID: 541249608831779774, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -449,7 +449,7 @@ PrefabInstance:
     - target: {fileID: 541249608831779774, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.955
+      value: -3.16
       objectReference: {fileID: 0}
     - target: {fileID: 541249608831779774, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -518,6 +518,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
+      propertyPath: dialogueInstructions.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[0].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[1].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[2].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[3].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[4].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[5].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[6].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
       propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -540,6 +580,151 @@ PrefabInstance:
         type: 3}
       propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: speakingPositionConfig
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[0].name
+      value: Stage000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[0].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 114080552303156030}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[0].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LunarReisen_Stage000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[0].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[1].name
+      value: Stage001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[1].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 114080552303156030}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[1].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LunarReisen_Stage001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[1].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[2].name
+      value: Stage002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[2].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 114080552303156030}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[2].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LunarReisen_Stage002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[2].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[3].name
+      value: Stage003_Elixir
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[3].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 114080552303156030}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[3].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LunarReisen_Stage003_Elixir
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[3].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[4].name
+      value: Stage003_Smartphone
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[4].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 114080552303156030}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[4].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LunarReisen_Stage003_Smartphone
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[4].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[5].name
+      value: Stage003_Wrench
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[5].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 114080552303156030}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[5].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LunarReisen_Stage003_Wrench
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[5].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[6].name
+      value: Stage100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[6].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 114080552303156030}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[6].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LunarReisen_Stage100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[6].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 140421137813915342, guid: 8247f7c181319ac4a8e7f0d741cc1563, type: 3}

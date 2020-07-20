@@ -17,8 +17,10 @@ Reisen: [expression] angry
 How would I know!?
 
 LunarReisen: Oh no... it was really important.
-My <b>master</b> is going to yell at me for losing it...
+My <b>masters</b> are going to yell at me for losing it...
 
 Reisen: [expression] sad
 **Ah, how pitiful...
 **I know how you feel... I guess.
+
+[instruction] Stage002

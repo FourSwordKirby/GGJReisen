@@ -1,16 +1,13 @@
 LunarReisen: I'm not doing anything suspicious. I swear... 
-
 If I just sit here and read, will you leave me alone? 
 
 Reisen: **She's reading a mystery novel. 
-
 Reisen: **Do I have something for her? 
 
-?{elixir=1} {schematic=1} [choice] [Hand over elixir | elixir] [Hand over schematic | schematic] [Leave | leave]
-?{elixir=1} {schematic=0} [choice] [Hand over elixir | elixir] [Leave | leave]
-?{elixir=0} {schematic=1} [choice] [Hand over schematic | schematic] [Leave | leave]
-?{elixir=0} {smartphone=0} [choice] [Leave | leave]
-
+?{elixir=1} {schematic=1} [choice] [Give elixir | elixir] [Give schematic | schematic] [Leave | leave]
+?{elixir=1}  [choice] [Give elixir | elixir] [Leave | leave]
+?{schematic=1} [choice] [Give schematic | schematic] [Leave | leave]
+[choice] [Leave | leave]
 
 
 Reisen: Here, take this. [elixir]
@@ -20,65 +17,59 @@ LunarReisen: What is this? Medicine?
 Reisen: It should help you remember anything you've forgotten. 
 
 LunarReisen: ... 
-
 I don't want it... 
+I'd rather wait here until my masters come get me... 
 
-I'd rather just wait here until my masters come get me... 
+Reisen: [expression] sweat
+Is that so...? 
 
-Reisen: Is that so...? 
-
-LunarReisen: ... well, also, this mystery novel is actually really interesting. 
-
+LunarReisen: ... well, also, this mystery novel is really interesting!
 Why don't they just use DNA tracing to find the culprit? 
+Earth technology is so primitive... 
 
-Earth technology is so weird... 
+Reisen: [expression] shock
+**She just wants to read!?
 
-**She just wants to read!? (end)
+(end)
 
 
 Reisen: I've been investigating throughout the village [schematic]
-
-And I've got reason to believe you might not be the culprit anymore. 
+And I've got reason to believe you aren't the culprit anymore. 
 
 LunarReisen: Oh, is that so... 
 
-Reisen: Erm... 
-
+Reisen: [expression] sad
+Erm... 
+[expression] normal
 I found an old diagram of the <b>Dimensionality Reducers</b>. 
-
 From what I learned, those devices have a <b>simplification algorithm</b>. 
-
-A Kappa seems to have broken one of devices. 
-
+[expression] sad
+A Kappa seems to have messed with one of the devices. 
 I suspect that might've caused the algorithm to get unleashed on the village. 
-
-She didn't seem aware of that fact though. 
+[expression] ugh
+The Kappa didn't seem aware of that fact though. 
 
 LunarReisen: Aaaah... 
 
-Reisen: There is good news though. 
-
-The <b>Dimensionality Reducers</b> should have a feature to undo the simplification. 
-
-I don't know how to invoke it though. 
+Reisen: [expression] normal
+There is good news though.
+The <b>Dimensionality Reducers</b> should have a feature to undo the simplification.
+I don't know how to invoke it though.
 
 LunarReisen: Ah! 
-
-Right, it's all coming back to me now. 
-
+Right, it's all coming back to me now!
 The honorable <b>Watatsuki Sisters</b> sent me here! 
-
-I need to stop the simplification leakage in the case it happened! 
-
+I need to stop the <b>simplification leakage</b> in the case it happened! 
 I don't have time to be reading! 
 
-Reisen: **Oh, she dropped the book. 
-
+Reisen: [expression] sweat
+**Oh, she dropped the book. 
 **What is this? 
+[expression] sad
+**"A mystery novel by the acclaimed Agatha Chris-Q"? 
 
-** "A mystery novel by the acclaimed Agatha Chris-Q"? 
-
-[instruction] Stage102 (end)
+[instruction] Stage102
+(end)
 
 Reisen: **I don't think anything here would work [leave]
 
