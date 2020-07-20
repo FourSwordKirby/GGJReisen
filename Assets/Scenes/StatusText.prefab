@@ -217,5 +217,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingColor: {r: 0, g: 0.6295158, b: 0.8679245, a: 1}
   text: {fileID: 2022352952880849765}
-  duration: 1
-  speed: 0.8
+  duration: 3
+  speed: 1.2

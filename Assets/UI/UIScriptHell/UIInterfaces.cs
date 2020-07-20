@@ -132,6 +132,8 @@ public abstract class ControllableGridMenuGroup : MonoBehaviour, ISelectableMenu
         {
             if (dir == InputDirection.W)
             {
+                AudioMaster.instance.PlayMenuSelectSfx();
+
                 currentMenuElementIndex--;
                 if (currentMenuElementIndex < 0)
                     currentMenuElementIndex = menuElements.Count - 1;
@@ -139,6 +141,7 @@ public abstract class ControllableGridMenuGroup : MonoBehaviour, ISelectableMenu
             }
             else if (dir == InputDirection.E)
             {
+                AudioMaster.instance.PlayMenuSelectSfx();
                 currentMenuElementIndex++;
                 if (currentMenuElementIndex >= menuElements.Count)
                     currentMenuElementIndex = 0;
@@ -149,6 +152,7 @@ public abstract class ControllableGridMenuGroup : MonoBehaviour, ISelectableMenu
         {
             if (dir == InputDirection.N)
             {
+                AudioMaster.instance.PlayMenuSelectSfx();
                 currentMenuElementIndex--;
                 if (currentMenuElementIndex < 0)
                     currentMenuElementIndex = menuElements.Count - 1;
@@ -156,6 +160,7 @@ public abstract class ControllableGridMenuGroup : MonoBehaviour, ISelectableMenu
             }
             else if (dir == InputDirection.S)
             {
+                AudioMaster.instance.PlayMenuSelectSfx();
                 currentMenuElementIndex++;
                 if (currentMenuElementIndex >= menuElements.Count)
                     currentMenuElementIndex = 0;

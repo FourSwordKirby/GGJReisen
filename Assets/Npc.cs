@@ -71,6 +71,7 @@ public class Npc : MonoBehaviour
     {
         this.GetComponentInChildren<CharacterExpressionAnimator>().changeExpression(CharacterExpression.normal);
         yield return new WaitForSeconds(0.2f);
+        AudioMaster.instance.PlayTransformSfx();
         stickForm.SetActive(true);
         cubeForm.SetActive(false);
     }

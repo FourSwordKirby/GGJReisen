@@ -41,10 +41,12 @@ public class MenuUI : ControllableGridMenu
         group.FocusNextElementInDirection(dir);
         if (Controls.confirmInputDown())
         {
+            AudioMaster.instance.PlayConfirmSfx();
             group.SelectElement(group.currentMenuElementIndex);
         }
         if (Controls.cancelInputDown())
         {
+            AudioMaster.instance.PlayCancelSfx();
             if (!isGameplayMenu)
             {
                 Blur();
