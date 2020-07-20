@@ -807,6 +807,26 @@ PrefabInstance:
       propertyPath: gameProgress.LunarReisen.Stage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6212093637441878869, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: gameProgress.Player.Smartphone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212093637441878869, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: gameProgress.Player.Wrench
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212093637441878869, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: gameProgress.Player.Elixir1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212093637441878869, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: gameProgress.Player.TextBook
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7303702813083294876, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_textInfo.characterCount

@@ -1,43 +1,37 @@
-Reisen: Hey, you mentioned you’re a lunarian... 
-
+Reisen: Hey, you mentioned you're a <b>Lunarian</b>... 
 Are you the one that caused this incident? 
 
 LunarReisen: What's an incident? 
 
-Reisen: Erm, the <b>simplification virus</b>. 
-
-And also the <b>Dimensionality Reducers</b> around town. 
-
+Reisen: [expression] sad
+The <b>simplification virus</b>.
+And also the <b>Dimensionality Reducers</b> around town.
+[expression] sweat
 Were those your doing? 
 
 LunarReisen: <b>Dimensionality Reducers</b>? The storage devices? 
-
-Um... maybe? I think I was supposed do to something with them. 
-
+Um... maybe?
+I think I was supposed do to something with them. 
 Maybe that was the <b>important thing</b> I forgot? 
-
 I don't know anything about a virus. 
 
-Reisen: Now that I think about it, the answer seems too obvious, doesn't it? 
-
+Reisen: [expression] ugh
+Now that I think about it, the answer seems too obvious, doesn't it? 
+[expression] heh
 A Lunarian suddenly arrives in the village. 
-
 A bunch of lunar storage containers appear in tow in scattered locations. 
-
 And a virus has infected everyone now. 
-
 Simply put... 
-
+[expression] angry
 You brought a bunch of canisters of a virus to infect the village! 
-
 This is outright biochemical terrorism! 
 
 LunarReisen: Wait what!? That's crazy! 
-
 I don't know anything about this! I swear! 
 
-Reisen: Great! I figured out the mystery! 
-
+Reisen: [expression] happy
+Great! I figured out the mystery! 
+[expression] angry
 Time to beat you up until you cough up the antidote!  
 
 [instruction] Stage100 

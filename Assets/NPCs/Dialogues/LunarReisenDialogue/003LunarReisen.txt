@@ -4,50 +4,82 @@ Maybe I can get that girl who interviewed me to take me in.
 I could just read mystery novels all day...
 
 Reisen: **Do I have something for this person?
+**They're probably an <b>extraterrestrial</b>...
 
+?{elixir=1} {smartphone=1} {wrench=1} [choice] [Give elixir | elixir] [Give smartphone | smartphone] [Give wrench | wrench] [Leave | leave]
 ?{elixir=1} {smartphone=1} [choice] [Give elixir | elixir] [Give smartphone | smartphone] [Leave | leave]
-?{elixir=1} {smartphone=0} [choice] [Give elixir | elixir] [Leave | leave]
-?{elixir=0} {smartphone=1} [choice] [Give smartphone | smartphone] [Leave | leave]
-?{elixir=0} {smartphone=0} [choice] [Leave | leave]
+?{elixir=1} {wrench=1} [choice] [Give elixir | elixir] [Give wrench | wrench] [Leave | leave]
+?{elixir=1} [choice] [Give elixir | elixir] [Leave | leave]
+?{smartphone=1} {wrench=1} [choice] [Give smartphone | smartphone] [Give wrench | wrench] [Leave | leave]
+?{smartphone=1} [choice] [Give smartphone | smartphone] [Leave | leave]
+?{wrench=1} [choice] [Give wrench | wrench] [Leave | leave]
+[choice] [Leave | leave]
+
 
 Reisen: Here, take this. [elixir]
+
 LunarReisen: What is that?
+
 Reisen: It's medicine to help with remembering things.
+
 LunarReisen: Eh? Oh? Uh... su-sure?
-... This is kind of suspicious, but for some reason I feel like I can trust you.
+This is kind of suspicious...
+But for some reason, I feel like I can trust you.
+
 [instruction] Stage003_Elixir
 (end)
 
+
 Reisen: Would this happen to be yours? [smartphone]
-LunarReisen: Ah, no way, you found it!
-This smartphone was entrusted to me by my master...
+
+LunarReisen: Ah, no way, you found my <b>smartphone</b>!
+My <b>masters</b> entrusted me with it.
 Ahhh! I'm so glad you found it!
 They would have been furious with me!
-Reisen: Hold on, that's a Lunarian smartphone.
-Are you... a Lunarian? Or maybe, your masters are...?
-LunarReisen: Huh? Yes, I guess you Gensokyo folks would call me a Lunarian.
+
+Reisen: [expression] sweat
+Hold on, that's a Lunarian smartphone.
+Are you... a <b>Lunarian</b>?
+[expression] sad
+Or maybe, your masters are...?
+
+LunarReisen: Huh? Yes, I guess I am a <b>Lunarian</b>.
 Are you also interested in hearing about the moon?
 Earthlings are quite curious, aren't they?
 Never in my life would I have imagined so.
-The Lunar Capital calls Earth a wasteland of impurity.
-The people here aren't the monsters I thought they'd be.
-Here, I found this rare magazine while I was looking around.
+The <b>Lunar Capital</b> calls Earth a <i>wasteland of impurity</i>.
+But, the people here aren't the monsters I had imagined.
+
+Reisen: [expression] annoy
+**That's ridiculous.
+[expression] sad
+**Though, I had the same thoughts when I first arrived on Earth...
+
+LunarReisen: I found this rare magazine while I was looking around.
 Consider it thanks for finding my phone!
+
 [instruction] Stage003_Smartphone
 (end)
 
-Reisen: Is this wrench yours?
-LunarReisen: Oh!
-... Yes, I think?
+
+Reisen: Is this wrench yours? [wrench]
+
+LunarReisen: Umm, yes!
+...I think?
 I don't think that's the lost item I was thinking of.
 But I do need it fix something...
-I think.
+I think...
 Thanks for bringing it!
+
+Reisen: [expression] sweat
+**Was that right...?
+
 [instruction] Stage003_Wrench
-Reisen: **Was that right...?
 (end)
+
 
 Reisen: **I should think this over carefully [leave]
 (end)
+
 
 [end]

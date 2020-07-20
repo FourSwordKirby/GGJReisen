@@ -1,53 +1,45 @@
 LunarReisen: Wah! Wait! Pause! 
 
-Reisen: You aren't getting away! 
+Reisen: [expression] angry
+You aren't getting away! 
 
 LunarReisen: Wait please! I just got a text message from my masters! 
+"We've been held up. Did you complete your <b>task</b>?"
+What awfully shady phrasing!
+What <b>task</b> is this talking about!?
 
-... "We've been held up. Did you complete your <b>task</b>?"... 
-
-What awfully shady phrasing! 
-
-What task is this talking about!? 
-
-Reisen: You're clearly guilty! 
+Reisen: [expression] ugh
+You're clearly guilty! 
 
 LunarReisen: No! Please! 
 
-Reisen: Prepare yourself! 
+Reisen: [expression] angry
+Prepare yourself! 
 
 LunarReisen: Wah! 
-
 Oh wait, a second text. 
-
 "Feel free to take a peach for yourself as a reward <3" 
-
 ... What is this talking about? 
-
 ... 
-
 Aha... I give up... 
 
-Reisen: ... Are you... are you crying? 
+Reisen: [expression] sweat
+...
+Are you... are you crying? 
 
 LunarReisen: I don't know what's going on. 
-
-I got sent down here to Earth to do some task that I can't remember. 
-
-Not only did I fail to carry out my master's orders, 
-
+I got sent to Earth to do something I can't remember. 
+Not only did I fail to carry out my masters' orders...
 But I'm also now being convicted of biochemical terrorism. 
+I have no idea why any of this happened. 
+I just wanted to get away from a life of pounding mochi.
+How did my life turn out like this... ?
 
-And to top it off, I have no idea why any of this happened. 
-
-I just wanted to get away from a life of pounding mochi. 
-
-How did my life turn out like this... 
-
-Reisen: ... 
-
+Reisen: [expression] sad
+...
+[expression] sweat
 I might've, uh, gotten carried away. 
-
+[expression] ugh
 My bad... 
 
-LunarReisen: Uuu... 
+LunarReisen: Uuu...
