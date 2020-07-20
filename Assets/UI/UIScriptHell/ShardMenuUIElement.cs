@@ -5,10 +5,22 @@ using UnityEngine.UI;
 
 public class ShardMenuUIElement : MenuUIElement
 {
+    private bool revealed;
+    public bool IsRevealed
+    {
+        get
+        {
+            return revealed;
+        }
+        set
+        {
+            ShardImage.color = value ? FoundColor : MissingColor;
+            revealed = value;
+        }
+    }
+
     public Color FoundColor;
     public Color MissingColor;
-
-    public bool revealed = false;
 
     public Sprite singleShardSprite;
     public Sprite doubleShardSprite;
@@ -23,12 +35,16 @@ public class ShardMenuUIElement : MenuUIElement
 
     public override void Blur()
     {
-        ShardImage.color = Color.black;
+        ShardSelectionHighlight.color = blurColor;
     }
 
     public override void Focus()
     {
-        shardMenuUI.ShowDescription(shardData);
-        ShardImage.color = Color.white;
+        if(revealed)
+            shardMenuUI.ShowDescription(shardData);
+        else
+            shardMenuUI.ShowDescription(shardData, "Still waiting to be discovered");
+
+        ShardSelectionHighlight.color = focusColor;
     }
 }

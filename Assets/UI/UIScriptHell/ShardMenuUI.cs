@@ -24,6 +24,8 @@ public class ShardMenuUI : MenuUI
     public Image shardImage;
 
     public TextMeshProUGUI emptyText;
+    public TextMeshProUGUI completionProgress;
+
 
     public override void Init()
     {
@@ -57,7 +59,6 @@ public class ShardMenuUI : MenuUI
 
             ShardMenuUIElement element = Instantiate(shardMenuElement).GetComponent<ShardMenuUIElement>();
             element.transform.SetParent(group.transform, false);
-            Debug.Log((i % cols) + " " + (i / rows));
             element.transform.position = initialPosition.position + ((i % cols) * Vector3.right * xspacing) + ((i / cols) * Vector3.down * yspacing);
             element.parentMenu = this;
             element.parentGroup = group;
@@ -69,22 +70,31 @@ public class ShardMenuUI : MenuUI
             group.menuElements.Add(element);
 
             if (isPauseMenuVersion)
-                element.revealed = true;
+                element.IsRevealed = true;
             else
-                element.revealed = totalShardData.Any(x => x.Id == shard.Id);
-
+                element.IsRevealed = totalShardData.Any(x => x.Id == shard.Id);
         }
+
+        if(completionProgress != null)
+        {
+            float totalShardCount = totalShardData.Select(x => x.ShardValue).Aggregate((x, y) => x + y);
+            float displayShardCount = shardsToDisplay.Select(x => x.ShardValue).Aggregate((x, y) => x + y);
+            completionProgress.text = ((int)(totalShardCount / displayShardCount * 100.0f)).ToString() + "%";
+        }
+
         base.Init();
     }
 
-    public void ShowDescription(Shard shardData)
+    public void ShowDescription(Shard shardData, string forcedDescription = "")
     {
+        string description = string.IsNullOrEmpty(forcedDescription) ? shardData.Description : forcedDescription;
+
         if (isPauseMenuVersion)
-            pauseMenuUI.ShowDescription(shardData.Description);
+            pauseMenuUI.ShowDescription(description);
         else
         {
             shardTitle.text = shardData.FriendlyName;
-            shardDescription.text = shardData.Description;
+            shardDescription.text = description;
         }
 
     }
