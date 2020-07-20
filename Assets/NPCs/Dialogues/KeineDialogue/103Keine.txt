@@ -49,9 +49,11 @@ Oh! Huh, it suddenly just came to me.
 I'm a <b>school teacher</b>. 
 I have been teaching history in this village for a <b>long, long time</b>. 
 Thanks for reminding me of that. 
-Reisen: **Oh! A <b>Personality Shard</b> just manifested!
 
 [instruction] Stage103_Newspaper
+
+Reisen: **Oh! A <b>Personality Shard</b> just manifested!
+
 
 ?{elixir=1} **Maybe I can find something else.  [leave]
 ?{elixir=0} **I'll have to find something. [leave]

@@ -56,6 +56,8 @@ It looked interesting, so I picked it up.
 I guess I dropped it without realizing!
 Whoops, haha! Imagine that!
 
+[instruction] Stage003_Smartphone
+
 Reisen: [expression] angry
 Wait, so it's not yours- 
 
@@ -67,7 +69,6 @@ Yes!?
 Nitori: You want to hear about the <b>contraption</b>, right?
 Let's talk about that instead!
 
-[instruction] Stage003_Smartphone
 (end)
 
 
@@ -81,6 +82,8 @@ Reisen: [expression] angry
 
 Nitori: It's hard to do <b>engineering</b> without one of these, yeah? 
 
+[instruction] Stage003_Wrench
+
 Reisen: [expression] ugh
 Um, sure...?
 [expression] normal
@@ -89,7 +92,6 @@ So, what do you know about the <b>contraptions</b>?
 Nitori: Right, a deal's a deal.
 I'll tell you what I know.
 
-[instruction] Stage003_Wrench
 (end)
 
 Nitori: I probably dropped my <b>tool</b> near the <b>school. [leave]

@@ -50,6 +50,8 @@ I've finished transcribing what I need from it.
 A <b>school teacher</b> in the village was asking to borrow it. 
 Can you bring this to them? 
 
+
+
 Reisen: [expression] sweat
 A <b>school teacher</b>? 
 [expression] sad
@@ -59,9 +61,10 @@ A <b>school teacher</b>?
 [expression] happy
 Sure, I will try.
 
+[instruction] Stage001_Textbook 
+
 Akyu: Thank you very much.
 
-[instruction] Stage001_Textbook 
 (end)
 
 Akyu: Have a nice day. [leave]

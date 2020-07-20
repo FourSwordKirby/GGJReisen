@@ -81,10 +81,11 @@ Ok, I'll trade.
 
 Nitori: Yay! I'm gonna get working on this phone right away.
 
+[instruction] Stage201_Smartphone
+
 Reisen: [expression] sad
 **Was it really a good idea to give it to her...? 
 
-[instruction] Stage201_Smartphone
 (end)
 
 

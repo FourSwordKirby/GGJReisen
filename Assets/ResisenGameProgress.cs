@@ -179,6 +179,7 @@ public class ReisenGameProgress: GameProgress
     public ReisenNpcCharacterProgress Nitori;
     public ReisenNpcCharacterProgress Akyu;
     public ReisenNpcCharacterProgress LunarReisen;
+    public ReisenNpcCharacterProgress Orb;
 
     public ReisenNpcCharacterProgress Miyoi;
     public ReisenNpcCharacterProgress Kogasa;

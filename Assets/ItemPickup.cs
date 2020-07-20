@@ -13,14 +13,18 @@ public class ItemPickup : MonoBehaviour
         {
             case ReisenPickupItemType.Wrench:
                 ReisenGameManager.instance.gameProgress.Player.Wrench = Assignment.Inventory;
+                ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Wrench +1" });
                 break;
             case ReisenPickupItemType.Newspaper:
                 ReisenGameManager.instance.gameProgress.Player.Newspaper = Assignment.Inventory;
+                ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Newspaper +1" });
                 break;
             case ReisenPickupItemType.Shard:
+                ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Shard +1" });
                 Debug.Log("potentially pick up a shard");
                 break;
         }
+
         ItemSprite.SetActive(false);
     }
 }
