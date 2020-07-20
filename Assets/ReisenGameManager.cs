@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class ReisenGameManager : MonoBehaviour
 {
     public ReisenGameProgress gameProgress;
+
     public static ReisenGameManager instance;
     public int spawnLocation;
     public static bool isNewGame;
@@ -345,6 +346,23 @@ public class ReisenGameManager : MonoBehaviour
         RpgGameManager.instance.ResumeGameplay();
 
         SceneManager.LoadScene("TitleScreen");
+
+        Destroy(this.gameObject);
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    internal void StartEnding()
+    {
+        StartCoroutine(EndingSequence());
+    }
+
+    IEnumerator EndingSequence()
+    {
+        yield return TransitionManager.instance.screenFader.FadeOut();
+
+        RpgGameManager.instance.ResumeGameplay();
+
+        SceneManager.LoadScene("Ending1");
 
         Destroy(this.gameObject);
         SceneManager.sceneLoaded -= OnSceneLoaded;
