@@ -24,10 +24,10 @@ Reisen: It’s written in a language I don’t know. Is it valuable?
 Kosuzu: Hmm, this seems to be German? It’s a… technology magazine from the Outside world.
 This is neat. We can buy this off your hands. Here’s your payment.
 Reisen: Thanks.
+[instruction] Stage200_Magazine
 Kosuzu: Oh right, this is a <b>book shop</b>!
 Right, I should be selling and buying books! How did I forget?
 Thanks for jogging my memory!
-[instruction] Stage200_Magazine
 (end)
 
 Kosuzu: Whoa! How’d you come into possession of that!? [scroll]
@@ -38,8 +38,8 @@ Reisen: **This is text written by a Youkai. Humans shouldn’t be able to read t
 Kosuzu: So, uh, are you willing to sell it, dear customer?
 Reisen: Sure thing.
 Kosuzu: Yay!
-Kosuzu: Oh right, this is <b>Suzunaan</b>, the local <b>book shop</b>!
 [instruction] Stage200_Scroll
+Kosuzu: Oh right, this is <b>Suzunaan</b>, the local <b>book shop</b>!
 (end)
 
 Kosuzu: See ya! [end]

@@ -17,9 +17,9 @@ If you do not learn fear from past tales, then you may end up hurting yourself i
 Reisen: Ahh.... Is that so... 
 **To think I'd get scolded here...
 **Hm?
+[instruction] Stage200_Correct
 **Another personality shard!
 
-[instruction] Stage200_Correct
 (end)
 
  

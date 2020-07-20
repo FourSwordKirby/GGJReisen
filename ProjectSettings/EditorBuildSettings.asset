@@ -5,12 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Testing/SampleScene2.unity
-    guid: 81347fadf684e0d499a436c18f9dd9ca
-  - enabled: 0
-    path: Assets/Scenes/Testing/SampleScene1.unity
-    guid: 2be981beb58508e42978038afff28815
   - enabled: 1
     path: Assets/Scenes/VillageAkyu.unity
     guid: 4564383170c33ab47adfcec6b5980922
@@ -35,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prologue.unity
     guid: 025ab6ab8d817414f81a54214654ed7f
+  - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 5e297fb00a2fcb343be90b85f060768a
   m_configObjects: {}
