@@ -3976,7 +3976,7 @@ PrefabInstance:
     - target: {fileID: 335369753230861667, guid: 7537dd874bf296a48b74079ee64a79f9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.91
       objectReference: {fileID: 0}
     - target: {fileID: 2077702299496918607, guid: 7537dd874bf296a48b74079ee64a79f9,
         type: 3}
@@ -7523,6 +7523,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212093637441878869, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: gameProgress.Player.ShardsAcquired.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8750121352881991921, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
