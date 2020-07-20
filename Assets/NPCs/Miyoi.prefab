@@ -409,6 +409,8 @@ MonoBehaviour:
   - stage: 100
     dialogue: {fileID: 4900000, guid: c01af1f7e2a704149927cd022dc4dcc0, type: 3}
   dialoguePromptTrigger: {fileID: 3900393675777100529}
+  cubeForm: {fileID: 0}
+  stickForm: {fileID: 0}
   StageWasUpdated: 0
 --- !u!1001 &5002769050301264454
 PrefabInstance:
@@ -486,7 +488,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5393201ceb4634d4fb77cffa9b036d9c, type: 2}
+      objectReference: {fileID: 2100000, guid: b39efdcfffae354488a081c18ae96cf2, type: 2}
     - target: {fileID: 2605394467221013306, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -506,6 +508,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049049504856623737, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.488
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049049504856623737, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1476647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049049504856623737, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.488
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -655,23 +672,23 @@ PrefabInstance:
     - target: {fileID: 8703541415378347464, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.04557228
+      value: 0.067811556
       objectReference: {fileID: 0}
     - target: {fileID: 8703541415378347464, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.04557228
+      value: 0.067811556
       objectReference: {fileID: 0}
     - target: {fileID: 8703541415378347464, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.04557228
+      value: 0.067811556
       objectReference: {fileID: 0}
     - target: {fileID: 8703541415378347465, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2d138ca9cf20cd74ba850c432bc7506b,
+      objectReference: {fileID: 21300000, guid: 6c52ef3232d037f468474468673c9ba0,
         type: 3}
     - target: {fileID: 9164995063544039961, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
