@@ -1,95 +1,90 @@
-Reisen: Ah! 
+Reisen: [expression] shock
+Ah!
 
-LunarReisen: Ah! 
+LunarReisen: Ah!
 
-Reisen: It's you! 
+Reisen: [expression] sweat
+It's you! 
 
 LunarReisen: Right, I remember now! 
-
 You're <b>Reisen</b>!  
+You're my masters' previous pet!
+The one that ran away to Earth! 
 
-You're my masters' previous pet that ran away to Earth! 
-
-Reisen: Y-yeah. And you're also <b>Reisen</b>, right? 
-
+Reisen: Y-yeah.
+[expression] normal
+And you're also <b>Reisen</b>, right? 
+[expression] sad
 You're my replacement at the Lunar Capital now... 
 
 LunarReisen: ... 
 
-Reisen: ... Life's rough up there, isn't it? 
+Reisen: [expression] heh
+... Life's rough up there, isn't it? 
 
 LunarReisen: ...Yes. As usual... 
 
-Reisen: So what was that about the Watatsuki Sisters? 
-
-What are the lunar princesses doing, interfering with Earth again? 
+Reisen: [expression] normal
+So what was that about the <b>Watatsuki Sisters</b>? 
+[expression] annoy
+Are the lunar princesses interfering with Earth again?
 
 LunarReisen: Right! The <b>Dimensionality Reducers</b>! 
-
-We were transporting those from the moon to the earth via a quantum tunnel. 
-
-But some outside interference knocked them off trajectory, 
-
-and they crash landed in the village. 
-
-I was sent to make sure they hadn't broken- 
-
+We were transporting them from the moon to Earth with a quantum tunnel. 
+But an outside interference knocked them off trajectory...
+And they crash landed in the village. 
+I'm here to make sure they weren't broken- 
 Though I guess it's too late now. 
 
-Reisen: So I was on the money, wasn't I? 
-
-This cube phenomenon isn't really a virus, 
-
+Reisen: [expression] sad
+So I was on the money, wasn't I? 
+[expression] normal
+This cube phenomenon isn't really a virus...
 But an effect of the reducer's <b>simplification algorithm</b> leaking out. 
 
-LunarReisen: Yes. But it's okay. 
-
-Lady Toyohime taught me how to invoke the reversal algorithm. 
-
+LunarReisen: Yes... But it's okay now.
+Lady Toyohime taught me how to invoke the <b>reversal algorithm</b>. 
 I had somehow forgotten when I arrived... 
 
-Reisen: Well, get moving. I'd like to get this phenomenon fixed finally. 
+Reisen: [expression] ugh
+Well, get moving.
+[expression] sad
+I'd like to get this phenomenon fixed finally. 
 
 LunarReisen: R-right! 
+Um...
+There's a small problem...
 
-Um... there's a small problem. 
-
-Reisen: Oh no... what now? 
+Reisen: [expression] annoy
+Oh no... what now? 
 
 LunarReisen: The <b>simplification algorithm</b> works by removing information to compress data. 
-
-The excess information is usually stored as a small key. 
-
-We need that key to fully reconstruct everything that was simplified. 
-
+The excess information is usually stored as a <b>small key</b>. 
+We need that key to reconstruct everything that was simplified. 
 Otherwise, the reversal process will only be 90% correct. 
 
-Reisen: Okay... so where do we get the key? 
+Reisen: [expression] sweat
+Okay... so where do we get the <b>key</b>? 
 
 LunarReisen: Well, I don't know. 
-
 One is made each time you put something into the container. 
-
-But since the simplification leaked out of the container, 
-
+But since the simplification leaked out of the container...
 I don't know where that key could be... 
 
-Reisen: What's it look like? 
+Reisen: [expression] normal
+What's it look like?
 
 LunarReisen: Tiny rock shards, I guess? 
 
-Reisen: **... Could that be the <b>Personality Shards</b>? 
-
+Reisen: [expression] sad
+**... Could that be the <b>Personality Shards</b>? 
+[expression] normal
 Like these things? 
 
-LunarReisen: Yes those! 
-
-Great, this will work out perfectly then! 
-
-Please bring me all of the shards you've collected when you're ready! 
-
+LunarReisen: Yes those!
+Great, this will work perfectly then!
+When you're ready, bring me all of the shards you've collected!
 Make sure you've got all of them! 
-
 Otherwise we might end up with 90% of a human in a village! 
 
-[instruction] Stage1000 
+[instruction] Stage1000
