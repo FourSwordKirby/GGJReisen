@@ -1,6 +1,14 @@
 Kosuzu: My name is <b>Kosuzu Motoori</b>!
-Ah, sorry for that random outburst, miss medicine peddler!
-I suddenly felt like I had to shout that out for some reason. Please ignore that haha...
+
+Reisen: [expression] shock
+...
+
+Kosuzu: Ah, sorry for that random outburst!
+I suddenly felt like I had to shout that...
+Please ignore that haha...
 How embarrassing...
-Reisen: **A personality shard appeared! And a big one!
+
+Reisen: [expression] sweat
+**A personality shard appeared! And a big one!
+
 [instruction] Stage1000

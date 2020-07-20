@@ -17,6 +17,13 @@
     public void Akyu_Stage001_Textbook()
     {
         GameProgress.Player.TextBook = Assignment.Akyu;
+
+        // When trading textbook, increment Kosuzu's plotline too
+        if (GameProgress.Kosuzu.Stage < 100)
+        {
+            GameProgress.Kosuzu.Stage = 100;
+        }
+
         GameProgress.Player.AddShard(Shard.Akyu_Textbook);
         Stage = 100;
     }

@@ -1,45 +1,104 @@
-Kosuzu: Hey, thanks for that coughing medicine earlier!
-Huh? Was everything always so dull and gray?
-We not only sell merchandise, but we also purchase it here. 
-What kind of merchandise? Umm, it’s that kind you know. Merchandise!
-Reisen: **Do I have something for her?
+Kosuzu: Hey if you have <i>things</i> that you don't need...
+We can buy them off you too!
 
-?{elixir=1} {magazine=1} {scroll=1} [choice] [Hand over the Elixir | elixir] [Hand over the magazine | magazine] [Hand over the Youkai scroll | scroll] [Leave | end]
-?{elixir=1} {magazine=1} [choice] [Hand over the Elixir | elixir] [Hand over the magazine | magazine] [Leave | end]
-?{elixir=1} {scroll=1} [choice] [Hand over the Elixir | elixir] [Hand over the Youkai scroll | scroll] [Leave | end]
-?{elixir=1} [choice] [Hand over the Elixir | elixir] [Leave | end]
-?{magazine=1} {scroll=1} [choice] [Hand over the magazine | magazine] [Hand over the Youkai scroll | scroll] [Leave | end]
-?{magazine=1} [choice] [Hand over the magazine | magazine] [Leave | end]
-?{scroll=1} [choice] [Hand over the Youkai scroll | scroll] [Leave | end]
-[choice] [Leave | end]
+Reisen: [expression] sweat
+What kinds of things are you talking about?
 
-Kosuzu: Oh? What’s this? [elixir]
-Reisen: It’s a second medicine to cure any additional illness that went with the cough.
+Kosuzu: Umm, you know, <i>things!</i>
+
+Reisen: [expression] annoy
+**No. I don't know.
+
+Kosuzu: Sorry, I'm feeling a little dizzy.
+Is this a side-effect of the cough earlier?
+
+Reisen: [expression] normal
+**Do I have something for her?
+
+?{elixir=1} {magazine=1} {scroll=1} [choice] [Give Elixir | elixir] [Give magazine | magazine] [Give Youkai scroll | scroll] [Leave | leave]
+?{elixir=1} {magazine=1} [choice] [Give Elixir | elixir] [Give magazine | magazine] [Leave | leave]
+?{elixir=1} {scroll=1} [choice] [Give Elixir | elixir] [Give Youkai scroll | scroll] [Leave | leave]
+?{elixir=1} [choice] [Give Elixir | elixir] [Leave | leave]
+?{magazine=1} {scroll=1} [choice] [Give magazine | magazine] [Give Youkai scroll | scroll] [Leave | leave]
+?{magazine=1} [choice] [Give magazine | magazine] [Leave | leave]
+?{scroll=1} [choice] [Give Youkai scroll | scroll] [Leave | leave]
+[choice] [Leave | leave]
+
+
+Kosuzu: Oh? What's this? [elixir]
+
+Reisen: It's medicine to cure any symptoms that came with the cough.
+
 Kosuzu: Oh, thanks Miss Medicine Peddler!
+My head's been feeling a bit hazy today.
+I guess the cough made me light headed.
+
 [instruction] Stage200_Elixir
 (end)
 
-Kosuzu: Oh? This is a… [magazine]
-Reisen: It’s written in a language I don’t know. Is it valuable?
-Kosuzu: Hmm, this seems to be German? It’s a… technology magazine from the Outside world.
-This is neat. We can buy this off your hands. Here’s your payment.
-Reisen: Thanks.
+
+Kosuzu: Oh? This is a... [magazine]
+Reisen: It's a magazine written in a language I don't know.
+Kosuzu: Hmm, this seems to be German?
+Reisen: [expression] sweat
+You can read it?
+
+Kosuzu: Yeah. It's a technology magazine from the Outside world.
+This is neat. We can buy this off your hands.
+Here's your payment.
+
 [instruction] Stage200_Magazine
+
 Kosuzu: Oh right, this is a <b>book shop</b>!
-Right, I should be selling and buying books! How did I forget?
-Thanks for jogging my memory!
+
+Reisen: [expression] ugh
+No kidding...
+
+Kosuzu: Ahaha, sorry. I'm feeling a bit off today.
+It's like... I keep forgetting a lot of things.
+And I have these random bursts where I remember what I forgot.
+
+Reisen: [expression] sad
+**That must be because of the Lunarian <b>virus</b>...
+
 (end)
 
-Kosuzu: Whoa! How’d you come into possession of that!? [scroll]
-I’d be willing to pay for that right now! How much!?
-Reisen: Do you know what this is?
-Kosuzu: Err, I mean… it’s looks like a rare manuscript. It’s a very valuable piece of literary work. Yes.
-Reisen: **This is text written by a Youkai. Humans shouldn’t be able to read this but she seemed to recognize it immediately.
+
+Kosuzu: Whoa! How'd you come into possession of that!? [scroll]
+
+Reisen: [expression] shock
+Huh? I uh-
+
+Kosuzu: Do you need it!? I'll buy it right now! How much!?
+
+Reisen: [expression] sweat
+Do you know what this is?
+
+Kosuzu: Err, I mean...
+It's looks like a rare scroll.
+It's a very valuable piece of literary work. Yes.
+
+Reisen: **This scroll is about the <b>Dimensionality Reducers</b>.
+**But it's written by Youkai, in a language I don't know.
+**Did she pick up on that somehow?
+
 Kosuzu: So, uh, are you willing to sell it, dear customer?
-Reisen: Sure thing.
+
+Reisen: [expression] sad
+Maybe later. I need it right now.
+
+Kosuzu: Aww... Could I... see it though?
+
+Reisen: [expression] sweat
+I suppose so.
+
 Kosuzu: Yay!
+Wait my dizzy spell just cleared up all of a sudden!
+This is <b>Suzunaan</b>, the local <b>book shop</b>!
+
 [instruction] Stage200_Scroll
-Kosuzu: Oh right, this is <b>Suzunaan</b>, the local <b>book shop</b>!
 (end)
 
-Kosuzu: See ya! [end]
+Kosuzu: See ya! [leave]
+
+[end]

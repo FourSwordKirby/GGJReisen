@@ -1,53 +1,133 @@
-Kosuzu: Hey, thanks for that coughing medicine earlier! 
-I’m really bored right now. 
-Some people say that being able to feel bored is a blessing in disguise. 
-But in the west, there’s a youkai known as the Boogeyman that comes children who have too much free time. 
-Heh heh, maybe I should keep being bored then? 
-What do you think? 
-Reisen: **I should choose my words carefully.
+Reisen: I delivered the <b>history book</b>.
 
-[choice] [Would prefer being bored over working. | work] [I see boredom as an opportunity. | opportunity] [I’d rather not get attacked by Youkai again. | youkai] [Give me a moment to think. | leave]
-    
-Reisen: If you’re bored, that means you have the luxury of free time from work. [work]
-I have to work every day. Sometimes, I envy you people who have time to do other things. 
+Kosuzu: Awesome! Thanks!
+And thanks again for that coughing medicine earlier!
+
+Reisen: [expression] sad
+Yeah, no problem...
+
+Kosuzu: Hey, I'm really bored right now. 
+They say that being bored is a blessing in disguise. 
+But in the Outside World, there's a youkai known as the Boogeyman.
+The Boogeyman comes for children who have too much free time. 
+Heehee, maybe I should keep being bored then? 
+What do you think?
+
+Reisen: [expression] sad
+**In order to manifest a <b>Personality Shard</b>...
+**I need to direct the conversation to reveal their personality.
+[expression] sweat
+**I should choose my words carefully.
+
+[choice] [Prefer boredom over working. | work] [Boredom is opportunity. | opportunity] [No Youkai please... | youkai] [Let me think. | leave]
+
+
+Reisen: If you're bored, that means you have free time from work. [work]
+[expression] annoy
+I have to work <i>very hard</i> every day.
+[expression] sad
+Sometimes, I envy people who have time to do other things. 
+
 Kosuzu: Hmm, I have to run this shop every day too. 
-It’s not like I don’t get what you mean, but… 
-Don’t you kinda wish that things could be more exciting sometimes? 
-If all you think about is work, work, work, is there any meaning to life? 
-You’d just be repeating what everyone else before you has done. 
-Reisen: There is no shame in carrying out your assigned duties. 
-Have you heard? The rabbits on the moon are content to pound mochi all day, in order to atone for their master’s sins. 
-Kosuzu: Haha, I can’t help but pity those rabbits… 
-Reisen: **I seem to have hit the wrong note. Talking to humans is exhausting...
+It's not like I don't get what you mean, but... 
+Don'tcha wish that things were more exciting? 
+If all you think about is work, work, work...
+Is there any meaning to life?
+There's nothing special to a life like that.
+
+Reisen: [expression] normal
+There's no shame in following your assigned duties.
+[expression] sad
+The rabbits on the moon are content to pound mochi all day...
+All in order to atone for their master's sins.
+
+Kosuzu: Haha, I can't help but pity those rabbits... 
+
+Reisen: [expression] ugh
+**I seem to have hit the wrong note.
+**Talking sure is exhausting...
+
 [instruction] Stage100_Wrong
 (end)
+
 
 Reisen: I see boredom as an opportunity to try new things. [opportunity]
-Well, in my case, I need to be careful to only try things that aren’t against my master’s strict rules… 
-Kosuzu: Ah, but there’s not much to do around here, is there? 
-Reisen: I’m sure you can find something if you try. 
-I don’t have very much free time, so I don’t get to experiment very often. 
-But if I did, I’d try to make a medicine on my own without help from my master. 
-Kosuzu: Heh, that sounds exciting. Do show me if you make something! 
-Reisen: **I ended up talking more about myself than she did.
+[expression] annoy
+Well, in my case, I need to be careful...
+My master has a lot of strict rules on what I can do...
+
+Kosuzu: But there's hardly anything to around here!
+
+Reisen: [expression] normal
+I'm sure you can find something if you try.
+[expression] sad
+I don't have much free time, so I don't get to try many things...
+[expression] happy
+But like... I guess I'd want to try making a medicine of my own.
+One without help from my master.
+
+Kosuzu: Hehh, that sounds exciting.
+Do show me if you make something! 
+
+Reisen: [expression] happy
+...
+[expression] shock
+**I ended up talking more about myself than she did!
+
 [instruction] Stage100_Wrong
 (end)
 
-Reisen: It sounds awful that a Youkai would attack when somebody was finally able to have time to relax. [youkai]
-I’d really rather not have to deal with more random attacks… 
-Kosuzu: Huh!? You’ve been attacked before? How are you still alive? 
-Reisen: A-ah, yeah. It was just a small youkai though. I managed to chase it off with some of the aromatics I carry though. 
-**That’s a lie. That was a full-on battle with a whimsical vampire...
-Kosuzu: Wow, I didn’t know medicine peddlers could be so awesome! 
-There’s so much more to Youkai beyond what the human village is willing to talk about. 
-Getting caught up in a Youkai scheme of some sort, now that would be really exciting. 
-Ah, not saying that I want to be caught up in one, that’d be terrifying. 
-But you know, I can’t help but wonder! 
-Reisen: **Hm? Another personality shard!
+
+Reisen: [expression] sweat [youkai]
+What is this Boogeyman business...?
+[expression] sad
+It sounds awful that you could get attacked for having free time.
+Are people in the Outside World even more overworked than moon rabbits?
+[expression] ugh
+I'd rather not deal with more random Youkai attacks...
+
+Kosuzu: "More Youkai Attacks"!?
+You've been attacked before!?
+How are you still alive?
+
+Reisen: [expression] shock
+A-ah, yeah.
+[expression] heh
+Heh, yeah, it wasn't a big deal.
+I've knocked out plenty of Youkai before.
+I once beat up a vampire in her own home.
+[expression] annoy
+**Well, I got trashed the first time...
+
+Kosuzu: Wow, I didn't know medicine peddlers could be so awesome!
+Please come visit the shop more often!
+I'd love to hear more of your stories!
+
+Reisen: [expression] shock
+Huh? Uh, sure...
+
+Kosuzu: So you, like, must know their weak points and stuff, right?
+I've been studying and reading a lot about Youkai...
+From uh... special Youkai books.
+There's so much more to Youkai beyond what everyone talks about!
+Like the schemes they have going behind human backs...
+Getting caught up in one sounds really exciting!
+Ah, not saying that I want to be caught up in one.
+That'd be terrifying. 
+But you know, I can't help but wonder!
+
+Reisen: [expression] sweat
+**Is she a... Youkai enthusiast...?
+**Did such humans exist...?
+[expression] shock
+**Another personality shard!
+
 [instruction] Stage100_Correct
 (end)
 
+
 Kosuzu: Sure, take your time. [leave]
 (end)
+
 
 [end]

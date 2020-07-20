@@ -1,28 +1,112 @@
-Kosuzu: *cough* Ack! Huff. Hmm? Ah! 
-Welcome to the… uh… what was this place again?
-Right, the shop! Yes, the <b>shop!</b> We have… <b>stuff</b>! *cough* 
+Kosuzu: *cough* Ack! Huff...
 
-Reisen: **Is she coughing? It’s hard to tell when they’re just cubes...
-[expression] ugh
+Reisen: [expression] sweat
+Is that cube... coughing?
 
-?{elixir=1} {cough=1} [choice] [Hand over the elixir  | elixir] [Hand over the cough medicine  | cough] [Leave | leave]
-?{cough=1} [choice] [Hand over the cough medicine  | cough] [Leave | leave]
-?{elixir=1} [choice] [Hand over the elixir  | elixir] [Leave | leave]
+Kosuzu: Hmm? Ah! 
+Welcome to... uh... what was this place again?
+Right, the <i>shop</i>! Yes, the <i>shop!</i>!
+Welcome to the <i>shop!</i>!
+We have... <i>things</i> in stock! *cough* 
+
+Reisen: [expression] normal
+**Oh, it's another a person...
+[expression] annoy
+**These cubes are hard to get used to...
+
+Kosuzu: Can I- *cough* -help you? Ahem! 
+
+Reisen: [expression] sad
+**Do I have something for her?
+
+?{elixir=1} **I have an elixir that can cure both her cough and the virus...
+?{elixir=1} **But I only have a limited quantity.
+
+
+?{elixir=1} {cough=1} [choice] [Give elixir | elixir] [Give cough medicine | cough] [Leave | leave]
+?{cough=1} [choice] [Give cough medicine | cough] [Leave | leave]
+?{elixir=1} [choice] [Give elixir | elixir] [Leave | leave]
 [choice] [Leave | leave]
 
 
 Kosuzu: Oh? *cough* Is this the cough medicine I asked for? [elixir]
-[instruction] Stage000_Elixir 
-Thanks for bringing it! (end)
+
+Reisen: [expression] sweat
+No, it's-
+
+Kosuzu: Thanks for bringing it!
+
+Reisen: [expression] shock
+**She just drank the entire thing!
+
+[instruction] Stage000_Elixir
+(end)
+
 
 Kosuzu: Oh? *cough* Is this the cough medicine I asked for? [cough]
-[instruction] Stage000_Cough (end)
 Thanks for bringing it! 
-Ah, my throat feels much better… Now back to working! 
-Hmm, I was supposed to deliver this merchandise to someone. 
-Hey miss, can you get this <b>history book</b> to the right <b>person</b>?
+
+Reisen: [expression] sweat
+No problem...
+[expression] sad
+**If she ordered medicine before, I probably know her...
+**Though, she probably doesn't recognize me without my usual disguise.
+[expression] sweat
+**Wait... I'm not disguised as a human right now.
+
+Kosuzu: Ah, my throat feels much better... Back to work!
+
+Reisen: Hey, aren't you be scared of me?
+
+Kosuzu: Am I supposed to be?
+
+Reisen: [expression] sad
+Well, I suppose you don't have to be...
+
+Kosuzu: I treat all my customers with respect!
+So long as you treat my wares with respect too!
+
+Reisen: [expression] sad
+**Strange, does she not see me as a <b>youkai</b>?
+**Is this also a part of the <b>virus</b>?
+**Hold on, I should know this person...
+**Did I sell medicine to someone who wasn't afraid of Youkai?
+
+Kosuzu: Hmm, I was supposed to deliver this to someone.
+But I can't leave the shop right now...
+Hey miss, could you do me a favor?
+
+Reisen: **It's no good... I never talked much to my customers.
+**Maybe if she wasn't a cube I would know who she is.
+**I think...
+
+Kosuzu: Hey miss?
+
+Reisen: [expression] shock
+Huh?
+[expression] sweat
+Ah, yeah sure. What did you say?
+
+Kosuzu: Great! Please deliver this <b>history book</b> for me!
+
+Reisen: [expression] happy
+Yeah of course!
+[expression] shock
+Wait, what did I just agree to!?
+
+Kosuzu: The recipient is...
+...Huh? I don't remember.
+Did the cough get to me...?
+Well, in any case, not many people borrow books these days.
+I'm sure if you ask around, you'll find the right person!
+
+Reisen: **What a ridiculous request!
+
+[instruction] Stage000_Cough
+(end)
 
 Kosuzu: *cough* Do come back again to our shop! [leave]
 (end)
+
 
 [end]
