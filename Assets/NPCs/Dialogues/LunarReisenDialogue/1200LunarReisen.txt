@@ -1,65 +1,61 @@
-Reisen: Ah! 
+Reisen: [expression] shock
+Ah! 
 
 LunarReisen: Ah! 
 
-Reisen: It's you! 
+Reisen: [expression] sweat
+It's you! 
 
-LunarReisen: Right, I remember now! Huh? It's you! 
+LunarReisen: Right, I remember you now!
 
-Reisen: <b>Reisen</b>, right? 
-
+Reisen: [expression] normal
+You're <b>Reisen</b>, right? 
 The Honorable Watatsuki Sisters' new pet... 
 
 LunarReisen: Yes, and you are... also <b>Reisen</b>. 
-
 The Honorable Watatsuki Sister's previous pet that ran away. 
 
-Reisen: ... 
+Reisen: [expression] annoy
+... 
 
 LunarReisen: ... 
 
-Reisen: What's a moon rabbit doing here? 
-
-I haven't seen you since that sudden visit at Eientei. 
+Reisen: [expression] normal
+What's a moon rabbit doing here? 
+I haven't seen you since you or the Lunar Princesses since Eientei.
 
 LunarReisen: Um... Frankly I don't remember... 
-
 I was here to do something <b>important</b>. 
-
 I think I lost something <b>important</b> too... 
 
-Reisen: Are you the Lunarian that's causing trouble here? 
-
+Reisen: [expression] sweat
+Are you the Lunarian that's causing trouble here? 
 The one that set the virus upon town? 
 
 LunarReisen: A virus...? 
-
 No, I don't think I was sent to do anything like that... 
 
-Reisen: Oh? 
+Reisen: [expression] annoy
+Oh?
 
-LunarReisen: No, really! I wasn't told anything like that! Really! 
+LunarReisen: No, really!
+I wasn't told anything like that! Really! 
+You know how the Lunarians are!
+They don't tell us Moon Rabbits anything important... 
 
-You know how the Lunarians are! 
-
-They don't tell us moon rabbits anything important... 
-
-Reisen: Well, I kind of understand. 
+Reisen: [expression] ugh
+Well, I kind of understand. 
 
 LunarReisen: Waaah, what is going on!? 
-
 Why did I get sent down to earth? I can't remember! 
-
-Can I just run for now? 
-
+Can I just run for now?
 You know what, I don't care anymore! 
+I'm going to go hide at the shrine!
+If anyone asks, the shrine maiden kidnapped me! 
+Don't tell anyone, please!
 
-I'm going to go hide at the shrine and say the shrine maiden abducted me! 
-
-Don't tell anyone, please! 
-
-Reisen: Ah, yeah, I guess. 
-
+Reisen: [expression] annoy
+Ah, yeah, I guess. 
+[expression] sweat
 I guess that's a good plan... 
-
-**Sorry Reimu. 
+**Sorry Reimu.
