@@ -436,6 +436,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LunarReisen
       objectReference: {fileID: 0}
+    - target: {fileID: 541249608831779773, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 541249608831779774, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -491,6 +496,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1353543425162924659, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2257679838649051404, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -515,6 +525,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049049504856623737, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9288444
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049049504856623737, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0162659
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049049504856623737, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0701871
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -546,12 +571,32 @@ PrefabInstance:
       propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8703541415378347464, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.33512163
+      objectReference: {fileID: 0}
+    - target: {fileID: 8703541415378347464, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.33512163
+      objectReference: {fileID: 0}
+    - target: {fileID: 8703541415378347464, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.33512163
+      objectReference: {fileID: 0}
     - target: {fileID: 8703541415378347465, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: cd29cd947e6ac204984cd262e724db3b,
         type: 3}
+    - target: {fileID: 9164995063544039961, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 140421137813915342, guid: 8247f7c181319ac4a8e7f0d741cc1563, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8247f7c181319ac4a8e7f0d741cc1563, type: 3}
