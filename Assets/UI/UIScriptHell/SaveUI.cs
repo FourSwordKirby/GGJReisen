@@ -39,6 +39,7 @@ public class SaveUI : MenuUI
         InputDirection dir = Controls.getInputDirectionDown();
         if (dir == InputDirection.N)
         {
+            AudioMaster.instance.PlayMenuSelectSfx();
             selectedSaveIndex--;
             if (selectedSaveIndex < 0)
                 selectedSaveIndex = savePanels.Count - 1;
@@ -46,6 +47,7 @@ public class SaveUI : MenuUI
         }
         else if (dir == InputDirection.S)
         {
+            AudioMaster.instance.PlayMenuSelectSfx();
             selectedSaveIndex++;
             if (selectedSaveIndex >= savePanels.Count)
                 selectedSaveIndex = 0;
@@ -54,7 +56,8 @@ public class SaveUI : MenuUI
 
         if (Controls.confirmInputDown())
         {
-            if(mode == SavePanelMode.Saving && currentSavePoint != null)
+            AudioMaster.instance.PlayConfirmSfx();
+            if (mode == SavePanelMode.Saving && currentSavePoint != null)
             {
                 ReisenGameManager.instance.SaveGame(savePanels[selectedSaveIndex].fileName, currentSavePoint);
                 Init();
@@ -75,6 +78,7 @@ public class SaveUI : MenuUI
         }
         if (Controls.cancelInputDown())
         {
+            AudioMaster.instance.PlayCancelSfx();
             if (!isGameplayMenu)
             {
                 if (persistOnExit)

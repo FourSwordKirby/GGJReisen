@@ -12,7 +12,11 @@ public class AudioMaster : MonoBehaviour
     //public List<AudioMixerSnapshot> snapshots;
 
     public BgmController bgmController;
-    public List<AudioTrack> audioMixes;
+    public List<AudioTrack> bgmAudioMixes;
+
+    public SfxController sfxController;
+    public List<AudioTrack> soundEffects;
+
 
     public AudioClip battleStart;
 
@@ -46,20 +50,20 @@ public class AudioMaster : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            bgmController.SwitchTrack(audioMixes[0].track);
+            bgmController.SwitchTrack(bgmAudioMixes[0].track);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            bgmController.SwitchTrack(audioMixes[1].track);
+            bgmController.SwitchTrack(bgmAudioMixes[1].track);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            bgmController.SwitchTrack(audioMixes[2].track);
+            bgmController.SwitchTrack(bgmAudioMixes[2].track);
         }
 
         if(Input.GetKeyDown(KeyCode.Alpha4))
         {
-            bgmController.SwitchTrackWithTransition(battleStart, audioMixes[0].track);
+            bgmController.SwitchTrackWithTransition(battleStart, bgmAudioMixes[0].track);
         }
         
         masterMixer.SetFloat("MasterVolume", Mathf.Log10(Mathf.Lerp(0.0001f, 1.0f, masterVolume)) * 20);
@@ -70,13 +74,51 @@ public class AudioMaster : MonoBehaviour
 
     internal void PlayTrack(string trackName)
     {
-        AudioTrack prologueTrack = audioMixes.Find(x => x.name == trackName);
+        AudioTrack prologueTrack = bgmAudioMixes.Find(x => x.name == trackName);
         bgmController.SwitchTrack(prologueTrack.track);
     }
 
     public void PlayPrologueTrack()
     {
-        AudioTrack prologueTrack = audioMixes.Find(x => x.name == "Prologue");
+        AudioTrack prologueTrack = bgmAudioMixes.Find(x => x.name == "Prologue");
         bgmController.SwitchTrack(prologueTrack.track);
+    }
+
+    internal void PlaySfx(string sfxName)
+    {
+        AudioTrack sfx = bgmAudioMixes.Find(x => x.name == sfxName);
+        sfxController.playSfx(sfx.track, 1.0f);
+    }
+
+    internal void PlayMenuSelectSfx()
+    {
+        AudioTrack sfx = soundEffects.Find(x => x.name == "MenuSelect");
+        sfxController.playSfx(sfx.track, 1.0f);
+    }
+
+
+    internal void PlayConfirmSfx()
+    {
+        AudioTrack sfx = soundEffects.Find(x => x.name == "Confirm");
+        sfxController.playSfx(sfx.track, 1.0f);
+    }
+
+
+    internal void PlayCancelSfx()
+    {
+        AudioTrack sfx = soundEffects.Find(x => x.name == "Cancel");
+        sfxController.playSfx(sfx.track, 1.0f);
+    }
+
+    internal void PlayTransformSfx()
+    {
+        AudioTrack sfx = soundEffects.Find(x => x.name == "Transform");
+        sfxController.playSfx(sfx.track, 1.0f);
+    }
+
+    internal void PlayItemGetSfx()
+    {
+        AudioTrack sfx = soundEffects.Find(x => x.name == "ItemGet");
+        sfxController.playSfx(sfx.track, 1.0f);
     }
 }
