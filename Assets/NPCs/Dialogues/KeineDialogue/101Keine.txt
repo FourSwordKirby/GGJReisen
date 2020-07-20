@@ -1,29 +1,54 @@
-Keine: If this is your first time here, you should have a look around. 
+Keine: Is this your first time here? Do you need a tour?
 
-There are all sorts of <b>stuff</b> and <b>people</b> around. 
+Reisen: [expression] sad
+No, I've...
+[expression] sweat
+...
+**I've been here plenty of times...
+**But now that everything is a cube...
+**I can't tell what's what anymore.
 
-Reisen: That's awfully vague. 
+Keine: If you need directions, I can help.
+Like for example, that right there is a <i>building</i>.
 
-Keine: Is it? Look over there. That's a <b>building</b>.  
+Reisen: [expression] ugh
+O-oh...
+[expression] sweat
+**I guess it is kind of shaped like one.
+[expression] normal
+What kind of building?
 
-Reisen: Are you pulling my leg here!? 
+Keine: A <i>building</i> of course.
+
+Reisen: [expresion] sweat
+No, no, no... Is it a store? A restaurant? An inn?
+
+Keine: Huh? I told you, it's a <i>building</i>.
+
+Reisen: [expression] angry
+Are you pulling my leg here!? 
 
 Keine: No? I'm trying to be helpful here. 
+Don't you see from the sign in the front?
+It clearly says that it's a <i>building</i>.
 
-Reisen: Can you be more specific? What kind of building is that? 
+Reisen: [expression] ugh
+There's a sign? What...?
+It's all cubes... It doesn't say anything!
 
-It looks like a gray cube to me. 
+Keine: Is your vision okay?
+Wait, are you feeling okay?
+Do you have a fever? 
 
-Keine: Gray cube? I guess it is cube-like, but I wouldn't really call it that. 
-
-Can't you tell from the sign in the front? It's a <b>building</b> that a <b>person</b> works in. 
-
-Reisen: What sign...? I just see cubes... 
-
-Keine: ... Is your vision okay? Wait, are you feeling okay? Do you have a fever? 
-
-Reisen: Am I the lunatic here!? 
-
-**... Is this an effect of the virus? Do they not see what's going on?
+Reisen: [expression] shock
+Am I the lunatic here!? 
+**Does she not see what's going on?
+**And why can't she call it anything other than a <i>building</i>?
+[expression] ugh
+**...
+**Maybe this is an effect of the virus?
+[expression] sad
+**Yukari mentioned the boundary of <b>simplicity and complexity</b>.
+**Are people's words getting <b>simplified</b>...?
 
 [instruction] Stage103

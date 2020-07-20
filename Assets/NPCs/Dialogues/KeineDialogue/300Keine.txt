@@ -1,49 +1,73 @@
 // 300 – Knowing too much history 
 
-Reisen: You... seem to be thinking deeply about something. 
-**Did I guess right?
-Keine: Yeah, something has been bothering me for a while. 
-I know that, as my job, I'm supposed to know a lot of history... 
-But some of these events... feel incredibly real to me? 
+Reisen: Hello?
+
+Keine: Oh, hi again.
+
+Reisen: [expression] sad
+Is something on your mind?
+
+Keine: Yeah, something's been bothering me for a while. 
+As a <b>history teacher</b>, I know a lot of history... 
+But some of these events feel incredibly real to me.
 It's almost like I was there. 
-But that can't be, these events I'm thinking about are from a several generations ago. 
-There's no way I was alive during that time, right? 
-Reisen: How should I know? 
-**This person seems to on the verge of remembering themselves.
-**Do I have anything that can give them the final push? 
+But that can't be...
+These stories are from several generations ago...
+There's no way I was alive during that time, right?
+
+Reisen: [expression] sweat
+I mean, maybe if you were a <b>youkai</b>...
+
+[expression] normal
+**She's recovering her memories...
+**Do I have something for her? 
 
 
-?{elixir=1} {encyclopedia=1} [choice] [Hand over the elixir  | elixir] [Hand over the encyclopedia | encyclopedia] [Leave | leave]
-?{encyclopedia=1} [choice] [Hand over the encyclopedia  | encyclopedia] [Leave | leave]
-?{elixir=1} [choice] [Hand over the elixir  | elixir] [Leave | leave]
+?{elixir=1} {encyclopedia=1} [choice] [Give elixir  | elixir] [Give encyclopedia | encyclopedia] [Leave | leave]
+?{encyclopedia=1} [choice] [Give encyclopedia  | encyclopedia] [Leave | leave]
+?{elixir=1} [choice] [Give elixir  | elixir] [Leave | leave]
 [choice] [Leave | leave]
 
-Keine: What is this?  [elixir]
-Reisen: It's a potion to make you see the same things I do. 
-There is something afflicting the human village right now, and I need you to see it. 
-Keine: Afflicting the human village? 
-... Alright, for the sake of everyone here, I'll trust you on this. 
-//Swap Keine blocks with Keine sprite 
-//Goto Stage 1000 
+
+Keine: What is this? [elixir]
+Reisen: A potion to cure the virus affecting you.
+Keine: Virus?
+Reisen: [expression] ugh
+...
+[expression] sad
+It'll help you see what I see. 
+[expression] normal
+There's an invisible virus plaguing the human village...
+This'll help you see it. 
+Keine: An invisible plague...?
+... For the sake of the humans, I'll trust you on this. 
 
 [instruction] Stage300_Elixir
 (end) 
 
-Keine: This is... wow, this is really old. [encyclopedia]
-This is part of the set that the old emperor Huang Di had transcribed. 
-I am surprised that it is still around... 
-Though I suppose if it is in Gensokyo, it has been lost to the outside world, and has passed into fantasy. 
-Yes... since you are a youkai, I suppose it is safe to tell you. 
-This encyclopedia volume. Its information was given to Emperor Huang Di by my ancestors, the Hakutaku. 
-Distant ancestors... I am barely a part of them. 
+
+Keine: This encyclopedia is... [encyclopedia]
+
+Reisen: The Hieda head asked me to give this to you.
+
+Keine: Wow, I can't believe she really had this.
+This is part of a set that emperor Huang Di had transcribed. 
+I'm surprised it's still around.
+Now that I think about it...
+The information in this book originally came from the <b>Hakutaku</b>.
+And...
+
+Reisen: [expression] sad
+And?
+
+Keine: And the <b>Hakutaku</b>... are my distant ancestors.
+I remember now.
 I am the were-Hakutaku, <b>Keine Kamishirasawa</b>.
 
-//Keine blocks is replaced with her proper sprite. 
-//Goto Stage 1100 
 [instruction] Stage300_Encyclopedia
 (end)
 
-[expression] worry [leave]
-Reisen: **No good I'm still missing something! 
-(end)
+Reisen: [expression] sweat [leave]
+**I'll come back later.
 
+[end]
