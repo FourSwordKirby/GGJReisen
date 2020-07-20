@@ -40,6 +40,10 @@ public class ItemMenuUI : MenuUI
             element.pauseMenuUI = pauseMenuUI;
             element.parentMenuOnSelectMode = ParentMenuStatusPostSelect.none;
             element.itemData = item;
+
+            //Initialize the appearance here
+            element.InitAppearance();
+
             group.menuElements.Add(element);
         }
 

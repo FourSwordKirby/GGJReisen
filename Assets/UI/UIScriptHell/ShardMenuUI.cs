@@ -35,10 +35,12 @@ public class ShardMenuUI : MenuUI
         if (isPauseMenuVersion)
         {
             ReisenGameProgress gameProgress = ReisenGameManager.instance.gameProgress;
-            shardsToDisplay = new List<Shard>() { new Shard("0", 0, "titletesting", "why not"), new Shard("0", 0, "testing2", "why not2"),
-                                                    new Shard("0", 0, "titletesting2", "why not3"), new Shard("0", 0, "testing2", "why not2"),
-                                                    new Shard("0", 0, "titletesting3", "why not3"), new Shard("0", 0, "testing2", "why not2"),
-                                                    new Shard("0", 0, "titletesting3", "why not3"), new Shard("0", 0, "testing2", "why not2")  };
+            shardsToDisplay = gameProgress.Player.ShardsAcquired;
+                // debug things
+                // new List<Shard>() { new Shard("0", 0, "titletesting", "why not"), new Shard("0", 0, "testing2", "why not2"),
+                //                                    new Shard("0", 0, "titletesting2", "why not3"), new Shard("0", 0, "testing2", "why not2"),
+                //                                    new Shard("0", 0, "titletesting3", "why not3"), new Shard("0", 0, "testing2", "why not2"),
+                //                                    new Shard("0", 0, "titletesting3", "why not3"), new Shard("0", 0, "testing2", "why not2")  };
         }
         else
         {
