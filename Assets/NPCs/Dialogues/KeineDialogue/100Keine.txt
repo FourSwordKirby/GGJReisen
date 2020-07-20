@@ -1,29 +1,54 @@
-Keine: Oh, welcome to the human village. You're not a human are you? 
+Keine: Oh, welcome to the human village.
+You're not a human, are you? 
 
-Reisen: Oh shoot, I forgot my disguise!  
+Reisen: [expression] shock
+Oh shoot, I forgot my disguise!
 
-Keine: Well, it's okay. There are already a bunch of other <b>youkai</b> coming in and out. 
+Keine: Well, it's okay.
+There are already a bunch of other <b>youkai</b> coming in and out. 
+Please don't cause trouble for anyone here. 
 
-Please try not to cause any trouble for anyone here. 
+Reisen: [expression] sweat
+To be so calm in front of a <b>youkai</b>...
+[expression] ugh
+**And even to lecture me...  
+[expression] sad
+**Aren't humans taught to fear <b>youkai</b>?
+[expression] normal
+Who are you?
 
-Reisen: To be so calm in front of a <b>youkai</b>, and even to lecture me...  
+Keine: I'm... Hm...?
+I'm a <i>person</i>. 
 
-Aren't humans taught to fear <b>youkai</b>? Who are you? 
+Reisen: [expression] sweat
+No, I meant your name.
 
-Keine: I'm... Hm? I'm a <b>person</b>. 
+Keine: For some reason, <b>I don't remember</b>.
 
-Reisen: No, like your <b>name</b>. 
+Reisen: [expression] shock
+Isn't that really bad!?
 
-Keine: For some reason, <b>I don't remember</b>. I'm pretty sure I'm a human though. 
+Keine: I suppose...
+But I don't think my name's very important.
 
-Reisen: Is there any possibility that you aren't? 
+Reisen: [expression] sweat
+No. No. No. Knowing your own name is very important.
+[expression] sad
+**Is this a symptom of the <b>virus</b>
+**I need to <b>help people remember themselves</b>, right?
+[expression] normal
+What DO you remember about yourself?
 
-Keine: That's weird. There's no way that I'm not. I don't know why I had such a thought.  
+Keine: Pretty sure I'm a human.
 
-Reisen: Suspicious... 
+Reisen: [expression] sweat
+That's a... rather odd thing to say.
+Saying something like that makes it more likely you aren't...
 
-[expression]: worry
+Keine: ... That's weird. There's no way I'm not a human.
+You're right. I don't know why I had such a thought. 
 
-**Agh! I've never talked to people here much. I can't tell who she is!
+Reisen: [expression] sad
+Suspicious... 
 
 [instruction] Stage101

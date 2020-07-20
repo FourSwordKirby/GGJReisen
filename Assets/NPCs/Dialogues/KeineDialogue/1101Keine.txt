@@ -1,9 +1,10 @@
-Keine: Oh hey, while I was investigating the contraption this morning, I found this nearby. 
+Keine: While investigating the contraption, I found this nearby.
+It's a metal plate, sized like a playing card, with a glass sheet.
+Some kind of fancy device?
 
-It's some kind of card sized piece of metal with glass attached to it. 
+Reisen: [expression] shock
+This is a... <b>Lunarian Smartphone!</b> 
 
-Reisen: This is a... <b>Lunarian Smartphone!</b> 
-
-Keine: Maybe it will help you in your investigation. 
+Keine: Maybe it will help you in your investigation.
 
 [instruction] Stage1101

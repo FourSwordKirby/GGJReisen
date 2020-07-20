@@ -23,7 +23,7 @@ MonoBehaviour:
     dialogue: {fileID: 4900000, guid: 5ecc881d8f5496b49a27736103c283ea, type: 3}
   - stage: 200
     dialogue: {fileID: 4900000, guid: 7d2ac314b9cd7e74e8b4506dd2ae41ed, type: 3}
-  - stage: 3000
+  - stage: 300
     dialogue: {fileID: 4900000, guid: b0bb5f36b93baa34ca4569b0c60f4fd3, type: 3}
   - stage: 1000
     dialogue: {fileID: 4900000, guid: bd34d8e57db5e1d4c92aa3bb979ff74c, type: 3}
@@ -382,6 +382,27 @@ PrefabInstance:
       propertyPath: dialogues.Array.data[10].stage
       value: 1102
       objectReference: {fileID: 0}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressionSprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressions.Array.data[0]
+      value: 
+      objectReference: {fileID: 2800000, guid: ba30bd55c01f92646bc54dd954d68e8f, type: 3}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressionSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: ba30bd55c01f92646bc54dd954d68e8f,
+        type: 3}
     - target: {fileID: 541249608831779773, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_Name
@@ -495,12 +516,32 @@ PrefabInstance:
     - target: {fileID: 4049049504856623737, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6507198
+      value: 0.7339036
       objectReference: {fileID: 0}
     - target: {fileID: 4049049504856623737, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.3232545
+      value: 1.4300834
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049049504856623737, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.805
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049049504856623737, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1014824
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711467595871931795, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.24700004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851568089420628989, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.95400006
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -660,7 +701,7 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: dialogueInstructions.Array.data[4].name
-      value: Stage103_Book
+      value: Stage103_Textbook
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -670,7 +711,7 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: dialogueInstructions.Array.data[4].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Keine_Stage103_Book
+      value: Keine_Stage103_Textbook
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -861,6 +902,26 @@ PrefabInstance:
         type: 3}
       propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8703541415378347464, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.805
+      objectReference: {fileID: 0}
+    - target: {fileID: 8703541415378347464, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.34239206
+      objectReference: {fileID: 0}
+    - target: {fileID: 8703541415378347464, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.34239206
+      objectReference: {fileID: 0}
+    - target: {fileID: 8703541415378347464, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.34239206
       objectReference: {fileID: 0}
     - target: {fileID: 8703541415378347465, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}

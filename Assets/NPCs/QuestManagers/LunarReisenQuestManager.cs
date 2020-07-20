@@ -19,6 +19,7 @@
 
     public void LunarReisen_Stage003_Elixir()
     {
+        AssignAvailableElixir(Assignment.LunarReisen);
         TransformToNormalSprite();
         Stage = 1200;
     }
