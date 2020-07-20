@@ -1,61 +1,73 @@
-//Only Elixir 
+Keine: Are you feeling better?
+I'll be glad to answer any questions.
+Reisen: [expression] sweat
+**I need to help this person remember themselves.
+**Maybe that'll help cure the virus symptoms too.
+**Can I give her something?
 
-//If only the Elixir is available 
-History: I'm sorry I can't help you more. 
-I'd be glad to answer any of your questions though. 
-Reisen: **I need to snap this person out of their trance to get more specific information.
-?{elixir=1} **I do have an elixir that can cure the virus, but I only have a limited quantity...
+?{elixir=1} [expression] sad
+?{elixir=1} **I have an elixir that can cure the virus...
+?{elixir=1} **But I only have a limited quantity.
 
-?{elixir=1} {textbook=1} {newspaper=1} [choice] [Hand over the elixir  | elixir] [Hand over the history book  | textbook] [Hand over the newspaper | newspaper] [Leave | leave]
-?{elixir=1} {textbook=1} [choice] [Hand over the elixir  | elixir] [Hand over the history book  | textbook] [Leave | leave]
-?{elixir=1} {newspaper=1} [choice] [Hand over the elixir  | elixir] [Hand over the newspaper | newspaper] [Leave | leave]
-?{elixir=1} [choice] [Hand over the elixir  | elixir]  [Leave | leave]
-?{textbook=1} {newspaper=1} [choice] [Hand over the history book  | textbook] [Hand over the newspaper | newspaper] [Leave | leave]
-?{textbook=1} [choice] [Hand over the history book  | textbook] [Leave | leave]
-?{newspaper=1} [Hand over the newspaper | newspaper] [Leave | leave]
+?{elixir=1} {textbook=1} {newspaper=1} [choice] [Give elixir | elixir] [Give history book | textbook] [Give newspaper | newspaper] [Leave | leave]
+?{elixir=1} {textbook=1} [choice] [Give elixir | elixir] [Give history book | textbook] [Leave | leave]
+?{elixir=1} {newspaper=1} [choice] [Give elixir | elixir] [Give newspaper | newspaper] [Leave | leave]
+?{elixir=1} [choice] [Give elixir | elixir] [Leave | leave]
+?{textbook=1} {newspaper=1} [choice] [Give history book | textbook] [Give newspaper | newspaper] [Leave | leave]
+?{textbook=1} [choice] [Give history book | textbook] [Leave | leave]
+?{newspaper=1} [Give newspaper | newspaper] [Leave | leave]
 [choice] [Leave | leave] 
 
-History: What is this? [elixir]
-Reisen: It's a potion to make you see the same things I do. 
-There is something afflicting the human village right now, and I need you to see it. 
-History: Afflicting the human village? 
-... Alright, for the sake of everyone here, I'll trust you on this. 
+
+Keine: What is this? [elixir]
+Reisen: A potion to cure the virus affecting you.
+Keine: Virus?
+Reisen: [expression] ugh
+...
+[expression] sad
+It'll help you see what I see. 
+[expression] normal
+There's an invisible virus plaguing the human village...
+This'll help you see it. 
+Keine: An invisible plague...?
+... For the sake of the humans, I'll trust you on this. 
 
 [instruction] Stage103_Elixir
 (end)
 
  
-History: Oh? A history book? [textbook]
-Oh! Huh, it suddenly just came to me. 
+Keine: A history book? [textbook]
+Oh! I suddenly just remembered! 
 I'm a <b>school teacher</b>. 
-I have been teaching history in this village for a <b>long, long time</b>. 
-Thanks for reminding me of that. 
-Reisen: **Oh! A <b>Personality Shard</b> just manifested!
+I have been teaching history in this village for a long time. 
+How did I forget that? Odd.
+
+Reisen: [expression] shock
+**Oh! A <b>Personality Shard</b> just manifested!
 
 [instruction] Stage103_Textbook
 (end)
 
- 
 
->Newspaper 
-
-History: Oh the newspaper! I haven't read today's yet. 
-Let's see. 
-Hm? 
-"Possible Scandal? School Teacher Seen Sneaking Out of Student's House in the Dead of Night!?" 
-What!? 
-That's absurd! I was there for a private tutor session! 
-Oh! Huh, it suddenly just came to me. 
+Keine: Oh the newspaper! [newspaper]
+I haven't read today's yet.
+Let's see...
+"Scandal in the Making!?"
+"School Teacher Caught Sneaking Out of Student's House at Night!" 
+What!? That's absurd!
+<b>I</b> was there to give a private tutor session!
+Oh! I suddenly just remembered! 
 I'm a <b>school teacher</b>. 
-I have been teaching history in this village for a <b>long, long time</b>. 
-Thanks for reminding me of that. 
+I've been teaching history in this village for a long time.
+How did I forget that? Odd.
+
+Reisen: [expression] shock
+**Oh! A <b>Personality Shard</b> just manifested!
 
 [instruction] Stage103_Newspaper
-
-Reisen: **Oh! A <b>Personality Shard</b> just manifested!
-
-
-?{elixir=1} **Maybe I can find something else.  [leave]
-?{elixir=0} **I'll have to find something. [leave]
-
 (end)
+
+
+**Maybe I can find something. [leave]
+
+[end]

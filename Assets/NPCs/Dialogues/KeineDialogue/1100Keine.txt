@@ -1,57 +1,59 @@
- 
+Keine: Would you look at that.
+It turns out I'm not human, but half-youkai...
 
-Keine: Indeed. It turns out I am not human, I am a youkai myself... 
+Reisen: [expression] annoy
+No wonder you were so suspicious at the start. 
+[expression] sweat
+Why's a youkai teaching history to humans? 
 
-Reisen: Huh, no wonder you were so suspicious at the start. 
+Keine: Well, the Hakutaku have always been friends to the humans. 
+My were-Hakutaku abilities allow me to know all of Gensokyo's history. 
+I merely wished to protect the human village with my knowledge. 
+By passing history down through the generations...
+I ensure that humans can protect themselves from both youkai and themselves.
+Indeed, from that perspective...
+I've protected the village for far longer than the shrine maiden. 
 
-What's a youkai like you teaching history to humans? 
+Reisen: [expression] sad
+Are the humans okay with a youkai teacher though?
 
-Keine: Well, you see, the Hakutaku have always been friends to the humans. 
+Keine: It's unfortunate, but I do hide that fact from them.
 
-As a were-Hakutaku, I am able to manipulate and know all of Gensokyo's history. 
+Reisen: [expression] normal
+Didn't you say you've been around for a long time?
+Haven't the humans become suspicious of you? 
 
-With such power, it inevitably followed that I wished to protect the human village with my knowledge. 
-
-By passing down the stories about other youkai, 
-
-I can ensure that each generation is armed with the knowledge to fear youkai and how to protect themselves. 
-
-Indeed, I'm willing to say I've been protecting the village for far longer than the current shrine maiden. 
-
-Reisen: Hm? If you've been around that long, haven't the humans become suspicious of you? 
-
-Keine: With each generation that passed, I used my ability to conceal my own history. 
-
-The length of my life in this village is unknowable to the humans around. 
-
+Keine: No. With each generation that passed...
+I used my ability to conceal my own history. 
+The length of my life is unknowable to the humans.
 It's a double-edged sword in its own way. 
-
 I have to reintroduce myself every so often. 
 
-Reisen: That seems like more trouble than its worth. 
+Reisen: [expression] sad
+That seems like more trouble than its worth. 
 
 Keine: Is that so? 
 
-Reisen: I can't be bothered to talk to people that I don't expect to make a lasting relationship with... 
+Reisen: [expression] normal
+I'd rather not talk to people that I don't expect a lasting relationship with... 
 
 Keine: Well, maybe you don't know this because you're a youkai. 
-
-But for humans, life is short. Every moment counts, no matter how long or short. 
-
-When I look at history, it's all just a collection of moments. Nothing lasts forever. 
-
+But for humans, life is short.
+Every moment counts, no matter how long or short. 
+When I look at history, it's all just a collection of moments.
+Nothing lasts forever. 
 A rich history is one with many moments, many relationships. 
-
 So, thinking like "it needs to be a lasting relationship" is flawed. 
 
-Reisen: That sounds like a very human reasoning. 
+Reisen: [expression] sweat
+That sounds like a very human reasoning. 
 
-Keine: Sure, I might've been influenced by living with them for so long. 
-
+Keine: Sure, I might've been influenced by living with them for so long.
 So I've figured, why not try doing as they do too? 
 
-Reisen: **When in Gensokyo, do as the Gensokyian's do...?
+Reisen: [expression] sad
+**When in Gensokyo, do as the Gensokyian's do...?
+[expression] shock
+**Oh, a really big Personality Shard manifested!
 
 [instruction] Stage1100
-
-**Oh, a really big Personality Shard manifested!
