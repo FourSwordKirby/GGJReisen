@@ -68,7 +68,7 @@ Reisen: [expression] sweat
 [expression] sad
 **"A mystery novel by the acclaimed Agatha Chris-Q"? 
 
-[instruction] Stage102
+[instruction] Stage102_Schematic
 (end)
 
 Reisen: **I don't think anything here would work [leave]
