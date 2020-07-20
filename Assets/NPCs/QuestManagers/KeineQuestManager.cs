@@ -28,7 +28,7 @@ public class KeineQuestManager : Npc
         Stage = 1000;
     }
 
-    public void Keine_Stage103_Book()
+    public void Keine_Stage103_Textbook()
     {
         GameProgress.Player.TextBook = Assignment.Keine;
         GameProgress.Player.AddShard(Shard.Keine_TextBook);
