@@ -1,17 +1,18 @@
 ﻿LunarReisen: Wahhh, I can't remember what I lost!
-... Maybe I should just run away.
+... Maybe I should run away.
 Maybe I can get that girl who interviewed me to take me in.
 I could just read mystery novels all day...
+
 Reisen: **Do I have something for this person?
 
-?{elixir=1} {smartphone=1} [choice] [Hand over elixir | elixir] [Hand over smartphone | smartphone] [Leave | leave]
-?{elixir=1} {smartphone=0} [choice] [Hand over elixir | elixir] [Leave | leave]
-?{elixir=0} {smartphone=1} [choice] [Hand over smartphone | smartphone] [Leave | leave]
+?{elixir=1} {smartphone=1} [choice] [Give elixir | elixir] [Give smartphone | smartphone] [Leave | leave]
+?{elixir=1} {smartphone=0} [choice] [Give elixir | elixir] [Leave | leave]
+?{elixir=0} {smartphone=1} [choice] [Give smartphone | smartphone] [Leave | leave]
 ?{elixir=0} {smartphone=0} [choice] [Leave | leave]
 
 Reisen: Here, take this. [elixir]
-LunarReisen: Huh? What is that?
-Reisen: It's medicine that can help you remember what you're looking for.
+LunarReisen: What is that?
+Reisen: It's medicine to help with remembering things.
 LunarReisen: Eh? Oh? Uh... su-sure?
 ... This is kind of suspicious, but for some reason I feel like I can trust you.
 [instruction] Stage003_Elixir
