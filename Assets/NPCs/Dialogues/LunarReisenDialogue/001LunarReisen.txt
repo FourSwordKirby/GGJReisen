@@ -1,10 +1,21 @@
 LunarReisen: Ah!
-Reisen: !?
+
+Reisen: [expression] shock
+!?
+
 LunarReisen: It's you!
+
 Reisen: Yes!?
+
 LunarReisen: ... Who are you?
-Reisen: That's my question!
+
+Reisen: [expression] angry
+That's my question!
+
 LunarReisen: Oh... my head is kind of hazy.
 Sorry, I thought I recognized you.
-Reisen: **What a bizarre cube...
-**Err, person I guess.
+
+Reisen: [expression] sweat
+**Who is this cube...?
+
+[instruction] Stage001
