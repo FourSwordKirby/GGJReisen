@@ -199,7 +199,7 @@ public class ReisenGameProgress: GameProgress
     public const string HasCough = "cough";
     public const string HasTextbook = "textbook";
     public const string HasEncyclopedia = "encyclopedia";
-    public const string HasNewspaper = "newspapaer";
+    public const string HasNewspaper = "newspaper";
     public const string HasSmartphone = "smartphone";
     public const string HasMagazine = "magazine";
     public const string HasWrench = "wrench";

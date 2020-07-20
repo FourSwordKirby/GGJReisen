@@ -328,7 +328,8 @@ public class ReisenGameManager : MonoBehaviour
             StatusText statusText = Instantiate(statusTextPrefab).GetComponent<StatusText>();
             statusText.transform.position = RpgPlayer.instance.transform.position + Vector3.up;
             statusText.text.text = transaction;
-            yield return new WaitForSeconds(1.5f);
+            AudioMaster.instance.PlayItemGetSfx();
+            yield return new WaitForSeconds(2.5f);
         }
     }
 

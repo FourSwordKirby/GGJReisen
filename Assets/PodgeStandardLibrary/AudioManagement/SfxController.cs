@@ -7,7 +7,7 @@ public class SfxController : MonoBehaviour {
 
     public AudioSource audioSrc;
 
-    void playSfx(AudioClip sfx, float volume)
+    public void playSfx(AudioClip sfx, float volume)
     {
         audioSrc.PlayOneShot(sfx, volume);
     }

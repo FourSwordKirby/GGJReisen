@@ -11,6 +11,8 @@ public class ShardMenuUIGroup : MenuUIGroup
     {
         if (dir == InputDirection.W)
         {
+            AudioMaster.instance.PlayMenuSelectSfx();
+
             currentMenuElementIndex--;
             if (currentMenuElementIndex < 0)
                 currentMenuElementIndex = menuElements.Count - 1;
@@ -18,6 +20,8 @@ public class ShardMenuUIGroup : MenuUIGroup
         }
         else if (dir == InputDirection.E)
         {
+            AudioMaster.instance.PlayMenuSelectSfx();
+
             currentMenuElementIndex++;
             if (currentMenuElementIndex >= menuElements.Count)
                 currentMenuElementIndex = 0;
@@ -25,6 +29,8 @@ public class ShardMenuUIGroup : MenuUIGroup
         }
         else if(dir == InputDirection.N)
         {
+            AudioMaster.instance.PlayMenuSelectSfx();
+
             currentMenuElementIndex -= cols;
             if (currentMenuElementIndex < 0)
                 currentMenuElementIndex = Mathf.Min(menuElements.Count - 1, (menuElements.Count/cols) * cols + ((currentMenuElementIndex + cols) % cols));
@@ -32,6 +38,8 @@ public class ShardMenuUIGroup : MenuUIGroup
         }
         else if (dir == InputDirection.S)
         {
+            AudioMaster.instance.PlayMenuSelectSfx();
+
             currentMenuElementIndex += cols;
             if (currentMenuElementIndex >= menuElements.Count)
                 currentMenuElementIndex = currentMenuElementIndex % cols;
