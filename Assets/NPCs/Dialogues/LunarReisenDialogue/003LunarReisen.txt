@@ -42,8 +42,8 @@ I don't think that's the lost item I was thinking of.
 But I do need it fix something...
 I think.
 Thanks for bringing it!
-Reisen: **Was that right...?
 [instruction] Stage003_Wrench
+Reisen: **Was that right...?
 (end)
 
 Reisen: **I should think this over carefully [leave]
