@@ -1,28 +1,27 @@
 LunarReisen: Do you have everything? 
-
-LunarReisen: Once I start the reversal process, that'll be <b>the end</b>. 
-
-If you missed any <b>personality shards</b>, that person might not come back perfectly. 
-
+Once I start the reversal process, that'll be <b>the end</b>. 
+If you missed any <b>personality shards</b>...
+That person might not come back correctly.
 Are you ready to start? 
 
-Reisen: **Am I ready to wrap up this <b>incident</b>? 
+Reisen: [expression] sad
+**Am I ready to wrap up this <b>incident</b>? 
 
-[choice] [Give me a moment | leave] [Hand over the Personality Shards | shards] 
+[choice] [Maybe later | leave] [Give shards | shards] 
 
 LunarReisen: Is this all of them? [shards] 
-
 I'm going to start the reversal process now. 
+There's no going back. Are you sure?
 
-There's no going back. Are you sure?  
+Reisen: [expression] sweat
+[choice] [On second thought... | leave] [End the incident | confirm] 
 
-[choice] [On second thought, give me a moment | leave] [End the incident | confirm] 
-
-Alright, here it goes... [confirm] 
+LunarReisen: Alright, here it goes... [confirm] 
 
 [instruction] Stage1001 
 
 (end) 
+
 
 LunarReisen: Make sure you haven't missed anything! [leave] 
 
