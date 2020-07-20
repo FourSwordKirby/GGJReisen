@@ -22,6 +22,7 @@ A vital piece of <b>me</b>...
 Reisen: [expression] sad
 **Something doesn't seem right.
 [expression] shock
-**But a personality shard manifested!
 
 [instruction] Stage1000 
+
+**But a personality shard manifested!

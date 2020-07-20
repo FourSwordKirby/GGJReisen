@@ -99,6 +99,11 @@ public class ReisenGameManager : MonoBehaviour
         if (Npc != null)
             Npc.GetComponent<Npc>().InitNpcState(gameProgress.Kogasa);
 
+
+        Npc = GameObject.Find("YinYangOrb");
+        if (Npc != null)
+            Npc.GetComponent<Npc>().InitNpcState(gameProgress.Orb);
+
     }
 
     //PARSE CONDITIONALS HERE
@@ -142,6 +147,7 @@ public class ReisenGameManager : MonoBehaviour
                 conditionalResult = gameProgress.Player.Novel == Assignment.Inventory;
             else if (variable == ReisenGameProgress.ElixirCount)
                 conditionalResult = gameProgress.Player.Elixir1 == Assignment.Inventory || gameProgress.Player.Elixir2 == Assignment.Inventory;
+
             // character stage progress checks
             else if (comparator == "=")
             {
@@ -159,6 +165,8 @@ public class ReisenGameManager : MonoBehaviour
                     conditionalResult = gameProgress.Miyoi.Stage == value;
                 else if (variable == ReisenGameProgress.KogasaStage)
                     conditionalResult = gameProgress.Kogasa.Stage == value;
+                else if (variable == ReisenGameProgress.ShardCount)
+                    conditionalResult = gameProgress.Player.ShardsAcquired.Count == value;
                 else
                     throw new Exception("broken conditional " + variable);
             }
@@ -178,6 +186,8 @@ public class ReisenGameManager : MonoBehaviour
                     conditionalResult = gameProgress.Miyoi.Stage > value;
                 else if (variable == ReisenGameProgress.KogasaStage)
                     conditionalResult = gameProgress.Kogasa.Stage > value;
+                else if (variable == ReisenGameProgress.ShardCount)
+                    conditionalResult = gameProgress.Player.ShardsAcquired.Count > value;
                 else
                     throw new Exception("broken conditional" + variable);
             }
@@ -197,6 +207,8 @@ public class ReisenGameManager : MonoBehaviour
                     conditionalResult = gameProgress.Miyoi.Stage < value;
                 else if (variable == ReisenGameProgress.KogasaStage)
                     conditionalResult = gameProgress.Kogasa.Stage < value;
+                else if (variable == ReisenGameProgress.ShardCount)
+                    conditionalResult = gameProgress.Player.ShardsAcquired.Count < value;
                 else
                     throw new Exception("broken conditional" + variable);
             }

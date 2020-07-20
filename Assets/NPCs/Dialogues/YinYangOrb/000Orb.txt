@@ -1,0 +1,33 @@
+Reisen: Wait you're back so soon?
+
+YinYangOrb: Yeah, turns out the incident was almost over by the time we got to the final boss.
+
+Now all that's left to do is clean up the aftermath.
+
+How have you been progressing? Do we have all the shards yet?
+
+
+?{shard_count>0} Reisen: [choice] [Yes I gathered all of them  | endgame] [There still more to collect | continue]
+
+Reisen: [expression] ugh
+
+Reisen: **I haven't even gotten a chance to get started
+
+Reisen: [choice] [There still more to collect | continue]
+
+
+YinYangOrb: Alright, we've arranged the necessary preparations on our end as well [endgame]
+
+Here goes! 
+
+[instruction] endgame
+
+(end)
+
+YinYangOrb: Well what are you waiting for! [continue]
+
+This incident isn't going to resolve itself after all. 
+
+[instruction] Stage_000
+
+[end]

@@ -23,9 +23,9 @@ Is that really...
 ^^Please let me have it! 
 
 Reisen: [expression] shock
+[instruction] Stage200_Elixir
 **Whoa, she's fast! 
 
-[instruction] Stage200_Elixir
 (end)
 
 
