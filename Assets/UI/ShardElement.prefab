@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.6627451, b: 0.73333335, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -140,13 +140,13 @@ MonoBehaviour:
   parentMenu: {fileID: 0}
   parentMenuOnSelectMode: 0
   text: {fileID: 0}
-  focusColor: {r: 0, g: 0, b: 0, a: 1}
+  focusColor: {r: 1, g: 1, b: 1, a: 1}
   blurColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 0.5529412}
   FoundColor: {r: 1, g: 1, b: 1, a: 1}
-  MissingColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0.5882353}
+  MissingColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0.53333336}
   revealed: 0
-  singleShardSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  doubleShardSprite: {fileID: 21300000, guid: 410c565572d1a04419047b0da8dbd280, type: 3}
+  singleShardSprite: {fileID: 21300000, guid: 76686b3e9a8cbdb459e212f70392e14e, type: 3}
+  doubleShardSprite: {fileID: 21300000, guid: 5202ffa7ae13d5e4786a8c9ec60bee3b, type: 3}
   ShardImage: {fileID: 3714298378112313196}
   ShardSelectionHighlight: {fileID: 8067842099332091692}
   isPauseMenuVersion: 0
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 410c565572d1a04419047b0da8dbd280, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76686b3e9a8cbdb459e212f70392e14e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
