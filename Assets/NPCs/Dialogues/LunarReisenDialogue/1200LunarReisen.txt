@@ -59,3 +59,5 @@ Ah, yeah, I guess.
 [expression] sweat
 I guess that's a good plan... 
 **Sorry Reimu.
+
+[instruction] Stage1200

@@ -37,6 +37,13 @@ public class Npc : MonoBehaviour
 
     public virtual void InitNpcState(CharacterProgress characterProgress)
     {
+        if (characterProgress.GetStage() >= 1000)
+        {
+            this.GetComponentInChildren<CharacterExpressionAnimator>().changeExpression(CharacterExpression.normal);
+            stickForm.SetActive(true);
+            cubeForm.SetActive(false);
+        }
+
         TextAsset dialogueTextForStage = dialogues.Find(x => x.stage == characterProgress.GetStage()).dialogue;
         dialoguePromptTrigger.SetDialogueText(dialogueTextForStage, !characterProgress.StageDialogueHasBeenRead);
     }
