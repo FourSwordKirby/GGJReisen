@@ -53,6 +53,8 @@ public class Npc : MonoBehaviour
 
     public void AssignAvailableElixir(Assignment a)
     {
+        //hacky and exists outside the procedure for all other transaction displays but should be harmless
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Elixir -1" });
         if (GameProgress.Player.Elixir1 == Assignment.Inventory)
         {
             GameProgress.Player.Elixir1 = a;
@@ -65,6 +67,12 @@ public class Npc : MonoBehaviour
         {
             throw new InvalidOperationException("Tried to assign Elixir, but player does not have any in inventory");
         }
+    }
+
+    public void DisplayShardTransaction(Shard s)
+    {
+        int value = s.ShardValue;
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Shard +" + value });
     }
 
     public void TransformToNormalSprite()

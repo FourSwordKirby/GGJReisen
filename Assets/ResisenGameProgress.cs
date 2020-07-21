@@ -35,11 +35,11 @@ public class Shard
     public static Shard Kosuzu_GoodEnd { get; } = new Shard(nameof(Kosuzu_GoodEnd), 2, "Suzunaan, Opened for Business", "Looks like the book shop is in order again.");
     public static Shard Kosuzu_Elixir { get; } = new Shard(nameof(Kosuzu_Elixir), 1, "A New Incident Solver on the Case!", "Perfectly honest, I don't think that human is able to do anything about this incident...");
 
-    public static Shard Nitori_Tool_Smartphone { get; } = new Shard(nameof(Nitori_Tool_Smartphone), 1, "", "");
-    public static Shard Nitori_Tool_Wrench { get; } = new Shard(nameof(Nitori_Tool_Wrench), 1, "", "");
-    public static Shard Nitori_QuestionCorrect { get; } = new Shard(nameof(Nitori_QuestionCorrect), 1, "", "");
-    public static Shard Nitori_GoodEnd { get; } = new Shard(nameof(Nitori_GoodEnd), 2, "", "");
-    public static Shard Nitori_Elixir { get; } = new Shard(nameof(Nitori_Elixir), 1, "", "");
+    public static Shard Nitori_Tool_Smartphone { get; } = new Shard(nameof(Nitori_Tool_Smartphone), 1, "Finders Keepers", "I'm pretty sure that phone isn't hers...");
+    public static Shard Nitori_Tool_Wrench { get; } = new Shard(nameof(Nitori_Tool_Wrench), 1, "Everything is a bolt", "Its really reckless dismantling things you don't understand");
+    public static Shard Nitori_QuestionCorrect { get; } = new Shard(nameof(Nitori_QuestionCorrect), 1, "A new contact", "How's a kappa supposed to find Eientei anyways");
+    public static Shard Nitori_GoodEnd { get; } = new Shard(nameof(Nitori_GoodEnd), 2, "Science Fair", "Those kappa sure like to dream big");
+    public static Shard Nitori_Elixir { get; } = new Shard(nameof(Nitori_Elixir), 1, "Big Pharma", "I feel like there's going to be an influx of medicine pedlers...");
 
     public static Shard Akyu_Textbook { get; } = new Shard(nameof(Akyu_Textbook), 1, "Book Shop Intern", "I met the Gensokyo Chronicler... she was singing a weird song to herself.");
     public static Shard Akyu_Novel { get; } = new Shard(nameof(Akyu_Novel), 1, "Case closed!", "A chronicler working as novelist as a side job. I wonder if she gets fact and fiction mixed up.");
@@ -47,7 +47,7 @@ public class Shard
     public static Shard Akyu_BadElixir2 { get; } = new Shard(nameof(Akyu_BadElixir2), 1, "Not All Powerful", "Master Yagokoro's elixir didn't work!?");
     public static Shard Akyu_GoodEnd { get; } = new Shard(nameof(Akyu_GoodEnd), 2, "One in a Thousand", "Akyu looked very young, but to think that she might be as old as Mokou...");
 
-    public static Shard LunarReisen_Smartphone { get; } = new Shard(nameof(LunarReisen_Smartphone), 1, "Can't Live Without it", "Even my Lunatic Red Eyes would get tired from looking at a screen for too long");
+    public static Shard LunarReisen_Smartphone { get; } = new Shard(nameof(LunarReisen_Smartphone), 1, "Can't live without it", "Even my Lunatic Red Eyes would get tired from looking at a screen for too long");
     public static Shard LunarReisen_GoodEnd { get; } = new Shard(nameof(LunarReisen_GoodEnd), 2, "Inaba of the Moon", "I see we get worked to the bone whether we're from the Earth or the Moon");
     public static Shard LunarReisen_Elixir { get; } = new Shard(nameof(LunarReisen_Elixir), 1, "Help me, ERINNNNNN!!", "I cured this moon rabbit, but she's quite unreliable all things considered...");
 
@@ -138,29 +138,29 @@ public class PlayerProgress
         List<KeyItem> inventoryItems = new List<KeyItem>();
         
         if (CoughingMedicine == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Coughing Medicine", "medicine description"));
+            inventoryItems.Add(new KeyItem("Coughing Medicine", "Cough medicine I'm supposed to deliver to a <b>book store</b>"));
         if (TextBook == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("History Book", "medicine description"));
+            inventoryItems.Add(new KeyItem("History Book", "A delivery from that from the <b>book store</b>. It has a lot of info about Gensokyo's history"));
         if (Encyclopedia == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Encyclopeida", "medicine description"));
+            inventoryItems.Add(new KeyItem("Encyclopeida", "An encyclopeia on many <b>Youkai</b>. I was told to give it to a <b>school teacher</b>"));
         if (Newspaper == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Newspaper", "medicine description"));
+            inventoryItems.Add(new KeyItem("Newspaper", "A Bunbunmaru Super Special Extra Edition. It's addressed to the <b>west</b> side of the village"));
         if (Smartphone == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Smartphone", "medicine description"));
+            inventoryItems.Add(new KeyItem("Smartphone", "A <b>Lunarian</b> smartphone. There's not much installed on here."));
         if (Magazine == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Magazine", "medicine description"));
+            inventoryItems.Add(new KeyItem("Magazine", "A magazine from the outside world. It features a lot of <b>sophisticated diagrams</b>"));
         if (Wrench == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Wrench", "medicine description"));
+            inventoryItems.Add(new KeyItem("Wrench", "A wrench I found lying on the roof. Useful for <b>construction</b>"));
         if (Scroll == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Scroll", "medicine description"));
+            inventoryItems.Add(new KeyItem("Scroll", "A scroll about the <b>Dimensionality Reducer</b>. Written in a <b>Foreign Yokai Language</b>"));
         if (Schematic == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Schematic", "medicine description"));
+            inventoryItems.Add(new KeyItem("Schematic", "The translated scroll was actually a guide for reversing the <b>Dimensionality Reducer</b>!"));
         if (Novel == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Novel", "medicine description"));
+            inventoryItems.Add(new KeyItem("Novel", "A mystery novel by <i>Agatha Chris-Q.</i>"));
         if (Elixir1 == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Elixir", "medicine description"));
+            inventoryItems.Add(new KeyItem("Elixir", "Medicine given to me by Miss Eirin. It should cure any villagers of this virus."));
         if (Elixir2 == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Elixir", "medicine description"));
+            inventoryItems.Add(new KeyItem("Elixir", "Medicine given to me by Miss Eirin. It should cure any villagers of this virus."));
 
         return inventoryItems;
     }

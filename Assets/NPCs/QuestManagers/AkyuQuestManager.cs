@@ -1,4 +1,6 @@
-﻿public class AkyuQuestManager : Npc
+﻿using System.Collections.Generic;
+
+public class AkyuQuestManager : Npc
 {
     public override ReisenNpcCharacterProgress NpcProgress => GameProgress.Akyu;
 
@@ -25,6 +27,8 @@
         }
 
         GameProgress.Player.AddShard(Shard.Akyu_Textbook);
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "History Book -1, Shard +1" });
+
         Stage = 100;
     }
 
@@ -44,6 +48,7 @@
     {
         GameProgress.Player.Novel = Assignment.Akyu;
         GameProgress.Player.AddShard(Shard.Akyu_Novel);
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Novel -1, Shard +1" });
         Stage = 200;
     }
 
@@ -57,18 +62,21 @@
     public void Akyu_Stage1000()
     {
         GameProgress.Player.AddShard(Shard.Akyu_BadElixir1);
+        DisplayShardTransaction(Shard.Akyu_BadElixir1);
         Stage = 1001;
     }
 
     public void Akyu_Stage1002()
     {
         GameProgress.Player.AddShard(Shard.Akyu_BadElixir2);
+        DisplayShardTransaction(Shard.Akyu_BadElixir2);
         Stage = 1001;
     }
 
     public void Akyu_Stage1100()
     {
         GameProgress.Player.AddShard(Shard.Akyu_GoodEnd);
+        DisplayShardTransaction(Shard.Akyu_GoodEnd);
         Stage = 1101;
     }
 }

@@ -459,7 +459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 4900000, guid: 57ea3b46e5fc1014bbf30b53d34f0234, type: 3}
   triggerActive: 1
-  repeatingDialogue: 1
+  repeatingDialogue: 0
   forceDialogueOnEnter: 0
   forceBack: 0
   promptPosition: {fileID: 3750876472566478762}

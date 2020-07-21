@@ -33,6 +33,7 @@ public class TitleScreenUtils : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         loadedGameProgress.savePoint.SpawnPlayer(RpgPlayer.instance.gameObject);
+        ReisenGameManager.instance.gameProgress = loadedGameProgress;
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 

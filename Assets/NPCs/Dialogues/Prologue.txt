@@ -1,6 +1,6 @@
 Reisen: My name is Reisen Udonge’in Inaba. 
 
-[instruction] LoadVillage
+// debug to make things go faster [instruction] LoadVillage
 
 I am a moon rabbit that abandoned the moon during the war between the Moon and the Earth. 
 
@@ -95,4 +95,4 @@ Life is never without a dull moment.
 
 But really, why do I have to be the one to get caught up in another incident? 
 
-//[instruction] LoadVillage
+[instruction] LoadVillage

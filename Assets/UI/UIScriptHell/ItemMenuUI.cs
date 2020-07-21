@@ -33,7 +33,7 @@ public class ItemMenuUI : MenuUI
             KeyItem item = inventoryKeyItems[i];
 
             ItemUIElement element = Instantiate(ItemMenuElement).GetComponent<ItemUIElement>();
-            element.transform.parent = group.transform;
+            element.transform.SetParent(group.transform, false);
             element.transform.position = initialPosition.position + i * Vector3.down * spacing;
             element.parentMenu = this;
             element.parentGroup = group;

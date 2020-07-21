@@ -84,6 +84,12 @@ public class AudioMaster : MonoBehaviour
         bgmController.SwitchTrack(prologueTrack.track);
     }
 
+    internal void PlayTownTrack()
+    {
+        AudioTrack prologueTrack = bgmAudioMixes.Find(x => x.name == "Town");
+        bgmController.SwitchTrack(prologueTrack.track);
+    }
+
     internal void PlaySfx(string sfxName)
     {
         AudioTrack sfx = bgmAudioMixes.Find(x => x.name == sfxName);
@@ -119,6 +125,12 @@ public class AudioMaster : MonoBehaviour
     internal void PlayItemGetSfx()
     {
         AudioTrack sfx = soundEffects.Find(x => x.name == "ItemGet");
+        sfxController.playSfx(sfx.track, 1.0f);
+    }
+
+    internal void PlayDialogueAdvanceSfx()
+    {
+        AudioTrack sfx = soundEffects.Find(x => x.name == "DialogueAdvance");
         sfxController.playSfx(sfx.track, 1.0f);
     }
 }

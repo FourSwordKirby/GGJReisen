@@ -1,4 +1,6 @@
-﻿public class LunarReisenQuestManager : Npc
+﻿using System.Collections.Generic;
+
+public class LunarReisenQuestManager : Npc
 {
     public override ReisenNpcCharacterProgress NpcProgress => GameProgress.LunarReisen;
 
@@ -29,12 +31,15 @@
         GameProgress.Player.AddShard(Shard.LunarReisen_Smartphone);
         GameProgress.Player.Smartphone = Assignment.LunarReisen;
         GameProgress.Player.Magazine = Assignment.Inventory;
+
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Smartphone -1, Magazine +1, Shard + 1" });
         Stage = 100;
     }
 
     public void LunarReisen_Stage003_Wrench()
     {
         GameProgress.Player.Wrench = Assignment.LunarReisen;
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Wrench -1" });
         // No reward, no stage advancement.
     }
 
@@ -54,6 +59,7 @@
     {
         GameProgress.Player.Schematic = Assignment.LunarReisen;
         GameProgress.Player.Novel = Assignment.Inventory;
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Schematic -1, Novel +1" });
         TransformToNormalSprite();
         Stage = 1000;
     }
@@ -61,6 +67,7 @@
     public void LunarReisen_Stage1000()
     {
         GameProgress.Player.AddShard(Shard.LunarReisen_GoodEnd);
+        DisplayShardTransaction(Shard.LunarReisen_GoodEnd);
         Stage = 1001;
     }
 
@@ -73,6 +80,7 @@
     public void LunarReisen_Stage1200()
     {
         GameProgress.Player.AddShard(Shard.LunarReisen_Elixir);
+        DisplayShardTransaction(Shard.LunarReisen_Elixir);
         Stage = 1201;
     }
 }

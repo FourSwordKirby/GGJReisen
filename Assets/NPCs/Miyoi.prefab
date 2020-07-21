@@ -412,6 +412,7 @@ MonoBehaviour:
   cubeForm: {fileID: 0}
   stickForm: {fileID: 0}
   StageWasUpdated: 0
+  NextDialogueIsRead: 0
 --- !u!1001 &5002769050301264454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -512,17 +513,17 @@ PrefabInstance:
     - target: {fileID: 4049049504856623737, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.488
+      value: 1.1929594
       objectReference: {fileID: 0}
     - target: {fileID: 4049049504856623737, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.1476647
+      value: 0.92010576
       objectReference: {fileID: 0}
     - target: {fileID: 4049049504856623737, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.488
+      value: 1.1929594
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -672,17 +673,17 @@ PrefabInstance:
     - target: {fileID: 8703541415378347464, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.46809
+      value: 0.37527713
       objectReference: {fileID: 0}
     - target: {fileID: 8703541415378347464, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.46809
+      value: 0.37527713
       objectReference: {fileID: 0}
     - target: {fileID: 8703541415378347464, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.46809
+      value: 0.37527713
       objectReference: {fileID: 0}
     - target: {fileID: 8703541415378347465, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}

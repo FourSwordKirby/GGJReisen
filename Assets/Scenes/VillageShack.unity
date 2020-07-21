@@ -394,11 +394,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CameraBounds:
-    m_Center: {x: -24.66, y: 0, z: 0}
-    m_Extent: {x: 5.7, y: 19.59, z: 13.01}
+    m_Center: {x: -27.5, y: 0, z: 0}
+    m_Extent: {x: 8.9, y: 19.59, z: 13.01}
   sceneEntrances:
   - {fileID: 1863089819}
-  renderGizmo: 0
+  renderGizmo: 1
 --- !u!4 &296285703
 Transform:
   m_ObjectHideFlags: 0
@@ -2087,6 +2087,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510233527}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1561756569
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 456247859300951823, guid: 30e8becfb8fb89e42963c80449e3e5a8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 456247859300951823, guid: 30e8becfb8fb89e42963c80449e3e5a8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 456247859300951823, guid: 30e8becfb8fb89e42963c80449e3e5a8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 456247859300951823, guid: 30e8becfb8fb89e42963c80449e3e5a8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 456247859300951823, guid: 30e8becfb8fb89e42963c80449e3e5a8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 456247859300951823, guid: 30e8becfb8fb89e42963c80449e3e5a8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 456247859300951823, guid: 30e8becfb8fb89e42963c80449e3e5a8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 456247859300951823, guid: 30e8becfb8fb89e42963c80449e3e5a8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 456247859300951823, guid: 30e8becfb8fb89e42963c80449e3e5a8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 456247859300951823, guid: 30e8becfb8fb89e42963c80449e3e5a8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 456247859300951823, guid: 30e8becfb8fb89e42963c80449e3e5a8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 456247859300951827, guid: 30e8becfb8fb89e42963c80449e3e5a8,
+        type: 3}
+      propertyPath: m_Name
+      value: MasterAudio
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
 --- !u!1 &1610448779
 GameObject:
   m_ObjectHideFlags: 0
@@ -2562,31 +2631,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6212093637441878869, guid: c2f4dd1d06becac4fae7721a65118f70,
-        type: 3}
-      propertyPath: gameProgress.Nitori.Stage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6212093637441878869, guid: c2f4dd1d06becac4fae7721a65118f70,
-        type: 3}
-      propertyPath: gameProgress.Player.Elixir1
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6212093637441878869, guid: c2f4dd1d06becac4fae7721a65118f70,
-        type: 3}
-      propertyPath: gameProgress.Player.Wrench
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6212093637441878869, guid: c2f4dd1d06becac4fae7721a65118f70,
-        type: 3}
-      propertyPath: gameProgress.Player.Magazine
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6212093637441878869, guid: c2f4dd1d06becac4fae7721a65118f70,
-        type: 3}
-      propertyPath: gameProgress.Player.Smartphone
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7714349210501684526, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
