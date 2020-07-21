@@ -192,6 +192,10 @@ public class DialogueBubbleUI : MonoBehaviour
             }
             currentLineNumber = targetLineNumber;
         }
+
+        // Audioooo
+        AudioMaster.instance.PlayDialogueAdvanceSfx();
+
         yield return new WaitForSeconds(0.2f);
         while (!Controls.confirmInputDown())
         {

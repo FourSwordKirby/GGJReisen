@@ -1,10 +1,14 @@
 Reisen: A copy of Bunbunmaru Newspaper?
 
-It says here this is a super special extra edition
+It says here this is a Super Special Extra Edition.
 
 [expression] ugh
 
 What does that tengu hope to gain by making even more papers...
+
+This one's not even addressed for here!
+
+It seems to be for a building in the <b>west</b> side of the village.
 
 [instruction] PickupItem
 

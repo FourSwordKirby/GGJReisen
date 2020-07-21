@@ -620,8 +620,8 @@ MonoBehaviour:
       Scroll: 0
       Schematic: 0
       Novel: 0
-      Elixir1: 0
-      Elixir2: 0
+      Elixir1: 1
+      Elixir2: 1
     Keine:
       Stage: 0
       DialogueRead: 0
@@ -637,12 +637,16 @@ MonoBehaviour:
     LunarReisen:
       Stage: 0
       DialogueRead: 0
+    Orb:
+      Stage: 0
+      DialogueRead: 0
     Miyoi:
       Stage: 0
       DialogueRead: 0
     Kogasa:
       Stage: 0
       DialogueRead: 0
+    KogasaCount: 0
   spawnLocation: 0
   statusTextPrefab: {fileID: 2022352952880849763, guid: 854dea0d69b472c4cbf30d71d81047c2,
     type: 3}

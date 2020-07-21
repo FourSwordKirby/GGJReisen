@@ -79,7 +79,11 @@ public class ShardMenuUI : MenuUI
 
         if(completionProgress != null)
         {
-            float totalShardCount = totalShardData.Select(x => x.ShardValue).Aggregate((x, y) => x + y);
+            float totalShardCount;
+            if (totalShardData.Count == 0)
+                totalShardCount = 0;
+            else
+                totalShardCount = totalShardData.Select(x => x.ShardValue).Aggregate((x, y) => x + y);
             float displayShardCount = shardsToDisplay.Select(x => x.ShardValue).Aggregate((x, y) => x + y);
             completionProgress.text = ((int)(totalShardCount / displayShardCount * 100.0f)).ToString() + "%";
         }

@@ -39,6 +39,7 @@ public class KeineQuestManager : Npc
         }
 
         GameProgress.Player.AddShard(Shard.Keine_TextBook);
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "History Book -1, Shard +1" });
         Stage = 200;
     }
 
@@ -46,12 +47,14 @@ public class KeineQuestManager : Npc
     {
         GameProgress.Player.Newspaper = Assignment.Keine;
         GameProgress.Player.AddShard(Shard.Keine_Newspaper);
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Newspaper -1, Shard +1" });
         Stage = 200;
     }
 
     public void Keine_Stage200_Correct()
     {
         GameProgress.Player.AddShard(Shard.Keine_QuestionCorrect);
+        DisplayShardTransaction(Shard.Keine_QuestionCorrect);
         Stage = 300;
     }
 
@@ -70,6 +73,7 @@ public class KeineQuestManager : Npc
     public void Keine_Stage300_Encyclopedia()
     {
         GameProgress.Player.Encyclopedia = Assignment.Keine;
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Encyclopedia -1" });
         TransformToNormalSprite();
         Stage = 1100;
     }
@@ -77,18 +81,21 @@ public class KeineQuestManager : Npc
     public void Keine_Stage1000()
     {
         GameProgress.Player.AddShard(Shard.Keine_Elixir);
+        DisplayShardTransaction(Shard.Keine_Elixir);
         Stage = 1001;
     }
 
     public void Keine_Stage1100()
     {
         GameProgress.Player.AddShard(Shard.Keine_GoodEnd);
+        DisplayShardTransaction(Shard.Keine_GoodEnd);
         Stage = 1101;
     }
 
     public void Keine_Stage1101()
     {
         GameProgress.Player.Smartphone = Assignment.Inventory;
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Smartphone +1" });
         Stage = 1102;
     }
 }

@@ -47,6 +47,7 @@ public class ReisenGameManager : MonoBehaviour
             }
             isNewGame = false;
         }
+        AudioMaster.instance.PlayTownTrack();
     }
 
     private void Update()
@@ -239,6 +240,7 @@ public class ReisenGameManager : MonoBehaviour
         gameProgress.savePoint = savePoint;
 
         SaveManager.SaveGame(saveName, gameProgress);
+        SaveManager.SaveSeenShardData(gameProgress);
     }
 
     public virtual void LoadGame(string saveName)
@@ -354,6 +356,7 @@ public class ReisenGameManager : MonoBehaviour
     internal void StartEnding()
     {
         StartCoroutine(EndingSequence());
+        throw new Exception("Ending not yet implemented");
     }
 
     IEnumerator EndingSequence()

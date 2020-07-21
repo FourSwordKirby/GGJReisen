@@ -77,9 +77,9 @@ public class KogasaQuestManager : Npc
         {
             if (GameProgress.KogasaCount == 0)
                 currentStage = 0;
-            else if (GameProgress.KogasaCount == 3)
+            else if (GameProgress.KogasaCount == 2)
                 currentStage = 300;
-            else if (GameProgress.KogasaCount < 3)
+            else if (GameProgress.KogasaCount < 2)
                 currentStage = 200;
             else
             {

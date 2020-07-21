@@ -40,6 +40,7 @@ public class MiyoiQuestManager : Npc
     {
         stage_30_read = true;
         GameProgress.Player.AddShard(Shard.Miyoi_Company);
+        DisplayShardTransaction(Shard.Miyoi_Company);
         Stage = 100;
     }
 

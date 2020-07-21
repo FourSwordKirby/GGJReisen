@@ -47,7 +47,7 @@ public class SaveManager : MonoBehaviour
         // 2
         string jsonSavePath = string.Format("{0}/{1}.json", Application.persistentDataPath, shardSaveDataName);
         Debug.Log(jsonSavePath);
-        string jsonData = JsonUtility.ToJson(totalSeenShardData, true);
+        string jsonData = JsonUtility.ToJson(data, true);
         File.WriteAllText(jsonSavePath, jsonData);
 
         Debug.Log("Shard data Saved");

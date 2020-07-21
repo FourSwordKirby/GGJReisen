@@ -9,7 +9,7 @@ public class KosuzuQuestManager : Npc
         GameProgress.Player.CoughingMedicine = Assignment.Kosuzu;
         GameProgress.Player.TextBook = Assignment.Inventory;
         GameProgress.Player.AddShard(Shard.Kosuzu_CoughingMedicine);
-        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Cough Medicine -1", "Textbook +1", "Shard +1" });
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Cough Medicine -1", "History Book +1", "Shard +1" });
         Stage = 99;
         MarkNextDialogueAsRead();
     }
@@ -24,6 +24,7 @@ public class KosuzuQuestManager : Npc
     public void Kosuzu_Stage100_Correct()
     {
         GameProgress.Player.AddShard(Shard.Kosuzu_QuestionCorrect);
+        DisplayShardTransaction(Shard.Kosuzu_QuestionCorrect);
         Stage = 200;
     }
 
@@ -43,12 +44,14 @@ public class KosuzuQuestManager : Npc
     {
         GameProgress.Player.Magazine = Assignment.Kosuzu;
         GameProgress.Player.AddShard(Shard.Kosuzu_MagazineBadEnd);
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Magazine -1", "Shard +1" });
         Stage = 600;
     }
 
     public void Kosuzu_Stage200_Scroll()
     {
         GameProgress.Player.Scroll = Assignment.Kosuzu;
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Scroll -1" });
         TransformToNormalSprite();
         Stage = 1000;
     }
@@ -56,18 +59,21 @@ public class KosuzuQuestManager : Npc
     public void Kosuzu_Stage1000()
     {
         GameProgress.Player.AddShard(Shard.Kosuzu_GoodEnd);
+        DisplayShardTransaction(Shard.Kosuzu_GoodEnd);
         Stage = 1001;
     }
 
     public void Kosuzu_Stage1001()
     {
         GameProgress.Player.Schematic = Assignment.Inventory;
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Schematic +1" });
         Stage = 1002;
     }
 
     public void Kosuzu_Stage1100()
     {
         GameProgress.Player.AddShard(Shard.Kosuzu_Elixir);
+        DisplayShardTransaction(Shard.Kosuzu_Elixir);
         Stage = 1101;
         MarkNextDialogueAsRead();
     }
