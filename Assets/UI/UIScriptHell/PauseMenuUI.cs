@@ -12,6 +12,7 @@ public class PauseMenuUI : MenuUI
 
     public ItemMenuUI itemUI;
     public ShardMenuUI shardUI;
+    public SaveUI saveUI;
 
     public Transform startingPositon;
 
@@ -33,6 +34,7 @@ public class PauseMenuUI : MenuUI
         base.Open();
         itemUI.Init();
         shardUI.Init();
+        saveUI.Init();
         ItemDescriptionBubble.gameObject.SetActive(false);
 
         menuAnimator.SetTrigger("Open");

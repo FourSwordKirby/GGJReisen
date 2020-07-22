@@ -2,11 +2,11 @@ Miyoi: Oh Reisen!
 
 Come in, come in. Business is slow today so take any seat in the house. 
 
-Reisen: Oh, uh... I'm just passing through 
+Reisen: Oh, uh... I'm just passing through .
 
 Miyoi: [expression] sad 
 
-Miyoi: Boo hoo 
+Miyoi: Boo hoo.
 
 And after you promised during last nights party... 
 
@@ -18,7 +18,7 @@ Don't tell me you forgot the <b>Poster Girl of Geidontei?</b>
 
 It's me! <b>Miyoi Okunoda. </b>
 
-Reisen: Ohhh, its coming back to me now! You brought that really good sake and stewed vegtables 
+Reisen: Ohhh, its coming back to me now! You brought that really good sake and stewed vegtables.
 
 Miyoi: [expression] happy  
 
@@ -28,19 +28,19 @@ Miyoi: [expression] normal
 
 Anyways, it's good to see a familiar face.  
 
-Everyone looks so different today 
+Everyone looks so different today.
 
 Is it some sort of holiday? 
 
 Reisen: Wait, you can see whats going on? 
 
-Miyoi: Well, I can tell there's some sort of incident 
+Miyoi: Well, I can tell there's some sort of incident.
 
 After all none of the regulars have come around today, and I couldn't find the owner anywhere. 
 
 Reisen: It's strange that you weren't affected. 
 
-Miyoi: Maybe the instigators just forgot about me 
+Miyoi: Maybe the instigators just forgot about me.
 
 [expression] heh
 
@@ -52,7 +52,7 @@ Wouldn't be the first time heh heh....
 
 [expression] shock
 
-A-anyways 
+A-anyways.
 
 [expression] happy 
 
@@ -60,14 +60,14 @@ To make up for forgetting your promise you better come by later ok!
 
 And bring any friends you meet too! 
 
-Reisen: Sure thing 
+Reisen: Sure thing.
 
 [expression] annoy 
 
-**what a hardworking girl
+**What a hardworking girl...
 
 [expression] ugh 
 
-**I hope master treats me to good meal after this is all done
+**I hope master treats me to good meal after this is all done!
 
 [instruction] Stage000

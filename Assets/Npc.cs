@@ -36,7 +36,7 @@ public class Npc : MonoBehaviour
     public bool StageWasUpdated = false;
     public bool NextDialogueIsRead = false;
 
-    public virtual void InitNpcState(CharacterProgress characterProgress)
+    public virtual void SyncNpcState(CharacterProgress characterProgress)
     {
         if (characterProgress.GetStage() >= 1000)
         {

@@ -140,5 +140,11 @@ public class AudioMaster : MonoBehaviour
         AudioTrack sfx = soundEffects.Find(x => x.name == "Jump");
         sfxController.playSfx(sfx.track, 0.6f);
     }
+
+    internal void PlayTeleportEnterSfx()
+    {
+        AudioTrack sfx = soundEffects.Find(x => x.name == "TeleportEnter");
+        sfxController.playSfx(sfx.track, 0.6f);
+    }
 }
 

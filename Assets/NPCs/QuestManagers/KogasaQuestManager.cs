@@ -69,7 +69,7 @@ public class KogasaQuestManager : Npc
     }
 
 
-    public override void InitNpcState(CharacterProgress characterProgress)
+    public override void SyncNpcState(CharacterProgress characterProgress)
     {
         int currentStage = characterProgress.GetStage();
 
