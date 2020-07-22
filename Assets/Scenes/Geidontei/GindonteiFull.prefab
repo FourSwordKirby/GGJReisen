@@ -23,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3412689839069145396}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.75, y: 0.7843548, z: -24.586342}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -50,9 +50,102 @@ Transform:
   - {fileID: 7902267095826813071}
   - {fileID: 7902267095728721067}
   - {fileID: 7902267096673891970}
+  - {fileID: 2093016297604936462}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3646864517505538917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3141059438958347819}
+  - component: {fileID: 4455040301754986656}
+  - component: {fileID: 7450755430281282831}
+  - component: {fileID: 3212052658403317597}
+  m_Layer: 0
+  m_Name: Cylinder (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3141059438958347819
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3646864517505538917}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.3816, z: 0}
+  m_LocalScale: {x: 0.070279755, y: 0.52901316, z: 0.070279755}
+  m_Children: []
+  m_Father: {fileID: 2093016297604936462}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4455040301754986656
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3646864517505538917}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &7450755430281282831
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3646864517505538917}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1d822976c64169f4281fe837f0b5d436, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!136 &3212052658403317597
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3646864517505538917}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &5216063304778962078
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,7 +157,6 @@ GameObject:
   - component: {fileID: 5216063304778962077}
   - component: {fileID: 5216063304778962050}
   - component: {fileID: 5216063304778962051}
-  - component: {fileID: 5216063304778962076}
   m_Layer: 0
   m_Name: Fox Writing Screen Door (8)
   m_TagString: Untagged
@@ -131,19 +223,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5216063304778962076
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5216063304778962078}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5216063304841443706
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5216063304841443706}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.239, y: 0.792, z: -2.915}
+  m_LocalPosition: {x: 0.42, y: 0.792, z: -2.915}
   m_LocalScale: {x: 1.2366185, y: 2.7019613, z: 0.20309034}
   m_Children:
   - {fileID: 5216063306487296134}
@@ -197,7 +276,6 @@ GameObject:
   - component: {fileID: 5216063304843226195}
   - component: {fileID: 5216063304843226192}
   - component: {fileID: 5216063304843226193}
-  - component: {fileID: 5216063304843226194}
   m_Layer: 0
   m_Name: Fox Writing Screen Door (1)
   m_TagString: Untagged
@@ -264,19 +342,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5216063304843226194
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5216063304843226220}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5216063305428200643
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,7 +353,6 @@ GameObject:
   - component: {fileID: 5216063305428200642}
   - component: {fileID: 5216063305428200647}
   - component: {fileID: 5216063305428200640}
-  - component: {fileID: 5216063305428200641}
   m_Layer: 0
   m_Name: Fox Writing Screen Door (4)
   m_TagString: Untagged
@@ -355,19 +419,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5216063305428200641
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5216063305428200643}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5216063305476376920
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +430,6 @@ GameObject:
   - component: {fileID: 5216063305476376927}
   - component: {fileID: 5216063305476376924}
   - component: {fileID: 5216063305476376925}
-  - component: {fileID: 5216063305476376926}
   m_Layer: 0
   m_Name: Fox Writing Screen Door (7)
   m_TagString: Untagged
@@ -446,19 +496,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5216063305476376926
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5216063305476376920}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5216063305910475250
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +507,6 @@ GameObject:
   - component: {fileID: 5216063305910475249}
   - component: {fileID: 5216063305910475254}
   - component: {fileID: 5216063305910475255}
-  - component: {fileID: 5216063305910475248}
   m_Layer: 0
   m_Name: Fox Writing Screen Door (3)
   m_TagString: Untagged
@@ -537,19 +573,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5216063305910475248
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5216063305910475250}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5216063305935320719
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,7 +584,6 @@ GameObject:
   - component: {fileID: 5216063305935320718}
   - component: {fileID: 5216063305935320819}
   - component: {fileID: 5216063305935320716}
-  - component: {fileID: 5216063305935320717}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -628,19 +650,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5216063305935320717
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5216063305935320719}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5216063306271417336
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,7 +661,6 @@ GameObject:
   - component: {fileID: 5216063306271417343}
   - component: {fileID: 5216063306271417340}
   - component: {fileID: 5216063306271417341}
-  - component: {fileID: 5216063306271417342}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -719,19 +727,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5216063306271417342
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5216063306271417336}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5216063306302683292
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,7 +738,6 @@ GameObject:
   - component: {fileID: 5216063306302683267}
   - component: {fileID: 5216063306302683264}
   - component: {fileID: 5216063306302683265}
-  - component: {fileID: 5216063306302683266}
   m_Layer: 0
   m_Name: Fox Writing Screen Door (6)
   m_TagString: Untagged
@@ -810,19 +804,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5216063306302683266
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5216063306302683292}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5216063306376956824
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,7 +815,6 @@ GameObject:
   - component: {fileID: 5216063306376956831}
   - component: {fileID: 5216063306376956828}
   - component: {fileID: 5216063306376956829}
-  - component: {fileID: 5216063306376956830}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -901,19 +881,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5216063306376956830
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5216063306376956824}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5216063306487296130
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,7 +892,6 @@ GameObject:
   - component: {fileID: 5216063306487296134}
   - component: {fileID: 5216063306487296135}
   - component: {fileID: 5216063306487296128}
-  - component: {fileID: 5216063306487296129}
   m_Layer: 0
   m_Name: Fox Writing Screen Door
   m_TagString: Untagged
@@ -992,19 +958,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5216063306487296129
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5216063306487296130}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5216063306534308570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,7 +969,6 @@ GameObject:
   - component: {fileID: 5216063306534308569}
   - component: {fileID: 5216063306534308574}
   - component: {fileID: 5216063306534308575}
-  - component: {fileID: 5216063306534308568}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -1083,19 +1035,39 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5216063306534308568
-BoxCollider:
+--- !u!1 &5302096677342501745
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5216063306534308570}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2093016297604936462}
+  m_Layer: 0
+  m_Name: Lantern
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2093016297604936462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5302096677342501745}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.26, y: 1.313, z: -3.618}
+  m_LocalScale: {x: 0.49925515, y: 0.49925515, z: 0.49925515}
+  m_Children:
+  - {fileID: 4525337429330412179}
+  - {fileID: 8699838083122487931}
+  - {fileID: 3141059438958347819}
+  m_Father: {fileID: 3412689839069145397}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6090243744346773969
 GameObject:
   m_ObjectHideFlags: 0
@@ -5100,7 +5072,6 @@ GameObject:
   - component: {fileID: 7902267094830163989}
   - component: {fileID: 7902267094830164008}
   - component: {fileID: 7902267094830163991}
-  - component: {fileID: 7902267094830163990}
   m_Layer: 0
   m_Name: Fox Writing Screen Door
   m_TagString: Untagged
@@ -5167,19 +5138,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7902267094830163990
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7902267094830163988}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7902267094856532867
 GameObject:
   m_ObjectHideFlags: 0
@@ -6031,7 +5989,6 @@ GameObject:
   - component: {fileID: 7902267095548010121}
   - component: {fileID: 7902267095548010124}
   - component: {fileID: 7902267095548010123}
-  - component: {fileID: 7902267095548010122}
   m_Layer: 0
   m_Name: Fox Writing Screen Door (6)
   m_TagString: Untagged
@@ -6098,19 +6055,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7902267095548010122
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7902267095548010120}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7902267095637621489
 GameObject:
   m_ObjectHideFlags: 0
@@ -6122,7 +6066,6 @@ GameObject:
   - component: {fileID: 7902267095637621490}
   - component: {fileID: 7902267095637621493}
   - component: {fileID: 7902267095637621492}
-  - component: {fileID: 7902267095637621491}
   m_Layer: 0
   m_Name: Fox Writing Screen Door (1)
   m_TagString: Untagged
@@ -6189,19 +6132,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7902267095637621491
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7902267095637621489}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7902267095640155317
 GameObject:
   m_ObjectHideFlags: 0
@@ -6731,7 +6661,6 @@ GameObject:
   - component: {fileID: 7902267095937416948}
   - component: {fileID: 7902267095937416951}
   - component: {fileID: 7902267095937416950}
-  - component: {fileID: 7902267095937416949}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -6798,19 +6727,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7902267095937416949
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7902267095937416947}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7902267095952239845
 GameObject:
   m_ObjectHideFlags: 0
@@ -6822,7 +6738,6 @@ GameObject:
   - component: {fileID: 7902267095952239846}
   - component: {fileID: 7902267095952239865}
   - component: {fileID: 7902267095952239864}
-  - component: {fileID: 7902267095952239847}
   m_Layer: 0
   m_Name: Fox Writing Screen Door (3)
   m_TagString: Untagged
@@ -6889,19 +6804,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7902267095952239847
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7902267095952239845}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7902267095980167951
 GameObject:
   m_ObjectHideFlags: 0
@@ -7264,7 +7166,6 @@ GameObject:
   - component: {fileID: 7902267096139767603}
   - component: {fileID: 7902267096139767606}
   - component: {fileID: 7902267096139767605}
-  - component: {fileID: 7902267096139767604}
   m_Layer: 0
   m_Name: Fox Writing Screen Door (8)
   m_TagString: Untagged
@@ -7331,19 +7232,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7902267096139767604
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7902267096139767602}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7902267096163244166
 GameObject:
   m_ObjectHideFlags: 0
@@ -7432,7 +7320,6 @@ GameObject:
   - component: {fileID: 7902267096179479981}
   - component: {fileID: 7902267096179479968}
   - component: {fileID: 7902267096179479983}
-  - component: {fileID: 7902267096179479982}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -7499,19 +7386,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7902267096179479982
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7902267096179479980}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7902267096254172222
 GameObject:
   m_ObjectHideFlags: 0
@@ -7614,7 +7488,6 @@ GameObject:
   - component: {fileID: 7902267096268918226}
   - component: {fileID: 7902267096268918229}
   - component: {fileID: 7902267096268918228}
-  - component: {fileID: 7902267096268918227}
   m_Layer: 0
   m_Name: Fox Writing Screen Door (7)
   m_TagString: Untagged
@@ -7681,19 +7554,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7902267096268918227
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7902267096268918225}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7902267096305170606
 GameObject:
   m_ObjectHideFlags: 0
@@ -7747,7 +7607,6 @@ GameObject:
   - component: {fileID: 7902267096359035023}
   - component: {fileID: 7902267096359035010}
   - component: {fileID: 7902267096359035009}
-  - component: {fileID: 7902267096359035008}
   m_Layer: 0
   m_Name: Fox Writing Screen Door (2)
   m_TagString: Untagged
@@ -7814,19 +7673,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7902267096359035008
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7902267096359035022}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7902267096384829246
 GameObject:
   m_ObjectHideFlags: 0
@@ -7929,7 +7775,6 @@ GameObject:
   - component: {fileID: 7902267096391627583}
   - component: {fileID: 7902267096391627570}
   - component: {fileID: 7902267096391627569}
-  - component: {fileID: 7902267096391627568}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -7996,19 +7841,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7902267096391627568
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7902267096391627582}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7902267096486736866
 GameObject:
   m_ObjectHideFlags: 0
@@ -8230,7 +8062,6 @@ GameObject:
   - component: {fileID: 7902267096599570949}
   - component: {fileID: 7902267096599570968}
   - component: {fileID: 7902267096599570951}
-  - component: {fileID: 7902267096599570950}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -8297,19 +8128,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7902267096599570950
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7902267096599570948}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7902267096673891969
 GameObject:
   m_ObjectHideFlags: 0
@@ -8489,7 +8307,6 @@ GameObject:
   - component: {fileID: 7902267096775928230}
   - component: {fileID: 7902267096775928249}
   - component: {fileID: 7902267096775928248}
-  - component: {fileID: 7902267096775928231}
   m_Layer: 0
   m_Name: Fox Writing Screen Door (4)
   m_TagString: Untagged
@@ -8556,19 +8373,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7902267096775928231
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7902267096775928229}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7902267096785308260
 GameObject:
   m_ObjectHideFlags: 0
@@ -8580,7 +8384,6 @@ GameObject:
   - component: {fileID: 7902267096785308261}
   - component: {fileID: 7902267096785308280}
   - component: {fileID: 7902267096785308263}
-  - component: {fileID: 7902267096785308262}
   m_Layer: 0
   m_Name: Fox Writing Screen Door (2)
   m_TagString: Untagged
@@ -8647,19 +8450,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7902267096785308262
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7902267096785308260}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7902267096850503844
 GameObject:
   m_ObjectHideFlags: 0
@@ -8841,6 +8631,190 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &8442694324009548241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8699838083122487931}
+  - component: {fileID: 3831689954071005171}
+  - component: {fileID: 5851336200046596770}
+  - component: {fileID: 7204088577846127031}
+  m_Layer: 0
+  m_Name: Cylinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8699838083122487931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8442694324009548241}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6488502, y: 0.9850227, z: 0.6488502}
+  m_Children: []
+  m_Father: {fileID: 2093016297604936462}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3831689954071005171
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8442694324009548241}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &5851336200046596770
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8442694324009548241}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1d822976c64169f4281fe837f0b5d436, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!136 &7204088577846127031
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8442694324009548241}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!1 &8969809136858089143
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4525337429330412179}
+  - component: {fileID: 5266329504976337443}
+  - component: {fileID: 111610239049457171}
+  - component: {fileID: 3184685004082853220}
+  m_Layer: 0
+  m_Name: Capsule
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4525337429330412179
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8969809136858089143}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2093016297604936462}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &5266329504976337443
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8969809136858089143}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &111610239049457171
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8969809136858089143}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 71c297f367d3c004fbe3d303b1faddc8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!136 &3184685004082853220
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8969809136858089143}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8986247440303917887
 GameObject:
