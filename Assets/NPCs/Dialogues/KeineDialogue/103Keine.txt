@@ -46,7 +46,7 @@ Reisen: [expression] shock
 **Oh! A <b>Personality Shard</b> just manifested!
 
 [instruction] Stage103_Textbook
-(end)
+(conclude)
 
 
 Keine: Oh the newspaper! [newspaper]
@@ -65,6 +65,27 @@ Reisen: [expression] shock
 **Oh! A <b>Personality Shard</b> just manifested!
 
 [instruction] Stage103_Newspaper
+(conclude)
+
+
+Keine: By the way... [conclude]
+Do you know what this is?
+It's a metal plate, sized like a playing card, with a glass sheet.
+Some kind of fancy device?
+
+Reisen: [expression] shock
+This is a <b>Lunarian Smartphone!</b>
+
+Keine: Maybe somebody dropped it?
+There was someone touching the <b>contraption</b> earlier.
+Can you return this to them?
+
+Reisen: [expression] sweat
+Sure...
+[expression] sad
+**Why would a Lunarian phone be here?
+[instruction] Stage103_Conclude
+
 (end)
 
 

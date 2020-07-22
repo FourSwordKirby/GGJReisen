@@ -6,6 +6,41 @@ public class KeineQuestManager : Npc
 {
     public override ReisenNpcCharacterProgress NpcProgress => GameProgress.Keine;
 
+    public void Keine_Stage000_CameraShift()
+    {
+        StartCoroutine(Stage000_CameraShift_Coroutine());
+    }
+
+    public IEnumerator Stage000_CameraShift_Coroutine()
+    {
+        Controls.DisableGameplayControls();
+        var trigger = GameObject.FindObjectOfType<Keine_Stage000_Trigger>();
+        CameraMan.instance.StartCinematicMode(trigger.CameraLoc2);
+        while (!CameraMan.instance.InDesiredPosition())
+        {
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(4f);
+
+        CameraMan.instance.StartCinematicMode(trigger.CameraLoc1);
+        while (!CameraMan.instance.InDesiredPosition())
+        {
+            yield return null;
+        }
+
+        // Give a tiny before allowing control
+        yield return new WaitForSeconds(0.2f);
+
+        Controls.EnableGameplayControls();
+    }
+
+    public void Keine_Stage000_Camera2()
+    {
+        var trigger = GameObject.FindObjectOfType<Keine_Stage000_Trigger>();
+        CameraMan.instance.StartCinematicMode(trigger.CameraLoc2);
+    }
+
     public void Keine_Stage000()
     {
         Stage = 100;
@@ -51,6 +86,12 @@ public class KeineQuestManager : Npc
         Stage = 200;
     }
 
+    public void Keine_Stage103_Conclude()
+    {
+        GameProgress.Player.Smartphone = Assignment.Inventory;
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Smartphone +1" });
+    }
+
     public void Keine_Stage200_Correct()
     {
         GameProgress.Player.AddShard(Shard.Keine_QuestionCorrect);
@@ -89,13 +130,11 @@ public class KeineQuestManager : Npc
     {
         GameProgress.Player.AddShard(Shard.Keine_GoodEnd);
         DisplayShardTransaction(Shard.Keine_GoodEnd);
-        Stage = 1101;
+        Stage = 1102;
     }
 
     public void Keine_Stage1101()
     {
-        GameProgress.Player.Smartphone = Assignment.Inventory;
-        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Smartphone +1" });
-        Stage = 1102;
+        // No longer in use
     }
 }

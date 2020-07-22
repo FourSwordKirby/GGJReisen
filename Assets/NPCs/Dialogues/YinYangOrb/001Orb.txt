@@ -1,27 +1,24 @@
 YinYangOrb: Do we have all the shards yet?
 
-Reisen:
+?{shard_count>0} Reisen: [choice] [Yes, I've got them all | endgame] [There's still more... | continue]
 
-?{shard_count>0} Reisen: [choice] [Yes I gathered all of them  | endgame] [There still more to collect | continue]
+Reisen: [expression] ugh
+Reisen: **I haven't even gotten a chance to get started
+Reisen: [choice] [There still more... | continue]
 
-Reisen: [choice] [There still more to collect | continue]
 
-
-YinYangOrb: Alright, we've arranged the necessary preparations on our end as well [endgame]
-
-Here goes! 
+YinYangOrb: Alright, I'm calling over Yukari. [endgame]
+We're going to initiate something from our end...
+Here goes!
 
 [instruction] endgame
 
 (end)
 
 
-
-YinYangOrb: Well what are you waiting for! [continue]
-
-This incident isn't going to resolve itself after all. 
+YinYangOrb: Well, what are you waiting for!? [continue]
+This incident isn't going to resolve itself.
 
 [instruction] Stage_000
-
 
 [end]
