@@ -15,13 +15,13 @@ public class KeineQuestManager : Npc
     {
         Controls.DisableGameplayControls();
         var trigger = GameObject.FindObjectOfType<Keine_Stage000_Trigger>();
-        CameraMan.instance.StartCinematicMode(trigger.CameraLoc2);
+        CameraMan.instance.StartCinematicMode(trigger.CameraLoc3);
         while (!CameraMan.instance.InDesiredPosition())
         {
             yield return null;
         }
 
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(2.6f);
 
         CameraMan.instance.StartCinematicMode(trigger.CameraLoc1);
         while (!CameraMan.instance.InDesiredPosition())
@@ -29,21 +29,19 @@ public class KeineQuestManager : Npc
             yield return null;
         }
 
-        // Give a tiny before allowing control
-        yield return new WaitForSeconds(0.2f);
-
         Controls.EnableGameplayControls();
-    }
-
-    public void Keine_Stage000_Camera2()
-    {
-        var trigger = GameObject.FindObjectOfType<Keine_Stage000_Trigger>();
-        CameraMan.instance.StartCinematicMode(trigger.CameraLoc2);
     }
 
     public void Keine_Stage000()
     {
         Stage = 100;
+
+        string[] objectsToActive = new string[] { "SavePoint_FirstTime", "WestEntranceBlockUntilSavePoint", "EastEntranceBlockUntilSavePoint" };
+        foreach (string objName in objectsToActive)
+        {
+            GameObject obj = GameObject.Find(objName);
+            obj.transform.Find("TriggerZone").gameObject.SetActive(true);
+        }
     }
 
     public void Keine_Stage100()

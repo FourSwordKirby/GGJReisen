@@ -1,18 +1,19 @@
 Keine: Hmm...
-There’s a <b>contraption</b> over there that I've never seen. 
+There’s a <b>contraption</b> over there that I've never seen before.
 
 [instruction] Stage000_CameraShift
 
+...
 I wonder what it is? 
 I saw someone fiddling with it earlier... 
 
 Reisen: [expression] shock
 **A talking cube!?
-**Is this some kind of tsukumogami?
+**Is that some kind of tsukumogami?
 [expression] sad
 **Oh wait, Yukari said those could be human villagers.
 [expression] sweat
-**So that must someone that's been affected by the <b>virus</b>.
+**So that must be someone that's been affected by the <b>virus</b>.
 [expression] sad
 **I need to talk to them huh...
 [expression] ugh

@@ -28,8 +28,11 @@ public class Npc : MonoBehaviour
         }
         set
         {
-            NpcProgress.Stage = value;
-            StageWasUpdated = true;
+            if (Stage != value)
+            {
+                NpcProgress.Stage = value;
+                StageWasUpdated = true;
+            }
         }
     }
 

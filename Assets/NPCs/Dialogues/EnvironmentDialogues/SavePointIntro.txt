@@ -1,0 +1,21 @@
+﻿Reisen: This is...
+[expression] shock
+^^This is a Lunarian device!
+[expression] sweat
+It's some kind of storage container...
+I think they're called <b>Dimensionality Reducer</b>?
+[expression] sad
+What's this doing here?
+Is this what released the <b>virus<b>?
+...
+[expression] sweat
+It looks like someone touched this recently.
+I should find that person.
+[expression] normal
+...
+[expression] happy
+My <i>Lunatic Red Eyes</i> can transmit <i>waves</i> into it.
+I can condense my brain waves into this for storage.
+
+~~<i>Use the <b>Dimensionality Reducer</b> to save your progress.</i>
+~~<i>The game can be loaded from the inventory menu.</i>

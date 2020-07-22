@@ -39,10 +39,7 @@ public class RpgGameManager : MonoBehaviour
         if (cameraPosition != null)
         {
             cameraMan.StartCinematicMode(cameraPosition);
-            while (!cameraMan.InDesiredPosition())
-            {
-                yield return null;
-            }
+            // Don't wait for Camera yet. Let forced player movement start working.
         }
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -70,12 +67,13 @@ public class RpgGameManager : MonoBehaviour
                 Vector3 cameraOffset = new Vector3(0f, 2f, -4.5f); // Magical camera offset vector for 4:3 size.
                 Vector3 midpointBetweenSpeakers = (otherSpeaker.transform.position + player.transform.position) * .5f;
                 cameraMan.StartCinematicMode(midpointBetweenSpeakers + cameraOffset, Quaternion.identity);
-
-                while(!cameraMan.InDesiredPosition())
-                {
-                    yield return null;
-                }
             }
+        }
+
+        // Wait for Camera to be in place before we start initializing dialogue options.
+        while (!cameraMan.InDesiredPosition())
+        {
+            yield return null;
         }
 
         DialogueBubbleUI.instance.init(dialogue);
@@ -93,11 +91,11 @@ public class RpgGameManager : MonoBehaviour
             {
                 if(newSpeaker != speaker)
                 {
-                    speaker?.GetComponentInChildren<CharacterDialogueAnimator>().stopTalking();
+                    speaker?.GetComponentInChildren<CharacterDialogueAnimator>()?.stopTalking();
                     speaker = newSpeaker;
                 }
-                speaker.GetComponentInChildren<CharacterDialogueAnimator>().startTalking();
-                speaker.GetComponentInChildren<CharacterDialogueAnimator>().Turn(focusPosition.x - speaker.transform.position.x);
+                speaker.GetComponentInChildren<CharacterDialogueAnimator>()?.startTalking();
+                speaker.GetComponentInChildren<CharacterDialogueAnimator>()?.Turn(focusPosition.x - speaker.transform.position.x);
             }
 
             line.PerformLine();
@@ -131,7 +129,7 @@ public class RpgGameManager : MonoBehaviour
         foreach(string speakerName in dialogue.speakers)
         {
             GameObject newSpeaker = GameObject.Find(speakerName);
-            speaker?.GetComponentInChildren<CharacterDialogueAnimator>().stopTalking();
+            speaker?.GetComponentInChildren<CharacterDialogueAnimator>()?.stopTalking();
         }
 
         ConversationUnpause();
