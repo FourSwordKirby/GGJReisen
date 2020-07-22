@@ -1,8 +1,9 @@
 Keine: Hmm...
-There’s a <b>contraption</b> over there that I've never seen. 
+There’s a <b>contraption</b> over there that I've never seen before.
 
 [instruction] Stage000_CameraShift
 
+...
 I wonder what it is? 
 I saw someone fiddling with it earlier... 
 

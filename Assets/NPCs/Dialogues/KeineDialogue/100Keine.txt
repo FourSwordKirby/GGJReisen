@@ -37,7 +37,7 @@ No. No. No. Knowing your own name is very important.
 **Is this a symptom of the <b>virus</b>
 **I need to <b>help people remember themselves</b>, right?
 [expression] normal
-What DO you remember about yourself?
+What <i>do</i> you remember about yourself?
 
 Keine: Pretty sure I'm a human.
 
