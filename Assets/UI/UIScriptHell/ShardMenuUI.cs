@@ -93,13 +93,13 @@ public class ShardMenuUI : MenuUI
 
     public void ShowDescription(Shard shardData, string forcedDescription = "")
     {
-        string description = string.IsNullOrEmpty(forcedDescription) ? shardData.Description : forcedDescription;
+        shardTitle.text = shardData.FriendlyName;
 
+        string description = string.IsNullOrEmpty(forcedDescription) ? shardData.Description : forcedDescription;
         if (isPauseMenuVersion)
             pauseMenuUI.ShowDescription(description);
         else
         {
-            shardTitle.text = shardData.FriendlyName;
             shardDescription.text = description;
         }
 
@@ -120,5 +120,12 @@ public class ShardMenuUI : MenuUI
             group.FocusElement(group.currentMenuElementIndex);
         }
         base.Open();
+    }
+
+
+    public override void Blur()
+    {
+        shardTitle.text = "";
+        base.Blur();
     }
 }
