@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c59de39e1e8bfcb40891978e19a72c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 0
+  itemType: 0
   ItemSprite: {fileID: 1608305600}
 --- !u!1 &6978550825250287078
 GameObject:
@@ -463,8 +463,8 @@ MonoBehaviour:
   forceDialogueOnEnter: 0
   forceBack: 0
   promptPosition: {fileID: 3750876472566478762}
-  useNewPrompt: 0
-  trackNewDialogue: 1
+  useNewPrompt: 1
+  trackNewDialogue: 0
   speakingPositionConfig: 0
   leftSpeakingPosition: {fileID: 2234119119133012256}
   rightSpeakingPosition: {fileID: 3976455006679610120}
