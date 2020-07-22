@@ -87,6 +87,9 @@ public class DialoguePromptTrigger : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         Vector3 displacement = (player.transform.position - this.transform.position);
 
+        // Bad game specific hack that should get addressed somehwere else
+        ReisenGameManager.instance.SyncNpcState();
+
         Transform speakingPosition = null;
         switch (speakingPositionConfig)
         {
@@ -120,7 +123,7 @@ public class DialoguePromptTrigger : MonoBehaviour
         postDialogueEvent?.Invoke();
 
         // Bad game specific hack that should get addressed somehwere else
-        ReisenGameManager.instance.InitSceneState();
+        ReisenGameManager.instance.SyncNpcState();
 
         dialogueActive = false;
         if(!forceDialogueOnEnter)
@@ -149,7 +152,7 @@ public class DialoguePromptTrigger : MonoBehaviour
         postDialogueEvent?.Invoke();
 
         // Bad game specific hack that should get addressed somehwere else
-        ReisenGameManager.instance.InitSceneState();
+        ReisenGameManager.instance.SyncNpcState();
 
         Destroy(gameObject.transform.parent.gameObject);
     }
