@@ -395,12 +395,12 @@ PrefabInstance:
     - target: {fileID: 3570052165625753719, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 9.809999
       objectReference: {fileID: 0}
     - target: {fileID: 3570052165625753719, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 10.809999
       objectReference: {fileID: 0}
     - target: {fileID: 3570052165668538350, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
@@ -495,11 +495,6 @@ PrefabInstance:
     - target: {fileID: 5605456161494871071, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6212093637441878869, guid: c2f4dd1d06becac4fae7721a65118f70,
-        type: 3}
-      propertyPath: gameProgress.Miyoi.Stage
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7714349210501684526, guid: c2f4dd1d06becac4fae7721a65118f70,
