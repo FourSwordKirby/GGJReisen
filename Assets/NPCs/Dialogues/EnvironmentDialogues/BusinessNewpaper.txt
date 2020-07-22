@@ -2,6 +2,9 @@ Reisen: People's backyards are always filled with interesting things.
 
 ?{newspaper=0} (end)
 
-Though this one seems to be a landfill for that Tengu's <b>gossip-filled newspaper</b>.
+There seem to be a bunch of discarded newspapers here.
+[expression] annoy
+They're probably all <b>Bunbunmaru Newspaper</b>.
+No surpise seeing that gossip-filled newspaper getting dumped like trash.
  
 [end]

@@ -1,14 +1,17 @@
-Reisen: A copy of Bunbunmaru Newspaper?
-
+Reisen: A copy of <b>Bunbunmaru Newspaper</b>?
 It says here this is a Super Special Extra Edition.
-
 [expression] ugh
-
-What does that tengu hope to gain by making even more papers...
-
-This one's not even addressed for here!
-
-It seems to be for a building in the <b>west</b> side of the village.
+What does that tengu hope to gain by making even more papers?
+What's the headline here...
+[expression] shock
+"School Teacher Caught Sneaking Out of Student's House at Night!"
+[expression] sweat
+...
+There's only one school here, and maybe one or two teachers...
+[expression] ugh
+They must be sweating in their boots.
+[expression] sad
+The <b>school's</b> to the west I think...
 
 [instruction] PickupItem
 

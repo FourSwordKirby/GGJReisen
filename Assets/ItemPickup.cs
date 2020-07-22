@@ -28,4 +28,13 @@ public class ItemPickup : MonoBehaviour
 
         ItemSprite.SetActive(false);
     }
+
+    public void AdvanceAkyuToStage100()
+    {
+        if (ReisenGameManager.instance.gameProgress.Akyu.Stage == 99)
+        {
+            ReisenGameManager.instance.gameProgress.Akyu.Stage = 100;
+            ReisenGameManager.instance.gameProgress.Akyu.DialogueRead = false;
+        }
+    }
 }

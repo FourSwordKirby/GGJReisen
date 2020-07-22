@@ -5,9 +5,9 @@ Reisen: **Do I have something for her?
 ?{elixir=1} [expression] sad
 ?{elixir=1} **I can't shake this ominous feeling about giving her one... 
 
-?{elixir=1} {textbook=1} [choice] [Hand over the elixir  | elixir] [Hand over the history book  | textbook] [Leave | leave]
-?{elixir=1} [choice] [Hand over the elixir | elixir]  [Leave | leave]
-?{textbook=1} [choice] [Hand over the history book  | textbook] [Leave | leave]
+?{elixir=1} {textbook=1} [choice] [Give elixir  | elixir] [Give history book  | textbook] [Leave | leave]
+?{elixir=1} [choice] [Give elixir | elixir]  [Leave | leave]
+?{textbook=1} [choice] [Give history book  | textbook] [Leave | leave]
 [choice] [Leave | leave]
 
 
@@ -30,7 +30,7 @@ Reisen: [expression] shock
 
 
 Reisen: [expression] normal [textbook]
-Is this the <b>reference material</b> you needed?
+Is this <b>history textbook</b> the reference material you needed?
 
 Akyu: Oh my! Yes, it is. Thank you very much. 
 To think the medicine peddler is also doing book deliveries now.
@@ -38,32 +38,10 @@ To think the medicine peddler is also doing book deliveries now.
 Reisen: Um, no problem...
 [expression] ugh
 **How did I end up running errands for other people?
-
-Akyu: Since you're already here, could I trouble you with one more delivery?
-
-Reisen: [expression] sweat
-Ah... um... sure I guess. 
-
-Akyu: This is an old encyclopedia that I had acquired. 
-It contains entries on many <b>Youkai</b> and methods of dealing with them. 
-I've finished transcribing what I need from it. 
-A <b>school teacher</b> in the village was asking to borrow it. 
-Can you bring this to them? 
-
-
-
-Reisen: [expression] sweat
-A <b>school teacher</b>? 
-[expression] sad
-**... Did I meet such a person? 
-[expression] ugh
-**They must have been one of the cubes. 
-[expression] happy
-Sure, I will try.
+[expression] sweat
+**Oh! A Personality Shard!
 
 [instruction] Stage001_Textbook 
-
-Akyu: Thank you very much.
 
 (end)
 
