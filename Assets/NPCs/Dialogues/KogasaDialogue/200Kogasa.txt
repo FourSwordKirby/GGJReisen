@@ -2,14 +2,14 @@
 
 Reisen: [expression] shock
 
-Kogasa: Boo! 
+Kogasa: BOOO-! 
 
-Reisen: Eeep! 
+Reisen: Yiiiiiiiiii! 
 
 Kogasa: Hooray! This just keeps working! 
 
 Reisen: [expression] sad
 
-Reisen: **I'll never get used to this
+Reisen: **I'll never get used to this...
 
 [instruction] Stage200

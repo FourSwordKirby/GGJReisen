@@ -2,19 +2,17 @@
 
 Reisen: [expression] shock
 
-Kogasa: Boo!
+Kogasa: BoOooOOoOoo!!
 
-Reisen: Eeep! 
+Reisen: HyaaaAAaaAAaaa! 
 
-Kogasa: Wow you're such a good sport 
+Kogasa: Wow, you're such a good sport!
+It feels good to know that I'm doing a good job.
 
-It feels good to know that I'm doing a good job
-
-Reisen: [expression] sad
-
-Reisen: **This darn yokai!
+Reisen: [expression] angry
+**This darn youkai!
 
 [instruction] Stage300
 
-**Wait, did a shard just manifest from this exchange?!
-
+Reisen: [expression] shock
+**Wait, did a shard just manifest from this exchange!?

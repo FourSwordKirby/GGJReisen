@@ -44,6 +44,7 @@ public class KogasaQuestManager : Npc
         CollisionBox.SetActive(true);
         ECB.gameObject.SetActive(false);
         GameProgress.KogasaCount++;
+        MarkNextDialogueAsRead();
     }
 
     public void Kogasa_Stage200()
@@ -54,6 +55,7 @@ public class KogasaQuestManager : Npc
         CollisionBox.SetActive(true);
         ECB.gameObject.SetActive(false);
         GameProgress.KogasaCount++;
+        MarkNextDialogueAsRead();
     }
 
     public void Kogasa_Stage300()
@@ -66,6 +68,7 @@ public class KogasaQuestManager : Npc
         GameProgress.Player.AddShard(Shard.Kogasa_Spook);
         ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Shard +1" });
         GameProgress.KogasaCount++;
+        MarkNextDialogueAsRead();
     }
 
 
