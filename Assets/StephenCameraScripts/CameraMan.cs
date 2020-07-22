@@ -201,7 +201,10 @@ public class CameraMan : MonoBehaviour
     //In the future we should be able to do this check without having to wait for the camera to get into position
     public bool InDesiredPosition()
     {
-        return (MyCamera.transform.position - TargetPosition).magnitude < 0.1f;
+        return (MyCamera.transform.position - TargetPosition).sqrMagnitude < 0.1f * 0.1f
+            && Quaternion.Dot(MyCamera.transform.rotation, TargetRotation) > 0.99619; // 5 degrees
+
+
     }
 
     public void MoveCameraToDefault()
