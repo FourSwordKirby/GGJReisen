@@ -900,6 +900,7 @@ MonoBehaviour:
   CharacterProp: {fileID: 6268429926466818344}
   itemUI: {fileID: 8905306632534099342}
   shardUI: {fileID: 9201339247737593437}
+  saveUI: {fileID: 2366040003256918227}
   startingPositon: {fileID: 1600514178593419495}
   ReisenVisible: 0
   menuAnimator: {fileID: 9087227749057373027}
