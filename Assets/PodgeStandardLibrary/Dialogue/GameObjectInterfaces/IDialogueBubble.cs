@@ -6,7 +6,7 @@ using UnityEngine;
 
 public interface IDialogueBubble
 {
-    void DeployAt(Vector3 speakerPosition, Vector3 displacementVector);
+    void DeployAt(Vector3 speakerPosition, Vector3 displacementVector, Quaternion rotation);
 
     void Show();
     void Hide();

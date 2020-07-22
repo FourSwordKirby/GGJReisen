@@ -72,14 +72,7 @@ public class DialogueBubbleUI : MonoBehaviour
         ready = false;
 
         List<ChoiceLineContent> choices = line.dialogueChoices;
-
-        int choicesCount = choices.Count;
         int lineNumber = choices[0].lineNumber;
-        Vector2 speakerScreenPosition = dialogueCamera.WorldToScreenPoint(speakerPosition);
-
-        float relativeXdisplacment = (Camera.main.pixelWidth / 2.0f - speakerScreenPosition.x) / Camera.main.pixelWidth;
-        float relativeYdisplacment = (Camera.main.pixelHeight / 2.0f - speakerScreenPosition.y) / Camera.main.pixelHeight + 0.1f; // The dialogue should always be in the upper portion of the screen 
-        Vector2 displacementVector = new Vector2(relativeXdisplacment, relativeYdisplacment);
 
         ChoiceBubble choiceBubble = DialogueUIController.GenerateChoiceBubblePrefab(choices.Count(), type);
         for(int i = 0; i < choices.Count; i++)
@@ -90,7 +83,7 @@ public class DialogueBubbleUI : MonoBehaviour
 
         dialogueBubbles.Add(choiceBubble);
 
-        DialogueUIController.DeployDialogueBubbleAt(choiceBubble, speakerPosition, displacementVector);
+        DeployBubble(choiceBubble, speakerPosition);
 
         StartCoroutine(toggleChoices(line, choiceBubble));
         StartCoroutine(animateLogs(lineNumber));
@@ -102,20 +95,32 @@ public class DialogueBubbleUI : MonoBehaviour
         ready = false;
 
         int lineNumber = speakingLineContent.lineNumber;
-        Vector2 speakerScreenPosition = dialogueCamera.WorldToScreenPoint(speakerPosition);
-
-        float relativeXdisplacment = (Camera.main.pixelWidth / 2.0f - speakerScreenPosition.x) / Camera.main.pixelWidth;
-        float relativeYdisplacment = (Camera.main.pixelHeight / 2.0f - speakerScreenPosition.y) / Camera.main.pixelHeight + 0.1f; // The dialogue should always be in the upper portion of the screen 
-        Vector2 displacementVector = new Vector2(relativeXdisplacment, relativeYdisplacment);
 
         // *(offscreen dialogue we will need to handle seperately)
         SpeechBubble speechBubble = DialogueUIController.GenerateSpeechBubblePrefab(type);
         speechBubble.SetDialogueBubbleContent(speakingLineContent);
         dialogueBubbles.Add(speechBubble);
 
-        DialogueUIController.DeployDialogueBubbleAt(speechBubble, speakerPosition, displacementVector);
+        DeployBubble(speechBubble, speakerPosition);
 
         StartCoroutine(animateLogs(lineNumber));
+    }
+
+    private void DeployBubble(DialogueBubble speechBubble, Vector3 speakerPosition)
+    {
+        Vector2 speakerScreenPosition = dialogueCamera.WorldToScreenPoint(speakerPosition);
+
+        float relativeXdisplacment = (Camera.main.pixelWidth / 2.0f - speakerScreenPosition.x) / Camera.main.pixelWidth;
+        float relativeYdisplacment = (Camera.main.pixelHeight / 2.0f - speakerScreenPosition.y) / Camera.main.pixelHeight + 0.1f; // The dialogue should always be in the upper portion of the screen 
+        Vector2 displacementVector = new Vector2(relativeXdisplacment, relativeYdisplacment);
+
+        // The speech bubble needs to face in the same direction as the camera,
+        // in order for the opaque side to show
+        Vector3 awayFromCamera = Camera.main.transform.forward;
+        //awayFromCamera.y = 0;
+        Quaternion faceCameraRotation = Quaternion.LookRotation(awayFromCamera, Vector3.up);
+
+        DialogueUIController.DeployDialogueBubbleAt(speechBubble, speakerPosition, displacementVector, faceCameraRotation);
     }
 
     // kinda hacky crap aaa

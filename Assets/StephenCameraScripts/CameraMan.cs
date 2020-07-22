@@ -54,6 +54,9 @@ public class CameraMan : MonoBehaviour
     public Vector3 TargetPosition;
     public Quaternion TargetRotation;
 
+    public Vector3 TargetCameraPosition;
+    public Quaternion TargetCameraRotation;
+
     public float TranslatationLerpFactor = .5f;
     public float RotationLerpFactor = .5f;
 
@@ -145,7 +148,10 @@ public class CameraMan : MonoBehaviour
             }
 
             TargetRotation = this.transform.rotation;
-            
+
+            // By default, MyCamera is not expected to move.
+            TargetCameraPosition = MyCamera.transform.position;
+            TargetCameraRotation = MyCamera.transform.rotation;
             if (ZTracking == ZTrackingStrategy.Frozen)
             {
                 // CameraMan stays locked to the original XY-plane (z-coordinate)
@@ -159,11 +165,11 @@ public class CameraMan : MonoBehaviour
                 float minZ = DeadZone.min.z;
                 float maxZ = DeadZone.max.z;
                 float zPoint = (TransformToTrack.position.z - minZ) / (maxZ - minZ);
-                Vector3 targetCameraPosition = Vector3.Lerp(LowZTransform.position, HighZTransform.position, zPoint);
-                Quaternion targetCameraRotation = Quaternion.Lerp(LowZTransform.rotation, HighZTransform.rotation, zPoint);
+                TargetCameraPosition = Vector3.Lerp(LowZTransform.position, HighZTransform.position, zPoint);
+                TargetCameraRotation = Quaternion.Lerp(LowZTransform.rotation, HighZTransform.rotation, zPoint);
 
-                MyCamera.transform.position = Vector3.Lerp(MyCamera.transform.position, targetCameraPosition, TranslatationLerpFactor);
-                MyCamera.transform.rotation = Quaternion.Lerp(MyCamera.transform.rotation, targetCameraRotation, RotationLerpFactor);
+                MyCamera.transform.position = Vector3.Lerp(MyCamera.transform.position, TargetCameraPosition, TranslatationLerpFactor);
+                MyCamera.transform.rotation = Quaternion.Lerp(MyCamera.transform.rotation, TargetCameraRotation, RotationLerpFactor);
             }
             else if (ZTracking == ZTrackingStrategy.Exact)
             {
@@ -203,12 +209,18 @@ public class CameraMan : MonoBehaviour
     {
         if (IsCinematic)
         {
-            return (MyCamera.transform.position - TargetPosition).sqrMagnitude < 0.1f * 0.1f
-                && Quaternion.Dot(MyCamera.transform.rotation, TargetRotation) > 0.99619; // 5 degrees
+            // In Cinematic mode, TargetPosition is the target for MyCamera.
+            return (MyCamera.transform.position - TargetPosition).sqrMagnitude < 0.07f * 0.07f
+                && Quaternion.Dot(MyCamera.transform.rotation, TargetRotation) > 0.99939; // 2 degrees
         }
-
-        // If we're not in Cinematic mode, then we're always in position. (not really, but close enough)
-        return true;
+        else
+        {
+            // In non-Cinematic mode, TargetPosition is the location of the CameraMan.
+            return (transform.position - TargetPosition).sqrMagnitude < 0.07f * 0.07f
+                && Quaternion.Dot(transform.rotation, TargetRotation) > 0.99939 // 2 degrees
+                && (MyCamera.transform.position - TargetCameraPosition).sqrMagnitude < 0.07f * 0.07f
+                && Quaternion.Dot(MyCamera.transform.rotation, TargetCameraRotation) > 0.99939; // 2 degrees
+        }
     }
 
     public void MoveCameraToDefault()

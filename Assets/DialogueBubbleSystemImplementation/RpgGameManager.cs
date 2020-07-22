@@ -132,9 +132,11 @@ public class RpgGameManager : MonoBehaviour
             speaker?.GetComponentInChildren<CharacterDialogueAnimator>()?.stopTalking();
         }
 
-        ConversationUnpause();
 
         cameraMan.EndCinematicMode();
+        // No need to wait for CameraMan
+
+        ConversationUnpause();
 
         afterEvent();
         yield return null;
