@@ -70,7 +70,7 @@ public class ReisenGameManager : MonoBehaviour
         throw new Exception("not yet implemented");
     }
 
-    public void InitSceneState()
+    public void InitNpcState()
     {
         // bunch of bad game specific object goes here
         GameObject Npc = GameObject.Find("Keine");
@@ -105,11 +105,13 @@ public class ReisenGameManager : MonoBehaviour
         Npc = GameObject.Find("YinYangOrb");
         if (Npc != null)
             Npc.GetComponent<Npc>().InitNpcState(gameProgress.Orb);
+    }
 
-
+    private void InitSceneState()
+    {
         //Destroy items we already have
         ItemPickup itemPickup = GameObject.FindObjectOfType<ItemPickup>();
-        if(itemPickup != null)
+        if (itemPickup != null)
         {
             if (itemPickup.itemType == ReisenPickupItemType.Newspaper && gameProgress.Player.Newspaper != Assignment.NotAcquired)
             {
@@ -124,6 +126,8 @@ public class ReisenGameManager : MonoBehaviour
         //Set camera bounds properly
         if (FindObjectOfType<ReisenSceneManager>() != null)
             CameraMan.instance.CameraBounds = FindObjectOfType<ReisenSceneManager>().CameraBounds;
+
+        InitNpcState();
     }
 
     //PARSE CONDITIONALS HERE
