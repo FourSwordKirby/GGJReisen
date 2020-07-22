@@ -13058,11 +13058,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GeidonteiSign
       objectReference: {fileID: 0}
-    - target: {fileID: 284981328968879868, guid: 7df31b9d40553bd4b88a5c0ce09c0a93,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5873914287087058410, guid: 7df31b9d40553bd4b88a5c0ce09c0a93,
         type: 3}
       propertyPath: m_LocalPosition.x
