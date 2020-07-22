@@ -201,10 +201,14 @@ public class CameraMan : MonoBehaviour
     //In the future we should be able to do this check without having to wait for the camera to get into position
     public bool InDesiredPosition()
     {
-        return (MyCamera.transform.position - TargetPosition).sqrMagnitude < 0.1f * 0.1f
-            && Quaternion.Dot(MyCamera.transform.rotation, TargetRotation) > 0.99619; // 5 degrees
+        if (IsCinematic)
+        {
+            return (MyCamera.transform.position - TargetPosition).sqrMagnitude < 0.1f * 0.1f
+                && Quaternion.Dot(MyCamera.transform.rotation, TargetRotation) > 0.99619; // 5 degrees
+        }
 
-
+        // If we're not in Cinematic mode, then we're always in position. (not really, but close enough)
+        return true;
     }
 
     public void MoveCameraToDefault()
