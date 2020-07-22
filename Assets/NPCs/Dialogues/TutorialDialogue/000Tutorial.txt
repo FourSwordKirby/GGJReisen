@@ -12,7 +12,7 @@ Yes… any second… now…
 
 [expression] shock
 
-Ahhh! Are you kidding me, is this for real? 
+^^Ahhh! Are you kidding me, is this for real? 
 
 [instruction] cantleave
 

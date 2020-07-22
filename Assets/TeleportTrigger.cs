@@ -41,7 +41,7 @@ public class TeleportTrigger : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red + Color.yellow - Color.black * 0.5f;
-        //Gizmos.DrawCube(this.transform.position, this.transform.localScale);
+        Gizmos.DrawCube(this.transform.position, this.transform.localScale);
 
         Gizmos.color = Color.blue;
         Gizmos.DrawSphere(spawnArea.position, 0.5f);

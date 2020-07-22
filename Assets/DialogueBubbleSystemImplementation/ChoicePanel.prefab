@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 348062324}
   m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0.059999973}
-  m_LocalScale: {x: 3.2125564, y: 0.46048, z: 1}
+  m_LocalScale: {x: 3.690585, y: 0.46048, z: 1}
   m_Children: []
   m_Father: {fileID: 348362181346744021}
   m_RootOrder: 2
@@ -120,7 +120,7 @@ Transform:
   m_GameObject: {fileID: 1959902559}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.03999999}
-  m_LocalScale: {x: 3.2125564, y: 0.46048, z: 1}
+  m_LocalScale: {x: 3.690585, y: 0.46048, z: 1}
   m_Children: []
   m_Father: {fileID: 348362181346744021}
   m_RootOrder: 1
@@ -212,7 +212,7 @@ Transform:
   m_GameObject: {fileID: 1933168996014943699}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.2125564, y: 0.46048, z: 1}
+  m_LocalScale: {x: 3.690585, y: 0.46048, z: 1}
   m_Children: []
   m_Father: {fileID: 348362181346744021}
   m_RootOrder: 0
@@ -312,8 +312,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 31.923101, y: 3.7162428}
+  m_AnchoredPosition: {x: -0.0021, y: 0.0089}
+  m_SizeDelta: {x: 33.021225, y: 3.8784246}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &1933168996042557869
 MeshRenderer:
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Anything for Lady Erin!
+  m_text: Hand over the Agatha Chris-Q Novel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -431,7 +431,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 21
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -455,12 +455,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1933168996042557856}
-    characterCount: 23
+    characterCount: 34
     spriteCount: 0
-    spaceCount: 3
-    wordCount: 4
+    spaceCount: 5
+    wordCount: 6
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0

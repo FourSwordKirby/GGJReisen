@@ -106,6 +106,20 @@ public class ReisenGameManager : MonoBehaviour
         if (Npc != null)
             Npc.GetComponent<Npc>().InitNpcState(gameProgress.Orb);
 
+
+        //Destroy items we already have
+        ItemPickup itemPickup = GameObject.FindObjectOfType<ItemPickup>();
+        if(itemPickup != null)
+        {
+            if (itemPickup.itemType == ReisenPickupItemType.Newspaper && gameProgress.Player.Newspaper != Assignment.NotAcquired)
+            {
+                Destroy(itemPickup.gameObject);
+            }
+            if (itemPickup.itemType == ReisenPickupItemType.Wrench && gameProgress.Player.Wrench != Assignment.NotAcquired)
+            {
+                Destroy(itemPickup.gameObject);
+            }
+        }
     }
 
     //PARSE CONDITIONALS HERE
