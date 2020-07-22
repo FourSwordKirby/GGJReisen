@@ -6,18 +6,16 @@ Kogasa: Boo!
 
 Reisen: Eeeep! 
 
-Kogasa: W-wait that actually worked? 
-
-And on a visiting yokai nonetheless 
+Kogasa: W-wait, that actually worked? 
+And on a visiting youkai nonetheless.
 
 Reisen: [expression] sad
+Reisen: W-well, anyone would be terrified by someone appearing out of thin air...
 
-Reisen: W-well, anyone would be terrified by someone appearing out of thin air 
+Kogasa: Out of thin air? But I was just standing here.
+"Boo!" is my usual greeting.
 
-Kogasa: Out of thin air? But I was just standing here 
-
-"Boo!" is just my usual greeting 
-
-Reisen: **Is this another effect of the dimensionality reduction? 
+Reisen: **She definitely wasn't there a second ago...
+**Is this a side effect of the <b>virus</b>...?
 
 [instruction] Stage000
