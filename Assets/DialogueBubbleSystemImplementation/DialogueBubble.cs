@@ -39,16 +39,26 @@ public class DialogueBubble : MonoBehaviour, IDialogueBubble
     //in the future we want it to display based on any number of relative positions.
     //at the very least, it should make sure that it is visible on camera and can be positioned over
     //the center of the relevant character
-    public virtual void DeployAt(Vector3 speakerPosition, Vector3 displacementVector)
+    public void DeployAt(Vector3 speakerPosition, Vector3 displacementVector, Quaternion rotation)
     {
         Show();
 
-        if(displacementVector.x < 0)
-            this.transform.position = speakerPosition - anchorPoint.localPosition;
+        this.transform.localRotation *= rotation;
+
+
+        if (displacementVector.x < 0)
+        {
+            // Speaker on right side of the screen.
+            Vector3 anchorToTransformCenter = this.transform.position - anchorPoint.position;
+            this.transform.position = speakerPosition + anchorToTransformCenter;
+        }
         else
         {
+            // Speaker on the left side.
             bubbleFrame.transform.localScale -= Vector3.right * bubbleFrame.transform.localScale.x * 2;
-            this.transform.position = speakerPosition - anchorPoint.localPosition + Vector3.right * anchorPoint.localPosition.x * 2;
+            anchorPoint.localPosition -= Vector3.right * 2 * anchorPoint.localPosition.x;
+            Vector3 anchorToTransformCenter = this.transform.position - anchorPoint.position;
+            this.transform.position = speakerPosition + anchorToTransformCenter;
         }
     }
 

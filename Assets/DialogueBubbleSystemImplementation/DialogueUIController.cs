@@ -42,7 +42,7 @@ public class DialogueUIController : MonoBehaviour
         {
             speechPrompt = Instantiate(staticSpeechPromptPrefab).GetComponent<IDialogueBubble>();
         }
-        speechPrompt.DeployAt(speakerPosition, displacementVector);
+        speechPrompt.DeployAt(speakerPosition, displacementVector, Quaternion.identity);
 
         return speechPrompt;
     }
@@ -52,10 +52,10 @@ public class DialogueUIController : MonoBehaviour
         speechPrompt.Hide();
     }
 
-    public static void DeployDialogueBubbleAt(DialogueBubble dialogueBubble, Vector3 speakerPosition, Vector2 displacementVector)
+    public static void DeployDialogueBubbleAt(DialogueBubble dialogueBubble, Vector3 speakerPosition, Vector2 displacementVector, Quaternion rotation)
     {
         dialogueBubble.gameObject.SetActive(true);
-        dialogueBubble.DeployAt(speakerPosition, displacementVector);
+        dialogueBubble.DeployAt(speakerPosition, displacementVector, rotation);
     }
 
     public static void DeployDialogueBubble(IDialogueBubble dialogueBubble)
