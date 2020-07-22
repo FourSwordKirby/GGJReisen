@@ -1,10 +1,10 @@
-Pub is enterable and nice looking 
+// Pub is enterable and nice looking 
 
 Miyoi: Reisen! You remembered to visit! 
 
-Reisen: Yeah, well I can't stick around too long 
+Reisen: Yeah, well I can't stick around too long.
 
-I have to go talk to that shrine maiden to put a cap on everything 
+I have to go talk to that shrine maiden to put a cap on everything.
 
 Miyoi: Aww, I kind of want to go to with you see how everything turns out. 
 

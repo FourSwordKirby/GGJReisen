@@ -70,41 +70,41 @@ public class ReisenGameManager : MonoBehaviour
         throw new Exception("not yet implemented");
     }
 
-    public void InitNpcState()
+    public void SyncNpcState()
     {
         // bunch of bad game specific object goes here
         GameObject Npc = GameObject.Find("Keine");
         if (Npc != null)
-            Npc.GetComponent<Npc>().InitNpcState(gameProgress.Keine);
+            Npc.GetComponent<Npc>().SyncNpcState(gameProgress.Keine);
 
         Npc = GameObject.Find("Kosuzu");
         if (Npc != null)
-            Npc.GetComponent<Npc>().InitNpcState(gameProgress.Kosuzu);
+            Npc.GetComponent<Npc>().SyncNpcState(gameProgress.Kosuzu);
 
         Npc = GameObject.Find("Nitori");
         if (Npc != null)
-            Npc.GetComponent<Npc>().InitNpcState(gameProgress.Nitori);
+            Npc.GetComponent<Npc>().SyncNpcState(gameProgress.Nitori);
 
         Npc = GameObject.Find("Akyu");
         if (Npc != null)
-            Npc.GetComponent<Npc>().InitNpcState(gameProgress.Akyu);
+            Npc.GetComponent<Npc>().SyncNpcState(gameProgress.Akyu);
 
         Npc = GameObject.Find("LunarReisen");
         if (Npc != null)
-            Npc.GetComponent<Npc>().InitNpcState(gameProgress.LunarReisen);
+            Npc.GetComponent<Npc>().SyncNpcState(gameProgress.LunarReisen);
 
         Npc = GameObject.Find("Miyoi");
         if (Npc != null)
-            Npc.GetComponent<Npc>().InitNpcState(gameProgress.Miyoi);
+            Npc.GetComponent<Npc>().SyncNpcState(gameProgress.Miyoi);
 
         Npc = GameObject.Find("Kogasa");
         if (Npc != null)
-            Npc.GetComponent<Npc>().InitNpcState(gameProgress.Kogasa);
+            Npc.GetComponent<Npc>().SyncNpcState(gameProgress.Kogasa);
 
 
         Npc = GameObject.Find("YinYangOrb");
         if (Npc != null)
-            Npc.GetComponent<Npc>().InitNpcState(gameProgress.Orb);
+            Npc.GetComponent<Npc>().SyncNpcState(gameProgress.Orb);
     }
 
     private void InitSceneState()
@@ -127,7 +127,7 @@ public class ReisenGameManager : MonoBehaviour
         if (FindObjectOfType<ReisenSceneManager>() != null)
             CameraMan.instance.CameraBounds = FindObjectOfType<ReisenSceneManager>().CameraBounds;
 
-        InitNpcState();
+        SyncNpcState();
     }
 
     //PARSE CONDITIONALS HERE
