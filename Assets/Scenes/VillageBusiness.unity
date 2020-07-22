@@ -405,42 +405,42 @@ PrefabInstance:
     - target: {fileID: 3570052165668538350, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -23.34
+      value: -34.989998
       objectReference: {fileID: 0}
     - target: {fileID: 3570052165668538350, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.809999
+      value: 4.1400003
       objectReference: {fileID: 0}
     - target: {fileID: 3570052167220379949, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.1895943
+      value: 0.14866872
       objectReference: {fileID: 0}
     - target: {fileID: 3570052167220379949, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9818626
+      value: 0.9888871
       objectReference: {fileID: 0}
     - target: {fileID: 3570052167220379949, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.4464378
+      value: 2.799968
       objectReference: {fileID: 0}
     - target: {fileID: 3570052167220379949, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2562561
+      value: -0.016273499
       objectReference: {fileID: 0}
     - target: {fileID: 3854298775029977844, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.13
+      value: -29.26
       objectReference: {fileID: 0}
     - target: {fileID: 3854298775029977844, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.9
+      value: 3.14
       objectReference: {fileID: 0}
     - target: {fileID: 5605456161494871071, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
@@ -496,6 +496,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212093637441878869, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: gameProgress.Player.ShardsAcquired.Array.size
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7714349210501684526, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}

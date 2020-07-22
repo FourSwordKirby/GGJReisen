@@ -1,4 +1,4 @@
-Miyoi: Ah... there's so much work to do when the owner isn't around 
+Miyoi: Ah... there's so much work to do when the owner isn't around.
 
 With all of the stores lookin' the same you can't even tell that this is Geidontei! 
 
@@ -14,7 +14,7 @@ Reisen: You mean you weren't the one that fixed it?
 
 Miyoi: Nope, it must be because of the hard work you've done in resolving the incident. 
 
-I look forward to the grand feast you'll have here after you finish workin' 
+I look forward to the grand feast you'll have here after you finish workin'!
 
 Reisen: Yeah.
 
@@ -24,11 +24,11 @@ The signage all over the pub uses a normal whale.
 
 Miyoi: Weeeeell. Even if I'm not on the poster, that doesn't mean I'm not the poster girl.
 
-The word Geidon is refers to when a powerful creature swallows a smaller one in one gulp 
+The word Geidon is refers to when a powerful creature swallows a smaller one in one gulp.
 
 So a whale definitely matches that description!
 
-Reisen: Doesn't <b>Geidon</b> commonly refer to large countries swallowing up smaller ones
+Reisen: Doesn't <b>Geidon</b> commonly refer to large countries swallowing up smaller ones.
 
 [expression] ugh
 

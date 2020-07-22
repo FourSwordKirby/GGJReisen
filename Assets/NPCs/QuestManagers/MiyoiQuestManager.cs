@@ -4,15 +4,11 @@ public class MiyoiQuestManager : Npc
 {
     public override ReisenNpcCharacterProgress NpcProgress => GameProgress.Miyoi;
 
-    bool stage_0_read;
-    bool stage_10_read;
-    bool stage_20_read;
-    bool stage_30_read;
+    int MiyoiSeenShardDialogue;
 
     public void Miyoi_Stage000()
     {
-        stage_0_read = true;
-        if (GameProgress.Player.ShardsAcquired.Count > 5)
+        if (GameProgress.Player.ShardsAcquired.Count >= 5)
             Stage = 10;
         else
             Stage = 100;
@@ -20,8 +16,8 @@ public class MiyoiQuestManager : Npc
 
     public void Miyoi_Stage010()
     {
-        stage_10_read = true;
-        if (GameProgress.Player.ShardsAcquired.Count > 10)
+        GameProgress.MiyoiShardSeenCount = 10;
+        if (GameProgress.Player.ShardsAcquired.Count >= 10)
             Stage = 20;
         else
             Stage = 100;
@@ -29,8 +25,8 @@ public class MiyoiQuestManager : Npc
 
     public void Miyoi_Stage020()
     {
-        stage_20_read = true;
-        if (GameProgress.Player.ShardsAcquired.Count > 20)
+        GameProgress.MiyoiShardSeenCount = 20;
+        if (GameProgress.Player.ShardsAcquired.Count >= 20)
             Stage = 30;
         else
             Stage = 100;
@@ -38,24 +34,40 @@ public class MiyoiQuestManager : Npc
 
     public void Miyoi_Stage030()
     {
-        stage_30_read = true;
+        GameProgress.MiyoiShardSeenCount = 30;
         GameProgress.Player.AddShard(Shard.Miyoi_Company);
         DisplayShardTransaction(Shard.Miyoi_Company);
         Stage = 100;
     }
 
-    public override void InitNpcState(CharacterProgress characterProgress)
+    public override void SyncNpcState(CharacterProgress characterProgress)
     {
         int currentStage = characterProgress.GetStage();
 
-         if (GameProgress.Player.ShardsAcquired.Count < 5 && !stage_0_read)
-             currentStage = 0;
-         else if (GameProgress.Player.ShardsAcquired.Count < 10 && !stage_10_read)
-            currentStage = 10;
-         else if (GameProgress.Player.ShardsAcquired.Count < 20 && !stage_20_read)
-            currentStage = 20;
-         else if (GameProgress.Player.ShardsAcquired.Count >= 20 && !stage_30_read)
-             currentStage = 30;
+        //only try to play miyoi 10, 20, and 30 if we are at stage 100
+        if(currentStage == 100)
+        {
+            int acquiredShardCount = GameProgress.Player.ShardsAcquired.Count;
+            MiyoiSeenShardDialogue = GameProgress.MiyoiShardSeenCount;
+
+            if (MiyoiSeenShardDialogue < 10 && acquiredShardCount >= 5)
+            {
+                MiyoiSeenShardDialogue = 10;
+                currentStage = 10;
+            }
+            else if (MiyoiSeenShardDialogue < 20 && acquiredShardCount >= 10)
+            {
+                MiyoiSeenShardDialogue = 20;
+                currentStage = 20;
+            }
+            else if(MiyoiSeenShardDialogue < 30 && acquiredShardCount >= 20)
+            {
+                MiyoiSeenShardDialogue = 30;
+                currentStage = 30;
+            }
+        }
+
+        GameProgress.MiyoiShardSeenCount = MiyoiSeenShardDialogue;
 
         Stage = currentStage;
         TextAsset dialogueTextForStage = dialogues.Find(x => x.stage == currentStage).dialogue;
