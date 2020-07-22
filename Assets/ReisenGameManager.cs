@@ -120,6 +120,10 @@ public class ReisenGameManager : MonoBehaviour
                 Destroy(itemPickup.gameObject);
             }
         }
+
+        //Set camera bounds properly
+        if (FindObjectOfType<ReisenSceneManager>() != null)
+            CameraMan.instance.CameraBounds = FindObjectOfType<ReisenSceneManager>().CameraBounds;
     }
 
     //PARSE CONDITIONALS HERE
