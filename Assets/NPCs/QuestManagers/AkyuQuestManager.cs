@@ -24,12 +24,29 @@ public class AkyuQuestManager : Npc
         if (GameProgress.Kosuzu.Stage < 100)
         {
             GameProgress.Kosuzu.Stage = 100;
+            GameProgress.Kosuzu.DialogueRead = false;
         }
 
         GameProgress.Player.AddShard(Shard.Akyu_Textbook);
-        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "History Book -1, Shard +1" });
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "History Book -1", "Shard +1" });
 
-        Stage = 100;
+        if (GameProgress.Player.Newspaper == Assignment.NotAcquired)
+        {
+            Stage = 99;
+        }
+        else
+        {
+            Stage = 100;
+        }
+
+    }
+
+    public void Akyu_Stage099()
+    {
+        if (GameProgress.Player.Newspaper != Assignment.NotAcquired)
+        {
+            Stage = 100;
+        }
     }
 
     public void Akyu_Stage100()
@@ -48,7 +65,7 @@ public class AkyuQuestManager : Npc
     {
         GameProgress.Player.Novel = Assignment.Akyu;
         GameProgress.Player.AddShard(Shard.Akyu_Novel);
-        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Novel -1, Shard +1" });
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Novel -1", "Shard +1" });
         Stage = 200;
     }
 
@@ -77,6 +94,24 @@ public class AkyuQuestManager : Npc
     {
         GameProgress.Player.AddShard(Shard.Akyu_GoodEnd);
         DisplayShardTransaction(Shard.Akyu_GoodEnd);
-        Stage = 1101;
+
+        if (GameProgress.Keine.Stage >= 1000)
+        {
+            // If Keine has already been given an elixir, skip the final delivery quest.
+            Stage = 1102;
+            MarkNextDialogueAsRead();
+        }
+        else
+        {
+            Stage = 1101;
+        }
+    }
+
+    public void Akyu_Stage1101()
+    {
+        GameProgress.Player.Encyclopedia = Assignment.Inventory;
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Encyclopedia +1" });
+        Stage = 1102;
+        MarkNextDialogueAsRead();
     }
 }

@@ -1,12 +1,48 @@
-Akyu: I should go thank Kosuzu at the book shop too. 
-I'm probably being overly sentimental,
-but it truly was a blessing that I met her. 
-The Hieda house has always had good relations with her family's book shop. 
-But, it was truly a coincidence that in this generation, 
-That their daughter and I were of similar age. 
-Kosuzu's a very good friend. 
-Without her, I would've never had written my mystery novel series...
+Akyu: Reisen! 
 
-Reisen: [expression] sad
-**... I'm somewhat jealous.
-**Do I have a friend so dear to my heart?
+Reisen: [expression] sweat
+Yes?
+
+Akyu: I just remembered you were doing book deliveries earlier.
+
+Reisen: [expression] annoy
+Uh, yeah, I did do that, didn't I?
+
+Akyu: How convenient, could I trouble you with a book delivery?
+
+Reisen: [expression] angry
+No!
+[expression] happy
+This time I'm paying attention!
+
+Akyu: Oh... I see.
+And here, I thought you were trying to turn a new leaf too...
+Maybe you weren't as nice as I thought...
+
+Reisen: [expression] sweat
+...
+
+Akyu: I may not live for very long...
+But I'll definitely remember this for the rest of my life...
+And in my next life too...
+And the one after that as well.
+
+Reisen: [expression] annoy
+Okay, I get it...
+What's the book you need delivered...
+
+Akyu: Excellent!
+This is an old encyclopedia that I had acquired. 
+It contains entries on many <b>Youkai</b> and methods of dealing with them. 
+I've finished transcribing what I need from it. 
+A <b>school teacher</b> in the village was asking to borrow it. 
+Can you bring this to them? 
+
+Reisen: [expression] sweat
+A <b>school teacher</b>? 
+[expression] sad
+**I think one of the cubes said she was a <b>school teacher</b>.
+[expression] happy
+Sure, I will try.
+
+[instruction] Stage1101

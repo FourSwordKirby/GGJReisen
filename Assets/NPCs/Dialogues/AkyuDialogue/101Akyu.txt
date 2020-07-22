@@ -13,9 +13,9 @@ Reisen: [expression] normal
 ?{elixir=1} [expression] sad
 ?{elixir=1} **I can't shake this ominous feeling about giving her one... 
 
-?{elixir=1} {novel=1} [choice] [Hand over the elixir  | elixir] [Hand over the Agatha Chris-Q Novel | novel] [Leave | leave]
-?{elixir=1} [choice] [Hand over the elixir  | elixir]  [Leave | leave]
-?{novel=1} [choice] [Hand over the  Agatha Chris-Q Novel | novel] [Leave | leave]
+?{elixir=1} {novel=1} [choice] [Give elixir | elixir] [Give Mystery Novel | novel] [Leave | leave]
+?{elixir=1} [choice] [Give elixir | elixir]  [Leave | leave]
+?{novel=1} [choice] [Give Mystery Novel | novel] [Leave | leave]
 [choice] [Leave | end] 
 
 

@@ -30,7 +30,13 @@ public class LunarReisenQuestManager : Npc
     {
         GameProgress.Player.AddShard(Shard.LunarReisen_Smartphone);
         GameProgress.Player.Smartphone = Assignment.LunarReisen;
-        GameProgress.Keine.Stage = 200; 
+
+        // When assigning Smartphone, increment Keine's plotline too.
+        if (GameProgress.Keine.Stage < 200)
+        {
+            GameProgress.Keine.Stage = 200;
+            GameProgress.Keine.DialogueRead = false;
+        }
 
         GameProgress.Player.Magazine = Assignment.Inventory;
 

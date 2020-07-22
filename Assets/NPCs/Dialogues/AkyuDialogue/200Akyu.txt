@@ -6,7 +6,7 @@ Reisen: **She seems to still be affected by the simplification virus.
 
 ?{elixir=1} Reisen: **I think it should be okay to give her an elixir now. 
 ?{elixir=1} Reisen: **Should I do it?  
-?{elixir=1} [choice] [Hand over the elixir | elixir] [Leave | leave] 
+?{elixir=1} [choice] [Give elixir | elixir] [Leave | leave] 
 
 // No elixir case
 Reisen: **I'm not sure what more I can do here. (leave) 

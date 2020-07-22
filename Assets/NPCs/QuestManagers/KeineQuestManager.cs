@@ -13,23 +13,41 @@ public class KeineQuestManager : Npc
 
     public IEnumerator Stage000_CameraShift_Coroutine()
     {
-        Controls.DisableGameplayControls();
         var trigger = GameObject.FindObjectOfType<Keine_Stage000_Trigger>();
         CameraMan.instance.StartCinematicMode(trigger.CameraLoc3);
         while (!CameraMan.instance.InDesiredPosition())
         {
+            if (Controls.confirmInputDown())
+            {
+                // Fast break.
+                CameraMan.instance.StartCinematicMode(trigger.CameraLoc1);
+                yield break;
+            }
             yield return null;
         }
 
-        yield return new WaitForSeconds(2.6f);
+        float timeElapsed = 0f;
+        while (timeElapsed < 2.6f)
+        {
+            if (Controls.confirmInputDown())
+            {
+                // Fast skip
+                CameraMan.instance.StartCinematicMode(trigger.CameraLoc1);
+                yield break;
+            }
+            yield return null;
+        }
 
         CameraMan.instance.StartCinematicMode(trigger.CameraLoc1);
         while (!CameraMan.instance.InDesiredPosition())
         {
+            if (Controls.confirmInputDown())
+            {
+                // Fast skip
+                yield break;
+            }
             yield return null;
         }
-
-        Controls.EnableGameplayControls();
     }
 
     public void Keine_Stage000()
@@ -69,6 +87,7 @@ public class KeineQuestManager : Npc
         if (GameProgress.Kosuzu.Stage < 100)
         {
             GameProgress.Kosuzu.Stage = 100;
+            GameProgress.Kosuzu.DialogueRead = false;
         }
 
         GameProgress.Player.AddShard(Shard.Keine_TextBook);
@@ -92,7 +111,10 @@ public class KeineQuestManager : Npc
 
     public void Keine_Stage199()
     {
-        Stage = 200;
+        if (GameProgress.Player.Smartphone != Assignment.Inventory)
+        {
+            Stage = 200;
+        }
     }
 
     public void Keine_Stage200_Correct()
@@ -134,6 +156,7 @@ public class KeineQuestManager : Npc
         GameProgress.Player.AddShard(Shard.Keine_GoodEnd);
         DisplayShardTransaction(Shard.Keine_GoodEnd);
         Stage = 1102;
+        MarkNextDialogueAsRead();
     }
 
     public void Keine_Stage1101()

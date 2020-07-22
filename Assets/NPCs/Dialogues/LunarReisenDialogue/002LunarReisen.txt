@@ -16,11 +16,20 @@ Do you know what I dropped?
 Reisen: [expression] angry
 How would I know!?
 
+LunarReisen: What could it be...? And where could it be...?
+Before I got interviewed, I was at <b>school</b>...
+
+Reisen: [expression] sweat
+**School?
+**Oh yeah, there was a school somewhere in the <b>west</b>...
+[expression] ugh
+**One of the many cubes now, I guess...
+
 LunarReisen: Oh no... it was really important.
 My <b>masters</b> are going to yell at me for losing it...
 
 Reisen: [expression] sad
-**Ah, how pitiful...
+**How pitiful...
 **I know how you feel... I guess.
 
 [instruction] Stage002
