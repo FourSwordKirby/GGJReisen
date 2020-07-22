@@ -129,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ReimuColor: {r: 1, g: 0.6556604, b: 0.6556604, a: 1}
   YukariColor: {r: 0.59758115, g: 0, b: 0.7169812, a: 1}
+  selfAnimator: {fileID: 0}
   orbSprite: {fileID: 2077702299496918643}
   orbLight: {fileID: 7372851116440538854}
 --- !u!95 &2077702300666240755
@@ -258,7 +259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6763404895956934181}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2077702300666240753}
