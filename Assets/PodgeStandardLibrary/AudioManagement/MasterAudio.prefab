@@ -330,6 +330,8 @@ MonoBehaviour:
     track: {fileID: 8300000, guid: 5898cf1ebdeb6324da91e3c6e8c65528, type: 3}
   - name: Jump
     track: {fileID: 8300000, guid: 9642a0448709e12428b160820250a8fc, type: 3}
+  - name: TeleportEnter
+    track: {fileID: 8300000, guid: 3ff8b55c9d3618240844464940cff955, type: 3}
   battleStart: {fileID: 8300000, guid: 055302fcc2aaf74429a8782639d43c9c, type: 3}
   masterVolume: 1
   bgmVolume: 1

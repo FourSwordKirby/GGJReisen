@@ -25,6 +25,7 @@ public class TeleportTrigger : MonoBehaviour
     {
         GameObject player = RpgPlayer.instance.gameObject;
         CameraMan.instance.TransformToTrack = null;
+        AudioMaster.instance.PlayTeleportEnterSfx();
 
         yield return player.GetComponent<CharacterMovement>().moveCharacter(despawnArea.position, Vector3.zero, 1.5f, 5.0f);
 
@@ -40,8 +41,8 @@ public class TeleportTrigger : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red + Color.yellow - Color.black * 0.5f;
-        Gizmos.DrawCube(this.transform.position, this.transform.localScale);
+        //Gizmos.color = Color.red + Color.yellow - Color.black * 0.5f;
+        //Gizmos.DrawCube(this.transform.position, this.transform.localScale);
 
         Gizmos.color = Color.blue;
         Gizmos.DrawSphere(spawnArea.position, 0.5f);
