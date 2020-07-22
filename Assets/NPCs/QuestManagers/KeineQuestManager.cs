@@ -72,22 +72,27 @@ public class KeineQuestManager : Npc
         }
 
         GameProgress.Player.AddShard(Shard.Keine_TextBook);
-        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "History Book -1, Shard +1" });
-        Stage = 200;
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "History Book -1", "Shard +1" });
     }
 
     public void Keine_Stage103_Newspaper()
     {
         GameProgress.Player.Newspaper = Assignment.Keine;
         GameProgress.Player.AddShard(Shard.Keine_Newspaper);
-        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Newspaper -1, Shard +1" });
-        Stage = 200;
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Newspaper -1", "Shard +1" });
     }
 
     public void Keine_Stage103_Conclude()
     {
         GameProgress.Player.Smartphone = Assignment.Inventory;
         ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Smartphone +1" });
+        Stage = 199;
+        MarkNextDialogueAsRead();
+    }
+
+    public void Keine_Stage199()
+    {
+        Stage = 200;
     }
 
     public void Keine_Stage200_Correct()

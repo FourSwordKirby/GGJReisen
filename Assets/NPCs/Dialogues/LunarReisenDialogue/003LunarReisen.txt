@@ -55,7 +55,7 @@ Reisen: [expression] annoy
 [expression] sad
 **Though, I had the same thoughts when I first arrived on Earth...
 
-LunarReisen: I found this rare magazine while I was looking around.
+LunarReisen: I found this <b>rare magazine</b> while I was looking around.
 Consider it thanks for finding my phone!
 
 [instruction] Stage003_Smartphone

@@ -30,9 +30,11 @@ public class LunarReisenQuestManager : Npc
     {
         GameProgress.Player.AddShard(Shard.LunarReisen_Smartphone);
         GameProgress.Player.Smartphone = Assignment.LunarReisen;
+        GameProgress.Keine.Stage = 200; 
+
         GameProgress.Player.Magazine = Assignment.Inventory;
 
-        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Smartphone -1, Magazine +1, Shard + 1" });
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Smartphone -1", "Magazine +1", "Shard + 1" });
         Stage = 100;
     }
 
