@@ -35,6 +35,8 @@ MonoBehaviour:
     dialogue: {fileID: 4900000, guid: 3e21f98622470274cb5350b81216ab05, type: 3}
   - stage: 1102
     dialogue: {fileID: 4900000, guid: 38ec1c5ac9debdd468c58f04e3edaf62, type: 3}
+  - stage: 199
+    dialogue: {fileID: 4900000, guid: ae2a2c8650c9de94d95eb0db2d59212a, type: 3}
   dialoguePromptTrigger: {fileID: 8065946799819427377}
   cubeForm: {fileID: 1038822863455446261}
   stickForm: {fileID: 7175070946275261599}
@@ -547,7 +549,7 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: dialogueInstructions.Array.size
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -797,7 +799,7 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: dialogueInstructions.Array.data[8].name
-      value: Stage200_Correct
+      value: Stage199
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -807,7 +809,7 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: dialogueInstructions.Array.data[8].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Keine_Stage200_Correct
+      value: Keine_Stage199
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -817,7 +819,7 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: dialogueInstructions.Array.data[9].name
-      value: Stage200_Wrong
+      value: Stage200_Correct
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -827,7 +829,7 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: dialogueInstructions.Array.data[9].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Keine_Stage200_Wrong
+      value: Keine_Stage200_Correct
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -837,7 +839,7 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: dialogueInstructions.Array.data[10].name
-      value: Stage300_Elixir
+      value: Stage200_Wrong
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -847,7 +849,7 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: dialogueInstructions.Array.data[10].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Keine_Stage300_Elixir
+      value: Keine_Stage200_Wrong
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -857,7 +859,7 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: dialogueInstructions.Array.data[11].name
-      value: Stage300_Encyclopedia
+      value: Stage300_Elixir
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -867,7 +869,7 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: dialogueInstructions.Array.data[11].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Keine_Stage300_Encyclopedia
+      value: Keine_Stage300_Elixir
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -877,7 +879,7 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: dialogueInstructions.Array.data[12].name
-      value: Stage1000
+      value: Stage300_Encyclopedia
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -887,7 +889,7 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: dialogueInstructions.Array.data[12].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Keine_Stage1000
+      value: Keine_Stage300_Encyclopedia
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -922,7 +924,7 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: dialogueInstructions.Array.data[13].name
-      value: Stage1100
+      value: Stage1000
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -932,7 +934,7 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: dialogueInstructions.Array.data[13].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Keine_Stage1100
+      value: Keine_Stage1000
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -942,7 +944,7 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: dialogueInstructions.Array.data[14].name
-      value: Stage1101
+      value: Stage1100
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -952,7 +954,7 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: dialogueInstructions.Array.data[14].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Keine_Stage1101
+      value: Keine_Stage1100
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
