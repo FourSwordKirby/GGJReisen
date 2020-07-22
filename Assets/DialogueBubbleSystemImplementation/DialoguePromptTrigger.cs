@@ -120,7 +120,7 @@ public class DialoguePromptTrigger : MonoBehaviour
         postDialogueEvent?.Invoke();
 
         // Bad game specific hack that should get addressed somehwere else
-        ReisenGameManager.instance.InitSceneState();
+        ReisenGameManager.instance.InitNpcState();
 
         dialogueActive = false;
         if(!forceDialogueOnEnter)
@@ -149,7 +149,7 @@ public class DialoguePromptTrigger : MonoBehaviour
         postDialogueEvent?.Invoke();
 
         // Bad game specific hack that should get addressed somehwere else
-        ReisenGameManager.instance.InitSceneState();
+        ReisenGameManager.instance.InitNpcState();
 
         Destroy(gameObject.transform.parent.gameObject);
     }

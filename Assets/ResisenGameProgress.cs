@@ -184,6 +184,7 @@ public class ReisenGameProgress: GameProgress
     public ReisenNpcCharacterProgress Miyoi;
     public ReisenNpcCharacterProgress Kogasa;
     public int KogasaCount;
+    public List<int> MiyoiReadStages = new List<int>();
 
     public const string KeineStage = "keine_stage";
     public const string KosuzuStage = "kosuzu_stage";
