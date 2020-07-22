@@ -19,7 +19,8 @@ Reisen: [expression] sweat
 [choice] [Leave | leave] 
 
 
-Keine: What is this? [elixir]
+Reisen: [expression] normal [elixir]
+Keine: What is this? 
 Reisen: A potion to cure the virus affecting you.
 Keine: Virus?
 Reisen: [expression] ugh
@@ -35,8 +36,9 @@ Keine: An invisible plague...?
 [instruction] Stage103_Elixir
 (end)
 
- 
-Keine: A history book? [textbook]
+
+Reisen: [expression] normal [textbook]
+Keine: A history book?
 Oh! I suddenly just remembered! 
 I'm a <b>school teacher</b>. 
 I have been teaching history in this village for a long time. 
@@ -49,7 +51,8 @@ Reisen: [expression] shock
 (conclude)
 
 
-Keine: Oh the newspaper! [newspaper]
+Reisen: [expression] normal [newspaper]
+Keine: Oh the newspaper!
 I haven't read today's yet.
 Let's see...
 "Scandal in the Making!?"
@@ -68,7 +71,8 @@ Reisen: [expression] shock
 (conclude)
 
 
-Keine: By the way... [conclude]
+Reisen: [expression] normal [conclude]
+Keine: By the way...
 Do you know what this is?
 It's a metal plate, sized like a playing card, with a glass sheet.
 Some kind of fancy device?

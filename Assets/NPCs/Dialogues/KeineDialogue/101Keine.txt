@@ -49,6 +49,6 @@ Am I the lunatic here!?
 **Maybe this is an effect of the virus?
 [expression] sad
 **Yukari mentioned the boundary of <b>simplicity and complexity</b>.
-**Are people's words getting <b>simplified</b>...?
+**Is <i>vocabulary</i> also getting <b>simplified</b>...?
 
-[instruction] Stage103
+[instruction] Stage101

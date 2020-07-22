@@ -142,7 +142,7 @@ public class PlayerProgress
         if (TextBook == Assignment.Inventory)
             inventoryItems.Add(new KeyItem("History Book", "A delivery from that from the <b>book store</b>. It has a lot of info about Gensokyo's history"));
         if (Encyclopedia == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Encyclopeida", "An encyclopeia on many <b>Youkai</b>. I was told to give it to a <b>school teacher</b>"));
+            inventoryItems.Add(new KeyItem("Encyclopedia", "An encyclopedia on <b>Youkai</b>. I was told to give it to a <b>school teacher</b>"));
         if (Newspaper == Assignment.Inventory)
             inventoryItems.Add(new KeyItem("Newspaper", "A Bunbunmaru Super Special Extra Edition. It's addressed to the <b>west</b> side of the village"));
         if (Smartphone == Assignment.Inventory)

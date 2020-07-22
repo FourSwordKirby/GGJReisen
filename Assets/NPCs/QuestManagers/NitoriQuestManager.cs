@@ -30,6 +30,7 @@ public class NitoriQuestManager : Npc
     public void Nitori_Stage003_Smartphone()
     {
         GameProgress.Player.Smartphone = Assignment.Nitori;
+        GameProgress.Keine.Stage = 200;
         ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Smartphone -1" });
         Stage = 100;
     }
