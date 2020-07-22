@@ -410,22 +410,22 @@ PrefabInstance:
     - target: {fileID: 3570052165668538350, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.09
+      value: 9.8
       objectReference: {fileID: 0}
     - target: {fileID: 3570052167220379949, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.16887504
+      value: 0.16887599
       objectReference: {fileID: 0}
     - target: {fileID: 3570052167220379949, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98563755
+      value: 0.98563737
       objectReference: {fileID: 0}
     - target: {fileID: 3570052167220379949, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.1183372
+      value: 3.118352
       objectReference: {fileID: 0}
     - target: {fileID: 3570052167220379949, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
@@ -440,7 +440,7 @@ PrefabInstance:
     - target: {fileID: 3854298775029977844, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.12
+      value: 8.8
       objectReference: {fileID: 0}
     - target: {fileID: 5605456161494871071, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
@@ -1176,13 +1176,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170076733}
-  m_LocalRotation: {x: -0.35683763, y: -0.48559305, z: 0.22643614, w: -0.7652405}
+  m_LocalRotation: {x: -0.38115102, y: 0.39151433, z: -0.18256554, w: -0.8173802}
   m_LocalPosition: {x: 0, y: 5.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 50.000004, y: -295.205, z: 0}
+  m_LocalEulerAnglesHint: {x: 50.000004, y: -411.188, z: 0}
 --- !u!1 &171338389
 GameObject:
   m_ObjectHideFlags: 0
@@ -13178,11 +13178,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GeidonteiSign
-      objectReference: {fileID: 0}
-    - target: {fileID: 284981328968879868, guid: 7df31b9d40553bd4b88a5c0ce09c0a93,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5873914287087058410, guid: 7df31b9d40553bd4b88a5c0ce09c0a93,
         type: 3}
