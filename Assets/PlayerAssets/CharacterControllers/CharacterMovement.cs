@@ -38,6 +38,10 @@ public class CharacterMovement : MonoBehaviour
         {
             isGrounded = false;
             selfBody.velocity += Vector3.up * jumpPower;
+
+            //Hack
+            //Probably want to make audio master listen for jump events or something
+            AudioMaster.instance.PlayJumpSfx();
         }
     }
 
