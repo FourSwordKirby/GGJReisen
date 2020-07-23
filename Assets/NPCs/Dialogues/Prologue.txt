@@ -74,13 +74,7 @@ And now I’m back to the normal days of walking back-and-forth to the village a
 
 Of being a professional medicine peddler for the human village. 
 
-
-
-
-[instruction] Prologue6
-
  
-
 But when I crested the final hill leading to the village’s wooden gate entrance, 
 
 The sight that awaited reminded me that here, on earthen lands of Gensokyo, 
@@ -89,7 +83,7 @@ Life is never without a dull moment.
 
 
 
-[instruction] Prologue7
+[instruction] FadeCg
 
  
 

@@ -226,7 +226,7 @@ PrefabInstance:
     - target: {fileID: 456247859300951823, guid: 30e8becfb8fb89e42963c80449e3e5a8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 456247859300951823, guid: 30e8becfb8fb89e42963c80449e3e5a8,
         type: 3}
@@ -295,7 +295,7 @@ PrefabInstance:
     - target: {fileID: 616268525716181283, guid: 86be1572d57980e4d8de60db910a56d5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 616268525716181283, guid: 86be1572d57980e4d8de60db910a56d5,
         type: 3}
@@ -317,10 +317,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScreenFader
       objectReference: {fileID: 0}
+    - target: {fileID: 616268525716181293, guid: 86be1572d57980e4d8de60db910a56d5,
+        type: 3}
+      propertyPath: fading
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 616268525716181293, guid: 86be1572d57980e4d8de60db910a56d5,
+        type: 3}
+      propertyPath: startingColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 616268526774247784, guid: 86be1572d57980e4d8de60db910a56d5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 616268526814688993, guid: 86be1572d57980e4d8de60db910a56d5,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 616268526814688993, guid: 86be1572d57980e4d8de60db910a56d5,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 616268526814688993, guid: 86be1572d57980e4d8de60db910a56d5,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 616268526814688993, guid: 86be1572d57980e4d8de60db910a56d5,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86be1572d57980e4d8de60db910a56d5, type: 3}
@@ -404,8 +434,80 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1440834088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1440834089}
+  - component: {fileID: 1440834091}
+  - component: {fileID: 1440834090}
+  m_Layer: 5
+  m_Name: CG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1440834089
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440834088}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2036130386}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 11.609, y: 95.024}
+  m_SizeDelta: {x: 1047.219, y: 577.9524}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1440834090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440834088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7921569}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 91e8a0eeed4709044b0e3dcf9324f3d5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1440834091
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440834088}
+  m_CullTransparentMesh: 0
 --- !u!1 &1880783305
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +538,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2036130386}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -594,7 +696,7 @@ Transform:
   m_Children:
   - {fileID: 2036130386}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1882020936
 MonoBehaviour:
@@ -609,6 +711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1880783307}
+  CgImage: {fileID: 1440834090}
   textColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1882020937
 MonoBehaviour:
@@ -639,19 +742,34 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - name: FadeCg
+    action:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1882020938}
+          m_MethodName: FadeCg
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Prologue1
+            m_BoolArgument: 0
+          m_CallState: 2
   - name: Prologue1
     action:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1882020938}
-          m_MethodName: DisplayPrologueBackground
+          m_MethodName: DisplayCg
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 1
+            m_StringArgument: Prologue1
             m_BoolArgument: 0
           m_CallState: 2
   - name: Prologue2
@@ -659,14 +777,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1882020938}
-          m_MethodName: DisplayPrologueBackground
+          m_MethodName: DisplayCg
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 2
+            m_StringArgument: Prologue2
             m_BoolArgument: 0
           m_CallState: 2
   - name: Prologue3
@@ -674,14 +792,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1882020938}
-          m_MethodName: DisplayPrologueBackground
+          m_MethodName: DisplayCg
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 3
+            m_StringArgument: Prologue3
             m_BoolArgument: 0
           m_CallState: 2
   - name: Prologue4
@@ -689,14 +807,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1882020938}
-          m_MethodName: DisplayPrologueBackground
+          m_MethodName: DisplayCg
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 4
+            m_StringArgument: Prologue4
             m_BoolArgument: 0
           m_CallState: 2
   - name: Prologue5
@@ -704,44 +822,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1882020938}
-          m_MethodName: DisplayPrologueBackground
+          m_MethodName: DisplayCg
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 5
-            m_BoolArgument: 0
-          m_CallState: 2
-  - name: Prologue6
-    action:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1882020938}
-          m_MethodName: DisplayPrologueBackground
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 6
-            m_BoolArgument: 0
-          m_CallState: 2
-  - name: Prologue7
-    action:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1882020938}
-          m_MethodName: DisplayPrologueBackground
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 7
+            m_StringArgument: Prologue5
             m_BoolArgument: 0
           m_CallState: 2
   playOnAwake: 1
@@ -758,6 +846,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af66ff7d5041dc744a2a503fc4edc44b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CutsceneCgs:
+  - name: Prologue1
+    CgSprite: {fileID: 21300000, guid: 3a87716c362655540ab17a4c66223180, type: 3}
+  - name: Prologue2
+    CgSprite: {fileID: 21300000, guid: dd42a2727a3561c4187a64e34b5d621e, type: 3}
+  - name: Prologue3
+    CgSprite: {fileID: 21300000, guid: 12a2bf6ffc7ccb349aa87e542aeeded3, type: 3}
+  - name: Prologue4
+    CgSprite: {fileID: 21300000, guid: 78769f12bfa7509499f68f8a727bbcc1, type: 3}
+  - name: Prologue5
+    CgSprite: {fileID: 21300000, guid: 91e8a0eeed4709044b0e3dcf9324f3d5, type: 3}
 --- !u!1 &2036130385
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,6 +887,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1440834089}
   - {fileID: 1880783306}
   m_Father: {fileID: 1882020935}
   m_RootOrder: 0
