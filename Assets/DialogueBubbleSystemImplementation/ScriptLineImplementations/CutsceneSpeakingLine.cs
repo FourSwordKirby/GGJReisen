@@ -38,7 +38,7 @@ public class CutsceneSpeakingLine : SpeakingLine
 
     public override bool IsFinished()
     {
-        return CutsceneUI.instance.ready;
+        return CutsceneUI.instance.dialogueLineFinished;
     }
 
     public override DialogueEngine.LineType GetLineType()

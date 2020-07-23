@@ -1,13 +1,23 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PrologueEvents : MonoBehaviour
+public class CutsceneEvents : MonoBehaviour
 {
-    public void DisplayPrologueBackground(string background)
+    public List<CutsceneCg> CutsceneCgs;
+
+    public void DisplayCg(string CgName)
     {
-        Debug.Log(background);
+        Sprite CgSprite = CutsceneCgs.Find(x => x.name == CgName).CgSprite;
+        CutsceneUI.instance.DisplayCg(CgSprite);
+    }
+
+
+    public void FadeCg()
+    {
+        CutsceneUI.instance.FadeCg();
     }
 
     public void LoadVillageEntrance()
@@ -23,4 +33,11 @@ public class PrologueEvents : MonoBehaviour
         ReisenGameManager.isNewGame = true;
         yield return null;
     }
+}
+
+[Serializable]
+public struct CutsceneCg
+{
+    public string name;
+    public Sprite CgSprite;
 }
