@@ -65,12 +65,13 @@ MonoBehaviour:
   initialPosition: {fileID: 3201639936593195382}
   rows: 7
   cols: 4
-  xspacing: 85
-  yspacing: 85
+  xspacing: 108
+  yspacing: 108
   shardTitle: {fileID: 0}
   shardDescription: {fileID: 0}
   shardImage: {fileID: 0}
   emptyText: {fileID: 1908898729546712796}
+  completionProgress: {fileID: 0}
 --- !u!1 &4007697739100130627
 GameObject:
   m_ObjectHideFlags: 0

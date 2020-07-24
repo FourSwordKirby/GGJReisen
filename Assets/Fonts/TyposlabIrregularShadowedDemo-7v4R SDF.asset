@@ -1775,7 +1775,7 @@ MonoBehaviour:
     m_GlyphIndex: 205
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: 28174108444903766}
+  - {fileID: 28353364403524540}
   m_AtlasTextureIndex: 0
   m_UsedGlyphRects:
   - m_X: 0
@@ -2586,7 +2586,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 28174108444903766}
+        m_Texture: {fileID: 28353364403524540}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineTex:
@@ -2655,7 +2655,7 @@ Material:
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
---- !u!28 &28174108444903766
+--- !u!28 &28353364403524540
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

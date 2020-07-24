@@ -1026,12 +1026,17 @@ MonoBehaviour:
     LunarReisen:
       Stage: 0
       DialogueRead: 0
+    Orb:
+      Stage: 0
+      DialogueRead: 0
     Miyoi:
       Stage: 0
       DialogueRead: 0
     Kogasa:
       Stage: 0
       DialogueRead: 0
+    KogasaCount: 0
+    MiyoiShardSeenCount: 0
 --- !u!1 &9116032891013971132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,11 +2634,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1119014605801110962, guid: 3eb6ca052feade04d9b020b0f1303b5c,
-        type: 3}
-      propertyPath: isPauseMenuVersion
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2572599307428540657, guid: 3eb6ca052feade04d9b020b0f1303b5c,
         type: 3}
