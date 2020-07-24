@@ -47,7 +47,7 @@ public class ReisenGameManager : MonoBehaviour
             }
             isNewGame = false;
         }
-        AudioMaster.instance.PlayTownTrack();
+        AudioMaster.instance.PlayVillageTrack();
     }
 
     private void Update()
