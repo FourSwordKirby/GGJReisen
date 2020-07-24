@@ -33,4 +33,19 @@ public class TutorialEvents : MonoBehaviour
     {
         CantLeaveZone.SetActive(true);
     }
+
+    public void PlaySpookyTrack()
+    {
+        AudioMaster.instance.PlaySpookyTrack();
+    }
+
+    public void StopSpookyTrack()
+    {
+        AudioMaster.instance.StopSpookyTrack();
+    }
+
+    public void PlayVillageTrack()
+    {
+        AudioMaster.instance.PlayVillageTrack();
+    }
 }

@@ -7612,7 +7612,7 @@ PrefabInstance:
     - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
         type: 3}
       propertyPath: dialogueInstructions.Array.size
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
         type: 3}
@@ -7632,6 +7632,21 @@ PrefabInstance:
     - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
         type: 3}
       propertyPath: dialogueInstructions.Array.data[3].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[4].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[5].action.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[6].action.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
@@ -7784,6 +7799,96 @@ PrefabInstance:
       propertyPath: cameraPosition
       value: 
       objectReference: {fileID: 1679267101}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[4].name
+      value: PlaySpookyTrack
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[4].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 544011111}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[4].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySpookyTrack
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[4].action.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[4].action.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[4].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[5].name
+      value: StopSpookyTrack
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[5].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 544011111}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[5].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StopSpookyTrack
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[5].action.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[5].action.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[5].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[6].name
+      value: PlayVillageTrack
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[6].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 544011111}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[6].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayVillageTrack
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[6].action.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[6].action.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932829280698991745, guid: fbcfb14599707e2499bfbe397f90fd3c,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[6].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5932829281497447740, guid: fbcfb14599707e2499bfbe397f90fd3c,
         type: 3}
       propertyPath: m_Name

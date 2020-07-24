@@ -31,7 +31,6 @@ public class AudioMaster : MonoBehaviour
 
     [Range(0f, 1f)]
     public float voiceVolume;
-
     public static AudioMaster instance;
 
     public void Awake()
@@ -84,10 +83,22 @@ public class AudioMaster : MonoBehaviour
         bgmController.SwitchTrack(prologueTrack.track);
     }
 
-    internal void PlayTownTrack()
+    internal void PlayVillageTrack()
     {
         AudioTrack prologueTrack = bgmAudioMixes.Find(x => x.name == "Town");
         bgmController.SwitchTrack(prologueTrack.track);
+    }
+
+    internal void PlaySpookyTrack()
+    {
+        Debug.Log("this should be a spooky track");
+        AudioTrack track = bgmAudioMixes.Find(x => x.name == "Town");
+        bgmController.SwitchTrack(track.track);
+    }
+
+    internal void StopSpookyTrack()
+    {
+        bgmController.StopTrack();
     }
 
     internal void PlaySfx(string sfxName)
