@@ -47,7 +47,7 @@ public class ReisenGameManager : MonoBehaviour
             }
             isNewGame = false;
         }
-        AudioMaster.instance.PlayTownTrack();
+        AudioMaster.instance.PlayVillageTrack();
     }
 
     private void Update()
@@ -150,7 +150,7 @@ public class ReisenGameManager : MonoBehaviour
 
             // Item ownership checks
             if (variable == ReisenGameProgress.HasCough)
-                conditionalResult = gameProgress.Player.CoughingMedicine == Assignment.Inventory;
+                conditionalResult = gameProgress.Player.CoughMedicine == Assignment.Inventory;
             else if (variable == ReisenGameProgress.HasTextbook)
                 conditionalResult = gameProgress.Player.TextBook == Assignment.Inventory;
             else if (variable == ReisenGameProgress.HasEncyclopedia)

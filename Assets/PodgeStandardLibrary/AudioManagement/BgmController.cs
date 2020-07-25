@@ -11,6 +11,11 @@ public class BgmController : MonoBehaviour {
 
     public AudioClip currentAudio;
 
+    public void StopTrack()
+    {
+        StartCoroutine(StopTrackFadeOut(0.0f));
+    }
+
     public void SwitchTrack(AudioClip track, float transitionOverlap = 0.0f, float transitionTime = 1.0f)
     {
         currentAudio = track;
@@ -107,7 +112,22 @@ public class BgmController : MonoBehaviour {
 
         yield return null;
     }
-    
+
+    private IEnumerator StopTrackFadeOut(float duration = 1.0f)
+    {
+        float timer = 0.0f;
+
+        float startingVolume = audioBgmSrcMain.volume;
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            audioBgmSrcMain.volume = Mathf.Lerp(startingVolume, 0.0f, timer / duration);
+            yield return new WaitForEndOfFrame();
+        }
+        audioBgmSrcMain.Stop();
+        yield return null;
+    }
+
     private IEnumerator FadeTowards (float targetVolume, float duration=1.0f) {
         float timer = 0.0f;
 

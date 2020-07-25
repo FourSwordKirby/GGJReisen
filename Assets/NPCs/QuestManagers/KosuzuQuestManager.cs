@@ -6,9 +6,9 @@ public class KosuzuQuestManager : Npc
 
     public void Kosuzu_Stage000_CoughMedicine()
     {
-        GameProgress.Player.CoughingMedicine = Assignment.Kosuzu;
+        GameProgress.Player.CoughMedicine = Assignment.Kosuzu;
         GameProgress.Player.TextBook = Assignment.Inventory;
-        GameProgress.Player.AddShard(Shard.Kosuzu_CoughingMedicine);
+        GameProgress.Player.AddShard(Shard.Kosuzu_CoughMedicine);
         ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Cough Medicine -1", "History Book +1", "Shard +1" });
         Stage = 99;
         MarkNextDialogueAsRead();

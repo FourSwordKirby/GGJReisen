@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 7a7ce4169fb7cb043b34097f089150a3
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Lotuscoder
+  fontNames:
+  - Lotuscoder
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 504bebb1370439e4ebd8df54ebb96090, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -879,6 +879,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 616268526814688992, guid: 86be1572d57980e4d8de60db910a56d5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00012207031
+      objectReference: {fileID: 0}
+    - target: {fileID: 616268526814688992, guid: 86be1572d57980e4d8de60db910a56d5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0049438477
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86be1572d57980e4d8de60db910a56d5, type: 3}
 --- !u!1001 &9116032891078180318
@@ -977,6 +987,21 @@ PrefabInstance:
       propertyPath: completionProgress
       value: 
       objectReference: {fileID: 22033750}
+    - target: {fileID: 7270479690507366712, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: isPauseMenuVersion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7270479690507366712, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: xspacing
+      value: 108
+      objectReference: {fileID: 0}
+    - target: {fileID: 7270479690507366712, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: yspacing
+      value: 108
+      objectReference: {fileID: 0}
     - target: {fileID: 8518398384525039220, guid: b21610cf10db37248aa466140bf79f63,
         type: 3}
       propertyPath: m_RootOrder
@@ -986,6 +1011,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116032890699227195, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116032890699227195, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116032890699227195, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 768
       objectReference: {fileID: 0}
     - target: {fileID: 9116032890755456906, guid: b21610cf10db37248aa466140bf79f63,
         type: 3}
