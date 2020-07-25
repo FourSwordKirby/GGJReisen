@@ -10,7 +10,7 @@ Didn't I tell you I'm busy with very important work?
 Reisen: [expression] sad
 **If I say something, I should choose my words carefully...
 
-[choice] [Lunarian science is beyond you. | science] [Did you cause the incident? | culprit] [(Leave) | leave]
+[choice] [Lunarian science is beyond you. | science] [Did you cause the incident? | culprit] [Leave | leave]
 
 Reisen: [expression] heh [science]
 I doubt an Earthling could learn Lunarian Science in a day. 

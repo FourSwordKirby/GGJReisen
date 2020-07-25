@@ -71,6 +71,6 @@ Reisen: [expression] sweat
 [instruction] Stage102_Schematic
 (end)
 
-Reisen: **I don't think anything here would work [leave]
+Reisen: **I don't think anything here would work. [leave]
 
 [end]

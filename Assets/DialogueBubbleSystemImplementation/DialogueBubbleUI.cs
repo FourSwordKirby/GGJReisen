@@ -85,6 +85,7 @@ public class DialogueBubbleUI : MonoBehaviour
 
         DeployBubble(choiceBubble, speakerPosition);
 
+        choiceBubble.UpdateOption(line.GetOptionIndex());
         StartCoroutine(toggleChoices(line, choiceBubble));
         StartCoroutine(animateLogs(lineNumber));
     }
