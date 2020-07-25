@@ -18,6 +18,7 @@ public class PauseMenuUI : MenuUI
 
     public bool ReisenVisible;
 
+    private bool isClosing;
     public Animator menuAnimator;
 
     public override void Update()
@@ -26,7 +27,8 @@ public class PauseMenuUI : MenuUI
             ShowReisen();
         else
             HideReisen();
-        base.Update();
+        if(!isClosing)
+            base.Update();
     }
 
     public override void Open()
@@ -44,12 +46,14 @@ public class PauseMenuUI : MenuUI
     {
         HideDescription();
         HideReisen();
+        isClosing = true;
         menuAnimator.SetTrigger("Close");
     }
 
     public void CompleteClose()
     {
         base.Close();
+        isClosing = false;
     }
 
     public override void Focus()

@@ -29,7 +29,7 @@ public class Shard
     public static Shard Keine_QuestionCorrect { get; } = new Shard(nameof(Keine_QuestionCorrect), 1, "Get lectured by the teacher", "\"Those who fail to learn from history are doomed to repeat it.\" so she said.");
     public static Shard Keine_GoodEnd { get; } = new Shard(nameof(Keine_GoodEnd), 2, "Rich History", "\"A rich history is one with many relationships.\" Maybe I can put a little more effort...");
 
-    public static Shard Kosuzu_CoughingMedicine { get; } = new Shard(nameof(Kosuzu_CoughingMedicine), 1, "Medicine Peddler Arrives!", "Wonder if the coughing was due to allergies.");
+    public static Shard Kosuzu_CoughMedicine { get; } = new Shard(nameof(Kosuzu_CoughMedicine), 1, "Medicine Peddler Arrives!", "Wonder if the coughing was due to allergies.");
     public static Shard Kosuzu_QuestionCorrect { get; } = new Shard(nameof(Kosuzu_QuestionCorrect), 1, "Youkai Enthusiast", "Living dangerously. Well it might be fun... Don't get me involved though.");
     public static Shard Kosuzu_MagazineBadEnd { get; } = new Shard(nameof(Kosuzu_MagazineBadEnd), 1, "Buy and Sell Used Books", "I never asked for the book shop keeper's name, huh?");
     public static Shard Kosuzu_GoodEnd { get; } = new Shard(nameof(Kosuzu_GoodEnd), 2, "Suzunaan, Opened for Business", "Looks like the book shop is in order again.");
@@ -112,7 +112,7 @@ public class PlayerProgress
     public string nameTag;
 
     public List<Shard> ShardsAcquired;
-    public Assignment CoughingMedicine;
+    public Assignment CoughMedicine;
     public Assignment TextBook;
     public Assignment Encyclopedia;
     public Assignment Newspaper;
@@ -137,8 +137,8 @@ public class PlayerProgress
     {
         List<KeyItem> inventoryItems = new List<KeyItem>();
         
-        if (CoughingMedicine == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Coughing Medicine", "Cough medicine I'm supposed to deliver to a <b>book store</b>"));
+        if (CoughMedicine == Assignment.Inventory)
+            inventoryItems.Add(new KeyItem("Cough Medicine", "Cough medicine I'm supposed to deliver to a <b>book store</b>"));
         if (TextBook == Assignment.Inventory)
             inventoryItems.Add(new KeyItem("History Book", "A delivery from that from the <b>book store</b>. It has a lot of info about Gensokyo's history"));
         if (Encyclopedia == Assignment.Inventory)

@@ -237,6 +237,8 @@ MonoBehaviour:
   OffsetVectorToTrackedTransform: {x: 0, y: -0.7, z: 6.28}
   TargetPosition: {x: 1, y: 0.29999998, z: -12.530001}
   TargetRotation: {x: -0, y: -0, z: -0, w: 1}
+  TargetCameraPosition: {x: 1, y: 2.866, z: -12.097501}
+  TargetCameraRotation: {x: 0.13376993, y: 0, z: 0, w: 0.99101245}
   TranslatationLerpFactor: 0.05
   RotationLerpFactor: 0.05
   CameraMoveSpeed: 10
@@ -647,6 +649,7 @@ MonoBehaviour:
       Stage: 0
       DialogueRead: 0
     KogasaCount: 0
+    MiyoiShardSeenCount: 0
   spawnLocation: 0
   statusTextPrefab: {fileID: 2022352952880849763, guid: 854dea0d69b472c4cbf30d71d81047c2,
     type: 3}
@@ -803,11 +806,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7959057100026896125, guid: 174c1e9d211f11a45a52896f08f46f76,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7983752017863609243, guid: 174c1e9d211f11a45a52896f08f46f76,
         type: 3}

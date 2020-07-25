@@ -14,21 +14,29 @@ TutorialOrb: Ah, yeah. It’s me Reimu. You came at a convenient time.
 
 Can you clean up this mess? 
 
+Reisen: [expression] annoy
+
 Reisen: Clean up? Is this YOUR mess? 
 
 TutorialOrb: It’s nothing I did. In fact, the fault entirely lies with you. 
 
-Your entourage from the Lunar Capital started something again. Yukari and I are busy handling them. 
+Your entourage from the Lunar Capital started something again. 
+
+Yukari and I are busy handling them. 
+
+Reisen: [expression] shock
 
 Reisen: Hold on, my master wouldn’t start something as random as- 
 
 TutorialOrb: No, Eirin is also helping us right now. 
 
-It’s those princesses from the moon and Junko that have utterly screwed over Gensokyo right now. 
+It’s those princesses from the moon and Junko that are screwing with Gensokyo. 
 
 There’s no time to explain everything, but we need someone on Earth to stabilize the human village. 
 
 And quickly too. 
+
+Reisen: [expression] ugh
 
 Reisen: Can’t you get someone else? 
 
@@ -38,6 +46,8 @@ Reisen: Can’t you get someone else?
 [instruction] SwitchYukari 
 
 TutorialOrb: Hi hi! Is this the moon rabbit on the other end? 
+
+Reisen: [expression] sweat
 
 Reisen: Yes, this is she. Who is this? 
 
@@ -55,13 +65,22 @@ TutorialOrb: Bingo! And with that you’ve passed part one of your citizenship t
 
 TutorialOrb: Boo, you’ll have to brush up on your Gensokyo history if you want to live here, moon rabbit. [wrong]
 
-TutorialOrb: I am Yukari, the youkai sage who oversees the Gensokyo boundary. I’m sure you’ve heard of me. (103)
+Reisen: [expression] ugh
 
+TutorialOrb: I am Yukari, the youkai sage who oversees the Gensokyo boundary. 
+
+I’m sure you’ve heard of me. (103)
 
 
 TutorialOrb: Now listen carefully little rabbit. We’re almost out of time. [103]
 
-Currently, a lunar virus has eradicated the boundary of simplicity and complexity, <b>reducing all of Gensokyo into those simple gray cubes </b> you see around you.
+Currently, a lunar virus has eradicated the boundary of simplicity and complexity,
+
+[instruction] PlaySpookyTrack
+
+Reisen: [expression] shock
+
+TutorialOrb: <b>Reducing all of Gensokyo into those mere cubes </b> you see around you.
 
 In fact, even the residents have been affected.
 
@@ -71,9 +90,11 @@ At the current rate, all humans will merge into the landscape, becoming lifeless
 
 And once the humans are gone, the entirety of Gensokyo will cease to be. 
 
+[instruction] StopSpookyTrack
 
+Reisen: [expression] normal
 
-Now as part of your citizenship test… 
+TutorialOrb: Now as part of your citizenship test… 
 
 You have to make sure the humans stay cognizant of their complex individuality. 
 
@@ -87,9 +108,11 @@ Make them recall their names, their pasts, and their emotions.
 
 As you talk to people, you will discover they are all connected in complex ways. 
 
-<b>Keep talking as much as you can!</b> Do your best to figure out how they relate and surface the full force of their personalities. 
+<b>Keep talking as much as you can!</b> 
 
-<b>You will maximize the Personality Shards collected if you can unravel each person’s full story. </b>
+Do your best to figure out how they relate and surface the full force of their personalities. 
+
+<b>You will maximize the Personality Shards collected if you can extract their full story. </b>
 
 Good luck! If you fail this, then our frontline war here against the Lunarians will be for naught! 
 
@@ -97,21 +120,32 @@ Good luck! If you fail this, then our frontline war here against the Lunarians w
 
 We'll <b> be back here later </b> to collect the shards and <b> fix things up</b>
 
+Reisen: [expression] shock
 
 [instruction] ExitOrb 
 
 Reisen: This is the work of a virus? 
 
-Wait a minute, the medicine I packed today had several elixirs, didn’t it? 
+Wait a minute, the medicine I packed today had <b>several elixirs</b>, didn’t it? 
 
-Darn, there’s only two in here. 
+Reisen: [expression] ugh
+
+Darn, there’s only <b>two</b> in here. 
 
 I guess I can use these on the people that I think would be most helpful to me. 
 
-Oh? There’s also some cough medicine in here. 
+Reisen: [expression] shock
 
-I think this was supposed to go to the family that owns the book store? 
+Oh? There’s also some <b>cough medicine</b> in here. 
 
-…Shoot, these buildings all look the same. Which one is the book store? 
+Reisen: [expression] normal
+
+I think this was supposed to go to the family that owns the <b>book store?</b> 
+
+Reisen: [expression] ugh
+
+…Shoot, these buildings all look the same. Which one is the <b>book store?</b>
+
+[instruction] PlayVillageTrack
 
 [end]

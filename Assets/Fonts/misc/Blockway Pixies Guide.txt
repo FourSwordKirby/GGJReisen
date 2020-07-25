@@ -1,0 +1,19 @@
+Blockway Pixies is a pixelated version of the previous font release, Blockway.
+
+How to use the font:
+It's simple! You can overlap both solid(capitals) and hollow(lowercase) letterforms for a full color experience.
+
+Diffeneces:
+In the previous font, the letterforms are actually proportional.
+In the bitmap version, this is now a monospaced font.
+
+Legends:
+Capitals = Solid
+Small letters = Hollow
+# = Plain hollow
+®(alt+0174) = Plain solid
+
+Please enjoy this font.
+
+Kids do their best now and are preparing. Please watch warmly until it is ready.
+Heaven Castro

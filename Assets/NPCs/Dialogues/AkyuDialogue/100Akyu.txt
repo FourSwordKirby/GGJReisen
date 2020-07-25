@@ -5,7 +5,7 @@ Reisen: [expression] happy
 Hello.
 
 Akyu: Good afternoon, Miss Reisen.
-Akyu: I must be rather lucky today to finally meet the elusive youkai rabbit. 
+Akyu: I must be rather lucky today to finally meet the elusive Youkai rabbit. 
 
 Reisen: [expression] sad
 Hm? We talked earlier today, didn't we? 

@@ -32,7 +32,7 @@ public class ItemUIElement : MenuUIElement
             ItemImage.sprite = itemSprites[4];
         else if (itemData.ItemName == "Schematic")
             ItemImage.sprite = itemSprites[5];
-        else if (itemData.ItemName == "Coughing Medicine")
+        else if (itemData.ItemName == "Cough Medicine")
             ItemImage.sprite = itemSprites[6];
         else if (itemData.ItemName == "Smartphone")
             ItemImage.sprite = itemSprites[7];
