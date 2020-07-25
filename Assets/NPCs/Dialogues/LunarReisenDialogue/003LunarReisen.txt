@@ -79,7 +79,7 @@ Reisen: [expression] sweat
 (end)
 
 
-Reisen: **I should think this over carefully [leave]
+Reisen: **I should think this over carefully. [leave]
 (end)
 
 

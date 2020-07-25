@@ -2,6 +2,7 @@
 using UnityEditor;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 public class ChoiceLine : ScriptLine
 {
@@ -9,7 +10,7 @@ public class ChoiceLine : ScriptLine
     DialogueAnimator speakerAnimator;
 
     public List<ChoiceLineContent> dialogueChoices;
-    private int chosenOptionIndex = 0;
+    private int chosenOptionIndex;
 
     public ChoiceLine(string speaker, List<ChoiceLineContent> choices)
     {
@@ -26,6 +27,8 @@ public class ChoiceLine : ScriptLine
             throw new Exception($"Cannot determine speaker '{speaker}'", e);
         }
 
+        if(choices.Any(x => x.jumpLabel == "leave"))
+            chosenOptionIndex = dialogueChoices.Count - 1;
     }
 
     public static ChoiceLine GenerateChoiceLine(string speaker, List<ChoiceLineContent> choices)
