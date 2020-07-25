@@ -199,7 +199,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 8.099976, y: 17.099976}
+  m_AnchoredPosition: {x: 8.0998535, y: 17.099976}
   m_SizeDelta: {x: -100.19507, y: -139.01752}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8365266419343215071
@@ -282,7 +282,7 @@ PrefabInstance:
     - target: {fileID: 7630932077226734451, guid: 1add7641af9038a48bfca748e7a49269,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7630932077226734451, guid: 1add7641af9038a48bfca748e7a49269,
         type: 3}
@@ -447,7 +447,7 @@ PrefabInstance:
     - target: {fileID: 7630932077585313484, guid: 1add7641af9038a48bfca748e7a49269,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7630932077585313484, guid: 1add7641af9038a48bfca748e7a49269,
         type: 3}
@@ -491,6 +491,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8365266419038666817}
     m_Modifications:
+    - target: {fileID: 7630932076677503142, guid: 1add7641af9038a48bfca748e7a49269,
+        type: 3}
+      propertyPath: m_text
+      value: Waxing Moon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630932076677503142, guid: 1add7641af9038a48bfca748e7a49269,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630932076677503142, guid: 1add7641af9038a48bfca748e7a49269,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7630932077569368362, guid: 1add7641af9038a48bfca748e7a49269,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -666,7 +681,7 @@ PrefabInstance:
     - target: {fileID: 7630932077226734451, guid: 1add7641af9038a48bfca748e7a49269,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7630932077226734451, guid: 1add7641af9038a48bfca748e7a49269,
         type: 3}
@@ -831,7 +846,7 @@ PrefabInstance:
     - target: {fileID: 7630932077585313484, guid: 1add7641af9038a48bfca748e7a49269,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7630932077585313484, guid: 1add7641af9038a48bfca748e7a49269,
         type: 3}
