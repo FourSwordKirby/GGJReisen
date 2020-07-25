@@ -1,6 +1,6 @@
  //100 – <b>Dimensionality Reducer</b>s 
 
-Nitori: So, perfectly honest...
+Nitori: So, to be perfectly honest...
 I don't know much about those <b>contraptions</b>. 
 
 Reisen: [expression] angry
@@ -42,6 +42,7 @@ Reisen: [expression] sweat
 Huh? Why's that?
 
 Nitori: I might've clipped something bad while tinkering. 
+
 It made a weird sound.
 
 Reisen: [expression] sad

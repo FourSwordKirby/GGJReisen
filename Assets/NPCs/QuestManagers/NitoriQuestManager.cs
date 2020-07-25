@@ -1,9 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 public class NitoriQuestManager : Npc
 {
     public override ReisenNpcCharacterProgress NpcProgress => GameProgress.Nitori;
+
+    public void WeirdSound()
+    {
+        Debug.Log("Would play a weird sound if we had a good one");
+        //AudioMaster.instance.PlaySfx("NitoriWeird");
+    }
 
     public void Nitori_Stage000()
     {
