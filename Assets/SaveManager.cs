@@ -115,6 +115,28 @@ public class SaveManager : MonoBehaviour
             throw new Exception("save not found");
         }
     }
+
+    public static void DeleteAllData()
+    {
+        DeleteShardData();
+        foreach(string name in saveNames)
+        {
+            DeleteSaveData(name);
+        }
+    }
+
+    public static void DeleteShardData()
+    {
+        string jsonSavePath = string.Format("{0}/{1}.json", Application.persistentDataPath, shardSaveDataName);
+        File.Delete(jsonSavePath);
+    }
+
+    public static void DeleteSaveData(string saveName)
+    {
+        // 1
+        string jsonSavePath = string.Format("{0}/{1}.json", Application.persistentDataPath, saveName);
+        File.Delete(jsonSavePath);
+    }
 }
 
 [Serializable]

@@ -312,6 +312,10 @@ MonoBehaviour:
     track: {fileID: 8300000, guid: f7ec8f6083fdb5e499eb5beb01849b0b, type: 3}
   - name: Town
     track: {fileID: 8300000, guid: ee4b416afd167f9459f6081923a7520d, type: 3}
+  - name: Title
+    track: {fileID: 8300000, guid: d7aea83a7faef7b4a9573319e31d8aff, type: 3}
+  - name: BambooForest
+    track: {fileID: 8300000, guid: 4ac623e136e442e4d8f853abbb752a60, type: 3}
   sfxController: {fileID: 186148559}
   soundEffects:
   - name: MenuSelect
@@ -332,6 +336,10 @@ MonoBehaviour:
     track: {fileID: 8300000, guid: 9642a0448709e12428b160820250a8fc, type: 3}
   - name: TeleportEnter
     track: {fileID: 8300000, guid: 3ff8b55c9d3618240844464940cff955, type: 3}
+  - name: KogasaSurprise
+    track: {fileID: 8300000, guid: 9baaa434959402f49badf374fb2ae7f1, type: 3}
+  - name: DataDelete
+    track: {fileID: 8300000, guid: 76fc6fb539ab3864482ac1cbc8452f8b, type: 3}
   battleStart: {fileID: 8300000, guid: 055302fcc2aaf74429a8782639d43c9c, type: 3}
   masterVolume: 1
   bgmVolume: 1

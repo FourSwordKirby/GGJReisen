@@ -27,7 +27,7 @@ public class StartMenuUI : MenuUI
         base.Update();
     }
 
-    void InitializeTitleMenu()
+    public void InitializeTitleMenu()
     {
         group.menuElements.Clear();
 

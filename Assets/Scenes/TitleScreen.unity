@@ -898,9 +898,53 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 47215539, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: startMenu
+      value: 
+      objectReference: {fileID: 9116032891078180320}
+    - target: {fileID: 814189701, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: m_text
+      value: Delete All Data
+      objectReference: {fileID: 0}
+    - target: {fileID: 814189701, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 814189701, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 814189701, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279166800, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: m_Name
+      value: DeleteData
+      objectReference: {fileID: 0}
     - target: {fileID: 1279166801, guid: b21610cf10db37248aa466140bf79f63, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -362
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279166802, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: SelectionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9116032891078180321}
+    - target: {fileID: 1279166802, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: SelectionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DeleteData
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279166802, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: SelectionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279166802, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: SelectionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279166802, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: parentMenuOnSelectMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 267367348334390561, guid: b21610cf10db37248aa466140bf79f63,
         type: 3}
@@ -1149,5 +1193,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 925ddebaff94cd940a3d27c866f575c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9116032891078180321 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 47215539, guid: b21610cf10db37248aa466140bf79f63,
+    type: 3}
+  m_PrefabInstance: {fileID: 9116032891078180318}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cded307d41599cb45948c1771b15dee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

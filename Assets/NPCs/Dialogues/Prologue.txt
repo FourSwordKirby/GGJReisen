@@ -67,12 +67,13 @@ Yes, I had to be a professional solider for the sake of Gensokyo.
 It felt like a wasted chance to catch up. 
 
 
-[instruction] Prologue5
- 
-
 And now I’m back to the normal days of walking back-and-forth to the village again. 
 
 Back to being a professional medicine peddler.
+
+
+[instruction] Prologue5
+ 
  
 But when I crested the final hill leading to the village’s wooden gate entrance, 
 
@@ -81,10 +82,7 @@ The sight that awaited reminded me that here, on earthen lands of Gensokyo,
 Life is never without a dull moment. 
 
 
-
-[instruction] FadeCg
-
- 
+[instruction] FadeCg 
 
 But really, why do I have to be the one to get caught up in another incident? 
 

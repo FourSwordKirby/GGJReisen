@@ -507,6 +507,7 @@ MonoBehaviour:
   cubeForm: {fileID: 2915583380607829596}
   stickForm: {fileID: 5012050373487042102}
   StageWasUpdated: 0
+  NextDialogueIsRead: 0
 --- !u!1001 &4233096890982290479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -543,7 +544,7 @@ PrefabInstance:
     - target: {fileID: 541249608831779774, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.58
+      value: -26.66
       objectReference: {fileID: 0}
     - target: {fileID: 541249608831779774, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -553,7 +554,7 @@ PrefabInstance:
     - target: {fileID: 541249608831779774, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.7
+      value: -0.93
       objectReference: {fileID: 0}
     - target: {fileID: 541249608831779774, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -623,7 +624,7 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: dialogueInstructions.Array.size
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -718,6 +719,11 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[18].action.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
@@ -1103,6 +1109,36 @@ PrefabInstance:
     - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: postDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[18].name
+      value: WeirdSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[18].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 114603481155592042}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[18].action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: WeirdSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[18].action.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[18].action.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308469029863536823, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: dialogueInstructions.Array.data[18].action.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9164995063544039961, guid: 8247f7c181319ac4a8e7f0d741cc1563,

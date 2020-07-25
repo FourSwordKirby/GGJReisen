@@ -43,11 +43,13 @@ public class ReisenGameManager : MonoBehaviour
                 {
                     GameObject tutorialObject = newGameObjects.transform.GetChild(i).gameObject;
                     tutorialObject.SetActive(!tutorialObject.activeSelf);
+                    AudioMaster.instance.PlayTrack("BambooForest");
                 }
             }
             isNewGame = false;
         }
-        AudioMaster.instance.PlayVillageTrack();
+        else
+            AudioMaster.instance.PlayVillageTrack();
     }
 
     private void Update()

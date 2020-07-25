@@ -73,27 +73,38 @@ public class AudioMaster : MonoBehaviour
 
     internal void PlayTrack(string trackName)
     {
-        AudioTrack prologueTrack = bgmAudioMixes.Find(x => x.name == trackName);
-        bgmController.SwitchTrack(prologueTrack.track);
+        AudioTrack track = bgmAudioMixes.Find(x => x.name == trackName);
+        if (track.track == null)
+            Debug.Log("couldn't find bgm track: " + trackName);
+
+        if (bgmController.currentAudio != track.track)
+            bgmController.SwitchTrack(track.track);
     }
 
     public void PlayPrologueTrack()
     {
         AudioTrack prologueTrack = bgmAudioMixes.Find(x => x.name == "Prologue");
-        bgmController.SwitchTrack(prologueTrack.track);
+
+        if (bgmController.currentAudio != prologueTrack.track)
+            bgmController.SwitchTrack(prologueTrack.track);
     }
 
     internal void PlayVillageTrack()
     {
-        AudioTrack prologueTrack = bgmAudioMixes.Find(x => x.name == "Town");
-        bgmController.SwitchTrack(prologueTrack.track);
+        AudioTrack townTrack = bgmAudioMixes.Find(x => x.name == "Town");
+
+        if (bgmController.currentAudio != townTrack.track)
+            bgmController.SwitchTrack(townTrack.track);
     }
 
     internal void PlaySpookyTrack()
     {
-        Debug.Log("this should be a spooky track");
-        AudioTrack track = bgmAudioMixes.Find(x => x.name == "Town");
-        bgmController.SwitchTrack(track.track);
+        Debug.Log("this should be a spooky track... if we had one lol");
+
+        //AudioTrack track = bgmAudioMixes.Find(x => x.name == "Spooky");
+
+        //if (bgmController.currentAudio != track.track)
+        //    bgmController.SwitchTrack(track.track);
     }
 
     internal void StopSpookyTrack()
@@ -103,7 +114,9 @@ public class AudioMaster : MonoBehaviour
 
     internal void PlaySfx(string sfxName)
     {
-        AudioTrack sfx = bgmAudioMixes.Find(x => x.name == sfxName);
+        AudioTrack sfx = soundEffects.Find(x => x.name == sfxName);
+        if (sfx.track == null)
+            Debug.Log("couldn't find sfx: " + sfxName);
         sfxController.playSfx(sfx.track, 1.0f);
     }
 

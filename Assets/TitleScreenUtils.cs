@@ -7,12 +7,19 @@ public class TitleScreenUtils : MonoBehaviour
 {
     public static TitleScreenUtils instance;
 
+    public StartMenuUI startMenu;
+
     public void Awake()
     {
         if (TitleScreenUtils.instance == null)
             instance = this;
         else if (this != instance)
             Destroy(this.gameObject);
+    }
+
+    public void Start()
+    {
+        AudioMaster.instance.PlayTrack("Title");
     }
 
     public void LoadGame(string saveName)
@@ -48,5 +55,13 @@ public class TitleScreenUtils : MonoBehaviour
         yield return TransitionManager.instance.screenFader.FadeOut();
         SceneManager.LoadScene("Prologue");
         SceneManager.sceneLoaded -= TransitionManager.instance.FadeInScene;
+    }
+
+    public void DeleteData()
+    {
+        AudioMaster.instance.PlaySfx("DataDelete");
+        SaveManager.DeleteAllData();
+        startMenu.InitializeTitleMenu();
+        startMenu.Open();
     }
 }

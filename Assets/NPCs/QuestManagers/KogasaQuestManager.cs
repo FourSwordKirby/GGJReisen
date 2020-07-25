@@ -17,6 +17,7 @@ public class KogasaQuestManager : Npc
     public void Boo()
     {
         StartCoroutine(BooSequence());
+        AudioMaster.instance.PlaySfx("KogasaSurprise");
     }
 
     public IEnumerator BooSequence()
