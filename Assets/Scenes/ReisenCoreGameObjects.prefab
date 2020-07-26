@@ -692,7 +692,7 @@ MonoBehaviour:
     Player:
       nameTag: 
       ShardsAcquired: []
-      CoughMedicine: 0
+      CoughMedicine: 1
       TextBook: 0
       Encyclopedia: 0
       Newspaper: 0
