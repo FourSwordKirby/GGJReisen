@@ -3,7 +3,7 @@ Ah!
 
 LunarReisen: Ah!
 
-Reisen: [expression] sweat
+Reisen: [expression] shock
 It's you! 
 
 LunarReisen: Right, I remember now! 

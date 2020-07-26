@@ -19,7 +19,7 @@ Reisen: [expression] sad
 [expression] sweat
 **I should choose my words carefully.
 
-[choice] [Prefer boredom over working. | work] [Boredom is opportunity. | opportunity] [No Youkai please... | youkai] [Let me think. | leave]
+[choice] [Better than working. | work] [Boredom is opportunity. | opportunity] [No Youkai please... | youkai] [Let me think. | leave]
 
 
 Reisen: If you're bored, that means you have free time from work. [work]
@@ -82,7 +82,7 @@ Reisen: [expression] sweat [youkai]
 What is this Boogeyman business...?
 [expression] sad
 It sounds awful that you could get attacked for having free time.
-Are people in the Outside World even more overworked than moon rabbits?
+Are people in the Outside World even more overworked than Moon Rabbits?
 [expression] ugh
 I'd rather not deal with more random Youkai attacks...
 

@@ -67,7 +67,7 @@ public class LunarReisenQuestManager : Npc
     {
         GameProgress.Player.Schematic = Assignment.LunarReisen;
         GameProgress.Player.Novel = Assignment.Inventory;
-        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Schematic -1, Novel +1" });
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Schematic -1", "Novel +1" });
         TransformToNormalSprite();
         Stage = 1000;
     }

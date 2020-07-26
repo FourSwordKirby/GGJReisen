@@ -33,7 +33,7 @@ Reisen: [expression] shock
 (end)
 
 
-Reisen: I've been investigating throughout the village [schematic]
+Reisen: I've been investigating throughout the village. [schematic]
 And I've got reason to believe you aren't the culprit anymore. 
 
 LunarReisen: Oh, is that so... 

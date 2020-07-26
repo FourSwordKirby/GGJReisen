@@ -6,7 +6,7 @@ Is this technology from the Lunar Capital on the moon?
 
 [instruction] EnterOrb
 
-TutorialOrb: Oh? You’re the moon rabbit from the bamboo forest, aren’t you? 
+TutorialOrb: Oh? You’re the Moon Rabbit from the bamboo forest, aren’t you? 
 
 Reisen: Huh? This voice… is that the shrine maiden? 
 
@@ -45,7 +45,7 @@ Reisen: Can’t you get someone else?
 
 [instruction] SwitchYukari 
 
-TutorialOrb: Hi hi! Is this the moon rabbit on the other end? 
+TutorialOrb: Hi hi! Is this the Moon Rabbit on the other end? 
 
 Reisen: [expression] sweat
 
@@ -63,7 +63,7 @@ Reisen: [choice] [The youkai sage, Yukari?  | correct] [The magician from the fo
 
 TutorialOrb: Bingo! And with that you’ve passed part one of your citizenship test. [correct] (103)
 
-TutorialOrb: Boo, you’ll have to brush up on your Gensokyo history if you want to live here, moon rabbit. [wrong]
+TutorialOrb: Boo, you’ll have to brush up on your Gensokyo history if you want to live here, Moon Rabbit. [wrong]
 
 Reisen: [expression] ugh
 

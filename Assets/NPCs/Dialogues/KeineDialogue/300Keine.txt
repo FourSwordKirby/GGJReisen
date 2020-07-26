@@ -51,7 +51,7 @@ Keine: This encyclopedia is... [encyclopedia]
 Reisen: The Hieda head asked me to give this to you.
 
 Keine: Wow, I can't believe she really had this.
-This is part of a set that emperor Huang Di had transcribed. 
+This is part of a set that Emperor Huang Di had transcribed. 
 I'm surprised it's still around.
 Now that I think about it...
 The information in this book originally came from the <b>Hakutaku</b>.
@@ -62,7 +62,7 @@ And?
 
 Keine: And the <b>Hakutaku</b>... are my distant ancestors.
 I remember now.
-I am the were-Hakutaku, <b>Keine Kamishirasawa</b>.
+I am the Were-Hakutaku, <b>Keine Kamishirasawa</b>.
 
 [instruction] Stage300_Encyclopedia
 (end)

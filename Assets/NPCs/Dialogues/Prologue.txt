@@ -2,11 +2,11 @@ Reisen: My name is Reisen Udonge’in Inaba.
 
 // debug to make things go faster [instruction] LoadVillage
 
-I am a moon rabbit that abandoned the moon during the war between the Moon and the Earth. 
+I am a Moon Rabbit that abandoned the Moon during the war between the Moon and the Earth. 
 
 Now, I live as refugee in the fantastical lands of Gensokyo on Earth. 
 
-My caretaker and master, Eirin Yagokoro, is also a fugitive of the moon. 
+My caretaker and master, Eirin Yagokoro, is also a fugitive of the Moon. 
  
 
 
@@ -52,7 +52,7 @@ Devoid of clouds, the empty space overhead stretched like an artificial dome ove
 
 They say on days like these, you might be able to see the moon while the sun is out. 
 
-My thoughts turned to my fellow moon rabbits who I had unexpectedly met again a few weeks ago. 
+My thoughts turned to my fellow Moon Rabbits who I had unexpectedly met again a few weeks ago. 
 
 
 [instruction] Prologue4

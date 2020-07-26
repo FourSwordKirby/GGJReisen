@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 public class MiyoiQuestManager : Npc
 {
@@ -25,8 +26,8 @@ public class MiyoiQuestManager : Npc
 
     public void Miyoi_Stage020()
     {
-        GameProgress.MiyoiShardSeenCount = 20;
-        if (GameProgress.Player.ShardsAcquired.Count >= 20)
+        GameProgress.MiyoiShardSeenCount = 15;
+        if (GameProgress.Player.ShardsAcquired.Count >= 15)
             Stage = 30;
         else
             Stage = 100;
@@ -34,7 +35,7 @@ public class MiyoiQuestManager : Npc
 
     public void Miyoi_Stage030()
     {
-        GameProgress.MiyoiShardSeenCount = 30;
+        GameProgress.MiyoiShardSeenCount = 25;
         GameProgress.Player.AddShard(Shard.Miyoi_Company);
         DisplayShardTransaction(Shard.Miyoi_Company);
         Stage = 100;
@@ -47,7 +48,7 @@ public class MiyoiQuestManager : Npc
         //only try to play miyoi 10, 20, and 30 if we are at stage 100
         if(currentStage == 100)
         {
-            int acquiredShardCount = GameProgress.Player.ShardsAcquired.Count;
+            int acquiredShardCount = GameProgress.Player.ShardsAcquired.Sum(x => x.ShardValue);
             MiyoiSeenShardDialogue = GameProgress.MiyoiShardSeenCount;
 
             if (MiyoiSeenShardDialogue < 10 && acquiredShardCount >= 5)
@@ -55,12 +56,12 @@ public class MiyoiQuestManager : Npc
                 MiyoiSeenShardDialogue = 10;
                 currentStage = 10;
             }
-            else if (MiyoiSeenShardDialogue < 20 && acquiredShardCount >= 10)
+            else if (MiyoiSeenShardDialogue < 15 && acquiredShardCount >= 10)
             {
                 MiyoiSeenShardDialogue = 20;
                 currentStage = 20;
             }
-            else if(MiyoiSeenShardDialogue < 30 && acquiredShardCount >= 20)
+            else if(MiyoiSeenShardDialogue < 25 && acquiredShardCount >= 15)
             {
                 MiyoiSeenShardDialogue = 30;
                 currentStage = 30;

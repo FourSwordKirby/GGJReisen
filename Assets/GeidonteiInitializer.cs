@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GeidonteiInitializer : MonoBehaviour
@@ -12,12 +13,10 @@ public class GeidonteiInitializer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int shardCount = ReisenGameManager.instance.gameProgress.Player.ShardsAcquired.Count;
+        int shardCount = ReisenGameManager.instance.gameProgress.Player.ShardsAcquired.Sum(x => x.ShardValue);
 
-        if (shardCount >= 5)
-        {
-            GeidonteiSign.SetActive(true);
-        }
+        GeidonteiSign.SetActive(shardCount >= 5);
+
 
         if (0 <= shardCount && shardCount < 10)
         {
@@ -25,13 +24,13 @@ public class GeidonteiInitializer : MonoBehaviour
             GeidonteiPartial.SetActive(false);
             GeidonteiFull.SetActive(false);
         }
-        else if (10 <= shardCount && shardCount < 20)
+        else if (10 <= shardCount && shardCount < 15)
         {
             GeidonteiBase.SetActive(false);
             GeidonteiPartial.SetActive(true);
             GeidonteiFull.SetActive(false);
         }
-        else if (20 <= shardCount)
+        else if (15 <= shardCount)
         {
             GeidonteiBase.SetActive(false);
             GeidonteiPartial.SetActive(false);

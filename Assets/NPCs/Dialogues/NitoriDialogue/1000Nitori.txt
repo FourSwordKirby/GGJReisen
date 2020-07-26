@@ -9,8 +9,8 @@ Of course it's amazing!
 Nitori: I've gotta figure out how this was made! 
 
 Reisen: [expression] shock
-Wait, where are you going!? 
-**She just ran off!
+Wait, what are you doing!? 
+**It's no use, she's too absorbed in studying the Elixir.
 [expression] sad
 **Did I make a mistake in giving it to her? 
 [expression] sweat

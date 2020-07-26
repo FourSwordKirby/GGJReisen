@@ -21,7 +21,7 @@ Reisen: [expression] annoy
 LunarReisen: ... 
 
 Reisen: [expression] normal
-What's a moon rabbit doing here? 
+What's a Moon Rabbit doing here? 
 I haven't seen you since you or the Lunar Princesses since Eientei.
 
 LunarReisen: Um... Frankly I don't remember... 
