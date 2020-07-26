@@ -56,7 +56,7 @@ public class CharacterMovement : MonoBehaviour
         Vector3 displacement = (targetPosition - this.transform.position);
         Vector3 currentDisplacement = displacement;
         float elapsedTime = 0f;
-        while(currentDisplacement.sqrMagnitude > 0.4f && elapsedTime < timeLimit)
+        while(currentDisplacement.sqrMagnitude > 0.3f && elapsedTime < timeLimit)
         {
             currentDisplacement = (targetPosition - this.transform.position);
             selfBody.velocity = (Vector3.right * currentDisplacement.x + Vector3.forward * currentDisplacement.z).normalized * speed;

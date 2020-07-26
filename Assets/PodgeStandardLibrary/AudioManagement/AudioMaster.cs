@@ -109,7 +109,8 @@ public class AudioMaster : MonoBehaviour
 
     internal void StopSpookyTrack()
     {
-        bgmController.StopTrack();
+        Debug.Log("this should stop a spooky track... if we had one lol");
+        //bgmController.StopTrack();
     }
 
     internal void PlaySfx(string sfxName)

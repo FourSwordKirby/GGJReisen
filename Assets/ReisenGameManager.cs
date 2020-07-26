@@ -129,6 +129,13 @@ public class ReisenGameManager : MonoBehaviour
         if (FindObjectOfType<ReisenSceneManager>() != null)
             CameraMan.instance.CameraBounds = FindObjectOfType<ReisenSceneManager>().CameraBounds;
 
+        //Sanity check
+        if (gameProgress.Player.CoughMedicine == Assignment.NotAcquired)
+        {
+            Debug.Log("invalid state");
+            gameProgress.Player.CoughMedicine = Assignment.Inventory;
+        }
+
         SyncNpcState();
     }
 
