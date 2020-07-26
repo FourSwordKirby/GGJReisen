@@ -24,7 +24,6 @@ public class Shard
     }
 
     public static Shard Keine_TextBook { get; } = new Shard(nameof(Keine_TextBook), 1, "Don't forget your textbook!", "Well, figures that a history teacher teaches from a history text book.");
-    public static Shard Keine_Elixir { get; } = new Shard(nameof(Keine_Elixir), 1, "Medical History", "I better work fast to resolve the incident before Keine kills me...");
     public static Shard Keine_Newspaper { get; } = new Shard(nameof(Keine_Newspaper), 1, "Scandal with the Teacher!", "The Bunbunmaru newspaper sure doesn't hesistate to kill reputations.");
     public static Shard Keine_QuestionCorrect { get; } = new Shard(nameof(Keine_QuestionCorrect), 1, "Get lectured by the teacher", "\"Those who fail to learn from history are doomed to repeat it.\" so she said.");
     public static Shard Keine_GoodEnd { get; } = new Shard(nameof(Keine_GoodEnd), 2, "Rich History", "\"A rich history is one with many relationships.\" Maybe I can put a little more effort...");
@@ -33,27 +32,27 @@ public class Shard
     public static Shard Kosuzu_QuestionCorrect { get; } = new Shard(nameof(Kosuzu_QuestionCorrect), 1, "Youkai Enthusiast", "Living dangerously. Well it might be fun... Don't get me involved though.");
     public static Shard Kosuzu_MagazineBadEnd { get; } = new Shard(nameof(Kosuzu_MagazineBadEnd), 1, "Buy and Sell Used Books", "I never asked for the book shop keeper's name, huh?");
     public static Shard Kosuzu_GoodEnd { get; } = new Shard(nameof(Kosuzu_GoodEnd), 2, "Suzunaan, Opened for Business", "Looks like the book shop is in order again.");
-    public static Shard Kosuzu_Elixir { get; } = new Shard(nameof(Kosuzu_Elixir), 1, "A New Incident Solver on the Case!", "Perfectly honest, I don't think that human is able to do anything about this incident...");
 
     public static Shard Nitori_Tool_Smartphone { get; } = new Shard(nameof(Nitori_Tool_Smartphone), 1, "Finders Keepers", "I'm pretty sure that phone isn't hers...");
     public static Shard Nitori_Tool_Wrench { get; } = new Shard(nameof(Nitori_Tool_Wrench), 1, "Everything is a bolt", "Its really reckless dismantling things you don't understand");
     public static Shard Nitori_QuestionCorrect { get; } = new Shard(nameof(Nitori_QuestionCorrect), 1, "A new contact", "How's a kappa supposed to find Eientei anyways");
     public static Shard Nitori_GoodEnd { get; } = new Shard(nameof(Nitori_GoodEnd), 2, "Science Fair", "Those kappa sure like to dream big");
-    public static Shard Nitori_Elixir { get; } = new Shard(nameof(Nitori_Elixir), 1, "Big Pharma", "I feel like there's going to be an influx of medicine pedlers...");
 
+    public static Shard Kogasa_Spook { get; } = new Shard(nameof(Kogasa_Spook), 1, "Quite the Surprise", "I never liked scary movie nights at Eientei.");
     public static Shard Akyu_Textbook { get; } = new Shard(nameof(Akyu_Textbook), 1, "Book Shop Intern", "I met the Gensokyo Chronicler... she was singing a weird song to herself.");
     public static Shard Akyu_Novel { get; } = new Shard(nameof(Akyu_Novel), 1, "Case closed!", "A chronicler working as novelist as a side job. I wonder if she gets fact and fiction mixed up.");
-    public static Shard Akyu_BadElixir1 { get; } = new Shard(nameof(Akyu_BadElixir1), 1, "Malfunctioning Elixir?", "I cured the Hieda girl, but it seems like she's still forgetting something...");
-    public static Shard Akyu_BadElixir2 { get; } = new Shard(nameof(Akyu_BadElixir2), 1, "Not All Powerful", "Master Yagokoro's elixir didn't work!?");
     public static Shard Akyu_GoodEnd { get; } = new Shard(nameof(Akyu_GoodEnd), 2, "One in a Thousand", "Akyu looked very young, but to think that she might be as old as Mokou...");
 
     public static Shard LunarReisen_Smartphone { get; } = new Shard(nameof(LunarReisen_Smartphone), 1, "Can't live without it", "Even my Lunatic Red Eyes would get tired from looking at a screen for too long");
     public static Shard LunarReisen_GoodEnd { get; } = new Shard(nameof(LunarReisen_GoodEnd), 2, "Inaba of the Moon", "I see we get worked to the bone whether we're from the Earth or the Moon");
-    public static Shard LunarReisen_Elixir { get; } = new Shard(nameof(LunarReisen_Elixir), 1, "Help me, ERINNNNNN!!", "I cured this moon rabbit, but she's quite unreliable all things considered...");
-
     public static Shard Miyoi_Company { get; } = new Shard(nameof(Miyoi_Company), 2, "Poster Girl of Geidontei", "I guess some people really love their work.");
-    public static Shard Kogasa_Spook { get; } = new Shard(nameof(Kogasa_Spook), 1, "Quite the Surprise", "I never liked scary movie nights at Eientei.");
 
+    public static Shard Keine_Elixir { get; } = new Shard(nameof(Keine_Elixir), 1, "Medical History", "I better work fast to resolve the incident before Keine kills me...");
+    public static Shard Kosuzu_Elixir { get; } = new Shard(nameof(Kosuzu_Elixir), 1, "A New Incident Solver on the Case!", "Perfectly honest, I don't think that human is able to do anything about this incident...");
+    public static Shard Nitori_Elixir { get; } = new Shard(nameof(Nitori_Elixir), 1, "Big Pharma", "I feel like there's going to be an influx of medicine pedlers...");
+    public static Shard Akyu_BadElixir1 { get; } = new Shard(nameof(Akyu_BadElixir1), 1, "Malfunctioning Elixir?", "I cured the Hieda girl, but it seems like she's still forgetting something...");
+    public static Shard Akyu_BadElixir2 { get; } = new Shard(nameof(Akyu_BadElixir2), 1, "Not All Powerful", "Master Yagokoro's elixir didn't work!?");
+    public static Shard LunarReisen_Elixir { get; } = new Shard(nameof(LunarReisen_Elixir), 1, "Help me, ERINNNNNN!!", "I cured this moon rabbit, but she's quite unreliable all things considered...");
 
     private static Dictionary<string, Shard> _shardDictionary;
     public static Dictionary<string, Shard> ShardDictionary

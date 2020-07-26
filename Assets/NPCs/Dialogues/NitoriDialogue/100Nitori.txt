@@ -56,7 +56,7 @@ In the meantime, I've been thinking about how to recreate one.
 I could fit a whole harvest of cucumbers into one box if I had one!
 Oh, but don't tell the other <b>Kappa</b> about that yet.
 
+[instruction] Stage100
+
 Reisen: [expression] shock
 **A personality shard just manifested! 
-
-[instruction] Stage100
