@@ -24,9 +24,11 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (forcedMove)
+            return;
+
         Vector2 movementVector = Vector2.zero;
-        if (!forcedMove)
-            movementVector = Controls.getDirection();
+        movementVector = Controls.getDirection();
         selfBody.velocity += (Vector3.right * movementVector.x + Vector3.forward * movementVector.y).normalized;
 
         Vector3 vel = selfBody.velocity;
