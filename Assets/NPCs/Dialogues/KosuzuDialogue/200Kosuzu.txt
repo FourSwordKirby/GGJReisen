@@ -15,12 +15,12 @@ Is this a side-effect of the cough earlier?
 Reisen: [expression] normal
 **Do I have something for her?
 
-?{elixir=1} {magazine=1} {scroll=1} [choice] [Give elixir | elixir] [Give magazine | magazine] [Give Youkai scroll | scroll] [Leave | leave]
-?{elixir=1} {magazine=1} [choice] [Give elixir | elixir] [Give magazine | magazine] [Leave | leave]
+?{elixir=1} {magazine=1} {scroll=1} [choice] [Give elixir | elixir] [Give tech magazine | magazine] [Give Youkai scroll | scroll] [Leave | leave]
+?{elixir=1} {magazine=1} [choice] [Give elixir | elixir] [Give tech magazine | magazine] [Leave | leave]
 ?{elixir=1} {scroll=1} [choice] [Give elixir | elixir] [Give Youkai scroll | scroll] [Leave | leave]
 ?{elixir=1} [choice] [Give elixir | elixir] [Leave | leave]
-?{magazine=1} {scroll=1} [choice] [Give magazine | magazine] [Give Youkai scroll | scroll] [Leave | leave]
-?{magazine=1} [choice] [Give magazine | magazine] [Leave | leave]
+?{magazine=1} {scroll=1} [choice] [Give tech magazine | magazine] [Give Youkai scroll | scroll] [Leave | leave]
+?{magazine=1} [choice] [Give tech magazine | magazine] [Leave | leave]
 ?{scroll=1} [choice] [Give Youkai scroll | scroll] [Leave | leave]
 [choice] [Leave | leave]
 
