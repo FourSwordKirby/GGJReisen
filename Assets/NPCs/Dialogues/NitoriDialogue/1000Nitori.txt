@@ -1,6 +1,6 @@
 //1000 – Elixir Ending 
 
-Nitori: Wow, this Elixir is amazing stuff. 
+Nitori: Wow, this elixir is amazing stuff. 
 
 Reisen: [expression] heh
 It was made by my master!
@@ -10,7 +10,7 @@ Nitori: I've gotta figure out how this was made!
 
 Reisen: [expression] shock
 Wait, what are you doing!? 
-**It's no use, she's too absorbed in studying the Elixir.
+**It's no use, she's too absorbed in studying the elixir.
 [expression] sad
 **Did I make a mistake in giving it to her? 
 [expression] sweat

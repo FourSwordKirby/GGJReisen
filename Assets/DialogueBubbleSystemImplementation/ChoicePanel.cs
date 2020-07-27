@@ -46,12 +46,6 @@ public class ChoicePanel : MonoBehaviour
     public void SetChoicePanelContent(ChoiceLineContent content)  
     {
         textMesh.text = content.lineText;
-
-        //Hard coded automatic font size adjustment for long choice line
-        if (content.lineText.Length > 30)
-            textMesh.fontSize = 20;
-        else
-            textMesh.fontSize = 28;
     }
 
 }

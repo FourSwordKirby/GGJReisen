@@ -10,7 +10,7 @@ public class DialogueBubbleUI : MonoBehaviour
     private List<DialogueBubble> dialogueBubbles = new List<DialogueBubble>();
     private int onScreenSpeechBubbleLimit = 2;
     private int currentLineNumber = 0;
-    private int z_offset = 1;
+    private float z_offset = 1.2f;
 
     public Dialogue activeDialogue;
     public bool ready;
