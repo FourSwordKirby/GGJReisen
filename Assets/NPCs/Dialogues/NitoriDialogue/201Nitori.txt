@@ -7,13 +7,13 @@ I'm about to leave soon.
 Reisen: **She's struggling with the storage box idea.
 **Should I give her something?
 
-?{elixir=1} {smartphone=1} {magazine=1} [choice] [Give elixir  | elixir] [Give smartphone  | smartphone] [Give magazine | magazine] [Leave | leave]
+?{elixir=1} {smartphone=1} {magazine=1} [choice] [Give elixir  | elixir] [Give smartphone  | smartphone] [Give tech magazine | magazine] [Leave | leave]
 ?{elixir=1} {smartphone=1} [choice] [Give elixir  | elixir] [Give smartphone  | smartphone] [Leave | leave]
-?{elixir=1} {magazine=1} [choice] [Give elixir  | elixir] [Give magazine | magazine] [Leave | leave]
+?{elixir=1} {magazine=1} [choice] [Give elixir  | elixir] [Give tech magazine | magazine] [Leave | leave]
 ?{elixir=1} [choice] [Give elixir  | elixir]  [Leave | leave]
-?{smartphone=1} {magazine=1} [choice] [Give smartphone  | smartphone] [Give magazine | magazine] [Leave | leave]
+?{smartphone=1} {magazine=1} [choice] [Give smartphone  | smartphone] [Give tech magazine | magazine] [Leave | leave]
 ?{smartphone=1} [choice] [Give smartphone  | smartphone] [Leave | leave]
-?{magazine=1} [choice] [Give magazine | magazine] [Leave | leave]
+?{magazine=1} [choice] [Give tech magazine | magazine] [Leave | leave]
 [choice] [Leave | leave]
 
 Nitori: ... What is this? [elixir]
