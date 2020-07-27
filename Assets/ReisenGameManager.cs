@@ -303,6 +303,8 @@ public class ReisenGameManager : MonoBehaviour
         InitSceneState();
         if (spawnLocation != -1)
         {
+            GameObject player = RpgPlayer.instance.gameObject;
+            player.GetComponent<CharacterMovement>().forcedMove = true;
             StartCoroutine(SpawnPlayerAtEntrance());
         }
     }
@@ -341,7 +343,7 @@ public class ReisenGameManager : MonoBehaviour
 
         player.GetComponent<CharacterMovement>().externalMoveCharacter(spawnArea, Vector3.zero, 1.5f, 5.0f);
         yield return TransitionManager.instance.screenFader.FadeOut();
-        
+
         SceneManager.LoadScene(sceneName);
 
         yield return null;

@@ -40,9 +40,10 @@ public class CharacterMovementAnimator : MonoBehaviour
         ParticleSystem.EmissionModule dashPartEmission = dashParticleSystem.emission;
         dashPartEmission.rateOverTimeMultiplier = bobbingModifier * emitSpeed;
 
-        if (Controls.jumpInputDown() && movement.isGrounded)
+        if (movement.isGrounded)
         {
-            poofParticleSystem.Play();
+            if (movement.enabled && Controls.jumpInputDown() && !movement.forcedMove)
+                poofParticleSystem.Play();
         }
     }
 
