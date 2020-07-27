@@ -68,6 +68,7 @@ public class KosuzuQuestManager : Npc
         GameProgress.Player.Schematic = Assignment.Inventory;
         ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Schematic +1" });
         Stage = 1002;
+        MarkNextDialogueAsRead();
     }
 
     public void Kosuzu_Stage1100()
