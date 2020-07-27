@@ -137,25 +137,25 @@ public class PlayerProgress
         List<KeyItem> inventoryItems = new List<KeyItem>();
         
         if (CoughMedicine == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Cough Medicine", "Cough medicine I'm supposed to deliver to a <b>book store</b>"));
+            inventoryItems.Add(new KeyItem("Cough Medicine", "Cough medicine I'm supposed to deliver to a <b>book store</b>."));
         if (TextBook == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("History Book", "A delivery from that from the <b>book store</b>. It has a lot of info about Gensokyo's history"));
+            inventoryItems.Add(new KeyItem("History Book", "A delivery from that from the <b>book store</b>. It has a lot of info about Gensokyo's history."));
         if (Encyclopedia == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Encyclopedia", "An encyclopedia on <b>Youkai</b>. I was told to give it to a <b>school teacher</b>"));
+            inventoryItems.Add(new KeyItem("Encyclopedia", "An encyclopedia on <b>Youkai</b>. I was told to give it to a <b>school teacher</b>."));
         if (Newspaper == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Newspaper", "A Bunbunmaru Super Special Extra Edition. It's addressed to the <b>west</b> side of the village"));
+            inventoryItems.Add(new KeyItem("Newspaper", "A Bunbunmaru Super Special Extra Edition. It's addressed to the <b>west</b> side of the village."));
         if (Smartphone == Assignment.Inventory)
             inventoryItems.Add(new KeyItem("Smartphone", "A <b>Lunarian</b> smartphone. There's not much installed on here."));
         if (Magazine == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Magazine", "A magazine from the outside world. It features a lot of <b>sophisticated diagrams</b>"));
+            inventoryItems.Add(new KeyItem("Tech Magazine", "A magazine from the outside world. It features a lot of <b>sophisticated diagrams</b>."));
         if (Wrench == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Wrench", "A wrench I found lying on the roof. Useful for <b>construction</b>"));
+            inventoryItems.Add(new KeyItem("Wrench", "A wrench I found lying on the roof. Useful for <b>construction</b>."));
         if (Scroll == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Scroll", "A scroll about the <b>Dimensionality Reducer</b>. Written in a <b>Foreign Yokai Language</b>"));
+            inventoryItems.Add(new KeyItem("Scroll", "A scroll about the <b>Dimensionality Reducer</b>. Written in a <b>Foreign Yokai Language</b>."));
         if (Schematic == Assignment.Inventory)
             inventoryItems.Add(new KeyItem("Schematic", "The translated scroll was actually a guide for reversing the <b>Dimensionality Reducer</b>!"));
         if (Novel == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Novel", "A mystery novel by <i>Agatha Chris-Q.</i>"));
+            inventoryItems.Add(new KeyItem("Novel", "A mystery novel by <i>Agatha Chris-Q</i>."));
         if (Elixir1 == Assignment.Inventory)
             inventoryItems.Add(new KeyItem("Elixir", "Medicine given to me by Miss Eirin. It should cure any villagers of this virus."));
         if (Elixir2 == Assignment.Inventory)
