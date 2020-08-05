@@ -130,8 +130,9 @@ public class WallGeneratorNodeCleanup : Editor
 {
     public override void OnInspectorGUI()
     {
-        ((WallGeneratorNode)target).parentGraph.lastActiveNode = target as GraphNode;
-        Debug.Log("set " + target + "as the active node");
+        Graph parentGraph = ((WallGeneratorNode)target).parentGraph;
+        if (parentGraph != null)
+            parentGraph.lastActiveNode = target as GraphNode;
 
         base.OnInspectorGUI();
     }
