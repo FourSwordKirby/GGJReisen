@@ -15,12 +15,6 @@ namespace EditorTools {
         public List<GraphNode> nodes;
         public List<Edge> edges;
 
-        public Graph()
-        {
-            nodes = new List<GraphNode>();
-            edges = new List<Edge>();
-        }
-
         public void MovePoint(int handleIndexToDisplayAsTransform, Vector3 newPosition)
         {
             nodes[handleIndexToDisplayAsTransform].SetPosition(newPosition);
@@ -52,12 +46,13 @@ namespace EditorTools {
             vertex2.RemoveNeighbor(vertex1);
 
             GraphNode newNode = (PrefabUtility.InstantiatePrefab(nodeGameObject) as GameObject).GetComponent<GraphNode>();
+            Undo.RecordObject(newNode, "Created instance");
             newNode.parentGraph = this;
             newNode.transform.parent = transform;
             newNode.SetPosition(newPathPoint);
 
             nodes.Add(newNode);
-            vertex1.AddNeighbor(newNode);
+            newNode.AddNeighbor(vertex1);
             newNode.AddNeighbor(vertex2);
             edges.Add(new Edge(vertex1, newNode));
             edges.Add(new Edge(newNode, vertex2));
@@ -66,6 +61,7 @@ namespace EditorTools {
         public void AddNodeToLastSelected(Vector3 newPathPoint)
         {
             GraphNode newNode = (PrefabUtility.InstantiatePrefab(nodeGameObject) as GameObject).GetComponent<GraphNode>();
+            Undo.RecordObject(newNode, "Created instance");
             newNode.parentGraph = this;
             newNode.transform.parent = transform;
             newNode.SetPosition(newPathPoint);
@@ -77,30 +73,30 @@ namespace EditorTools {
                     tailNode = nodes[nodes.Count - 1];
                 else
                     tailNode = lastActiveNode;
-                tailNode.AddNeighbor(newNode);
+                Undo.RecordObject(tailNode, "Added Edge");
+                newNode.AddNeighbor(tailNode);
                 edges.Add(new Edge(tailNode, newNode));
             }
             nodes.Add(newNode);
             lastActiveNode = newNode;
         }
 
-        public void AddNodeToStart(Vector3 newPathPoint)
-        {
-            GraphNode newNode = (PrefabUtility.InstantiatePrefab(nodeGameObject) as GameObject).GetComponent<GraphNode>();
-            newNode.parentGraph = this;
-            newNode.transform.parent = transform;
-            newNode.SetPosition(newPathPoint);
+        //public void AddNodeToStart(Vector3 newPathPoint)
+        //{
+        //    GraphNode newNode = (PrefabUtility.InstantiatePrefab(nodeGameObject) as GameObject).GetComponent<GraphNode>();
+        //    newNode.parentGraph = this;
+        //    newNode.transform.parent = transform;
+        //    newNode.SetPosition(newPathPoint);
 
-            if (nodes.Count > 0)
-            {
-                GraphNode headNode = nodes[0];
-                headNode.AddNeighbor(newNode);
-                edges.Add(new Edge(headNode, newNode));
-            }
+        //    if (nodes.Count > 0)
+        //    {
+        //        GraphNode headNode = nodes[0];
+        //        headNode.AddNeighbor(newNode);
+        //        edges.Add(new Edge(headNode, newNode));
+        //    }
 
-            nodes.Add(newNode);
-
-        }
+        //    nodes.Add(newNode);
+        //}
 
         public void DeleteSegment(int mouseOverHandleIndex)
         {
@@ -120,10 +116,13 @@ namespace EditorTools {
             edges.RemoveAll(x => edgesToRemove.Contains(x));
             nodes.Remove(removedNode);
 
-            foreach(GraphNode node in nodes)
+            foreach (GraphNode node in nodes)
             {
                 if(node.neighboringNodes.Contains(removedNode))
+                {
+                    Undo.RecordObject(node, "DeletedNeighbor");
                     node.neighboringNodes.Remove(removedNode);
+                }
             }
         }
 
@@ -131,6 +130,18 @@ namespace EditorTools {
         {
             Bounds ourBounds = new Bounds();
             return ourBounds;
+        }
+        
+        public void Publish()
+        {
+            foreach(GraphNode node in nodes)
+            {
+                node.parentGraph = null;
+                node.transform.parent = this.transform.parent;
+            }
+
+            this.nodes = new List<GraphNode>();
+            this.edges = new List<Edge>();
         }
     }
 

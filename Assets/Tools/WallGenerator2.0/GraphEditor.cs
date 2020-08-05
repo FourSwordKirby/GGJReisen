@@ -83,35 +83,11 @@ namespace EditorTools {
             pathSpace = (PathSpace)EditorGUILayout.EnumPopup("Restrict PathSpace:", pathSpace);
             handleRadius = EditorGUILayout.FloatField(handleRadius);
 
+            if (GUILayout.Button("Publish Graph"))
+            {
+                ((Graph)target).Publish();
+            }
             base.OnInspectorGUI();
-            //// Initialize GUI styles
-            //if (boldFoldoutStyle == null) {
-            //    boldFoldoutStyle = new GUIStyle (EditorStyles.foldout);
-            //    boldFoldoutStyle.fontStyle = FontStyle.Bold;
-            //}
-
-            //Undo.RecordObject (creator, "Path settings changed");
-
-            //// Draw Bezier and Vertex tabs
-            //int tabIndex = GUILayout.Toolbar (data.tabIndex, tabNames);
-            //if (tabIndex != data.tabIndex) {
-            //    data.tabIndex = tabIndex;
-            //    TabChanged ();
-            //}
-
-            //// Draw inspector for active tab
-            //switch (data.tabIndex) {
-            //    case bezierPathTab:
-            //        DrawBezierPathInspector ();
-            //        break;
-            //    case vertexPathTab:
-            //        break;
-            //}
-
-            //// Notify of undo/redo that might modify the path
-            //if (Event.current.type == EventType.ValidateCommand && Event.current.commandName == "UndoRedoPerformed") {
-            //    data.PathModifiedByUndo ();
-            //}
         }
 
         void OnSceneGUI()
@@ -201,76 +177,6 @@ namespace EditorTools {
                 }
             }
         }
-
-            //void DrawGlobalDisplaySettingsInspector () {
-            //    using (var check = new EditorGUI.ChangeCheckScope ()) {
-            //        data.globalDisplaySettingsFoldout = EditorGUILayout.InspectorTitlebar (data.globalDisplaySettingsFoldout, globalDisplaySettings);
-            //        if (data.globalDisplaySettingsFoldout) {
-            //            CreateCachedEditor (globalDisplaySettings, null, ref globalDisplaySettingsEditor);
-            //            globalDisplaySettingsEditor.OnInspectorGUI ();
-            //        }
-            //        if (check.changed) {
-            //            UpdateGlobalDisplaySettings ();
-            //            SceneView.RepaintAll ();
-            //        }
-            //    }
-            //}
-
-            //#endregion
-
-            //#region Scene GUI
-
-            //void OnSceneGUI () {
-            //    if (!globalDisplaySettings.visibleBehindObjects) {
-            //        Handles.zTest = UnityEngine.Rendering.CompareFunction.LessEqual;
-            //    }
-
-            //    EventType eventType = Event.current.type;
-
-            //    using (var check = new EditorGUI.ChangeCheckScope ()) {
-            //        handlesStartCol = Handles.color;
-            //        switch (data.tabIndex) {
-            //            case bezierPathTab:
-            //                if (eventType != EventType.Repaint && eventType != EventType.Layout) {
-            //                    ProcessBezierPathInput (Event.current);
-            //                }
-
-            //                DrawBezierPathSceneEditor ();
-            //                break;
-            //            case vertexPathTab:
-            //                if (eventType == EventType.Repaint) {
-            //                    DrawVertexPathSceneEditor ();
-            //                }
-            //                break;
-            //        }
-
-            //        // Don't allow clicking over empty space to deselect the object
-            //        if (eventType == EventType.Layout) {
-            //            HandleUtility.AddDefaultControl (0);
-            //        }
-
-            //        if (check.changed) {
-            //            EditorApplication.QueuePlayerLoopUpdate ();
-            //        }
-            //    }
-
-            //    SetTransformState ();
-            //}
-
-            //void DrawVertexPathSceneEditor () {
-
-            //    Color bezierCol = globalDisplaySettings.bezierPath;
-            //    bezierCol.a *= .5f;
-
-            //    Handles.color = globalDisplaySettings.vertexPath;
-
-            //    foreach (IGraphNode node in graph.nodes) {
-            //        foreach (IGraphNode neighborNode in node.GetNeighbors())
-            //        {
-            //            Handles.DrawLine(node.GetPosition(), neighborNode.GetPosition());
-            //        }
-            //    }
-            //}
 
             
         void ProcessGraphInput (Event e) {
@@ -448,5 +354,4 @@ namespace EditorTools {
         //#endregion
 
     }
-
-    }
+}
