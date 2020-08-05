@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WallGenerator : MonoBehaviour
 {
-
     //PUBLIC INSPECTOR VARIABLES
     [SerializeField]
     public WallGenerator go_next_fence_post;
@@ -23,8 +22,7 @@ public class WallGenerator : MonoBehaviour
 
 
     //MONOBEHAVIOUR FUNCTIONS
-
-    void Awake()
+    void Start()
     {
         //is there another fence post?
         if (go_next_fence_post != null)
@@ -37,10 +35,8 @@ public class WallGenerator : MonoBehaviour
             //get the Vector3 that's the distance direction between these two fence posts
             v3_distance = go_next_fence_post.FencePostCenterWorldSpace - FencePostCenterWorldSpace;
         }
-    }
 
-    void Start()
-    {
+
         //connect it to another fence post?
         if (go_next_fence_post != null)
         {
