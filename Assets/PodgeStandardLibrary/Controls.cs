@@ -24,16 +24,19 @@ public class Controls {
         float xAxis = 0;
         float yAxis = 0;
 
-        if (Mathf.Abs(Input.GetAxis("P1 Horizontal")) > Mathf.Abs(Input.GetAxis("P1 Keyboard Horizontal")))
-            xAxis = Input.GetAxis("P1 Horizontal");
-        else
-            xAxis = Input.GetAxis("P1 Keyboard Horizontal");
-        if (Mathf.Abs(Input.GetAxis("P1 Vertical")) > Mathf.Abs(Input.GetAxis("P1 Keyboard Vertical")))
-            yAxis = Input.GetAxis("P1 Vertical");
-        else
-            yAxis = Input.GetAxis("P1 Keyboard Vertical");
+        xAxis = Input.GetAxis("Horizontal");
+        yAxis = Input.GetAxis("Vertical");
 
-        if(relativeToCamera)
+        //if (Mathf.Abs(Input.GetAxis("P1 Horizontal")) > Mathf.Abs(Input.GetAxis("P1 Keyboard Horizontal")))
+        //    xAxis = Input.GetAxis("P1 Horizontal");
+        //else
+        //    xAxis = Input.GetAxis("P1 Keyboard Horizontal");
+        //if (Mathf.Abs(Input.GetAxis("P1 Vertical")) > Mathf.Abs(Input.GetAxis("P1 Keyboard Vertical")))
+        //    yAxis = Input.GetAxis("P1 Vertical");
+        //else
+        //    yAxis = Input.GetAxis("P1 Keyboard Vertical");
+
+        if (relativeToCamera)
         {
 
             //float perspectiveRotation = -Mathf.Deg2Rad * Camera.current.gameObject.transform.rotation.y;

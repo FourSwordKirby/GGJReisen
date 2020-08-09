@@ -124,7 +124,16 @@ public class PlayerProgress
     public Assignment Elixir1;
     public Assignment Elixir2;
 
+    public int peachCount;
+    public Inventory inventory;
+
     public bool HasAvailableElixir => (Elixir1 == Assignment.Inventory) || (Elixir2 == Assignment.Inventory);
+
+    public void AddItem(ItemDesignation item, int count = 1)
+    {
+        if(item == ItemDesignation.Peach)
+            peachCount += count;
+    }
 
     public void AddShard(Shard s)
     {

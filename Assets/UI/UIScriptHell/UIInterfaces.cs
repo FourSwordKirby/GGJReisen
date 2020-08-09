@@ -52,6 +52,7 @@ public abstract class ControllableGridMenuElement : MonoBehaviour, ISelectableMe
 
     public virtual void Select()
     {
+        AudioMaster.instance.PlayConfirmSfx();
         SelectionEvent.Invoke();
         switch (parentMenuOnSelectMode)
         {
@@ -102,6 +103,9 @@ public abstract class ControllableGridMenuGroup : MonoBehaviour, ISelectableMenu
 
     public void FocusElement(int index)
     {
+        if (menuElements.Count == 0)
+            return;
+
         currentMenuElementIndex = index;
         for (int i = 0; i < menuElements.Count; i++)
         {
@@ -117,6 +121,9 @@ public abstract class ControllableGridMenuGroup : MonoBehaviour, ISelectableMenu
 
     public void SelectElement(int i)
     {
+        if (menuElements.Count == 0)
+            return;
+
         if (menuElements.Count > 0)
         {
             FocusElement(i);
