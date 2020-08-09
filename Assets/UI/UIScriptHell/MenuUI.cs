@@ -41,7 +41,6 @@ public class MenuUI : ControllableGridMenu
         group.FocusNextElementInDirection(dir);
         if (Controls.confirmInputDown())
         {
-            AudioMaster.instance.PlayConfirmSfx();
             group.SelectElement(group.currentMenuElementIndex);
         }
         if (Controls.cancelInputDown())
@@ -77,7 +76,7 @@ public class MenuUI : ControllableGridMenu
     #region interface implementation
     public override void Init()
     {
-        if(gainFocus || inFocus)
+        if (gainFocus || inFocus)
         {
             group.FocusElement(group.currentMenuElementIndex);
         }

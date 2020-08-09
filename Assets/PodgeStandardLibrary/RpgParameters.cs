@@ -22,6 +22,7 @@ public enum Symbol
 
 public enum ItemDesignation
 {
+    Peach,
     WeatherCharm,
     Soda,
     Coin
