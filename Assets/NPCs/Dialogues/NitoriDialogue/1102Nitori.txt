@@ -1,4 +1,5 @@
 Nitori: So this is what you meant by incident... 
+Nitori: [expression] shock
 ... shoot, did I cause this? 
 
 Reisen: [expression] sweat
@@ -7,6 +8,7 @@ Yeah, maybe.
 
 Nitori: No, I uh...
 That couldn't have caused something this bad, right?
+Nitori: [expression] heh
 Haha...
 
 Reisen: [expression] sad

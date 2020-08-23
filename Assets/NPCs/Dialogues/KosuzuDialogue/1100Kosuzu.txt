@@ -1,3 +1,4 @@
+Kosuzu: [expression] shock
 Kosuzu: Whoa! What’s going on!?
 Why's everything so cube-y now!
 Was I one of those cube things too!?
@@ -5,16 +6,19 @@ Was I one of those cube things too!?
 Reisen: [expression] sweat
 Yes, the elixir you just drank cured you...
 
+Kosuzu: [expression] happy
 Kosuzu: Wow, jee thanks!
 Nice bunny ear head band. It’s very cute!
 
 Reisen: [expression] annoy
 **I can’t tell her these are real...
 
+Kosuzu: [expression] normal
 Kosuzu: Wow this is so bizarre.
 Is this caused by <b>youkai</b>?
 Hey you! You should get back home and stay safe.
 I have to find Reimu!
+Kosuzu: [expression] happy
 ... Or maybe this is my chance to try incident solving?
 M-maybe I can figure this myself!
 Where are my Youma books...

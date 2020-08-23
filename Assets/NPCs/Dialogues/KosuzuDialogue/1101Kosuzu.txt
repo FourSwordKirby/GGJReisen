@@ -1,3 +1,5 @@
+Kosuzu: [expression] shock
 Kosuzu: Hey you! You should get back home and stay safe.
+Kosuzu: [expression] normal
 I'll figure out a way to solve this!
 Where are my Youma books...

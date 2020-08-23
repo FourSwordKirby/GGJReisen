@@ -12,6 +12,7 @@ Now that I think about it, I was talking in a really outdated fashion, wasn't I?
 Reisen: [expression] shock
 **Wow, what a dramatic shift in personality. 
 
+Akyu: [expression] happy
 Akyu: Please let Miss Yagokoro know I'm eternally grateful. 
 And also, thank you Reisen for your help. 
 I always knew you were different from other Youkai rabbits. 
@@ -22,6 +23,7 @@ I have my reasons.
 [expression] normal
 
 Akyu: ...
+Akyu: [expression] normal
 I have a lot of questions for you.
 But, I get the sense that you're not a social type to begin with. 
 So I'll reign in my curiosity for now. 

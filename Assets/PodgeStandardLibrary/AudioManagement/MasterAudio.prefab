@@ -325,13 +325,13 @@ MonoBehaviour:
   - name: Cancel
     track: {fileID: 8300000, guid: 618d25b34500e4742a01de8b0f811d7a, type: 3}
   - name: ItemToggle
-    track: {fileID: 8300000, guid: 5898cf1ebdeb6324da91e3c6e8c65528, type: 3}
+    track: {fileID: 8300000, guid: 8e0616bab138003429f4db31c5d3c50e, type: 3}
   - name: ItemGet
     track: {fileID: 8300000, guid: d90c56b082b67fd4db280a8b083045c0, type: 3}
   - name: Transform
-    track: {fileID: 8300000, guid: 83f122a7fd476b54a8d5b429569467ba, type: 3}
+    track: {fileID: 8300000, guid: e6130c4f24b7277458cbaea367842076, type: 3}
   - name: DialogueAdvance
-    track: {fileID: 8300000, guid: 5898cf1ebdeb6324da91e3c6e8c65528, type: 3}
+    track: {fileID: 8300000, guid: 8e0616bab138003429f4db31c5d3c50e, type: 3}
   - name: Jump
     track: {fileID: 8300000, guid: 9642a0448709e12428b160820250a8fc, type: 3}
   - name: TeleportEnter

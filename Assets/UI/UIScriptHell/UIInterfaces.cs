@@ -135,7 +135,11 @@ public abstract class ControllableGridMenuGroup : MonoBehaviour, ISelectableMenu
     public bool hortizontal;
     public virtual void FocusNextElementInDirection(InputDirection dir)
     {
-        if(hortizontal)
+        // No navigation needed when there is 1 element
+        if (menuElements.Count == 1)
+            return;
+
+        if (hortizontal)
         {
             if (dir == InputDirection.W)
             {

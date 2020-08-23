@@ -23,6 +23,7 @@ Reisen: [expression] annoy
 I'll take anything to get closer to solving this incident...
 
 Nitori: Incident?
+Nitori: [expression] shock
 Whoa!
 Why's everything so blocky!? 
 

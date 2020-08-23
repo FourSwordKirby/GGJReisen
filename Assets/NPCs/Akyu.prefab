@@ -591,12 +591,12 @@ PrefabInstance:
     - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: expressions.Array.size
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: expressionSprites.Array.size
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
@@ -606,6 +606,94 @@ PrefabInstance:
     - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
         type: 3}
       propertyPath: expressionSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 35c93ce0cec02ca499efee67449c4355,
+        type: 3}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressions.Array.data[1]
+      value: 
+      objectReference: {fileID: 2800000, guid: 35c93ce0cec02ca499efee67449c4355, type: 3}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressions.Array.data[2]
+      value: 
+      objectReference: {fileID: 2800000, guid: 35c93ce0cec02ca499efee67449c4355, type: 3}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressions.Array.data[3]
+      value: 
+      objectReference: {fileID: 2800000, guid: f961f5e6214a63345bd89464af514291, type: 3}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressions.Array.data[4]
+      value: 
+      objectReference: {fileID: 2800000, guid: 35c93ce0cec02ca499efee67449c4355, type: 3}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressions.Array.data[5]
+      value: 
+      objectReference: {fileID: 2800000, guid: cabc359ed5a31a2408bd7bbec6643287, type: 3}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressions.Array.data[6]
+      value: 
+      objectReference: {fileID: 2800000, guid: 35c93ce0cec02ca499efee67449c4355, type: 3}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressions.Array.data[7]
+      value: 
+      objectReference: {fileID: 2800000, guid: 35c93ce0cec02ca499efee67449c4355, type: 3}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressions.Array.data[8]
+      value: 
+      objectReference: {fileID: 2800000, guid: 35c93ce0cec02ca499efee67449c4355, type: 3}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressionSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 35c93ce0cec02ca499efee67449c4355,
+        type: 3}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressionSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 35c93ce0cec02ca499efee67449c4355,
+        type: 3}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressionSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: f961f5e6214a63345bd89464af514291,
+        type: 3}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressionSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 35c93ce0cec02ca499efee67449c4355,
+        type: 3}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressionSprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: cabc359ed5a31a2408bd7bbec6643287,
+        type: 3}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressionSprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 35c93ce0cec02ca499efee67449c4355,
+        type: 3}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressionSprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: 35c93ce0cec02ca499efee67449c4355,
+        type: 3}
+    - target: {fileID: 438429924349802139, guid: 8247f7c181319ac4a8e7f0d741cc1563,
+        type: 3}
+      propertyPath: expressionSprites.Array.data[8]
       value: 
       objectReference: {fileID: 21300000, guid: 35c93ce0cec02ca499efee67449c4355,
         type: 3}

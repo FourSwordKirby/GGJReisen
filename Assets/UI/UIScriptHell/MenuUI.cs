@@ -48,22 +48,7 @@ public class MenuUI : ControllableGridMenu
             AudioMaster.instance.PlayCancelSfx();
             if (!isGameplayMenu)
             {
-                Blur();
-                if (!persistOnExit)
-                    Close();
-
-
-                switch (prevMenuMode)
-                {
-                    case ParentMenuStatusPostSelect.blur:
-                        previousMenu?.Focus();
-                        break;
-                    case ParentMenuStatusPostSelect.close:
-                        previousMenu?.Open();
-                        break;
-                    case ParentMenuStatusPostSelect.none:
-                        break;
-                }
+                CloseReopen();
             }
             else
             {
@@ -116,6 +101,27 @@ public class MenuUI : ControllableGridMenu
     {
         this.gameObject.SetActive(false);
         Blur();
+    }
+
+    public void CloseReopen()
+    {
+        Blur();
+        if (!persistOnExit)
+            Close();
+
+
+        switch (prevMenuMode)
+        {
+            case ParentMenuStatusPostSelect.blur:
+                previousMenu?.Focus();
+                break;
+            case ParentMenuStatusPostSelect.close:
+                print("here");
+                previousMenu?.Open();
+                break;
+            case ParentMenuStatusPostSelect.none:
+                break;
+        }
     }
 
     #endregion

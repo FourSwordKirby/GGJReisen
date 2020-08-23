@@ -16,6 +16,11 @@ public class BgmController : MonoBehaviour {
         StartCoroutine(StopTrackFadeOut(0.0f));
     }
 
+    public void FadeOutTrack(float fadeTime = 1.0f)
+    {
+        StartCoroutine(StopTrackFadeOut(fadeTime));
+    }
+
     public void SwitchTrack(AudioClip track, float transitionOverlap = 0.0f, float transitionTime = 1.0f)
     {
         currentAudio = track;
