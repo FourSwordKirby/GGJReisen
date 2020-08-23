@@ -40,6 +40,7 @@ Kosuzu: "The <b>simplification algorithm</b> is a reversible process..."
 "When an object is placed inside, it is <b>simplified</b>..."
 "The inverse process, <b>feature reconstruction</b>, restores the object when removed."
 "This happens automatically, or can be manually triggered..."
+Kosuzu: [expression] angry
 Agh! I give up!
 This is too complicated. I have no idea what it's talking about...
 In the first place, what is this device even?

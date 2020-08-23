@@ -376,6 +376,8 @@ public class ReisenGameManager : MonoBehaviour
 
     IEnumerator ReturnToTitleSequence()
     {
+        AudioMaster.instance.bgmController.FadeOutTrack();
+
         yield return TransitionManager.instance.screenFader.FadeOut();
 
         RpgGameManager.instance.ResumeGameplay();

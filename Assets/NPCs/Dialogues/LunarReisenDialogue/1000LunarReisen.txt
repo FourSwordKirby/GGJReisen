@@ -22,6 +22,7 @@ LunarReisen: ...
 Reisen: [expression] heh
 ... Life's rough up there, isn't it? 
 
+LunarReisen: [expression] ugh
 LunarReisen: ...Yes. As usual... 
 
 Reisen: [expression] normal
@@ -29,6 +30,7 @@ So what was that about the <b>Watatsuki Sisters</b>?
 [expression] annoy
 Are the lunar princesses interfering with Earth again?
 
+LunarReisen: [expression] shock
 LunarReisen: Right! The <b>Dimensionality Reducers</b>! 
 We were transporting them from the moon to Earth with a quantum tunnel. 
 But an outside interference knocked them off trajectory...
@@ -42,6 +44,7 @@ So I was on the money, wasn't I?
 This cube phenomenon isn't really a virus...
 But an effect of the reducer's <b>simplification algorithm</b> leaking out. 
 
+LunarReisen: [expression] normal
 LunarReisen: Yes... But it's okay now.
 Lady Toyohime taught me how to invoke the <b>reversal algorithm</b>. 
 I had somehow forgotten when I arrived... 
@@ -51,6 +54,7 @@ Well, get moving.
 [expression] sad
 I'd like to get this phenomenon fixed finally. 
 
+LunarReisen: [expression] shock
 LunarReisen: R-right! 
 Um...
 There's a small problem...
@@ -58,6 +62,7 @@ There's a small problem...
 Reisen: [expression] annoy
 Oh no... what now? 
 
+LunarReisen: [expression] normal
 LunarReisen: The <b>simplification algorithm</b> works by removing information to compress data. 
 The excess information is usually stored as a <b>small key</b>. 
 We need that key to reconstruct everything that was simplified. 
@@ -66,6 +71,7 @@ Otherwise, the reversal process will only be 90% correct.
 Reisen: [expression] sweat
 Okay... so where do we get the <b>key</b>? 
 
+LunarReisen: [expression] ugh
 LunarReisen: Well, I don't know. 
 One is made each time you put something into the container. 
 But since the simplification leaked out of the container...

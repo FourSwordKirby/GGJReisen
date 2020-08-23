@@ -47,23 +47,23 @@ public class AudioMaster : MonoBehaviour
 
     public void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            bgmController.SwitchTrack(bgmAudioMixes[0].track);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            bgmController.SwitchTrack(bgmAudioMixes[1].track);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            bgmController.SwitchTrack(bgmAudioMixes[2].track);
-        }
+        //if(Input.GetKeyDown(KeyCode.Alpha1))
+        //{
+        //    bgmController.SwitchTrack(bgmAudioMixes[0].track);
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha2))
+        //{
+        //    bgmController.SwitchTrack(bgmAudioMixes[1].track);
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha3))
+        //{
+        //    bgmController.SwitchTrack(bgmAudioMixes[2].track);
+        //}
 
-        if(Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            bgmController.SwitchTrackWithTransition(battleStart, bgmAudioMixes[0].track);
-        }
+        //if(Input.GetKeyDown(KeyCode.Alpha4))
+        //{
+        //    bgmController.SwitchTrackWithTransition(battleStart, bgmAudioMixes[0].track);
+        //}
         
         masterMixer.SetFloat("MasterVolume", Mathf.Log10(Mathf.Lerp(0.0001f, 1.0f, masterVolume)) * 20);
         masterMixer.SetFloat("BgmVolume", Mathf.Log10(Mathf.Lerp(0.0001f, 1.0f, bgmVolume)) * 20);

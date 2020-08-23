@@ -9,6 +9,9 @@ public class ShardMenuUIGroup : MenuUIGroup
 
     public override void FocusNextElementInDirection(InputDirection dir)
     {
+        if (menuElements.Count == 0 || menuElements.Count == 1)
+            return;
+
         if (dir == InputDirection.W)
         {
             AudioMaster.instance.PlayMenuSelectSfx();

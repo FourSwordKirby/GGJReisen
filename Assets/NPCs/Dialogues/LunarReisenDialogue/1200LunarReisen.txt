@@ -1,6 +1,7 @@
 Reisen: [expression] shock
 Ah! 
 
+LunarReisen: [expression] shock
 LunarReisen: Ah! 
 
 Reisen: [expression] sweat
@@ -12,18 +13,21 @@ Reisen: [expression] normal
 You're <b>Reisen</b>, right? 
 The Honorable Watatsuki Sisters' new pet... 
 
+LunarReisen: [expression] normal
 LunarReisen: Yes, and you are... also <b>Reisen</b>. 
 The Honorable Watatsuki Sister's previous pet that ran away. 
 
 Reisen: [expression] annoy
 ... 
 
+LunarReisen: [expression] annoy
 LunarReisen: ... 
 
 Reisen: [expression] normal
 What's a Moon Rabbit doing here? 
 I haven't seen you since you or the Lunar Princesses since Eientei.
 
+LunarReisen: [expression] normal
 LunarReisen: Um... Frankly I don't remember... 
 I was here to do something <b>important</b>. 
 I think I lost something <b>important</b> too... 
@@ -38,6 +42,7 @@ No, I don't think I was sent to do anything like that...
 Reisen: [expression] annoy
 Oh?
 
+LunarReisen: [expression] shock
 LunarReisen: No, really!
 I wasn't told anything like that! Really! 
 You know how the Lunarians are!

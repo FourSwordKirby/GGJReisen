@@ -5,6 +5,7 @@ Oh! You're the half-youkai school teacher!
 
 Keine: Yes. <b>Keine Kamishirasawa</b>.
 How did I forget that earlier...? 
+Keine: [expression] shock
 But forget that, what's with all of these cubes!?  
 
 Reisen: [expression] sad
@@ -26,6 +27,7 @@ Reisen: [expression] sad
 As an ex-Lunarian, I'm obligated to help in this mess...
 
 Keine: Haaah... I'll buy that for now.
+Keine: [expression] angry
 But one wrong move, and eradicate you from history!
 
 Reisen: [expression] shock
