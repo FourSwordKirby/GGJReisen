@@ -20,6 +20,7 @@ public class TitleScreenUtils : MonoBehaviour
     public void Start()
     {
         AudioMaster.instance.PlayTrack("Title");
+        StartCoroutine(TransitionManager.instance.screenFader.FadeIn());
     }
 
     public void LoadGame(string saveName)
