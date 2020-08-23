@@ -11,7 +11,7 @@ public class ScreenFader : MonoBehaviour
 
     void Awake()
     {
-        this.screen.color = Color.clear;
+        //this.screen.color = Color.clear;
     }
 
     public IEnumerator FadeOut(float fadeTime = 1.0f, float lingerTime = 0.3f)
