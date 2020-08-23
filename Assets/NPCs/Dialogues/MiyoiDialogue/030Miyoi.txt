@@ -1,5 +1,7 @@
 // Pub is enterable and nice looking 
 
+Miyoi: [expression] happy
+
 Miyoi: Reisen! You remembered to visit! 
 
 Reisen: Yeah, well I can't stick around too long.
