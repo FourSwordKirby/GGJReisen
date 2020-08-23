@@ -115,7 +115,7 @@ public class StartMenuUI : MenuUI
     {
         group.menuElements.Add(element);
         element.transform.position = menuElementPositions[index].position;
-        element.transform.parent = menuElementPositions[index];
+        element.transform.SetParent(menuElementPositions[index], true);
     }
 
 }

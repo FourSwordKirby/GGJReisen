@@ -1,27 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class OptionsMenuUI : MenuUI
 {
     public Dropdown resolutionDropdown;
 
-    public override void Init()
+    public override void Open()
     {
-        if (resolutionDropdown != null)
-        {
-            resolutionDropdown.Hide();
-        }
+        //if (resolutionDropdown != null)
+        //{
+        //    resolutionDropdown.OnDeselect(new BaseEventData(EventSystem.current));
+        //}
 
-        base.Init();
+        base.Open();
     }
 
     public override void Update()
     {
-        if(Controls.cancelInputDown() && resolutionDropdown != null)
+        if(Controls.cancelInputDown() && GameObject.Find("Dropdown List"))
         {
+            AudioMaster.instance.PlayCancelSfx();
             resolutionDropdown.Hide();
+            return;
         }
 
         base.Update();
