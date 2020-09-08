@@ -151,11 +151,13 @@ public class BgmController : MonoBehaviour {
 public struct AudioTrack
 {
     public string name;
+    public string artist;
     public AudioClip track;
 
-    public AudioTrack(string name, AudioClip track)
+    public AudioTrack(string name, string artist, AudioClip track)
     {
         this.name = name;
+        this.artist = artist;
         this.track = track;
     }
 }

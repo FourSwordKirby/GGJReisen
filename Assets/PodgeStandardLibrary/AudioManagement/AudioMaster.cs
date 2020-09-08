@@ -9,14 +9,12 @@ using UnityEngine.Audio;
 public class AudioMaster : MonoBehaviour
 {
     public AudioMixer masterMixer;
-    //public List<AudioMixerSnapshot> snapshots;
 
     public BgmController bgmController;
     public List<AudioTrack> bgmAudioMixes;
 
     public SfxController sfxController;
     public List<AudioTrack> soundEffects;
-
 
     public AudioClip battleStart;
 
@@ -32,6 +30,8 @@ public class AudioMaster : MonoBehaviour
     [Range(0f, 1f)]
     public float voiceVolume;
     public static AudioMaster instance;
+
+    public SongNotification songNotif;
 
     public void Awake()
     {
@@ -78,7 +78,10 @@ public class AudioMaster : MonoBehaviour
             Debug.Log("couldn't find bgm track: " + trackName);
 
         if (bgmController.currentAudio != track.track)
+        {
             bgmController.SwitchTrack(track.track);
+            songNotif.ShowSongInfo(track.name, track.artist);
+        }
     }
 
     public void PlayPrologueTrack()
@@ -87,6 +90,8 @@ public class AudioMaster : MonoBehaviour
 
         if (bgmController.currentAudio != prologueTrack.track)
             bgmController.SwitchTrack(prologueTrack.track);
+
+        songNotif.ShowSongInfo(prologueTrack.name, prologueTrack.artist);
     }
 
     internal void PlayVillageTrack()
@@ -95,6 +100,9 @@ public class AudioMaster : MonoBehaviour
 
         if (bgmController.currentAudio != townTrack.track)
             bgmController.SwitchTrack(townTrack.track);
+
+
+        songNotif.ShowSongInfo(townTrack.name, townTrack.artist);
     }
 
     internal void PlaySpookyTrack()

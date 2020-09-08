@@ -1,0 +1,41 @@
+<i>In front of the Hidea Mansion </i>
+
+[instruction] Credits1
+
+[instruction] CG3
+
+<color=#add8e6ff>Reisen</color>: Phew I think that took care of most of it 
+
+<color=#add8e6ff>Reisen</color>: If you find any other personality shards, shove them into the compartment like I did and the machine should take care of the rest. 
+
+<color=#add8e6ff>Reisen</color>: We’ll leave them around for a bit longer in case any other cases pop up. 
+
+<color=#DCB0FA>Reisen</color>: Phew, looks like us grunts managed to take care of business this time huh? 
+
+<color=#add8e6ff>Reisen</color>: Y-yeah. 
+
+[instruction] Credits2
+
+<color=#add8e6ff>Reisen</color>: U-um, as an apology, please take these peaches. 
+
+<color=#add8e6ff>Reisen</color>: I was told to give them to Lady Eirin after I took care of business here, but now it feels sort of awkward. 
+
+<color=#add8e6ff>Reisen</color>: I-I'll be going now! 
+
+<color=#DCB0FA>Reisen</color>: S-sure. 
+
+[instruction] Credits3
+
+<i>It took a few more days, and hiding of a few more blocky villagers and pieces of furniture, but eventually the whole village was returned to normal. </i>
+
+<i>Whatever was the point of this whole endeavor? </i>
+
+<i>Reimu never gave Reisen a satisfactory answer, claiming it was an extension of some Lunar Capital relocation plan. </i>
+
+[instruction] CreditsCleanup
+
+<i>Well, at the very least those peaches were delicious </i>
+
+[instruction] Credits4
+
+[instruction] Ending1

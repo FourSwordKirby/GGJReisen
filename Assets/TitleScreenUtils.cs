@@ -56,7 +56,6 @@ public class TitleScreenUtils : MonoBehaviour
     {
         yield return TransitionManager.instance.screenFader.FadeOut();
         SceneManager.LoadScene("Prologue");
-        SceneManager.sceneLoaded -= TransitionManager.instance.FadeInScene;
     }
 
     public void DeleteData()
