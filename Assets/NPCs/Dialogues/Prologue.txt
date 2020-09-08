@@ -1,4 +1,4 @@
-Reisen: My name is Reisen Udonge’in Inaba. 
+My name is Reisen Udonge’in Inaba. 
 
 // debug to make things go faster [instruction] LoadVillage
 

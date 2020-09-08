@@ -81,7 +81,7 @@ public class LunarReisenQuestManager : Npc
 
     public void LunarReisen_Stage1001()
     {
-        ReisenGameManager.instance.StartEnding();
+        ReisenGameManager.instance.StartLunarEnding();
         // This is the game ending instruction
     }
 

@@ -20,14 +20,34 @@ public class CutsceneEvents : MonoBehaviour
         CutsceneUI.instance.FadeCg();
     }
 
+    public void LoadTitle()
+    {
+        StartCoroutine(ReturnToTitleSequence());
+    }
+
     public void LoadVillageEntrance()
     {
         StartCoroutine(SceneSwitchSequence());
     }
 
+    public void DisplayCredits()
+    {
+    }
+
+    public void ConfirmEnding()
+    {
+    }
+
+    public IEnumerator ReturnToTitleSequence()
+    {
+        yield return new WaitForSeconds(3.0f);
+        yield return TransitionManager.instance.screenFader.FadeOut();
+        SceneManager.LoadScene("TitleScreen");
+        yield return null;
+    }
+
     public IEnumerator SceneSwitchSequence()
     {
-        SceneManager.sceneLoaded += TransitionManager.instance.FadeInScene;
         yield return TransitionManager.instance.screenFader.FadeOut();
         SceneManager.LoadScene("VillageEntrance");
         ReisenGameManager.isNewGame = true;

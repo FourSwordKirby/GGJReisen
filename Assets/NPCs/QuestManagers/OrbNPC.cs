@@ -11,6 +11,6 @@ public class OrbNPC : Npc
 
     public void EndGame()
     {
-        ReisenGameManager.instance.StartEnding();
+        ReisenGameManager.instance.StartReimuEnding();
     }
 }

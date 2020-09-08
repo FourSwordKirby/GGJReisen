@@ -1,0 +1,47 @@
+<i>At Geidontei</i>
+
+[instruction] CG4
+
+[instruction] Credits1
+
+Toyohime: Oh my! I didn’t think that there were chefs on earth who could do our Lunarian peaches justice. 
+
+Toyohime: And to think we even got the whole place to ourselves. 
+
+Yorihime: Yes Eirin, the invitation was unexpected so we couldn’t refuse, but this is far more delightful than I could have managed. 
+
+Eirin: No need to thank me. After Reisen told me of what happened, it simply made more sense to do things in a more straightforward manner. 
+
+Eirin: Though her choice in venue was pretty decent. 
+
+[instruction] Credits2
+
+Tewi: Waiterrrrr, one more slice of peach cake please 
+
+<color=#add8e6ff>Reisen</color>: I-I'll take a peach ice cream bowl for my dessert. 
+
+<i>It's finally over. 
+
+<i>The strange storage devices strewn throughout town turned out be just that, storage boxes for the loads of peaches that the Watasuki sisters tried to send to Eientei. </i>
+
+<i>Rather than any hostile act to spread their influence over Gensokyo, they were simply apologies for all the trouble caused by the Lunar Invasion incident. </i>
+
+[instruction] Credits3
+
+<i>As it turns out, they were attacked and malfucntioned while in transit, landing in the Human Village and causing the latest set of havok. </i>
+
+<i>As for who they were attacked by? Reisen asked Reimu if she knew anything. </i>
+
+<i>Though she adamantly asserted she had no idea. </i>
+
+<i>For Reimu, lying came as easy as breathing... </i>
+
+<i>Taking a bite of the freshly candied peaches, Reisen’s mind drifted.</i>
+
+[instruction] CreditsCleanup
+
+<i>Satisfied with a job well done.</i>
+
+[instruction] Credits4
+
+[instruction] Ending1

@@ -3,7 +3,7 @@ YinYangOrb: Do we have all the shards yet?
 ?{shard_count>0} Reisen: [choice] [Yes, I've got them all | endgame] [There's still more... | continue]
 
 Reisen: [expression] ugh
-Reisen: **I haven't even gotten a chance to get started
+Reisen: **I haven't even gotten a chance to get started.
 Reisen: [choice] [There still more... | continue]
 
 

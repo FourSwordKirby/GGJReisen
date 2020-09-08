@@ -382,28 +382,49 @@ public class ReisenGameManager : MonoBehaviour
 
         RpgGameManager.instance.ResumeGameplay();
 
+        SceneManager.sceneLoaded -= OnSceneLoaded;
         SceneManager.LoadScene("TitleScreen");
 
         Destroy(this.gameObject);
-        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    internal void StartEnding()
+    internal void StartReimuEnding()
     {
-        StartCoroutine(EndingSequence());
-        throw new Exception("Ending not yet implemented");
+        StartCoroutine(EndingSequence(true));
+        //throw new Exception("Ending not yet implemented");
     }
 
-    IEnumerator EndingSequence()
+    internal void StartLunarEnding()
+    {
+        StartCoroutine(EndingSequence(false));
+        //throw new Exception("Ending not yet implemented");
+    }
+
+    IEnumerator EndingSequence(bool isReimuEnding)
     {
         yield return TransitionManager.instance.screenFader.FadeOut();
 
         RpgGameManager.instance.ResumeGameplay();
 
-        SceneManager.LoadScene("Ending1");
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+
+        yield return SceneManager.LoadSceneAsync("Ending");
+        if (isReimuEnding)
+        {
+            if (gameProgress.Player.ShardsAcquired.Count < 5)
+                GameObject.FindObjectOfType<EndingController>().SetEnding(1);
+            else
+                GameObject.FindObjectOfType<EndingController>().SetEnding(2);
+        }
+        else
+        {
+            if (gameProgress.Player.ShardsAcquired.Count < 15)
+                GameObject.FindObjectOfType<EndingController>().SetEnding(3);
+            else
+                GameObject.FindObjectOfType<EndingController>().SetEnding(4);
+        }
 
         Destroy(this.gameObject);
-        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     internal void QuitGame()

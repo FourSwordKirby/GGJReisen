@@ -1,0 +1,33 @@
+<i>At Hakurei Shrine</i>
+
+[instruction] CG2
+
+[instruction] Credits1
+
+Keine: Ah so the Lunarians were at fault for this incident? 
+
+Nitori: Psh, any amateur could have figured that out, their technology was strewn about everywhere.
+
+Reimu: Can it you! 
+
+[instruction] Credits2
+
+Reimu: They laid an insidious virus among Gensokyo, hoping to purify it and turn it into the new Lunar Capital. 
+
+Reimu: Without me, you’d still be as blocky as you are blockheaded. 
+
+[instruction] Credits3
+
+<i>Though the blissful sounds of pointless arguments were back, Reisen still couldn’t shake the feeling that something was off. 
+
+<i>Once Reisen had gathered the memory shards, Reimu told her to put them into the compartment of one of the strange Lunarian monoliths.</i>
+
+<i>After directing her with some frustratingly unclear instructions, it emitted a bright light and returned the Human Village and its inhabitants to normal, while also spilling forth an excessive number of peaches.</i>
+
+[instruction] CreditsCleanup
+
+<i>Though there’s nothing really to complain about, just what were the Lunarians doing with those monoliths anyways? </i>
+
+[instruction] Credits4
+
+[instruction] Ending1

@@ -63,7 +63,7 @@ public class MiyoiQuestManager : Npc
             }
             else if(MiyoiSeenShardDialogue < 25 && acquiredShardCount >= 15)
             {
-                MiyoiSeenShardDialogue = 30;
+                MiyoiSeenShardDialogue = 25;
                 currentStage = 30;
             }
         }

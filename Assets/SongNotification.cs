@@ -13,15 +13,21 @@ public class SongNotification : MonoBehaviour
     public TextMeshProUGUI SongTitle;
     public TextMeshProUGUI SongArtist;
 
-    private void Update()
+    //private void Update()
+    //{
+    //    if(Input.GetKeyDown(KeyCode.I))
+    //    {
+    //        StartCoroutine(ShowSongInfo("Placeholder Song Title", "Placeholder Song Artist"));
+    //    }
+    //}
+
+
+    public void ShowSongInfo(string songTitle, string songArtist, float customDisplayDuration = 0.0f)
     {
-        if(Input.GetKeyDown(KeyCode.I))
-        {
-            StartCoroutine(ShowSongInfo("Placeholder Song Title", "Placeholder Song Artist"));
-        }
+        StartCoroutine(ShowSongInfoSequence(songTitle, songArtist, customDisplayDuration));
     }
 
-    public IEnumerator ShowSongInfo(string songTitle, string songArtist, float customDisplayDuration = 0.0f)
+    public IEnumerator ShowSongInfoSequence(string songTitle, string songArtist, float customDisplayDuration = 0.0f)
     {
         songAnimator.SetTrigger("Show");
         SongTitle.text = songTitle;

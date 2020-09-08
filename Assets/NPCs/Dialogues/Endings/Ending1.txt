@@ -1,0 +1,31 @@
+<i>At the Eientei Residence</i>
+
+Kaguya: So you’re saying there’s nothing we can do?
+
+[instruction] Credits1
+
+[instruction] CG1
+
+Eirin: Unfortunately yes, though the shrine maiden told me she should be back to normal soon if she avoids going to the human village for a little bit.
+
+Eirin: Apparently this sickness is plaguing all of the villagers.
+
+[instruction] Credits2
+
+Tewi: Oh how awwwwwwwful, I like Reisen a bit better this way though.
+
+Reisen: Uggggggh this situation is unpleasantly nostalgic for <b>some reason</b> .
+
+[instruction] Credits3
+
+<i>The shrine maiden’s plan backfired, and ultimately put the moon rabbit out of commission for a bit. </i>
+
+<i>Though the plan itself was half-baked, a certain someone’s contributions were also a bit less than lacking... </i>
+
+[instruction] CreditsCleanup
+
+<i>She promises to try harder next time. </i>
+
+[instruction] Credits4
+
+[instruction] Ending1

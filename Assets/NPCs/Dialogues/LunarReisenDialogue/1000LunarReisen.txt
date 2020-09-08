@@ -7,13 +7,13 @@ Reisen: [expression] shock
 It's you! 
 
 LunarReisen: Right, I remember now! 
-You're <b>Reisen</b>!  
+You're <b><color = magenta>Reisen</color></b>!  
 You're my masters' previous pet!
 The one that ran away to Earth! 
 
 Reisen: Y-yeah.
 [expression] normal
-And you're also <b>Reisen</b>, right? 
+And you're also <b><color = blue>Reisen</color>Reisen</color></b>, right? 
 [expression] sad
 You're my replacement at the Lunar Capital now... 
 
