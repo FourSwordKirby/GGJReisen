@@ -71,7 +71,7 @@ public class AudioMaster : MonoBehaviour
         masterMixer.SetFloat("VoiceVolume", Mathf.Log10(Mathf.Lerp(0.0001f, 1.0f, voiceVolume)) * 20);
     }
 
-    internal void PlayTrack(string trackName)
+    internal void PlayTrack(string trackName, bool showSongInfo = false)
     {
         AudioTrack track = bgmAudioMixes.Find(x => x.name == trackName);
         if (track.track == null)
@@ -80,29 +80,19 @@ public class AudioMaster : MonoBehaviour
         if (bgmController.currentAudio != track.track)
         {
             bgmController.SwitchTrack(track.track);
-            songNotif.ShowSongInfo(track.name, track.artist);
+            if(showSongInfo)
+                songNotif.ShowSongInfo(track.name, track.artist);
         }
     }
 
     public void PlayPrologueTrack()
     {
-        AudioTrack prologueTrack = bgmAudioMixes.Find(x => x.name == "Prologue");
-
-        if (bgmController.currentAudio != prologueTrack.track)
-            bgmController.SwitchTrack(prologueTrack.track);
-
-        songNotif.ShowSongInfo(prologueTrack.name, prologueTrack.artist);
+        PlayTrack("Prologue", false);
     }
 
     internal void PlayVillageTrack()
     {
-        AudioTrack townTrack = bgmAudioMixes.Find(x => x.name == "Town");
-
-        if (bgmController.currentAudio != townTrack.track)
-            bgmController.SwitchTrack(townTrack.track);
-
-
-        songNotif.ShowSongInfo(townTrack.name, townTrack.artist);
+        PlayTrack("Town", false);
     }
 
     internal void PlaySpookyTrack()

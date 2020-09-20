@@ -4614,6 +4614,7 @@ GameObject:
   - component: {fileID: 466389582}
   - component: {fileID: 466389581}
   - component: {fileID: 466389584}
+  - component: {fileID: 466389585}
   m_Layer: 11
   m_Name: MusicChangeZone
   m_TagString: Untagged
@@ -4669,6 +4670,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackName: Town
+--- !u!114 &466389585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466389580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9b3ad9bf90b98488fa27fe0d394640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AreaName: Human Village
 --- !u!1 &468228362
 GameObject:
   m_ObjectHideFlags: 0
@@ -5670,6 +5684,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1122613230, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122613230, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122613230, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122613230, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122613230, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474108121, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474108121, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474108121, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474108121, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474108121, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 456247859300951823, guid: 30e8becfb8fb89e42963c80449e3e5a8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18878,6 +18932,7 @@ GameObject:
   - component: {fileID: 2098704107}
   - component: {fileID: 2098704106}
   - component: {fileID: 2098704105}
+  - component: {fileID: 2098704104}
   m_Layer: 11
   m_Name: MusicChangeZone (1)
   m_TagString: Untagged
@@ -18885,6 +18940,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2098704104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098704103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9b3ad9bf90b98488fa27fe0d394640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AreaName: Village Outskirts
 --- !u!114 &2098704105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18927,8 +18995,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098704103}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.89, y: -0.98460495, z: 2.82}
-  m_LocalScale: {x: 1.6228626, y: 9.1563, z: 19.80661}
+  m_LocalPosition: {x: -21.11, y: -0.98460495, z: 2.82}
+  m_LocalScale: {x: 10.52035, y: 9.1563, z: 19.80661}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -19772,10 +19840,85 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 322719115647022943, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 322719115647022943, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 322719115647022943, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 322719115647022943, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 322719115647022943, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 322719116000156264, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 322719116000156264, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 322719116000156264, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 322719116000156264, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 322719116000156264, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 961609075121107813, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1861643197885643542, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1861643197885643542, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1861643197885643542, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1861643197885643542, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1861643197885643542, guid: c2f4dd1d06becac4fae7721a65118f70,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3570052165625753719, guid: c2f4dd1d06becac4fae7721a65118f70,
         type: 3}

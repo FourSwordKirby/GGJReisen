@@ -4,7 +4,6 @@ using System;
 public class CutsceneSpeakingLine : SpeakingLine
 {
     public SpeakingLineContent content;
-    public DialogueBubbleType type;
 
     public CutsceneSpeakingLine(string speaker, string lineText, int lineNumber, string label = "" ):base(speaker,lineText,lineNumber,label)
     {
@@ -20,6 +19,9 @@ public class CutsceneSpeakingLine : SpeakingLine
         if (lineText.StartsWith("**") || lineText.StartsWith("^^") || lineText.StartsWith("~~"))
             lineText = lineText.Substring(2);
 
+        if (speaker != "" && !lineText.Contains("<i>"))
+            lineText = speaker + ": " + lineText;
+
         content = new SpeakingLineContent(speaker, lineText, lineNumber);
     }
 
@@ -30,15 +32,20 @@ public class CutsceneSpeakingLine : SpeakingLine
         return line;
     }
 
+    private const float textAdvanceCooldown = 1.0f;
+    private float textAdvanceTime;
+
     //Change this based on the game implementation
     public override void PerformLine()
     {
+        textAdvanceTime = Time.realtimeSinceStartup;
         CutsceneUI.instance.DisplayText(content);
     }
 
     public override bool IsFinished()
     {
-        return CutsceneUI.instance.dialogueLineFinished;
+        bool cooldownOver = Time.realtimeSinceStartup - textAdvanceTime > textAdvanceCooldown;
+        return CutsceneUI.instance.dialogueLineFinished && cooldownOver;
     }
 
     public override DialogueEngine.LineType GetLineType()
