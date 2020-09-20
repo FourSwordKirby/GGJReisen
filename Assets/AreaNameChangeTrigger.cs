@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicChangeTrigger : MonoBehaviour
+public class AreaNameChangeTrigger : MonoBehaviour
 {
-    public string trackName;
+    public string AreaName;
     public void OnTriggerEnter(Collider other)
     {
-        AudioMaster.instance.PlayTrack(trackName, true);
+        AreaNotifcation.instance.ShowAreaInfo(AreaName, "");
     }
 }

@@ -44,6 +44,11 @@ public class TutorialEvents : MonoBehaviour
         AudioMaster.instance.StopSpookyTrack();
     }
 
+    public void ShowAreaName(string areaName)
+    {
+
+    }
+
     public void PlayVillageTrack()
     {
         AudioMaster.instance.PlayVillageTrack();

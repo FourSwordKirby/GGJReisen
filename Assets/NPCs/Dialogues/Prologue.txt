@@ -28,11 +28,6 @@ In accordance with my master’s strict orders, I kept my interactions terse and
 
 
 
-[instruction] Prologue2
-
-
-
-
 Today, without fail, I woke up early in the morning to prepare for my trek to the village. 
 
 Master Eirin was not present, but a neatly packaged bag of medicine lay waiting for me on her desk. 
@@ -41,7 +36,7 @@ Medicine in tow, I exited a silent house, whispering a quick “And I’m off.�
 
 
 
-[instruction] Prologue3
+[instruction] Prologue2
 
 
 
@@ -55,7 +50,7 @@ They say on days like these, you might be able to see the moon while the sun is 
 My thoughts turned to my fellow Moon Rabbits who I had unexpectedly met again a few weeks ago. 
 
 
-[instruction] Prologue4
+[instruction] Prologue3
 
 
 The recent "Lunar Invasion" of Gensokyo… it was over now. 
@@ -72,7 +67,7 @@ And now I’m back to the normal days of walking back-and-forth to the village a
 Back to being a professional medicine peddler.
 
 
-[instruction] Prologue5
+[instruction] Prologue4
  
  
 But when I crested the final hill leading to the village’s wooden gate entrance, 

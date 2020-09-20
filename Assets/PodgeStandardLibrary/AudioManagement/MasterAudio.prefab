@@ -313,8 +313,8 @@ MonoBehaviour:
     artist: 
     track: {fileID: 8300000, guid: f7ec8f6083fdb5e499eb5beb01849b0b, type: 3}
   - name: Town
-    artist: 
-    track: {fileID: 8300000, guid: ee4b416afd167f9459f6081923a7520d, type: 3}
+    artist: Mark Mendell
+    track: {fileID: 8300000, guid: e457e9c2d7753194a8660a49ee923f75, type: 3}
   - name: Title
     artist: 
     track: {fileID: 8300000, guid: d7aea83a7faef7b4a9573319e31d8aff, type: 3}
@@ -763,6 +763,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SongNotification
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195527816920251644, guid: 9bec4b85468704f479b31b92acf3cf89,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bec4b85468704f479b31b92acf3cf89, type: 3}
