@@ -156,7 +156,7 @@ public class PlayerProgress
         if (Smartphone == Assignment.Inventory)
             inventoryItems.Add(new KeyItem("Smartphone", "A <b>Lunarian</b> smartphone. There's not much installed on here."));
         if (Magazine == Assignment.Inventory)
-            inventoryItems.Add(new KeyItem("Tech Magazine", "A magazine from the outside world. It features a lot of <b>sophisticated diagrams</b>."));
+            inventoryItems.Add(new KeyItem("Magazine", "A magazine from the outside world. It features a lot of <b>sophisticated diagrams</b>."));
         if (Wrench == Assignment.Inventory)
             inventoryItems.Add(new KeyItem("Wrench", "A wrench I found lying on the roof. Useful for <b>construction</b>."));
         if (Scroll == Assignment.Inventory)
