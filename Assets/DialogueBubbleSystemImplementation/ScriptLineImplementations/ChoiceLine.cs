@@ -6,7 +6,6 @@ using System.Linq;
 
 public class ChoiceLine : ScriptLine
 {
-    string speaker;
     DialogueAnimator speakerAnimator;
 
     public List<ChoiceLineContent> dialogueChoices;

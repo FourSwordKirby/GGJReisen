@@ -21,9 +21,8 @@ public class ItemPickup : MonoBehaviour
                 break;
             case ReisenPickupItemType.Shard:
                 ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Shard +1" });
-                throw new System.Exception("Picking up a shard not implemented");
                 Debug.Log("potentially pick up a shard");
-                break;
+                throw new System.Exception("Picking up a shard not implemented");
         }
 
         ItemSprite.SetActive(false);
