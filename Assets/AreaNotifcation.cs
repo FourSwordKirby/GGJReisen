@@ -7,7 +7,7 @@ using UnityEngine;
 public class AreaNotifcation : MonoBehaviour
 {
     [SerializeField]
-    private float displayDuration;
+    private float displayDuration = 3.0f;
 
     public Animator songAnimator;
     public TextMeshProUGUI AreaTitle;

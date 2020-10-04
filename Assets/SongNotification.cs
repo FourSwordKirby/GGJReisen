@@ -7,7 +7,7 @@ using UnityEngine;
 public class SongNotification : MonoBehaviour
 {
     [SerializeField]
-    private float displayDuration;
+    private float displayDuration = 3.0f;
 
     public Animator songAnimator;
     public TextMeshProUGUI SongTitle;

@@ -5,7 +5,6 @@ using System;
 
 public class ExpressionLine : ScriptLine
 {
-    string speaker;
     CharacterExpression desiredExpression;
 
     public ExpressionLine(string speaker, CharacterExpression expression)
