@@ -310,17 +310,17 @@ MonoBehaviour:
   bgmController: {fileID: 456247859300951826}
   bgmAudioMixes:
   - name: Prologue
-    artist: 
-    track: {fileID: 8300000, guid: f7ec8f6083fdb5e499eb5beb01849b0b, type: 3}
+    artist: Mark Mendell
+    track: {fileID: 8300000, guid: 9f57774a90a29db4fa8ccb0ff2700411, type: 3}
   - name: Town
     artist: Mark Mendell
-    track: {fileID: 8300000, guid: e457e9c2d7753194a8660a49ee923f75, type: 3}
+    track: {fileID: 8300000, guid: c9ed026c74e157f44933aee2bf1c30fd, type: 3}
   - name: Title
-    artist: 
-    track: {fileID: 8300000, guid: 8f8bb84c28f0b3340a4ca1c4f30aa9c2, type: 3}
+    artist: Mark Mendell
+    track: {fileID: 8300000, guid: 34ad3f9f1d3e074409cc7364829bca2f, type: 3}
   - name: BambooForest
     artist: 
-    track: {fileID: 8300000, guid: 4ac623e136e442e4d8f853abbb752a60, type: 3}
+    track: {fileID: 8300000, guid: 311116e744e120d47a8d94dcd180eb2d, type: 3}
   sfxController: {fileID: 186148559}
   soundEffects:
   - name: MenuSelect
@@ -334,7 +334,7 @@ MonoBehaviour:
     track: {fileID: 8300000, guid: 618d25b34500e4742a01de8b0f811d7a, type: 3}
   - name: ItemToggle
     artist: 
-    track: {fileID: 8300000, guid: 8e0616bab138003429f4db31c5d3c50e, type: 3}
+    track: {fileID: 8300000, guid: 82c90f628df6d8e40bacd6e58cd7bbb4, type: 3}
   - name: ItemGet
     artist: 
     track: {fileID: 8300000, guid: d90c56b082b67fd4db280a8b083045c0, type: 3}
@@ -343,7 +343,7 @@ MonoBehaviour:
     track: {fileID: 8300000, guid: e6130c4f24b7277458cbaea367842076, type: 3}
   - name: DialogueAdvance
     artist: 
-    track: {fileID: 8300000, guid: 8e0616bab138003429f4db31c5d3c50e, type: 3}
+    track: {fileID: 8300000, guid: 82c90f628df6d8e40bacd6e58cd7bbb4, type: 3}
   - name: Jump
     artist: 
     track: {fileID: 8300000, guid: 9642a0448709e12428b160820250a8fc, type: 3}
@@ -654,6 +654,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 456247859300951823}
     m_Modifications:
+    - target: {fileID: 1326483276364991884, guid: 9bec4b85468704f479b31b92acf3cf89,
+        type: 3}
+      propertyPath: m_Name
+      value: DivderLine
+      objectReference: {fileID: 0}
     - target: {fileID: 4195527816920251632, guid: 9bec4b85468704f479b31b92acf3cf89,
         type: 3}
       propertyPath: m_LocalPosition.x
