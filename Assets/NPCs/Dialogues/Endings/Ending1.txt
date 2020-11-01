@@ -14,7 +14,7 @@ Eirin: Apparently this sickness is plaguing all of the villagers.
 
 Tewi: Oh how awwwwwwwful, I like Reisen a bit better this way though.
 
-Reisen: Uggggggh this situation is unpleasantly nostalgic for <b>some reason</b> .
+Reisen: Uggggggh this situation is unpleasantly nostalgic for <b>some reason</b>.
 
 [instruction] Credits3
 

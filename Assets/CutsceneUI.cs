@@ -13,6 +13,7 @@ public class CutsceneUI : MonoBehaviour
     public Image CgImage;
     internal bool dialogueLineFinished;
 
+    public Color cgColor = Color.white;
     public Color textColor;
 
     public void Awake()
@@ -75,7 +76,7 @@ public class CutsceneUI : MonoBehaviour
         while (fadeTimer < FADE_TIME)
         {
             fadeTimer += Time.deltaTime;
-            CgImage.color = Color.Lerp(CgImage.color, textColor, fadeTimer / FADE_TIME);
+            CgImage.color = Color.Lerp(CgImage.color, cgColor, fadeTimer / FADE_TIME);
             yield return new WaitForEndOfFrame();
         }
     }
