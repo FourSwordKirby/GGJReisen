@@ -12,7 +12,7 @@ public class StartMenuUI : MenuUI
     public MenuUIElement viewShardsElement;
     public MenuUIElement clearShardDataElement;
     public MenuUIElement optionsElement;
-
+    public MenuUIElement galleryElement;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +45,7 @@ public class StartMenuUI : MenuUI
 
         newGameElement.gameObject.SetActive(true);
         optionsElement.gameObject.SetActive(true);
+        galleryElement.gameObject.SetActive(true);
         continueGameElement.gameObject.SetActive(hasSaveData);
 
 
@@ -68,8 +69,10 @@ public class StartMenuUI : MenuUI
             AddMenuElement(clearShardDataElement, activeMenuElement);
             activeMenuElement++;
         }
-
         AddMenuElement(optionsElement, activeMenuElement);
+        activeMenuElement++;
+
+        AddMenuElement(galleryElement, activeMenuElement);
         activeMenuElement++;
 
         //setting navigation
@@ -79,31 +82,38 @@ public class StartMenuUI : MenuUI
             newGameNav.mode = Navigation.Mode.Explicit;
             Navigation optionsNav = new Navigation();
             optionsNav.mode = Navigation.Mode.Explicit;
+            Navigation galleryNav = new Navigation();
+            galleryNav.mode = Navigation.Mode.Explicit;
 
             if (!hasSaveData)
             {
-                newGameNav.selectOnUp = optionsElement.GetComponent<Button>();
-                optionsNav.selectOnDown = newGameElement.GetComponent<Button>();
+                newGameNav.selectOnUp = galleryElement.GetComponent<Button>();
+                optionsNav.selectOnDown = galleryElement.GetComponent<Button>();
+                galleryNav.selectOnDown = newGameElement.GetComponent<Button>();
             }
             else
             {
                 newGameNav.selectOnUp = continueGameElement.GetComponent<Button>();
-                optionsNav.selectOnDown = continueGameElement.GetComponent<Button>();
+                optionsNav.selectOnDown = galleryElement.GetComponent<Button>();
+                galleryNav.selectOnDown = continueGameElement.GetComponent<Button>();
             }
 
             if (!hasShardData)
             {
                 newGameNav.selectOnDown = optionsElement.GetComponent<Button>();
                 optionsNav.selectOnUp = newGameElement.GetComponent<Button>();
+                galleryNav.selectOnUp = optionsElement.GetComponent<Button>();
             }
             else
             {
                 newGameNav.selectOnDown = viewShardsElement.GetComponent<Button>();
                 optionsNav.selectOnUp = clearShardDataElement.GetComponent<Button>();
+                galleryNav.selectOnUp = optionsElement.GetComponent<Button>();
             }
 
             newGameElement.GetComponent<Button>().navigation = newGameNav;
             optionsElement.GetComponent<Button>().navigation = optionsNav;
+            galleryElement.GetComponent<Button>().navigation = galleryNav;
         }
 
         //dumb hacks we don't really care about groups anymore lol

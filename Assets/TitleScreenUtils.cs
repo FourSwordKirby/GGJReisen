@@ -58,6 +58,25 @@ public class TitleScreenUtils : MonoBehaviour
         SceneManager.LoadScene("Prologue");
     }
 
+    /// <summary>
+    /// Show a numbered ending
+    /// </summary>
+    /// <param name="endingNumber">A number between 1 and 4 for the appropriate ending</param>
+    public void ShowEnding(int endingNumber)
+    {
+        StartCoroutine(EndingSequence(endingNumber));
+    }
+
+    IEnumerator EndingSequence(int endingNumber)
+    {
+        DontDestroyOnLoad(this);
+        yield return TransitionManager.instance.screenFader.FadeOut();
+        yield return SceneManager.LoadSceneAsync("Ending");
+        GameObject.FindObjectOfType<EndingController>().SetEnding(endingNumber);
+        Destroy(this.gameObject);
+    }
+
+
     public void DeleteData()
     {
         AudioMaster.instance.PlaySfx("DataDelete");
