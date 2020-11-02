@@ -17,6 +17,9 @@ public class EndingController : MonoBehaviour
 
     public void SetEnding(int i)
     {
+        Debug.Log("hi");
+        SaveManager.SaveEndingProgress(i);
+
         if (i == 1)
             cutscene.dialogueTextAsset = ending1;
         if (i == 2)

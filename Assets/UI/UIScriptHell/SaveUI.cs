@@ -56,24 +56,29 @@ public class SaveUI : MenuUI
 
         if (Controls.confirmInputDown())
         {
-            AudioMaster.instance.PlayConfirmSfx();
             if (mode == SavePanelMode.Saving && currentSavePoint != null)
             {
+                AudioMaster.instance.PlayConfirmSfx();
                 ReisenGameManager.instance.SaveGame(savePanels[selectedSaveIndex].fileName, currentSavePoint);
                 Init();
             }
             else
             {
-                if (isTitleScreenVersion)
-                    TitleScreenUtils.instance.LoadGame(savePanels[selectedSaveIndex].fileName);
-                else
-                    ReisenGameManager.instance.LoadGame(savePanels[selectedSaveIndex].fileName);
+                string saveFileName = savePanels[selectedSaveIndex].fileName;
+                if (SaveManager.CheckIfSaveDataPresent(saveFileName))
+                {
+                    AudioMaster.instance.PlayConfirmSfx();
 
-                if (!persistOnExit)
-                    this.Close();
-                else
-                    this.Blur();
-                this.previousMenu?.Close();
+                    if (isTitleScreenVersion)
+                        TitleScreenUtils.instance.LoadGame(saveFileName);
+                    else
+                        ReisenGameManager.instance.LoadGame(saveFileName);
+                    if (!persistOnExit)
+                        this.Close();
+                    else
+                        this.Blur();
+                    this.previousMenu?.Close();
+                }
             }
         }
         if (Controls.cancelInputDown())

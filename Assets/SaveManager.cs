@@ -19,10 +19,23 @@ public class ShardSaveData
     }
 }
 
+[Serializable]
+public class EndingSaveData
+{
+    [SerializeField]
+    public List<int> SeenEndings;
+
+    public EndingSaveData(List<int> seenEndings)
+    {
+        this.SeenEndings = seenEndings;
+    }
+}
+
 public class SaveManager : MonoBehaviour
 {
     public static readonly List<string> saveNames = new List<string>() { "Waning Moon", "Full Moon", "Waxing Moon" };
     public static readonly string shardSaveDataName = "shardsave";
+    public static readonly string endingSaveDataName = "endingsave";
 
     public static void SaveSeenShardData(ReisenGameProgress gameProgress)
     {
@@ -70,6 +83,11 @@ public class SaveManager : MonoBehaviour
         }
     }
 
+    public static bool CheckIfSaveDataPresent(string saveName)
+    {
+        string jsonSavePath = string.Format("{0}/{1}.json", Application.persistentDataPath, saveName);
+        return File.Exists(jsonSavePath);
+    }
 
     public static void SaveGame(string saveName, ReisenGameProgress gameProgress)
     {
@@ -123,6 +141,7 @@ public class SaveManager : MonoBehaviour
         {
             DeleteSaveData(name);
         }
+        DeleteEndingData();
     }
 
     public static void DeleteShardData()
@@ -136,6 +155,43 @@ public class SaveManager : MonoBehaviour
         // 1
         string jsonSavePath = string.Format("{0}/{1}.json", Application.persistentDataPath, saveName);
         File.Delete(jsonSavePath);
+    }
+
+    public static void SaveEndingProgress(int endingNumber)
+    {
+        List<int> currentEndingProgress = GetAcquiredEndings();
+        if(!currentEndingProgress.Contains(endingNumber))
+        {
+            currentEndingProgress.Add(endingNumber);
+        }
+
+        EndingSaveData data = new EndingSaveData(currentEndingProgress);
+        // 2
+        string jsonEndingPath = string.Format("{0}/{1}.json", Application.persistentDataPath, endingSaveDataName);
+        Debug.Log(jsonEndingPath);
+        string jsonData = JsonUtility.ToJson(data, true);
+        File.WriteAllText(jsonEndingPath, jsonData);
+
+        Debug.Log("Ending Progress Saved");
+    }
+
+    public static void DeleteEndingData()
+    {
+        // 1
+        string jsonEndingPath = string.Format("{0}/{1}.json", Application.persistentDataPath, endingSaveDataName);
+        File.Delete(jsonEndingPath);
+    }
+
+    public static List<int> GetAcquiredEndings()
+    {
+        // 1
+        string jsonEndingPath = string.Format("{0}/{1}.json", Application.persistentDataPath, endingSaveDataName);
+        if (File.Exists(jsonEndingPath))
+        {
+            EndingSaveData save = JsonUtility.FromJson<EndingSaveData>(File.ReadAllText(jsonEndingPath));
+            return save.SeenEndings;
+        }
+        return new List<int>();
     }
 }
 

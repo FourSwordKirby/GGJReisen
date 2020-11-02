@@ -40,6 +40,13 @@ public enum ParentMenuStatusPostSelect
     none
 }
 
+public enum GridNavigationMode
+{
+    Horizontal,
+    Vertical,
+    FreeForm
+}
+
 public abstract class ControllableGridMenuElement : MonoBehaviour, ISelectableMenuElement
 {
     public ControllableGridMenuGroup parentGroup;
@@ -132,51 +139,57 @@ public abstract class ControllableGridMenuGroup : MonoBehaviour, ISelectableMenu
     }
 
 
-    public bool hortizontal;
+    public GridNavigationMode gridNavigationMode;
     public virtual void FocusNextElementInDirection(InputDirection dir)
     {
         // No navigation needed when there is 1 element
         if (menuElements.Count == 1)
             return;
 
-        if (hortizontal)
+        switch (gridNavigationMode)
         {
-            if (dir == InputDirection.W)
-            {
-                AudioMaster.instance.PlayMenuSelectSfx();
+            case GridNavigationMode.Horizontal:
+                if (dir == InputDirection.W)
+                {
+                    AudioMaster.instance.PlayMenuSelectSfx();
 
-                currentMenuElementIndex--;
-                if (currentMenuElementIndex < 0)
-                    currentMenuElementIndex = menuElements.Count - 1;
-                FocusElement(currentMenuElementIndex);
-            }
-            else if (dir == InputDirection.E)
-            {
-                AudioMaster.instance.PlayMenuSelectSfx();
-                currentMenuElementIndex++;
-                if (currentMenuElementIndex >= menuElements.Count)
-                    currentMenuElementIndex = 0;
-                FocusElement(currentMenuElementIndex);
-            }
-        }
-        else
-        {
-            if (dir == InputDirection.N)
-            {
-                AudioMaster.instance.PlayMenuSelectSfx();
-                currentMenuElementIndex--;
-                if (currentMenuElementIndex < 0)
-                    currentMenuElementIndex = menuElements.Count - 1;
-                FocusElement(currentMenuElementIndex);
-            }
-            else if (dir == InputDirection.S)
-            {
-                AudioMaster.instance.PlayMenuSelectSfx();
-                currentMenuElementIndex++;
-                if (currentMenuElementIndex >= menuElements.Count)
-                    currentMenuElementIndex = 0;
-                FocusElement(currentMenuElementIndex);
-            }
+                    currentMenuElementIndex--;
+                    if (currentMenuElementIndex < 0)
+                        currentMenuElementIndex = menuElements.Count - 1;
+                    FocusElement(currentMenuElementIndex);
+                }
+                else if (dir == InputDirection.E)
+                {
+                    AudioMaster.instance.PlayMenuSelectSfx();
+                    currentMenuElementIndex++;
+                    if (currentMenuElementIndex >= menuElements.Count)
+                        currentMenuElementIndex = 0;
+                    FocusElement(currentMenuElementIndex);
+                }
+                break;
+            case GridNavigationMode.Vertical:
+                if (dir == InputDirection.N)
+                {
+                    AudioMaster.instance.PlayMenuSelectSfx();
+                    currentMenuElementIndex--;
+                    if (currentMenuElementIndex < 0)
+                        currentMenuElementIndex = menuElements.Count - 1;
+                    FocusElement(currentMenuElementIndex);
+                }
+                else if (dir == InputDirection.S)
+                {
+                    AudioMaster.instance.PlayMenuSelectSfx();
+                    currentMenuElementIndex++;
+                    if (currentMenuElementIndex >= menuElements.Count)
+                        currentMenuElementIndex = 0;
+                    FocusElement(currentMenuElementIndex);
+                }
+                break;
+            case GridNavigationMode.FreeForm:
+                if (dir == InputDirection.W || dir == InputDirection.S || dir == InputDirection.E || dir == InputDirection.N)
+                    AudioMaster.instance.PlayMenuSelectSfx();
+                // This is case doesn't do anything fancy with focusing elements, we let Unity's UI navigation tools to the heavy lifting here
+                break;
         }
     }
 }
