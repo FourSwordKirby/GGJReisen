@@ -908,12 +908,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496748879}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1160328269}
-  m_RootOrder: 2
+  m_Father: {fileID: 2036130386}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1010,7 +1010,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 722b5d50d8d0a9a4da9edcddf6886d5d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7e2c6d6d0390eac4bb5051749923f1c2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1958,7 +1958,6 @@ RectTransform:
   m_Children:
   - {fileID: 1656697528}
   - {fileID: 1031630460}
-  - {fileID: 496748880}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2511,7 +2510,7 @@ RectTransform:
   - {fileID: 1418134161}
   - {fileID: 85380104}
   m_Father: {fileID: 2036130386}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2548,7 +2547,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2036130386}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -2956,13 +2955,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CutsceneCgs:
   - name: CG1
-    CgSprite: {fileID: 21300000, guid: 722b5d50d8d0a9a4da9edcddf6886d5d, type: 3}
+    CgSprite: {fileID: 21300000, guid: 00aa5d3cc0d97414e951f75d88dc234a, type: 3}
   - name: CG2
-    CgSprite: {fileID: 21300000, guid: dd42a2727a3561c4187a64e34b5d621e, type: 3}
+    CgSprite: {fileID: 21300000, guid: d97d56a98dcf31740adf80110849f63a, type: 3}
   - name: CG3
-    CgSprite: {fileID: 21300000, guid: 12a2bf6ffc7ccb349aa87e542aeeded3, type: 3}
+    CgSprite: {fileID: 21300000, guid: 0e08d9c49ff79be4584a9f3997b3af33, type: 3}
   - name: CG4
-    CgSprite: {fileID: 21300000, guid: 78769f12bfa7509499f68f8a727bbcc1, type: 3}
+    CgSprite: {fileID: 21300000, guid: 5c954bbb819e5444fa983cb57d26eb90, type: 3}
 --- !u!114 &1882020940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3172,6 +3171,7 @@ RectTransform:
   - {fileID: 1890679907}
   - {fileID: 541978208}
   - {fileID: 2016638733}
+  - {fileID: 496748880}
   - {fileID: 1880783306}
   - {fileID: 1775822619}
   m_Father: {fileID: 1882020935}

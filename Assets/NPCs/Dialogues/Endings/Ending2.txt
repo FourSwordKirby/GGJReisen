@@ -24,7 +24,9 @@ Reimu: Without me, you’d still be as blocky as you are blockheaded.
 
 <i>Once Reisen had gathered the memory shards, Reimu told her to put them into the compartment of one of the strange Lunarian monoliths.</i>
 
-<i>After directing her with some frustratingly unclear instructions, it emitted a bright light and returned the Human Village and its inhabitants to normal, while also spilling forth an excessive number of peaches.</i>
+<i>After directing her with some frustratingly unclear instructions, it emitted a bright light.</i>
+
+<i>The Human Village and its inhabitants returned to normal, and an excessive number of peaches spilled out.</i>
 
 [instruction] CreditsCleanup
 

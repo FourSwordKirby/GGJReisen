@@ -4,25 +4,25 @@
 
 [instruction] CG3
 
-<color=#add8e6ff>Reisen</color>: Phew I think that took care of most of it 
+<color=#3399ff>Reisen</color>: Phew I think that took care of most of it 
 
-<color=#add8e6ff>Reisen</color>: If you find any other personality shards, shove them into the compartment like I did and the machine should take care of the rest. 
+<color=#3399ff>Reisen</color>: If you find any other personality shards, shove them into the compartment like I did and the machine should take care of the rest. 
 
-<color=#add8e6ff>Reisen</color>: We’ll leave them around for a bit longer in case any other cases pop up. 
+<color=#3399ff>Reisen</color>: We’ll leave them around for a bit longer in case any other cases pop up. 
 
-<color=#DCB0FA>Reisen</color>: Phew, looks like us grunts managed to take care of business this time huh? 
+<color=#d966ff>Reisen</color>: Phew, looks like us grunts managed to take care of business this time huh? 
 
-<color=#add8e6ff>Reisen</color>: Y-yeah. 
+<color=#3399ff>Reisen</color>: Y-yeah. 
 
 [instruction] Credits2
 
-<color=#add8e6ff>Reisen</color>: U-um, as an apology, please take these peaches. 
+<color=#3399ff>Reisen</color>: U-um, as an apology, please take these peaches. 
 
-<color=#add8e6ff>Reisen</color>: I was told to give them to Lady Eirin after I took care of business here, but now it feels sort of awkward. 
+<color=#3399ff>Reisen</color>: I was told to give them to Lady Eirin after I took care of business here, but now it feels sort of awkward. 
 
-<color=#add8e6ff>Reisen</color>: I-I'll be going now! 
+<color=#3399ff>Reisen</color>: I-I'll be going now! 
 
-<color=#DCB0FA>Reisen</color>: S-sure. 
+<color=#d966ff>Reisen</color>: S-sure. 
 
 [instruction] Credits3
 
