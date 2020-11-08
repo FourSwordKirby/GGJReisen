@@ -5684,46 +5684,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1122613230, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122613230, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122613230, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122613230, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122613230, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1474108121, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1474108121, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1474108121, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1474108121, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1474108121, guid: 30e8becfb8fb89e42963c80449e3e5a8, type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 456247859300951823, guid: 30e8becfb8fb89e42963c80449e3e5a8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17502,7 +17462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937217525}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.17911911, y: 2.3700001, z: -6.52}
+  m_LocalPosition: {x: -0.98, y: 2.3700001, z: -6.52}
   m_LocalScale: {x: 0.15635425, y: 0.18035462, z: 0.15635425}
   m_Children: []
   m_Father: {fileID: 428699364}

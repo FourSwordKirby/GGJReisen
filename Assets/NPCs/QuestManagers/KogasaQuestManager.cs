@@ -10,6 +10,15 @@ public class KogasaQuestManager : Npc
     public Collider ECB;
     public DialoguePromptTrigger trigger;
 
+    public CharacterDialogueAnimator KogasaDialogueAnimator;
+
+    public Transform leftPosition;
+    public Transform rightPosition;
+
+    public Transform leftSpeechOrigin;
+    public Transform rightSpeechOrigin;
+
+
     public GameObject CollisionBox;
 
     bool hiding = true;
@@ -22,6 +31,19 @@ public class KogasaQuestManager : Npc
 
     public IEnumerator BooSequence()
     {
+        float midpoint = rightPosition.position.x + leftPosition.position.x * 0.5f;
+        if (RpgPlayer.instance.transform.position.x > midpoint)
+        {
+            selfBody.transform.position = leftPosition.position;
+            KogasaDialogueAnimator.speechBubbleOrigin = leftSpeechOrigin;
+            trigger.speakingPositionConfig = DialogueTriggerSpeakerConfig.ForceRight;
+        }
+        else
+        {
+            selfBody.transform.position = rightPosition.position;
+            KogasaDialogueAnimator.speechBubbleOrigin = rightSpeechOrigin;
+            trigger.speakingPositionConfig = DialogueTriggerSpeakerConfig.ForceLeft;
+        }
 
         selfBody.AddForce(Vector3.up * 800.0f);
         selfBody.useGravity = true;
@@ -32,7 +54,6 @@ public class KogasaQuestManager : Npc
         }
         ECB.enabled = true;
         trigger.forceDialogueOnEnter = false;
-        trigger.speakingPositionConfig = DialogueTriggerSpeakerConfig.ForceRight;
         yield return null;
     }
 
@@ -90,7 +111,7 @@ public class KogasaQuestManager : Npc
                 currentStage = 100;
                 selfBody.gameObject.transform.position -= Vector3.up * selfBody.gameObject.transform.position.y;
                 trigger.forceDialogueOnEnter = false;
-                trigger.speakingPositionConfig = DialogueTriggerSpeakerConfig.ForceRight;
+                //trigger.speakingPositionConfig = DialogueTriggerSpeakerConfig.ForceRight;
                 CollisionBox.SetActive(true);
                 ECB.gameObject.SetActive(false);
             }
