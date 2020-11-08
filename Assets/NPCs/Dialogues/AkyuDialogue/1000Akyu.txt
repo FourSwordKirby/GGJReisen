@@ -26,4 +26,4 @@ Reisen: [expression] sad
 
 [instruction] Stage1000 
 
-**But a personality shard manifested!
+**But a <b>Personality Shard</b> manifested!

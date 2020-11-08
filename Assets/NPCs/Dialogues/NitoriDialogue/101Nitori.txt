@@ -63,9 +63,10 @@ Let's keep in touch?
 Reisen: [expression] sad
 Um... sure, I guess.
 [expression] sweat
-**Oh, a personality shard manifested!
-
 [instruction] Stage101_Correct
+
+**Oh, a <b>Personality Shard</b> manifested!
+
 (end)
 
 

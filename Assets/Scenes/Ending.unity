@@ -2957,7 +2957,7 @@ MonoBehaviour:
   - name: CG1
     CgSprite: {fileID: 21300000, guid: 00aa5d3cc0d97414e951f75d88dc234a, type: 3}
   - name: CG2
-    CgSprite: {fileID: 21300000, guid: d97d56a98dcf31740adf80110849f63a, type: 3}
+    CgSprite: {fileID: 21300000, guid: 8261330330176254d9c2448a8c7cb599, type: 3}
   - name: CG3
     CgSprite: {fileID: 21300000, guid: 0e08d9c49ff79be4584a9f3997b3af33, type: 3}
   - name: CG4

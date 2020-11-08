@@ -38,4 +38,8 @@ I'll consider it.
 [expression] annoy
 So long as my master permits. 
 
+[expression] shock
+
 [instruction] Stage1100
+
+**Oh, a really big <b>Personality Shard</b> manifested!

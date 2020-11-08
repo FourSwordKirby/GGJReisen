@@ -21,3 +21,5 @@ Reisen: [expression] shock
 Ah!
 
 [instruction] Stage1002
+
+**A <b>Personality Shard</b> manifested!

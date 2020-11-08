@@ -11,6 +11,7 @@ Please ignore that haha...
 How embarrassing...
 
 Reisen: [expression] sweat
-**A personality shard appeared! And a big one!
 
 [instruction] Stage1000
+
+**A <b>Personality Shard</b> appeared! And a big one!

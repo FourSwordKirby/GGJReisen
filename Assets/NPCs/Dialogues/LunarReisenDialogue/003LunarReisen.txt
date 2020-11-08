@@ -60,6 +60,11 @@ LunarReisen: I found this <b>rare magazine</b> while I was looking around.
 Consider it thanks for finding my phone!
 
 [instruction] Stage003_Smartphone
+
+[expression] happy
+
+Reisen: **A <b>Personality Shard</b> manifested
+
 (end)
 
 
@@ -73,11 +78,22 @@ I think...
 Thanks for bringing it!
 
 Reisen: [expression] sweat
-**Was that right...?
+**W-was that right...?
+
+Reisen: **It's hard to say if that wrench was really hers.
+
+Reisen: **She didn't seem so confident herself
+
+Reisen: **Agh, what if I gave her some else's stuff!
+
+Reisen: **And I very well can't ask for it back...
+
+Reisen: [expression] annoy
+
+Reisen: **All these deliveries are such a pain!!
 
 [instruction] Stage003_Wrench
 (end)
-
 
 Reisen: **I should think this over carefully. [leave]
 (end)

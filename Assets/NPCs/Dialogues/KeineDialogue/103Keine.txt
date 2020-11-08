@@ -45,9 +45,11 @@ I have been teaching history in this village for a long time.
 How did I forget that? Odd.
 
 Reisen: [expression] shock
-**Oh! A <b>Personality Shard</b> just manifested!
 
 [instruction] Stage103_Textbook
+
+**Oh! A <b>Personality Shard</b> just manifested!
+
 (conclude)
 
 
@@ -65,9 +67,11 @@ I've been teaching history in this village for a long time.
 How did I forget that? Odd.
 
 Reisen: [expression] shock
-**Oh! A <b>Personality Shard</b> just manifested!
 
 [instruction] Stage103_Newspaper
+
+**Oh! A <b>Personality Shard</b> just manifested!
+
 (conclude)
 
 

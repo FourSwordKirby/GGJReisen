@@ -84,7 +84,7 @@ TutorialOrb: <b>Reducing all of Gensokyo into those mere cubes </b> you see arou
 
 In fact, even the residents have been affected.
 
-One of the blocks you find might actually be one of the towns folks.
+One of the blocks you find might actually be one of the townsfolk.
 
 At the current rate, all humans will merge into the landscape, becoming lifeless blocks of matter. 
 
@@ -112,13 +112,13 @@ As you talk to people, you will discover they are all connected in complex ways.
 
 Do your best to figure out how they relate and surface the full force of their personalities. 
 
-<b>You will maximize the Personality Shards collected if you can extract their full story. </b>
+<b>You will maximize the <b>Personality Shards</b> collected if you can extract their full story. </b>
 
 Good luck! If you fail this, then our frontline war here against the Lunarians will be for naught! 
 
 [instruction] SwitchReimu 
 
-We'll <b> be back here later </b> to collect the shards and <b> fix things up</b>
+We'll <b> be back here later </b> to collect the shards and <b> fix things up</b>.
 
 Reisen: [expression] shock
 

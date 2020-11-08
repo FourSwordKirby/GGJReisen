@@ -15,3 +15,7 @@ But, with things almost looking normal I can't afford to leave in case any custo
 I'll leave it to you Moon Rabbit of the Earth! 
 
 [instruction] Stage030
+
+Reisen: [expression] happy
+
+Reisen: **Thanks Miyoi, and thanks for the <b>Personality Shard</b>. 

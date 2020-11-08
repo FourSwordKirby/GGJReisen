@@ -28,7 +28,7 @@ public class AkyuQuestManager : Npc
         }
 
         GameProgress.Player.AddShard(Shard.Akyu_Textbook);
-        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "History Book -1", "Shard +1" });
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Shard +1", "History Book -1" });
 
         if (GameProgress.Player.Newspaper == Assignment.NotAcquired)
         {
@@ -65,7 +65,7 @@ public class AkyuQuestManager : Npc
     {
         GameProgress.Player.Novel = Assignment.Akyu;
         GameProgress.Player.AddShard(Shard.Akyu_Novel);
-        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Novel -1", "Shard +1" });
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Shard +1", "Novel -1" });
         Stage = 200;
     }
 
