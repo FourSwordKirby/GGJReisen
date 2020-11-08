@@ -318,8 +318,8 @@ MonoBehaviour:
   - name: Title
     artist: Mark Mendell
     track: {fileID: 8300000, guid: 34ad3f9f1d3e074409cc7364829bca2f, type: 3}
-  - name: BambooForest
-    artist: 
+  - name: Bamboo Forest
+    artist: Mark Mendell
     track: {fileID: 8300000, guid: 311116e744e120d47a8d94dcd180eb2d, type: 3}
   sfxController: {fileID: 186148559}
   soundEffects:
