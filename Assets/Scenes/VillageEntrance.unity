@@ -18925,7 +18925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aaeffd9f452bf9499b75479295f4edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackName: BambooForest
+  trackName: Bamboo Forest
 --- !u!65 &2098704106
 BoxCollider:
   m_ObjectHideFlags: 0

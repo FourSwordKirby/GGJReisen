@@ -79,7 +79,7 @@ The shop keeper, Kosuzu, inspired me to write these for fun.
 
 Reisen: [expression] shock
 [instruction] Stage101_Novel 
-**A personality shard manifested! 
+**A <b>Personality Shard</b> manifested! 
 (end)
 
  

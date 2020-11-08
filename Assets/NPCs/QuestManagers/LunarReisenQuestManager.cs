@@ -40,7 +40,7 @@ public class LunarReisenQuestManager : Npc
 
         GameProgress.Player.Magazine = Assignment.Inventory;
 
-        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Smartphone -1", "Magazine +1", "Shard + 1" });
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Shard + 1", "Smartphone -1", "Magazine +1"});
         Stage = 100;
     }
 

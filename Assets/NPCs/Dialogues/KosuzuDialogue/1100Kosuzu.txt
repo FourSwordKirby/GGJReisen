@@ -27,3 +27,5 @@ Reisen: [expression] ugh
 **Uh... Did I make a mistake giving her the elixir?
 
 [instruction] Stage1100
+
+**Oh wait, she dropped a <b>Personality Shard</b>. 

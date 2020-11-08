@@ -83,7 +83,7 @@ What's it look like?
 LunarReisen: Tiny rock shards, I guess? 
 
 Reisen: [expression] sad
-**... Could that be the <b>Personality Shards</b>? 
+**... Could that be the <b>Personality Shard</b>? 
 [expression] normal
 Like these things? 
 
@@ -94,3 +94,6 @@ Make sure you've got all of them!
 Otherwise we might end up with 90% of a human in a village! 
 
 [instruction] Stage1000
+
+Reisen: [expression] shock
+**Whoa, a really big <b>Personality Shard</b> manifested!

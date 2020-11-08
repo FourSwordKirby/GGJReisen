@@ -29,12 +29,12 @@ Ahh... Is that so...
 [expression] normal
 **Hm?
 [expression] shock
-**Another <b>Personality shard</b>!
 
 [instruction] Stage200_Correct
 
-(end)
+**Another <b>Personality Shard</b>!
 
+(end)
 
 Reisen: [expression] happy [teach]
 Sure, I can listen for a bit.
@@ -64,8 +64,6 @@ Reisen: [expression] sad
 [instruction] Stage200_Wrong
 (end)
 
-
 Keine: Sure, see you around. [leave]
-
 
 [end]

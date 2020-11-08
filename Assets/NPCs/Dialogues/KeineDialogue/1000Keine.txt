@@ -33,4 +33,12 @@ But one wrong move, and eradicate you from history!
 Reisen: [expression] shock
 I'm just trying to help!
 
+[expression] sweat
+
+**I didn't expect her to be so aggressive
+
+Reisen: [expression] shock
+
 [instruction] Stage1000
+
+**Oh wait, she dropped a <b>Personality Shard</b>. 

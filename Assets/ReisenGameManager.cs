@@ -404,6 +404,7 @@ public class ReisenGameManager : MonoBehaviour
     {
         yield return TransitionManager.instance.screenFader.FadeOut();
 
+        SaveManager.SaveSeenShardData(gameProgress);
         RpgGameManager.instance.ResumeGameplay();
 
         SceneManager.sceneLoaded -= OnSceneLoaded;

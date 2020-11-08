@@ -49,6 +49,8 @@ Here's your payment.
 
 [instruction] Stage200_Magazine
 
+Reisen: **Huh, she dropped a <b>Personality Shard</b>. 
+
 Kosuzu: Oh right, this is a <b>book shop</b>!
 
 Reisen: [expression] ugh

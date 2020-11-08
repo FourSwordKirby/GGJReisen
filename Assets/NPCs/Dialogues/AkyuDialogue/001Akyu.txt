@@ -39,9 +39,10 @@ Reisen: Um, no problem...
 [expression] ugh
 **How did I end up running errands for other people?
 [expression] sweat
-**Oh! A Personality Shard!
 
 [instruction] Stage001_Textbook 
+
+**Oh! A <b>Personality Shard</b>!
 
 (end)
 

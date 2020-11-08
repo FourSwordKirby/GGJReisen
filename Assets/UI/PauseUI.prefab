@@ -122,7 +122,7 @@ MonoBehaviour:
   - {fileID: 860022842654872826}
   - {fileID: 1249256456491474291}
   currentMenuElementIndex: 0
-  hortizontal: 1
+  gridNavigationMode: 0
 --- !u!1 &407341134098117801
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,7 +934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuElements: []
   currentMenuElementIndex: 0
-  hortizontal: 1
+  gridNavigationMode: 0
 --- !u!1 &1660311175686020523
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,7 +1871,7 @@ MonoBehaviour:
   menuElements:
   - {fileID: 1157410383}
   currentMenuElementIndex: 0
-  hortizontal: 0
+  gridNavigationMode: 0
 --- !u!1 &3129384765904142925
 GameObject:
   m_ObjectHideFlags: 0
@@ -2742,7 +2742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuElements: []
   currentMenuElementIndex: 0
-  hortizontal: 0
+  gridNavigationMode: 1
 --- !u!114 &1157410383
 MonoBehaviour:
   m_ObjectHideFlags: 0

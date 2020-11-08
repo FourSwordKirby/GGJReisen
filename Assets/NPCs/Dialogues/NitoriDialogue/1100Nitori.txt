@@ -68,7 +68,7 @@ We exchange ideas all the time.
 If you're up for it, we can share ideas too.
 Just let me know. And bring your coolest Lunar tech!
 
-Reisen: [expression] shock
-**Whoa, a really big Personality Shard manifested!
-
 [instruction] Stage1100
+
+Reisen: [expression] shock
+**Whoa, a really big <b>Personality Shard</b> manifested!

@@ -91,14 +91,14 @@ public class KeineQuestManager : Npc
         }
 
         GameProgress.Player.AddShard(Shard.Keine_TextBook);
-        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "History Book -1", "Shard +1" });
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Shard +1", "History Book -1"});
     }
 
     public void Keine_Stage103_Newspaper()
     {
         GameProgress.Player.Newspaper = Assignment.Keine;
         GameProgress.Player.AddShard(Shard.Keine_Newspaper);
-        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Newspaper -1", "Shard +1" });
+        ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Shard +1", "Newspaper -1"});
     }
 
     public void Keine_Stage103_Conclude()

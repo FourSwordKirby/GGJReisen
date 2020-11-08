@@ -6,7 +6,7 @@ Is that cube... coughing?
 Kosuzu: Hmm? Ah! 
 Welcome to... uh... what was this place again?
 Right, the <i>shop</i>! Yes, the <i>shop</i>!
-Welcome to the <i>shop!</i>!
+Welcome to the <i>shop</i>!!
 We have... <i>things</i> in stock! *cough* 
 
 Reisen: [expression] normal
@@ -103,6 +103,9 @@ I'm sure if you ask around, you'll find the right person!
 Reisen: **What a ridiculous request!
 
 [instruction] Stage000_Cough
+
+Reisen: **Wait, did a <b>Personality Shard</b> just manifest?!
+
 (end)
 
 Kosuzu: *cough* Do come back again to our shop! [leave]

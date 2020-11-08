@@ -1,4 +1,4 @@
- //100 – <b>Dimensionality Reducer</b>s 
+ //100 – <b>Dimensionality Reducers</b> 
 
 Nitori: So, to be perfectly honest...
 I don't know much about those <b>contraptions</b>. 
@@ -59,4 +59,4 @@ Oh, but don't tell the other <b>Kappa</b> about that yet.
 [instruction] Stage100
 
 Reisen: [expression] shock
-**A personality shard just manifested! 
+**A <b>Personality Shard</b> just manifested! 

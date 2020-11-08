@@ -120,9 +120,10 @@ Reisen: [expression] sweat
 **Is she a... Youkai enthusiast...?
 **Did such humans exist...?
 [expression] shock
-**Another personality shard!
 
 [instruction] Stage100_Correct
+
+**Another <b>Personality Shard</b>!
 (end)
 
 
