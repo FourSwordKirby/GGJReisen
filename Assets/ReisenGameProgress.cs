@@ -43,7 +43,7 @@ public class Shard
     public static Shard Akyu_Novel { get; } = new Shard(nameof(Akyu_Novel), 1, "Case closed!", "A chronicler working as novelist as a side job. I wonder if she gets fact and fiction mixed up.");
     public static Shard Akyu_GoodEnd { get; } = new Shard(nameof(Akyu_GoodEnd), 2, "One in a Thousand", "Akyu looked very young, but to think that she might be as old as Mokou...");
 
-    public static Shard LunarReisen_Smartphone { get; } = new Shard(nameof(LunarReisen_Smartphone), 1, "Can't live without it", "Even my Lunatic Red Eyes would get tired from looking at a screen for too long");
+    public static Shard LunarReisen_Smartphone { get; } = new Shard(nameof(LunarReisen_Smartphone), 1, "Smartphone needy", "Even my Lunatic Red Eyes would get tired from looking at a screen for too long");
     public static Shard LunarReisen_GoodEnd { get; } = new Shard(nameof(LunarReisen_GoodEnd), 2, "Inaba of the Moon", "I see we get worked to the bone whether we're from the Earth or the Moon");
     public static Shard Miyoi_Company { get; } = new Shard(nameof(Miyoi_Company), 2, "Poster Girl of Geidontei", "I guess some people really love their work.");
 
