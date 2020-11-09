@@ -47,7 +47,13 @@ Kosuzu: Yeah. It's a technology magazine from the Outside world.
 This is neat. We can buy this off your hands.
 Here's your payment.
 
+Reisen: [expression] ugh
+**Does this human actually know what that magazine is...
+**Maybe someone else could have made better use of it.
+
 [instruction] Stage200_Magazine
+
+Reisen: [expression] shock
 
 Reisen: **Huh, she dropped a <b>Personality Shard</b>. 
 

@@ -34,7 +34,7 @@
 
 [instruction] CreditsCleanup
 
-<i>Well, at the very least those peaches were delicious </i>
+<i>Well, at the very least those peaches were delicious.<br><br><color=#B7B7B7><Try finding all of the Personality Shards!></color></i>
 
 [instruction] Credits4
 

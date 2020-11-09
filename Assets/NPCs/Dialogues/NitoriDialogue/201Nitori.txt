@@ -84,6 +84,7 @@ Nitori: Yay! I'm gonna get working on this phone right away.
 [instruction] Stage201_Smartphone
 
 Reisen: [expression] sad
+**Did I just royally screw up...?
 **Was it really a good idea to give it to her...? 
 
 (end)

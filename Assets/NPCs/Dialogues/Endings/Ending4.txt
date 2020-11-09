@@ -28,7 +28,7 @@ Tewi: Waiterrrrr, one more slice of peach cake please~
 
 [instruction] Credits3
 
-<i>As it turns out, they were attacked and malfucntioned while in transit, landing in the Human Village and causing the latest set of havok. </i>
+<i>As it turns out, they were attacked and malfunctioned while in transit, landing in the Human Village and causing the latest set of havok. </i>
 
 <i>As for who they were attacked by? Reisen asked Reimu if she knew anything. </i>
 
@@ -40,7 +40,7 @@ Tewi: Waiterrrrr, one more slice of peach cake please~
 
 [instruction] CreditsCleanup
 
-<i>Satisfied with a job well done.</i>
+<i>Satisfied with a job well done.<br><br><color=#B7B7B7><Congratulations!></color></i>
 
 [instruction] Credits4
 
