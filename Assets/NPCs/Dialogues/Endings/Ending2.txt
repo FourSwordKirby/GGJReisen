@@ -30,7 +30,9 @@ Reimu: Without me, you’d still be as blocky as you are blockheaded.
 
 [instruction] CreditsCleanup
 
-<i>Though there’s nothing really to complain about, just what were the Lunarians doing with those monoliths anyways? </i>
+<i>Though there’s nothing really to complain about.</i>
+
+<i>Just what were the Lunarians doing with those monoliths anyways?<br><color=#B7B7B7><Have you cured every resident?></color></i>
 
 [instruction] Credits4
 

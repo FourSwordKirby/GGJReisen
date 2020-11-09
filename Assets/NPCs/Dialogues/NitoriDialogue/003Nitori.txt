@@ -58,6 +58,9 @@ Whoops, haha! Imagine that!
 
 [instruction] Stage003_Smartphone
 
+Reisen: [expression] ugh
+**Did I just royally screw up?
+
 Reisen: [expression] angry
 Wait, so it's not yours- 
 
