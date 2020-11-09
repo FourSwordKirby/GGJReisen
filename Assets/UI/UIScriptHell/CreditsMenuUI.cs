@@ -38,7 +38,6 @@ public class CreditsMenuUI : MenuUI
     public void ShowEnding(int ending)
     {
         List<int> availableEndings = SaveManager.GetAcquiredEndings();
-        Debug.Log(availableEndings);
         if(availableEndings.Contains(ending))
         {
             AudioMaster.instance.PlayConfirmSfx();
