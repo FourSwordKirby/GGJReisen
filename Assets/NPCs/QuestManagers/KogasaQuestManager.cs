@@ -87,7 +87,7 @@ public class KogasaQuestManager : Npc
         selfBody.useGravity = false;
         CollisionBox.SetActive(true);
         ECB.gameObject.SetActive(false);
-        GameProgress.Player.AddShard(Shard.Kogasa_Spook);
+        ReisenGameManager.instance.AddShard(Shard.Kogasa_Spook);
         ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Shard +1" });
         GameProgress.KogasaCount++;
         MarkNextDialogueAsRead();

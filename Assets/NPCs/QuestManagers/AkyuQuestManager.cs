@@ -27,7 +27,7 @@ public class AkyuQuestManager : Npc
             GameProgress.Kosuzu.DialogueRead = false;
         }
 
-        GameProgress.Player.AddShard(Shard.Akyu_Textbook);
+        ReisenGameManager.instance.AddShard(Shard.Akyu_Textbook);
         ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Shard +1", "History Book -1" });
 
         if (GameProgress.Player.Newspaper == Assignment.NotAcquired)
@@ -64,7 +64,7 @@ public class AkyuQuestManager : Npc
     public void Akyu_Stage101_Novel()
     {
         GameProgress.Player.Novel = Assignment.Akyu;
-        GameProgress.Player.AddShard(Shard.Akyu_Novel);
+        ReisenGameManager.instance.AddShard(Shard.Akyu_Novel);
         ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Shard +1", "Novel -1" });
         Stage = 200;
     }
@@ -78,21 +78,21 @@ public class AkyuQuestManager : Npc
 
     public void Akyu_Stage1000()
     {
-        GameProgress.Player.AddShard(Shard.Akyu_BadElixir1);
+        ReisenGameManager.instance.AddShard(Shard.Akyu_BadElixir1);
         DisplayShardTransaction(Shard.Akyu_BadElixir1);
         Stage = 1001;
     }
 
     public void Akyu_Stage1002()
     {
-        GameProgress.Player.AddShard(Shard.Akyu_BadElixir2);
+        ReisenGameManager.instance.AddShard(Shard.Akyu_BadElixir2);
         DisplayShardTransaction(Shard.Akyu_BadElixir2);
         Stage = 1001;
     }
 
     public void Akyu_Stage1100()
     {
-        GameProgress.Player.AddShard(Shard.Akyu_GoodEnd);
+        ReisenGameManager.instance.AddShard(Shard.Akyu_GoodEnd);
         DisplayShardTransaction(Shard.Akyu_GoodEnd);
 
         if (GameProgress.Keine.Stage >= 1000)

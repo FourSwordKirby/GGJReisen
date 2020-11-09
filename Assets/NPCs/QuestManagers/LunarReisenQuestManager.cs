@@ -28,7 +28,7 @@ public class LunarReisenQuestManager : Npc
 
     public void LunarReisen_Stage003_Smartphone()
     {
-        GameProgress.Player.AddShard(Shard.LunarReisen_Smartphone);
+        ReisenGameManager.instance.AddShard(Shard.LunarReisen_Smartphone);
         GameProgress.Player.Smartphone = Assignment.LunarReisen;
 
         // When assigning Smartphone, increment Keine's plotline too.
@@ -74,7 +74,7 @@ public class LunarReisenQuestManager : Npc
 
     public void LunarReisen_Stage1000()
     {
-        GameProgress.Player.AddShard(Shard.LunarReisen_GoodEnd);
+        ReisenGameManager.instance.AddShard(Shard.LunarReisen_GoodEnd);
         DisplayShardTransaction(Shard.LunarReisen_GoodEnd);
         Stage = 1001;
     }
@@ -87,7 +87,7 @@ public class LunarReisenQuestManager : Npc
 
     public void LunarReisen_Stage1200()
     {
-        GameProgress.Player.AddShard(Shard.LunarReisen_Elixir);
+        ReisenGameManager.instance.AddShard(Shard.LunarReisen_Elixir);
         DisplayShardTransaction(Shard.LunarReisen_Elixir);
         Stage = 1201;
     }

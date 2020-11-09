@@ -364,11 +364,79 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1275353676, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: blurColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275353676, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: blurColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275353676, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: blurColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275353676, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: blurColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279166802, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: blurColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279166802, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: blurColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279166802, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: blurColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279166802, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: blurColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347143643, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: blurColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347143643, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: blurColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347143643, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: blurColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347143643, guid: b21610cf10db37248aa466140bf79f63, type: 3}
+      propertyPath: blurColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9116032890699227192, guid: b21610cf10db37248aa466140bf79f63,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1205422895}
+    - target: {fileID: 9116032890755456904, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: blurColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116032890755456904, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: blurColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116032890755456904, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: blurColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116032890755456904, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: blurColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9116032890994093603, guid: b21610cf10db37248aa466140bf79f63,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -428,6 +496,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TitleScreenUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116032891013971130, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: blurColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116032891013971130, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: blurColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116032891013971130, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: blurColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116032891013971130, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: blurColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116032891953315713, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: blurColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116032891953315713, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: blurColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116032891953315713, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: blurColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116032891953315713, guid: b21610cf10db37248aa466140bf79f63,
+        type: 3}
+      propertyPath: blurColor.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b21610cf10db37248aa466140bf79f63, type: 3}

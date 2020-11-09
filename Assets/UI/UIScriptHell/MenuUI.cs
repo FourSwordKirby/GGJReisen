@@ -116,7 +116,6 @@ public class MenuUI : ControllableGridMenu
                 previousMenu?.Focus();
                 break;
             case ParentMenuStatusPostSelect.close:
-                print("here");
                 previousMenu?.Open();
                 break;
             case ParentMenuStatusPostSelect.none:

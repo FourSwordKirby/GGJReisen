@@ -36,7 +36,7 @@ public class MiyoiQuestManager : Npc
     public void Miyoi_Stage030()
     {
         GameProgress.MiyoiShardSeenCount = 25;
-        GameProgress.Player.AddShard(Shard.Miyoi_Company);
+        ReisenGameManager.instance.AddShard(Shard.Miyoi_Company);
         DisplayShardTransaction(Shard.Miyoi_Company);
         Stage = 100;
     }

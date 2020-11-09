@@ -82,6 +82,5 @@ public class TitleScreenUtils : MonoBehaviour
         AudioMaster.instance.PlaySfx("DataDelete");
         SaveManager.DeleteAllData();
         startMenu.InitializeTitleMenu();
-        startMenu.Open();
     }
 }

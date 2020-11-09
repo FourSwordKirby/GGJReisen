@@ -16,13 +16,13 @@ Eirin: Though her choice in venue was pretty decent.
 
 [instruction] Credits2
 
-Tewi: Waiterrrrr, one more slice of peach cake please 
+Tewi: Waiterrrrr, one more slice of peach cake please~
 
 <color=#3399ff>Reisen</color>: I-I'll take a peach ice cream bowl for my dessert. 
 
 <i>It's finally over. 
 
-<i>The strange storage devices strewn throughout town turned out be just that, storage boxes for the loads of peaches that the Watasuki sisters tried to send to Eientei. </i>
+<i>The strange storage devices strewn throughout town turned out be just that, storage boxes for peaches that the Watasuki sisters tried to send to Eientei. </i>
 
 <i>Rather than any hostile act to spread their influence over Gensokyo, they were simply apologies for all the trouble caused by the Lunar Invasion incident. </i>
 
@@ -32,9 +32,9 @@ Tewi: Waiterrrrr, one more slice of peach cake please
 
 <i>As for who they were attacked by? Reisen asked Reimu if she knew anything. </i>
 
-<i>Though she adamantly asserted she had no idea. </i>
+<i>Though Reimu adamantly asserted she had no idea. </i>
 
-<i>For Reimu, lying came as easy as breathing... </i>
+<i>For her, lying came as easy as breathing... </i>
 
 <i>Taking a bite of the freshly candied peaches, Reisen’s mind drifted.</i>
 

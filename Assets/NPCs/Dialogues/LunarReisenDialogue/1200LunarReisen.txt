@@ -10,11 +10,11 @@ It's you!
 LunarReisen: Right, I remember you now!
 
 Reisen: [expression] normal
-You're <b>Reisen</b>, right? 
+You're <b><color=#3399ff>Reisen</color></b>, right? 
 The Honorable Watatsuki Sisters' new pet... 
 
 LunarReisen: [expression] normal
-LunarReisen: Yes, and you are... also <b>Reisen</b>. 
+LunarReisen: Yes, and you are... also <b><color=#d966ff>Reisen</color></b>. 
 The Honorable Watatsuki Sister's previous pet that ran away. 
 
 Reisen: [expression] annoy

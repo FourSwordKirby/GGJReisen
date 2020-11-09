@@ -349,6 +349,11 @@ public class ReisenGameManager : MonoBehaviour
         yield return null;
     }
 
+    public void AddShard(Shard s)
+    {
+        gameProgress.Player.AddShard(s);
+        SaveManager.SaveSeenShardData(gameProgress);
+    }
 
     //Wheeee more hacking
     public GameObject statusTextPrefab;
