@@ -35,12 +35,14 @@ public class KogasaQuestManager : Npc
         if (RpgPlayer.instance.transform.position.x > midpoint)
         {
             selfBody.transform.position = leftPosition.position;
+            CollisionBox.transform.position = leftPosition.position + Vector3.up * 2.0f;
             KogasaDialogueAnimator.speechBubbleOrigin = leftSpeechOrigin;
             trigger.speakingPositionConfig = DialogueTriggerSpeakerConfig.ForceRight;
         }
         else
         {
             selfBody.transform.position = rightPosition.position;
+            CollisionBox.transform.position = rightPosition.position + Vector3.up * 2.0f;
             KogasaDialogueAnimator.speechBubbleOrigin = rightSpeechOrigin;
             trigger.speakingPositionConfig = DialogueTriggerSpeakerConfig.ForceLeft;
         }

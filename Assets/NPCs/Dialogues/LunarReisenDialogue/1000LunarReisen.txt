@@ -1,10 +1,10 @@
 Reisen: [expression] shock
 Ah!
 
+LunarReisen: [expression] shock
 LunarReisen: Ah!
 
-Reisen: [expression] shock
-It's you! 
+Reisen: It's you! 
 
 LunarReisen: Right, I remember now! 
 You're <b><color=#d966ff>Reisen</color></b>!  
@@ -17,6 +17,7 @@ And you're also <b><color=#3399ff>Reisen</color></b>, right?
 [expression] sad
 You're my replacement at the Lunar Capital now... 
 
+LunarReisen: [expression] normal
 LunarReisen: ... 
 
 Reisen: [expression] heh
