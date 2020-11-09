@@ -14,7 +14,7 @@ I'm going to start the reversal process now.
 There's no going back. Are you sure?
 
 Reisen: [expression] sweat
-[choice] [On second thought... | leave] [End the incident | confirm] 
+[choice]  [End the incident | confirm] [On second thought... | leave]
 
 LunarReisen: Alright, here it goes... [confirm] 
 
