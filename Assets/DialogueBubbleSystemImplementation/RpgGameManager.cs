@@ -20,7 +20,7 @@ public class RpgGameManager : MonoBehaviour
 
     public void StartConversation(TextAsset dialogue, Vector3 focusPosition, Transform playerPosition = null, Transform cameraPosition = null, AfterDialogueEvent afterEvent = null, List<DialogueInstruction> AvailableInstructions = null)
     {
-        DialogueEngine.InitializeGenerators(SpeakingLine.CreateSpeakingLine, ExpressionLine.CreateInstructionLine, ChoiceLine.GenerateChoiceLine, InstructionLine.GenerateInstructionline, ReisenGameManager.instance.ConditionsSatisfied);
+        DialogueEngine.InitializeGenerators(SpeakingLine.CreateSpeakingLine, ExpressionLine.CreateInstructionLine, ChoiceLine.GenerateChoiceLine, InstructionLine.GenerateInstructionline, StallLine.GenerateStallLine, ReisenGameManager.instance.ConditionsSatisfied);
         List<ScriptLine> lines = DialogueEngine.CreateDialogueComponents(dialogue.text, AvailableInstructions);
         HashSet<string> speakers = new HashSet<string>(lines.Select(x => x.speaker).Distinct());
         Dialogue processedDialogue = new Dialogue(lines, speakers);

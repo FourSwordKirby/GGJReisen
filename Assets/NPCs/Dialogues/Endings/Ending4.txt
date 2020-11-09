@@ -22,7 +22,7 @@ Tewi: Waiterrrrr, one more slice of peach cake please~
 
 <i>It's finally over. 
 
-<i>The strange storage devices strewn throughout town turned out be just that, storage boxes for peaches that the Watasuki sisters tried to send to Eientei. </i>
+<i>The strange storage devices strewn throughout town turned out be just that, storage boxes for peaches that the Watatsuki sisters tried to send to Eientei. </i>
 
 <i>Rather than any hostile act to spread their influence over Gensokyo, they were simply apologies for all the trouble caused by the Lunar Invasion incident. </i>
 
@@ -42,6 +42,12 @@ Tewi: Waiterrrrr, one more slice of peach cake please~
 
 <i>Satisfied with a job well done.<br><br><color=#B7B7B7><Congratulations!></color></i>
 
+[stall] 3.0
+
 [instruction] Credits4
+
+[stall] 3.0
+
+[instruction] CreditsCleanup2
 
 [instruction] Ending1

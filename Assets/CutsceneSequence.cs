@@ -16,7 +16,7 @@ public class CutsceneSequence : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DialogueEngine.InitializeGenerators(CutsceneSpeakingLine.CreateSpeakingLine, ExpressionLine.CreateInstructionLine, ChoiceLine.GenerateChoiceLine, InstructionLine.GenerateInstructionline, (x) => true);
+        DialogueEngine.InitializeGenerators(CutsceneSpeakingLine.CreateSpeakingLine, ExpressionLine.CreateInstructionLine, ChoiceLine.GenerateChoiceLine, InstructionLine.GenerateInstructionline, StallLine.GenerateStallLine, (x) => true);
         List<ScriptLine> lines = DialogueEngine.CreateDialogueComponents(dialogueTextAsset.text, AvailableInstructions);
         HashSet<string> speakers = new HashSet<string>(lines.Select(x => x.speaker).Distinct());
         dialogue = new Dialogue(lines, speakers);

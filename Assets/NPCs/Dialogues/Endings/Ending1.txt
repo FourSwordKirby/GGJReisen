@@ -1,5 +1,3 @@
-<i>She promises to try harder next time.<br><br> <Have you found all of the Personality Shards?></i>
-
 <i>At the Eientei Residence</i>
 
 Kaguya: So you’re saying there’s nothing we can do?
@@ -28,6 +26,12 @@ Reisen: Uggggggh this situation is unpleasantly nostalgic for <b>some reason</b>
 
 <i>She promises to try harder next time.<br><br><color=#B7B7B7><Have you found all of the Personality Shards?></color></i></i>
 
+[stall] 3.0
+
 [instruction] Credits4
+
+[stall] 3.0
+
+[instruction] CreditsCleanup2
 
 [instruction] Ending1

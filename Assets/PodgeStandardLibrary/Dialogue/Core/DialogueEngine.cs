@@ -9,6 +9,7 @@ public delegate ScriptLine SpeakingLineGenerator(string speaker, string lineText
 public delegate ScriptLine ExpressionLineGenerator(string speaker, CharacterExpression expression);
 public delegate ScriptLine ChoiceLineGenerator(string speaker, List<ChoiceLineContent> choices);
 public delegate ScriptLine InstructionLineGenerator(DialogueInstruction instruction);
+public delegate ScriptLine StallLineGenerator(float stallTime);
 public delegate bool LineChecker(List<string> conditions);
 
 
@@ -18,17 +19,19 @@ public class DialogueEngine
     public static ExpressionLineGenerator GenerateExperssionLine;
     public static ChoiceLineGenerator GenerateChoiceLine;
     public static InstructionLineGenerator GenerateInstructionLine;
+    public static StallLineGenerator GenerateStallLine;
     public static LineChecker IsLineValid;
     static bool initialized;
 
     public static void InitializeGenerators(SpeakingLineGenerator speakingLineGenerator, ExpressionLineGenerator expressionLineGenerator,
                                             ChoiceLineGenerator choiceLineGenerator, InstructionLineGenerator instructionLineGenerator,
-                                            LineChecker isLineValid)
+                                            StallLineGenerator stallLineGenerator, LineChecker isLineValid)
     {
         GenerateSpeakingLine = speakingLineGenerator;
         GenerateExperssionLine = expressionLineGenerator;
         GenerateChoiceLine = choiceLineGenerator;
         GenerateInstructionLine = instructionLineGenerator;
+        GenerateStallLine = stallLineGenerator;
         IsLineValid = isLineValid;
         initialized = true;
     }
@@ -106,6 +109,10 @@ public class DialogueEngine
                     }
                     else
                         throw new Exception("No instructions provided");
+                    break;
+                case LineType.Stall:
+                    float time = GetStallTime(line);
+                    processedLine = GenerateStallLine(time);
                     break;
             }
 
@@ -204,9 +211,9 @@ public class DialogueEngine
         if (line.StartsWith("[choice]"))
             return originalLine;
 
-        // Strip out the [expression] or [instruction] command and save it for later
+        // Strip out the [expression] or [instruction] or [stall] command and save it for later
         string prefix = "";
-        if (line.StartsWith("[expression]") || line.StartsWith("[instruction]"))
+        if (line.StartsWith("[expression]") || line.StartsWith("[instruction]") || line.StartsWith("[stall]"))
         {
             int indexAfterBracket = line.IndexOf("]") + 1;
             prefix = line.Substring(0, indexAfterBracket);
@@ -246,6 +253,12 @@ public class DialogueEngine
             return LineType.Choice;
         else if (line.StartsWith("[instruction]"))
             return LineType.Instruction;
+        else if (line.StartsWith("[stall]"))
+        {
+            Debug.Log("here");
+            return LineType.Stall;
+
+        }
         else
             return LineType.SpeakingLine;
     }
@@ -371,11 +384,21 @@ public class DialogueEngine
         return line.Trim();
     }
 
+    public static float GetStallTime(string line)
+    {
+        string[] dialoguePieces = line.Split(']');
+        if (dialoguePieces.Length > 1)
+            line = dialoguePieces[1];
+
+        return float.Parse(line.Trim());
+    }
+
     public enum LineType
     {
         SpeakingLine,
         Expression,
         Choice,
-        Instruction
+        Instruction,
+        Stall
     }
 }

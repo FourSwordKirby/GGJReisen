@@ -58,7 +58,6 @@ public class EndingController : MonoBehaviour
     {
         foreach(Animator anim in Credits)
         {
-            Debug.Log(anim);
             anim.SetTrigger("Appear");
             yield return new WaitForSeconds(0.75f);
         }
@@ -71,5 +70,10 @@ public class EndingController : MonoBehaviour
             yield return new WaitForSeconds(0.3f);
             anim.SetTrigger("Disappear");
         }
+    }
+
+    public void Linger()
+    {
+
     }
 }
