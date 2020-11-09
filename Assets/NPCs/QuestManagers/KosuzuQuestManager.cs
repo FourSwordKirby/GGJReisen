@@ -8,7 +8,7 @@ public class KosuzuQuestManager : Npc
     {
         GameProgress.Player.CoughMedicine = Assignment.Kosuzu;
         GameProgress.Player.TextBook = Assignment.Inventory;
-        GameProgress.Player.AddShard(Shard.Kosuzu_CoughMedicine);
+        ReisenGameManager.instance.AddShard(Shard.Kosuzu_CoughMedicine);
         ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Shard +1", "Cough Medicine -1", "History Book +1" });
         Stage = 99;
         MarkNextDialogueAsRead();
@@ -23,7 +23,7 @@ public class KosuzuQuestManager : Npc
 
     public void Kosuzu_Stage100_Correct()
     {
-        GameProgress.Player.AddShard(Shard.Kosuzu_QuestionCorrect);
+        ReisenGameManager.instance.AddShard(Shard.Kosuzu_QuestionCorrect);
         DisplayShardTransaction(Shard.Kosuzu_QuestionCorrect);
         Stage = 200;
     }
@@ -43,7 +43,7 @@ public class KosuzuQuestManager : Npc
     public void Kosuzu_Stage200_Magazine()
     {
         GameProgress.Player.Magazine = Assignment.Kosuzu;
-        GameProgress.Player.AddShard(Shard.Kosuzu_MagazineBadEnd);
+        ReisenGameManager.instance.AddShard(Shard.Kosuzu_MagazineBadEnd);
         ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Shard +1", "Magazine -1" });
         Stage = 600;
     }
@@ -58,7 +58,7 @@ public class KosuzuQuestManager : Npc
 
     public void Kosuzu_Stage1000()
     {
-        GameProgress.Player.AddShard(Shard.Kosuzu_GoodEnd);
+        ReisenGameManager.instance.AddShard(Shard.Kosuzu_GoodEnd);
         DisplayShardTransaction(Shard.Kosuzu_GoodEnd);
         Stage = 1001;
     }
@@ -73,7 +73,7 @@ public class KosuzuQuestManager : Npc
 
     public void Kosuzu_Stage1100()
     {
-        GameProgress.Player.AddShard(Shard.Kosuzu_Elixir);
+        ReisenGameManager.instance.AddShard(Shard.Kosuzu_Elixir);
         DisplayShardTransaction(Shard.Kosuzu_Elixir);
         Stage = 1101;
         MarkNextDialogueAsRead();

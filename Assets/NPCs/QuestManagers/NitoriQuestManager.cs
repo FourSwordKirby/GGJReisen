@@ -60,12 +60,12 @@ public class NitoriQuestManager : Npc
     {
         if (GameProgress.Player.Smartphone == Assignment.Nitori)
         {
-            GameProgress.Player.AddShard(Shard.Nitori_Tool_Smartphone);
+            ReisenGameManager.instance.AddShard(Shard.Nitori_Tool_Smartphone);
             DisplayShardTransaction(Shard.Nitori_Tool_Smartphone);
         }
         else if (GameProgress.Player.Wrench == Assignment.Nitori)
         {
-            GameProgress.Player.AddShard(Shard.Nitori_Tool_Wrench);
+            ReisenGameManager.instance.AddShard(Shard.Nitori_Tool_Wrench);
             DisplayShardTransaction(Shard.Nitori_Tool_Wrench);
         }
         Stage = 101;
@@ -73,7 +73,7 @@ public class NitoriQuestManager : Npc
 
     public void Nitori_Stage101_Correct()
     {
-        GameProgress.Player.AddShard(Shard.Nitori_QuestionCorrect);
+        ReisenGameManager.instance.AddShard(Shard.Nitori_QuestionCorrect);
         DisplayShardTransaction(Shard.Nitori_QuestionCorrect);
         Stage = 201;
     }
@@ -127,14 +127,14 @@ public class NitoriQuestManager : Npc
 
     public void Nitori_Stage1000()
     {
-        GameProgress.Player.AddShard(Shard.Nitori_Elixir);
+        ReisenGameManager.instance.AddShard(Shard.Nitori_Elixir);
         DisplayShardTransaction(Shard.Nitori_Elixir);
         Stage = 1001;
     }
 
     public void Nitori_Stage1100()
     {
-        GameProgress.Player.AddShard(Shard.Nitori_GoodEnd);
+        ReisenGameManager.instance.AddShard(Shard.Nitori_GoodEnd);
         DisplayShardTransaction(Shard.Nitori_GoodEnd);
         Stage = 1101;
     }

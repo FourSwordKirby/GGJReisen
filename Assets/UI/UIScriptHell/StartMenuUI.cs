@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class StartMenuUI : MenuUI
@@ -117,8 +118,8 @@ public class StartMenuUI : MenuUI
         }
 
         //dumb hacks we don't really care about groups anymore lol
-        group.menuElements.Clear();
-        group.FocusElement(group.currentMenuElementIndex);
+        //group.menuElements.Clear();
+        //group.FocusElement(group.currentMenuElementIndex);
     }
 
     void AddMenuElement(MenuUIElement element, int index)
@@ -128,4 +129,9 @@ public class StartMenuUI : MenuUI
         element.transform.SetParent(menuElementPositions[index], true);
     }
 
+    public override void Open()
+    {
+        base.Open();
+        EventSystem.current.SetSelectedGameObject(group.menuElements[0].gameObject);
+    }
 }

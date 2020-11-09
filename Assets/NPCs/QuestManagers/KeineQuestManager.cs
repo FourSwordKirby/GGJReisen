@@ -90,14 +90,14 @@ public class KeineQuestManager : Npc
             GameProgress.Kosuzu.DialogueRead = false;
         }
 
-        GameProgress.Player.AddShard(Shard.Keine_TextBook);
+        ReisenGameManager.instance.AddShard(Shard.Keine_TextBook);
         ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Shard +1", "History Book -1"});
     }
 
     public void Keine_Stage103_Newspaper()
     {
         GameProgress.Player.Newspaper = Assignment.Keine;
-        GameProgress.Player.AddShard(Shard.Keine_Newspaper);
+        ReisenGameManager.instance.AddShard(Shard.Keine_Newspaper);
         ReisenGameManager.instance.ShowItemTransaction(new List<string>() { "Shard +1", "Newspaper -1"});
     }
 
@@ -119,7 +119,7 @@ public class KeineQuestManager : Npc
 
     public void Keine_Stage200_Correct()
     {
-        GameProgress.Player.AddShard(Shard.Keine_QuestionCorrect);
+        ReisenGameManager.instance.AddShard(Shard.Keine_QuestionCorrect);
         DisplayShardTransaction(Shard.Keine_QuestionCorrect);
         Stage = 300;
     }
@@ -146,14 +146,14 @@ public class KeineQuestManager : Npc
 
     public void Keine_Stage1000()
     {
-        GameProgress.Player.AddShard(Shard.Keine_Elixir);
+        ReisenGameManager.instance.AddShard(Shard.Keine_Elixir);
         DisplayShardTransaction(Shard.Keine_Elixir);
         Stage = 1001;
     }
 
     public void Keine_Stage1100()
     {
-        GameProgress.Player.AddShard(Shard.Keine_GoodEnd);
+        ReisenGameManager.instance.AddShard(Shard.Keine_GoodEnd);
         DisplayShardTransaction(Shard.Keine_GoodEnd);
         Stage = 1102;
         MarkNextDialogueAsRead();
